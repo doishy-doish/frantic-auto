@@ -1,0 +1,15 @@
+{
+ "name": "bp-env",
+ "url": "https://bountypay.luccilabs.xyz/api/network/env",
+ "status": 200,
+ "ct": "application/json",
+ "bytes": 17,
+ "json": {
+  "keys": [
+   "env"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"env\":\"mainnet\"}"
+ }
+}

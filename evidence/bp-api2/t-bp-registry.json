@@ -1,0 +1,16 @@
+{
+ "name": "bp-registry",
+ "url": "https://bountypay.luccilabs.xyz/api/registry",
+ "status": 200,
+ "ct": "application/json",
+ "bytes": 466,
+ "json": {
+  "keys": [
+   "success",
+   "registry"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"success\":true,\"registry\":{\"BASE_MAINNET\":{\"group\":\"mainnet\",\"chainId\":8453,\"chainIdHex\":\"0x2105\",\"name\":\"Base Mainnet\",\"rpcUrl\":\"https://mainnet.base.org\",\"blockExplorerUrl\":\"https://basescan.org\",\"supports1559\":true,\"nativeCurrency\":{\"name\":\"ETH\",\"symbol\":\"ETH\",\"decimals\":18},\"contracts\":{\"escrow\":\"0xd0A0ae89fb06AB705c28cA99A059a10E7C532cF9\"},\"token\":{\"address\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"symbol\":\"USDC\",\"decimals\":6},\"additionalTokens\":[]}}}"
+ }
+}

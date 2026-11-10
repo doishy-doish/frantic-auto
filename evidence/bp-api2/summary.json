@@ -1,0 +1,22 @@
+{
+ "stamp": "bp-api2",
+ "takenAt": "2026-11-10T20:29:40.742Z",
+ "depth": 0,
+ "targets": [
+  {
+   "name": "bp-registry",
+   "status": 200,
+   "bytes": 466
+  },
+  {
+   "name": "bp-env",
+   "status": 200,
+   "bytes": 17
+  },
+  {
+   "name": "bp-open",
+   "status": 500,
+   "bytes": 41
+  }
+ ]
+}
