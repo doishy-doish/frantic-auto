@@ -1,0 +1,18 @@
+{
+ "stamp": "regjob3",
+ "takenAt": "2026-11-10T21:12:16.491Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 1,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "ub-b9",
+   "status": 200,
+   "bytes": 43450
+  }
+ ]
+}

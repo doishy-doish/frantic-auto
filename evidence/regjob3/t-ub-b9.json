@@ -1,0 +1,92 @@
+{
+ "name": "ub-b9",
+ "url": "https://ubounty.ai/ubounty/ubounty-app/ubounty-demo/9",
+ "rendered": true,
+ "status": 200,
+ "ct": "rendered-dom",
+ "bytes": 43450,
+ "textLen": 1834,
+ "head": "$20.0 Bounty: Complete a test bounty: Submit PR and receive USDC payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Completed Complete a test bounty: Submit PR and receive USDC payment ubounty-app/ubounty-demo Posted November 12, 2025 bounty small Description I need a developer to walk through ubounty's core workflow from the contributor side. Pick any open test bounty from our platform, submit a PR that resolves it, and verify you receive the USDC payment to your wallet after the PR is merged. The goal is to validate that our payment infrastructure works smoothly, and the GitHub webhook detection of merged PRs. What you need to do: Browse available bounties on ubounty.ai Submit a PR for one of the test issues Share your Base wallet address for payout Confirm when you receive the USDC Deliverable: A brief note (3-5 sentences) on your experience: Did the payment arrive as expected? Was anything confusing? Any friction points in the flow? This is a straightforward test of our settlement infrastructure. $20 for helping us validate the end-to-end developer experience. Requirements GitHub PR subm…[trunc 1834]",
+ "links": [
+  {
+   "h": "/how-it-works",
+   "t": "How It Works"
+  },
+  {
+   "h": "/bounties",
+   "t": "Bounties"
+  },
+  {
+   "h": "/how-it-works",
+   "t": "How It Works"
+  },
+  {
+   "h": "/bounties",
+   "t": "Bounties"
+  },
+  {
+   "h": "https://github.com/ubounty-app/ubounty-demo/issues/11",
+   "t": "#11"
+  },
+  {
+   "h": "/terms",
+   "t": "Terms of Service"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "PRs. What you need to do: Browse available bounties on ubounty.ai Submit a PR for one of the test issues Share your Base wallet address for payout Confirm when you receive the USDC Deliverable: A brief note (3-5 sentences) on your experience: Did the payment arrive as expected? Was anything confusing? Any friction poin"
+  },
+  {
+   "k": "wallet",
+   "w": "ontributor side. Pick any open test bounty from our platform, submit a PR that resolves it, and verify you receive the USDC payment to your wallet after the PR is merged. The goal is to validate that our payment infrastructure works smoothly, and the GitHub webhook detection of merged PRs. What you need to do: Browse a"
+  },
+  {
+   "k": "wallet",
+   "w": "etection of merged PRs. What you need to do: Browse available bounties on ubounty.ai Submit a PR for one of the test issues Share your Base wallet address for payout Confirm when you receive the USDC Deliverable: A brief note (3-5 sentences) on your experience: Did the payment arrive as expected? Was anything confusing"
+  },
+  {
+   "k": "wallet",
+   "w": "ttlement infrastructure. $20 for helping us validate the end-to-end developer experience. Requirements GitHub PR submission Base blockchain wallet setup Basic smart contract interaction Acceptance Criteria PR successfully merged into target repository USDC payment received in specified wallet address No errors in bount"
+  },
+  {
+   "k": "usdc",
+   "w": "$20.0 Bounty: Complete a test bounty: Submit PR and receive USDC payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Completed Complete a test bounty"
+  },
+  {
+   "k": "usdc",
+   "w": "C payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Completed Complete a test bounty: Submit PR and receive USDC payment ubounty-app/ubounty-demo Posted November 12, 2025 bounty small Description I need a developer to walk thro"
+  },
+  {
+   "k": "usdc",
+   "w": "ect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Completed Complete a test bounty: Submit PR and receive USDC payment ubounty-app/ubounty-demo Posted November 12, 2025 bounty small Description I need a developer to walk through ubounty's core workflow from the contributor side. Pick a"
+  },
+  {
+   "k": "bounty",
+   "w": "$20.0 Bounty: Complete a test bounty: Submit PR and receive USDC payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back t"
+  },
+  {
+   "k": "bounty",
+   "w": "$20.0 Bounty: Complete a test bounty: Submit PR and receive USDC payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Co"
+  },
+  {
+   "k": "bounty",
+   "w": "$20.0 Bounty: Complete a test bounty: Submit PR and receive USDC payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Completed Complete a test bounty: Submit PR and "
+  },
+  {
+   "k": "how it works",
+   "w": "$20.0 Bounty: Complete a test bounty: Submit PR and receive USDC payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Completed Complete a test bounty: Submit PR and receive USDC payment u"
+  },
+  {
+   "k": "how it works",
+   "w": ".0 Bounty: Complete a test bounty: Submit PR and receive USDC payment - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Back to Bounties $20.0 USDC Completed Complete a test bounty: Submit PR and receive USDC payment ubounty-app/ubounty-demo Posted November 12, 2"
+  },
+  {
+   "k": "terms",
+   "w": "itHub X LinkedIn Copy ubounty .ai Dev Bounty on Github powered by X402. Instant USDC payments for solving GitHub issues. Company Jobs Legal Terms of Service Privacy Policy Acceptable Use Policy © 2025 ubounty.ai. All rights reserved."
+  }
+ ],
+ "depth": 0
+}
