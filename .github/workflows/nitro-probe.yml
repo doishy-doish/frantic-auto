@@ -1,0 +1,25 @@
+name: nitro-probe
+# READ-ONLY: verify Nitrosend key + sender state. Never sends.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/nitro-probe.mjs
+      - run: node scripts/nitro-probe.mjs
+        env:
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }}
+      - run: |
+          git config user.name "nitro-probe"
+          git config user.email "nitro-probe@users.noreply.github.com"
+          git add nitro-probe-out.json || true
+          git diff --cached --quiet || git commit -m "nitro probe $(date -u +%FT%TZ)"
+          git push
