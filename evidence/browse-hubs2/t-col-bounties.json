@@ -1,0 +1,17 @@
+{
+ "name": "col-bounties",
+ "url": "https://collaborators.build/bounties",
+ "status": 404,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 12191,
+ "textLen": 110,
+ "head": "404: This page could not be found. Collaborators - GitHub Bounty Marketplace 404 This page could not be found.",
+ "links": [],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "bounty",
+   "w": "404: This page could not be found. Collaborators - GitHub Bounty Marketplace 404 This page could not be found."
+  }
+ ]
+}

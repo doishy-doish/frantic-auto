@@ -1,0 +1,36 @@
+{
+ "stamp": "browse-hubs2",
+ "takenAt": "2026-11-10T20:12:20.742Z",
+ "targets": [
+  {
+   "name": "col-bounties",
+   "status": 404,
+   "bytes": 12191
+  },
+  {
+   "name": "bp-app",
+   "status": 200,
+   "bytes": 17995
+  },
+  {
+   "name": "tb-browse",
+   "status": 200,
+   "bytes": 57371
+  },
+  {
+   "name": "hp-register",
+   "status": 200,
+   "bytes": 11647
+  },
+  {
+   "name": "ao-app",
+   "status": 200,
+   "bytes": 9412
+  },
+  {
+   "name": "ub-bounties",
+   "status": 200,
+   "bytes": 24381
+  }
+ ]
+}
