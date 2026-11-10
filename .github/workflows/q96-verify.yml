@@ -1,0 +1,23 @@
+name: q96-verify
+# Q96 independent verification (public lane, scramble protocol).
+# Public BSC data only — no secrets. Dispatched with the classic token, never fine-grained.
+on:
+  workflow_dispatch: {}
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node scripts/q96-verify.mjs
+      - run: |
+          git config user.name "bounty-watch"
+          git config user.email "bounty-watch@users.noreply.github.com"
+          git add q96-verify.json
+          git commit -m "q96-verify: $(node -e "const o=require('./q96-verify.json');process.stdout.write(o.firstBlock+'-'+o.lastBlock+' n='+o.n)")" || echo "nothing to commit"
+          git push
+      - uses: actions/upload-artifact@v4
+        with: { name: q96-out, path: q96-verify.json }
