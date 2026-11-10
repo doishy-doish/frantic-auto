@@ -1,0 +1,10 @@
+{
+ "name": "bp-api",
+ "url": "https://bountypay.luccilabs.xyz/api/bounties",
+ "status": 404,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 24814,
+ "json": {
+  "parse": "fail"
+ }
+}

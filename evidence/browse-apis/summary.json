@@ -1,0 +1,36 @@
+{
+ "stamp": "browse-apis",
+ "takenAt": "2026-11-10T20:14:07.569Z",
+ "targets": [
+  {
+   "name": "col-app",
+   "status": 404,
+   "bytes": 12191
+  },
+  {
+   "name": "col-explore",
+   "status": 404,
+   "bytes": 12191
+  },
+  {
+   "name": "bp-api",
+   "status": 404,
+   "bytes": 24814
+  },
+  {
+   "name": "ub-api",
+   "status": 404,
+   "bytes": 22
+  },
+  {
+   "name": "tb-board",
+   "status": 200,
+   "bytes": 107620
+  },
+  {
+   "name": "tb-docs",
+   "status": 200,
+   "bytes": 60130
+  }
+ ]
+}

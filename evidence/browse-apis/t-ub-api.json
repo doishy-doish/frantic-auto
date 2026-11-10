@@ -1,0 +1,14 @@
+{
+ "name": "ub-api",
+ "url": "https://ubounty.ai/api/bounties",
+ "status": 404,
+ "ct": "application/json",
+ "bytes": 22,
+ "json": {
+  "keys": [
+   "error"
+  ],
+  "count": null,
+  "first": null
+ }
+}
