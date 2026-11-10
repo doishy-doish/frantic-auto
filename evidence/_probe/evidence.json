@@ -1,0 +1,9 @@
+{
+ "summary": "Probe packet for preflight contract discovery (read-only, never delivered).",
+ "observations": [
+  "installed ext v1 from dispatch input, launched headful chromium",
+  "manifest audit score 90; top findings: none",
+  "drove 2 steps, 2 screenshots, 4 console lines, 31 requests",
+  "network table in run.json; no pageerrors"
+ ]
+}
