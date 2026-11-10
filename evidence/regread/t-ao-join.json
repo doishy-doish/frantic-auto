@@ -1,0 +1,39 @@
+{
+ "name": "ao-join",
+ "url": "https://docs.auditone.io/platform/auditors/join-and-work-at-auditone",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 356589,
+ "textLen": 1596,
+ "head": "Join & work at AuditOne | AuditOne Docs AuditOne Docs ⌘ Ctrl k AuditOne Docs 📋 About AuditOne Our Vision What makes us different? TIC OS: Audit Management Software for Certification Bodies Free Tools Services On-chain Agent: The Audit Oracle 🧑‍🚀 STAKEHOLDERS For Clients For Auditors Community Ambassadors program 👨‍💻 Platform The all-in-one audit platform Academy Tools Auditors Join & work at AuditOne Validate AI Findings Bug Bounty 🔗 Links Links and Social Powered by GitBook On this page For the complete documentation index, see llms.txt . This page is also available as Markdown . Copy On this page 👨‍💻 Platform Auditors Join & work at AuditOne Process Details Where to Register Register here . Provide a detailed description of your professional background, skills, and experience. Eligibility Requirements KYC: Complete the KYC verification 5 minutes. Exam: Pass one of two exams (Solidity or Rust). Results in 2 weeks. Notification of Audits Set Availability: Indicate availability in the dashboard. Notifications: Receive through app, Discord, and email. Selection Process Apply: Submit an application for projects. Selection: Based on experience, skills, availability, previous pe…[trunc 1596]",
+ "links": [
+  {
+   "h": "https://docs.auditone.io/llms.txt",
+   "t": "llms.txt"
+  },
+  {
+   "h": "https://docs.auditone.io/platform/auditors/join-and-work-at-auditone.md",
+   "t": "Markdown"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "kyc",
+   "w": "o Register Register here . Provide a detailed description of your professional background, skills, and experience. Eligibility Requirements KYC: Complete the KYC verification 5 minutes. Exam: Pass one of two exams (Solidity or Rust). Results in 2 weeks. Notification of Audits Set Availability: Indicate availability in "
+  },
+  {
+   "k": "kyc",
+   "w": "r here . Provide a detailed description of your professional background, skills, and experience. Eligibility Requirements KYC: Complete the KYC verification 5 minutes. Exam: Pass one of two exams (Solidity or Rust). Results in 2 weeks. Notification of Audits Set Availability: Indicate availability in the dashboard. Not"
+  },
+  {
+   "k": "reward",
+   "w": "on: Based on experience, skills, availability, previous performance, and capacity. Compensation A fixed and performance based compensation. Rewards are based on XP levels, issue severity, and bug bounties. Earn $AUDIT Tokens and increase your salary with XP. Payment Process Complete invoice info before the audit. The i"
+  },
+  {
+   "k": "bounty",
+   "w": "ty Ambassadors program 👨‍💻 Platform The all-in-one audit platform Academy Tools Auditors Join & work at AuditOne Validate AI Findings Bug Bounty 🔗 Links Links and Social Powered by GitBook On this page For the complete documentation index, see llms.txt . This page is also available as Markdown . Copy On this page 👨"
+  }
+ ],
+ "depth": 0
+}

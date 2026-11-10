@@ -1,0 +1,83 @@
+{
+ "stamp": "regread",
+ "takenAt": "2026-11-10T20:57:31.313Z",
+ "case": "proof",
+ "depth": 2,
+ "breadth": {
+  "maxTargets": 7,
+  "maxFollows": 6
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "ub-how",
+   "status": 200,
+   "bytes": 21301
+  },
+  {
+   "name": "ub-home",
+   "status": 200,
+   "bytes": 40094
+  },
+  {
+   "name": "tb-home",
+   "status": 200,
+   "bytes": 100288
+  },
+  {
+   "name": "bp-home",
+   "status": 200,
+   "bytes": 42417
+  },
+  {
+   "name": "hp-start",
+   "status": 200,
+   "bytes": 427530
+  },
+  {
+   "name": "ao-join",
+   "status": 200,
+   "bytes": 356589
+  },
+  {
+   "name": "bb-app",
+   "status": 200,
+   "bytes": 24356
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  },
+  {
+   "name": "d1-1",
+   "status": 200,
+   "bytes": 13374
+  },
+  {
+   "name": "d1-2",
+   "status": 200,
+   "bytes": 60130
+  },
+  {
+   "name": "d1-3",
+   "status": 200,
+   "bytes": 152283
+  },
+  {
+   "name": "d1-4",
+   "status": 200,
+   "bytes": 76277
+  },
+  {
+   "name": "d1-5",
+   "status": 200,
+   "bytes": 20642
+  },
+  {
+   "name": "d1-6",
+   "status": 200,
+   "bytes": 394078
+  }
+ ]
+}

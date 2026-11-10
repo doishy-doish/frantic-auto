@@ -1,0 +1,104 @@
+{
+ "name": "d1-6",
+ "url": "https://docs.hackenproof.com/bug-bounty/bug-bounty-process",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 394078,
+ "textLen": 2784,
+ "head": "Bug Bounty process | HackenProof Docs HackenProof Docs ⌘ Ctrl k HackenProof Docs Welcome HackenProof Integrations FAQ Emergency Code of Conduct Referral Program Bug Bounty Bug Bounty process How to start Bug Bounty How to create a VDP Vulnerability classification Reports Basics Dashboard Company dashboard Hacker dashboard MCP Server Crowdsourced audit Audit process How to start Audit Supported tech Vulnerability classification Reports Basics Qualified Auditors Judging / Triaging [CA] Bounty Distribution Rules Fee & Payments DualDefense Audit What is DualDefence Audit General Guidelines How DualDefence Audit goes Contest Phases Vulnerability classification [DD] Bounty Distribution Rules good to know Changelog Branding Vulnerability Disclosure HackenProof Vanguard National CTF Education Courses Tools Useful sources Powered by GitBook On this page For the complete documentation index, see llms.txt . This page is also available as Markdown . Copy On this page Bug Bounty Bug Bounty process How it works You will need to register your account (or the HackenProof team will register), and draft the program rules & rewards, and specify targets for hackers (or our team will lead this process …[trunc 2784]",
+ "links": [
+  {
+   "h": "/bug-bounty/bug-bounty-process",
+   "t": "Bug Bounty process"
+  },
+  {
+   "h": "/bug-bounty/how-to-start-bug-bounty",
+   "t": "How to start Bug Bounty"
+  },
+  {
+   "h": "/bug-bounty/how-to-create-a-vdp",
+   "t": "How to create a VDP"
+  },
+  {
+   "h": "/crowdsourced-audit/how-to-start-audit",
+   "t": "How to start Audit"
+  },
+  {
+   "h": "/bug-bounty/reports-basics",
+   "t": "Reports Basics"
+  },
+  {
+   "h": "/crowdsourced-audit/ca-bounty-distribution-rules",
+   "t": "[CA] Bounty Distribution Rules"
+  },
+  {
+   "h": "/crowdsourced-audit/fee-and-payments",
+   "t": "Fee &amp; Payments"
+  },
+  {
+   "h": "/dualdefense-audit/general-guidelines",
+   "t": "General Guidelines"
+  },
+  {
+   "h": "/dualdefense-audit/how-dualdefence-audit-goes",
+   "t": "How DualDefence Audit goes"
+  },
+  {
+   "h": "/dualdefense-audit/dd-bounty-distribution-rules",
+   "t": "[DD] Bounty Distribution Rules"
+  },
+  {
+   "h": "https://docs.hackenproof.com/llms.txt",
+   "t": "llms.txt"
+  },
+  {
+   "h": "https://docs.hackenproof.com/bug-bounty/bug-bounty-process.md",
+   "t": "Markdown"
+  },
+  {
+   "h": "/bug-bounty/bug-bounty-process",
+   "t": "Bug Bounty"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "fee",
+   "w": "start Audit Supported tech Vulnerability classification Reports Basics Qualified Auditors Judging / Triaging [CA] Bounty Distribution Rules Fee & Payments DualDefense Audit What is DualDefence Audit General Guidelines How DualDefence Audit goes Contest Phases Vulnerability classification [DD] Bounty Distribution Rules "
+  },
+  {
+   "k": "reward",
+   "w": "g Bounty process How it works You will need to register your account (or the HackenProof team will register), and draft the program rules & rewards, and specify targets for hackers (or our team will lead this process as well) As soon as everything is agreed with the HackenProof team, the program comes alive. Then Hacke"
+  },
+  {
+   "k": "reward",
+   "w": "nProof platform The final decision on the severity level and a bounty is always on the client, but please don't try to downgrade the hacker reward or hide the real severity of the report. If you don't follow the rules we will delist you from the HackenProof platform If you triage reports by yourself we may still ask yo"
+  },
+  {
+   "k": "reward",
+   "w": "form If you triage reports by yourself we may still ask you to allow us to review some reports if researchers have notified us of a reduced reward or severity Please avoid discussing any issues submitted by researchers in an open channel After the Bug Bounty In case you decide to stop running the program for an unpredi"
+  },
+  {
+   "k": "bounty",
+   "w": "Bug Bounty process | HackenProof Docs HackenProof Docs ⌘ Ctrl k HackenProof Docs Welcome HackenProof Integrations FAQ Emergency Code of Conduct Referral Program Bug Bounty Bug Bounty p"
+  },
+  {
+   "k": "bounty",
+   "w": "enProof Docs HackenProof Docs ⌘ Ctrl k HackenProof Docs Welcome HackenProof Integrations FAQ Emergency Code of Conduct Referral Program Bug Bounty Bug Bounty process How to start Bug Bounty How to create a VDP Vulnerability classification Reports Basics Dashboard Company dashboard Hacker dashboard MCP Server Crowdsourc"
+  },
+  {
+   "k": "bounty",
+   "w": "s HackenProof Docs ⌘ Ctrl k HackenProof Docs Welcome HackenProof Integrations FAQ Emergency Code of Conduct Referral Program Bug Bounty Bug Bounty process How to start Bug Bounty How to create a VDP Vulnerability classification Reports Basics Dashboard Company dashboard Hacker dashboard MCP Server Crowdsourced audit Au"
+  },
+  {
+   "k": "how it works",
+   "w": " the complete documentation index, see llms.txt . This page is also available as Markdown . Copy On this page Bug Bounty Bug Bounty process How it works You will need to register your account (or the HackenProof team will register), and draft the program rules & rewards, and specify targets for hackers (or our team wil"
+  },
+  {
+   "k": "how it works",
+   "w": "we store your data in accordance with our official policy). Previous Referral Program Next How to start Bug Bounty Last updated 3 years ago How it works Before the Bug Bounty During the Bug Bounty After the Bug Bounty"
+  }
+ ],
+ "followOf": "hp-start",
+ "depth": 1
+}
