@@ -1,6 +1,7 @@
 // Minimal agentic browser — public GETs only. No secrets, no auth, quiet logs.
-// Env: TARGETS_JSON = [{name, url}] (max 12), STAMP = evidence dir name.
-// Writes evidence/<stamp>/t-<name>.json + evidence/<stamp>/summary.json (all size-capped).
+// Env: TARGETS_JSON = [{name, url} | {name, search}], STAMP = evidence dir name,
+//   DEPTH = 0|1 (1 = follow interesting links inside the same run — one run does hop chains).
+// Writes evidence/<stamp>/t-<name>.json (+ t-d1-<n>.json follows) + evidence/<stamp>/summary.json.
 import { writeFile, mkdir } from 'node:fs/promises';
 
 const stamp = (process.env.STAMP || new Date().toISOString().replace(/[:.]/g, '-')).replace(/[^a-zA-Z0-9-_]/g, '').slice(0, 60) || 'run';
@@ -9,6 +10,9 @@ await mkdir(outDir, { recursive: true });
 
 let targets = [];
 try { targets = JSON.parse(process.env.TARGETS_JSON || '[]'); } catch { targets = []; }
+
+const DEPTH = Math.min(parseInt(process.env.DEPTH || '0', 10) || 0, 1);
+const FOLLOW_RE = /(docs|faq|pricing|terms|lifecycle|bount|board|how-it-works|\/api\/|attach|guide)/i;
 
 const KW = ['payout', 'paid out', 'stripe', 'wallet', 'bank account', 'usdc', 'usdt', 'crypto',
   'kyc', 'interview', 'video call', 'fee', 'withdraw', 'claim', 'escrow', 'reward', 'bounty',
@@ -71,6 +75,43 @@ function nextData(html) {
   } catch { return { parse: 'fail', bytes: m[1].length }; }
 }
 
+async function browseUrl(name, rawUrl) {
+  const su = sanitizeUrl(rawUrl);
+  const row = { name, url: su.url };
+  if (su.sanitized) row.sanitized = true;
+  try {
+    const r = await fetch(su.url, {
+      headers: { 'User-Agent': 'agent-browser/1.0', Accept: 'text/html,application/json' },
+      redirect: 'follow',
+    });
+    row.status = r.status;
+    if (r.url !== su.url) row.final = sanitizeUrl(r.url).url;
+    row.ct = (r.headers.get('content-type') || '').slice(0, 60);
+    const buf = Buffer.from(await r.arrayBuffer());
+    row.bytes = buf.length;
+    if (row.ct.includes('json') || /\/api\//.test(rawUrl)) {
+      try {
+        const j = JSON.parse(buf.toString('utf8'));
+        const items = j.items || j.data || j.bounties || j.issues || j.rewards || (Array.isArray(j) ? j : null);
+        row.json = {
+          keys: (Array.isArray(j) ? ['<array>'] : Object.keys(j)).slice(0, 20),
+          count: Array.isArray(items) ? items.length : (j.count ?? j.total ?? null),
+          first: items && items[0] ? JSON.stringify(items[0]).slice(0, 600) : null,
+        };
+      } catch { row.json = { parse: 'fail' }; }
+    } else {
+      const html = buf.toString('utf8').slice(0, 500000);
+      const text = textOf(html);
+      row.textLen = text.length;
+      row.head = cap(text, 1200);
+      row.links = linksOf(html);
+      row.nextData = nextData(html);
+      row.hits = windows(text);
+    }
+  } catch (e) { row.error = String(e).slice(0, 160); }
+  return row;
+}
+
 async function doSearch(engine, query, count = 10, kind = 'repositories') {
   count = Math.min(Math.max(count || 10, 1), 10);
   const UA = { 'User-Agent': 'agent-browser/1.0' };
@@ -122,7 +163,10 @@ async function doSearch(engine, query, count = 10, kind = 'repositories') {
   }
   return { engine, query, error: 'unknown engine (ddg | mojeek | github)' };
 }
+
 const rows = [];
+const followQueue = [];
+const seen = new Set();
 for (const t of targets.slice(0, 12)) {
   if (t.search) {
     const row = { name: t.name };
@@ -132,45 +176,33 @@ for (const t of targets.slice(0, 12)) {
     await writeFile(`${outDir}/t-${t.name}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
     continue;
   }
-  const su = sanitizeUrl(t.url);
-  const row = { name: t.name, url: su.url };
-  if (su.sanitized) row.sanitized = true;
-  try {
-    const r = await fetch(su.url, {
-      headers: { 'User-Agent': 'agent-browser/1.0', Accept: 'text/html,application/json' },
-      redirect: 'follow',
-    });
-    row.status = r.status;
-    if (r.url !== su.url) row.final = sanitizeUrl(r.url).url;
-    row.ct = (r.headers.get('content-type') || '').slice(0, 60);
-    const buf = Buffer.from(await r.arrayBuffer());
-    row.bytes = buf.length;
-    if (row.ct.includes('json') || /\/api\//.test(t.url)) {
-      try {
-        const j = JSON.parse(buf.toString('utf8'));
-        const items = j.items || j.data || j.bounties || j.issues || j.rewards || (Array.isArray(j) ? j : null);
-        row.json = {
-          keys: (Array.isArray(j) ? ['<array>'] : Object.keys(j)).slice(0, 20),
-          count: Array.isArray(items) ? items.length : (j.count ?? j.total ?? null),
-          first: items && items[0] ? JSON.stringify(items[0]).slice(0, 600) : null,
-        };
-      } catch { row.json = { parse: 'fail' }; }
-    } else {
-      const html = buf.toString('utf8').slice(0, 500000);
-      const text = textOf(html);
-      row.textLen = text.length;
-      row.head = cap(text, 1200);
-      row.links = linksOf(html);
-      row.nextData = nextData(html);
-      row.hits = windows(text);
-    }
-  } catch (e) { row.error = String(e).slice(0, 160); }
+  seen.add(sanitizeUrl(t.url).url);
+  const row = await browseUrl(t.name, t.url);
   rows.push(row);
   await writeFile(`${outDir}/t-${t.name}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
+  if (DEPTH >= 1 && row.links) {
+    for (const l of row.links) {
+      let abs;
+      try { abs = new URL(l.h, row.final || row.url).toString(); } catch { continue; }
+      if (!FOLLOW_RE.test(abs) || seen.has(sanitizeUrl(abs).url)) continue;
+      seen.add(sanitizeUrl(abs).url);
+      if (followQueue.length < 8) followQueue.push(abs);
+    }
+  }
+}
+// DEPTH=1: hop chain inside the SAME run — same evidence format, no extra dispatches.
+let d = 0;
+for (const u of followQueue) {
+  d++;
+  const row = await browseUrl(`d1-${d}`, u);
+  row.followOf = stamp;
+  rows.push(row);
+  await writeFile(`${outDir}/t-d1-${d}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
 }
 await writeFile(`${outDir}/summary.json`, JSON.stringify({
   stamp,
   takenAt: new Date().toISOString(),
+  depth: DEPTH,
   targets: rows.map((r) => ({ name: r.name, status: r.status ?? r.error ?? '?', bytes: r.bytes ?? 0 })),
 }, null, 1));
 console.log('browse ok ' + rows.map((r) => `${r.name}=${r.status ?? r.error}`).join(' '));
