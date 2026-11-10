@@ -1,0 +1,28 @@
+{
+ "stamp": "casedepth1",
+ "takenAt": "2026-11-10T20:33:55.077Z",
+ "case": "proof",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 8,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "opire-docs",
+   "status": 404,
+   "bytes": 14452
+  },
+  {
+   "name": "base-chain",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

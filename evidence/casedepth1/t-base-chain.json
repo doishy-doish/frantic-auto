@@ -1,0 +1,9 @@
+{
+ "name": "base-chain",
+ "rpc": {
+  "method": "eth_chainId",
+  "url": "https://mainnet.base.org/"
+ },
+ "status": 200,
+ "result": "\"0x2105\""
+}

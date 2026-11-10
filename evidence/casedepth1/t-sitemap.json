@@ -1,0 +1,24 @@
+{
+ "name": "sitemap",
+ "origin": "https://opire.dev",
+ "routes": [
+  {
+   "path": "/sitemap.xml",
+   "status": 200,
+   "locs": [
+    "https://opire.dev",
+    "https://opire.dev/open-startup"
+   ],
+   "paths": []
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/",
+    "https://opire.dev/sitemap.xml"
+   ]
+  }
+ ]
+}
