@@ -22,6 +22,10 @@ on:
         description: '0 = targets only, 1 = also follow interesting links in-run (one run does hop chains)'
         required: false
         default: '0'
+      render:
+        description: '0 = plain fetch (fast), 1 = headless Chromium render for JS shells (slower, +2-4 min install)'
+        required: false
+        default: '0'
 permissions:
   contents: write
 jobs:
@@ -38,11 +42,14 @@ jobs:
         with:
           node-version: 20
       - run: node --check scripts/browse.mjs
+      - run: |
+          if [ "${{ inputs.render }}" = "1" ]; then npm init -y >/dev/null 2>&1; npm pkg set type=module >/dev/null 2>&1; npm i playwright@latest && npx playwright install chromium --with-deps; fi
       - run: node scripts/browse.mjs
         env:
           TARGETS_JSON: ${{ inputs.targets }}
           STAMP: ${{ inputs.stamp }}
           DEPTH: ${{ inputs.depth }}
+          RENDER: ${{ inputs.render }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           git config user.name "agent-browser"
