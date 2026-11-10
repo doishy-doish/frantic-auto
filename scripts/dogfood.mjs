@@ -10,8 +10,12 @@ import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
+import { createRequire } from "node:module";
 import { chromium } from "playwright";
 import { auditExtension, summarizeNet } from "./ext-audit.js";
+const require = createRequire(import.meta.url);
+let pwVersion = null;
+try { pwVersion = require("playwright/package.json").version; } catch {}
 
 const BASE = process.env.FRANTIC_BASE || "https://gofrantic.com";
 const KID = process.env.FRANTIC_AGENT_KID || "agent-4bc19b"; // public id, safe to default
@@ -118,7 +122,7 @@ const fullAudit = auditExtension(loadDir, manifest);
 
 // 4. drive it: headful Chromium under xvfb, extension loaded
 const steps = TASKS.length ? TASKS : [{ url: "https://example.com", action: "shot" }];
-const log = { extension: { name: manifest.name, version: manifest.version }, steps: [], console: [], started: new Date().toISOString() };
+const log = { playwright: pwVersion, extension: { name: manifest.name, version: manifest.version }, steps: [], console: [], started: new Date().toISOString() };
 const ctx = await chromium.launchPersistentContext("", {
   headless: false,
   args: [`--load-extension=${path.resolve(loadDir)}`, "--no-sandbox"],
