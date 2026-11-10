@@ -1,5 +1,11 @@
 name: agent-browser
 # Minimal agentic browser — public GETs only. Triggers stay dispatch ONLY.
+# Scramble protocol: NO secrets in this lane by construction (no env secrets, no auth);
+# evidence/ holds third-party PUBLIC bytes only — never our numbers. URLs are sanitized
+# (credentials + secret query params redacted) before fetch AND before commit, so a future
+# authed-URL dispatch cannot land secrets in the public repo. Stdout stays quiet
+# (one status line, no bodies). contents:write exists ONLY because this workflow commits
+# evidence/ back (same pattern as dogfood.yml).
 # Inputs: targets (JSON [{name,url}], max 12), stamp (evidence dir name).
 # Needs NO secrets. Writes evidence/<stamp>/ + uploads artifact browse-<stamp>.
 # Reads: evidence/<stamp>/summary.json + t-<name>.json via contents API or artifact.
