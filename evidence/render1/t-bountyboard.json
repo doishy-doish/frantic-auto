@@ -1,0 +1,86 @@
+{
+ "name": "bountyboard",
+ "url": "https://bountyboard.site/",
+ "rendered": true,
+ "status": 200,
+ "ct": "rendered-dom",
+ "bytes": 54010,
+ "textLen": 2843,
+ "head": "BountyBoard — Project management with on-chain bounties Bounty Board How it works Features On-chain Sign in Get started Project management, settled on Solana Ship the work. Earn the bounty. BountyBoard turns your roadmap into a marketplace. Post tasks with USDC bounties, collaborate in a kanban built for distributed teams, and pay contributors instantly on-chain when work is approved. Get started Learn more No credit card Free to start Solana wallet ready How it works From task to payout in three steps No spreadsheets, no Discord DMs about who got paid what. The whole loop lives in one place. 01 Create a project & post tasks Spin up a project, invite teammates, and break the work into tasks. Attach a USDC bounty to anything you want done. 02 Contributors claim & ship Members claim open tasks, work in the open, and submit a deliverable URL when they're ready for review. 03 Approve & pay on Solana Managers review the submission and release the bounty straight to the contributor's wallet — no invoices, no delays. Features Everything a bounty-driven team needs Built for open-source maintainers, DAO operators, and remote teams that pay for outcomes. Drag-and-drop kanban Backlog → In Pro…[trunc 2843]",
+ "links": [],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "instantly on-chain when work is approved. Get started Learn more No credit card Free to start Solana wallet ready How it works From task to payout in three steps No spreadsheets, no Discord DMs about who got paid what. The whole loop lives in one place. 01 Create a project & post tasks Spin up a project, invite teammat"
+  },
+  {
+   "k": "payout",
+   "w": "paid. Contributors connect a Phantom or Backpack wallet, managers approve a submission, and the USDC bounty is transferred on-chain — every payout backed by a verifiable transaction signature anyone can audit. The platform stays useful for traditional teams too: roles, projects and reviews work exactly the same whether"
+  },
+  {
+   "k": "payout",
+   "w": "exactly the same whether you connect a wallet on day one or much later. Connect wallet & try See the leaderboard What lives on-chain Bounty payouts (amount, currency, tx signature) Recipient wallet address Task that earned the payment What stays private (off-chain, RLS-protected) Project & task content Comments and sub"
+  },
+  {
+   "k": "wallet",
+   "w": "istributed teams, and pay contributors instantly on-chain when work is approved. Get started Learn more No credit card Free to start Solana wallet ready How it works From task to payout in three steps No spreadsheets, no Discord DMs about who got paid what. The whole loop lives in one place. 01 Create a project & post "
+  },
+  {
+   "k": "wallet",
+   "w": "en they're ready for review. 03 Approve & pay on Solana Managers review the submission and release the bounty straight to the contributor's wallet — no invoices, no delays. Features Everything a bounty-driven team needs Built for open-source maintainers, DAO operators, and remote teams that pay for outcomes. Drag-and-d"
+  },
+  {
+   "k": "wallet",
+   "w": "ks BountyBoard uses Solana for the part of project work that actually needs trust: getting paid. Contributors connect a Phantom or Backpack wallet, managers approve a submission, and the USDC bounty is transferred on-chain — every payout backed by a verifiable transaction signature anyone can audit. The platform stays "
+  },
+  {
+   "k": "usdc",
+   "w": "ed Project management, settled on Solana Ship the work. Earn the bounty. BountyBoard turns your roadmap into a marketplace. Post tasks with USDC bounties, collaborate in a kanban built for distributed teams, and pay contributors instantly on-chain when work is approved. Get started Learn more No credit card Free to sta"
+  },
+  {
+   "k": "usdc",
+   "w": "hole loop lives in one place. 01 Create a project & post tasks Spin up a project, invite teammates, and break the work into tasks. Attach a USDC bounty to anything you want done. 02 Contributors claim & ship Members claim open tasks, work in the open, and submit a deliverable URL when they're ready for review. 03 Appro"
+  },
+  {
+   "k": "usdc",
+   "w": "drop kanban Backlog → In Progress → Review → Done. Status, priority, deadlines and assignees built in. Bounties on every task Price work in USDC. Contributors see exactly what each task pays before they claim it. Role-based access Admin, manager, contributor. Row-level security ensures members only see projects they be"
+  },
+  {
+   "k": "claim",
+   "w": "t tasks Spin up a project, invite teammates, and break the work into tasks. Attach a USDC bounty to anything you want done. 02 Contributors claim & ship Members claim open tasks, work in the open, and submit a deliverable URL when they're ready for review. 03 Approve & pay on Solana Managers review the submission and r"
+  },
+  {
+   "k": "claim",
+   "w": "ject, invite teammates, and break the work into tasks. Attach a USDC bounty to anything you want done. 02 Contributors claim & ship Members claim open tasks, work in the open, and submit a deliverable URL when they're ready for review. 03 Approve & pay on Solana Managers review the submission and release the bounty str"
+  },
+  {
+   "k": "claim",
+   "w": "rity, deadlines and assignees built in. Bounties on every task Price work in USDC. Contributors see exactly what each task pays before they claim it. Role-based access Admin, manager, contributor. Row-level security ensures members only see projects they belong to. Public leaderboard Lifetime on-chain earnings ranked a"
+  },
+  {
+   "k": "bounty",
+   "w": "BountyBoard — Project management with on-chain bounties Bounty Board How it works Features On-chain Sign in Get started Project management, settled on Solana Ship the work. Earn th"
+  },
+  {
+   "k": "bounty",
+   "w": "BountyBoard — Project management with on-chain bounties Bounty Board How it works Features On-chain Sign in Get started Project management, settled on Solana Ship the work. Earn the bounty. BountyBoard turns your roadmap into a marketpl"
+  },
+  {
+   "k": "bounty",
+   "w": "hain bounties Bounty Board How it works Features On-chain Sign in Get started Project management, settled on Solana Ship the work. Earn the bounty. BountyBoard turns your roadmap into a marketplace. Post tasks with USDC bounties, collaborate in a kanban built for distributed teams, and pay contributors instantly on-cha"
+  },
+  {
+   "k": "how it works",
+   "w": "BountyBoard — Project management with on-chain bounties Bounty Board How it works Features On-chain Sign in Get started Project management, settled on Solana Ship the work. Earn the bounty. BountyBoard turns your roadmap into a marketplace. Post tas"
+  },
+  {
+   "k": "how it works",
+   "w": "ams, and pay contributors instantly on-chain when work is approved. Get started Learn more No credit card Free to start Solana wallet ready How it works From task to payout in three steps No spreadsheets, no Discord DMs about who got paid what. The whole loop lives in one place. 01 Create a project & post tasks Spin up"
+  },
+  {
+   "k": "how it works",
+   "w": "st a bounty, and pay your first contributor on Solana — all in the next few minutes. Sign up free BountyBoard — pay for outcomes, on-chain. How it works Features Sign in Edit with"
+  }
+ ]
+}

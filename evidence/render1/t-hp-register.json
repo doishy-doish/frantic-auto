@@ -1,0 +1,39 @@
+{
+ "name": "hp-register",
+ "url": "https://dashboard.hackenproof.com/register",
+ "rendered": true,
+ "status": 200,
+ "ct": "rendered-dom",
+ "bytes": 24085,
+ "textLen": 599,
+ "head": "> Register and learn to hack as a bounty hunter - Hackenproof Already have an account? Log in Start hacking today! Enter your details below to create an account Sign up with Google Or Nickname 32 Email Password 64 ● Lowercase letter ● Uppercase letter ● Number ● Minimum 8 characters Confirm password 64 Search engine (Google, Bing, etc.) Twitter LinkedIn Referral YouTube I have read and accept the Terms and Conditions and the Privacy Notice I would like to receive news, notifications and other messages from Hackenproof Create account 2026 Ⓒ HackenProof Blog Docs Contact us Privacy Notice Terms",
+ "links": [
+  {
+   "h": "https://hackenproof.com/HackenProof_Terms_and_Conditions.pdf",
+   "t": "Terms and Conditions"
+  },
+  {
+   "h": "https://docs.hackenproof.com/",
+   "t": "Docs"
+  },
+  {
+   "h": "https://hackenproof.com/HackenProof_Terms_and_Conditions.pdf",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "bounty",
+   "w": "> Register and learn to hack as a bounty hunter - Hackenproof Already have an account? Log in Start hacking today! Enter your details below to create an account Sign up with Google Or Nickname 32 Email Password 64 "
+  },
+  {
+   "k": "terms",
+   "w": " ● Minimum 8 characters Confirm password 64 Search engine (Google, Bing, etc.) Twitter LinkedIn Referral YouTube I have read and accept the Terms and Conditions and the Privacy Notice I would like to receive news, notifications and other messages from Hackenproof Create account 2026 Ⓒ HackenProof Blog Docs Contact us P"
+  },
+  {
+   "k": "terms",
+   "w": "ke to receive news, notifications and other messages from Hackenproof Create account 2026 Ⓒ HackenProof Blog Docs Contact us Privacy Notice Terms"
+  }
+ ]
+}
