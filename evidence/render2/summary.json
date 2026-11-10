@@ -1,0 +1,22 @@
+{
+ "stamp": "render2",
+ "takenAt": "2026-11-10T20:25:48.449Z",
+ "depth": 0,
+ "targets": [
+  {
+   "name": "ub-bounties",
+   "status": 200,
+   "bytes": 24539
+  },
+  {
+   "name": "bp-app",
+   "status": 200,
+   "bytes": 18461
+  },
+  {
+   "name": "tb-browse",
+   "status": 200,
+   "bytes": 60101
+  }
+ ]
+}

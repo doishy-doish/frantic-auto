@@ -1,0 +1,31 @@
+{
+ "name": "bp-app",
+ "url": "https://bountypay.luccilabs.xyz/app",
+ "rendered": true,
+ "status": 200,
+ "ct": "rendered-dom",
+ "bytes": 18461,
+ "textLen": 85,
+ "head": "Bounties | BountyPay BountyPay Log in Open Bounties Unable to load bounties Try again",
+ "links": [],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "bounty",
+   "w": "Bounties | BountyPay BountyPay Log in Open Bounties Unable to load bounties Try again"
+  },
+  {
+   "k": "bounty",
+   "w": "Bounties | BountyPay BountyPay Log in Open Bounties Unable to load bounties Try again"
+  }
+ ],
+ "apiCalls": [
+  "https://bountypay.luccilabs.xyz/api/oauth/user",
+  "https://bountypay.luccilabs.xyz/api/bounties/open",
+  "https://bountypay.luccilabs.xyz/api/beta/check",
+  "https://bountypay.luccilabs.xyz/api/registry",
+  "https://bountypay.luccilabs.xyz/api/network/env",
+  "https://bountypay.luccilabs.xyz/api/network/default?group=mainnet",
+  "https://api.web3modal.org/appkit/v1/config?projectId=73b4fe978f9e3084af5e7c7595365793&st=appkit&sv=html-core-1.7.8"
+ ]
+}
