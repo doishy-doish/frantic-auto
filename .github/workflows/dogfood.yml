@@ -1,9 +1,11 @@
 name: frantic-dogfood
 # Claim -> drive extension in real Chromium -> evidence -> preflight -> deliver.
 # Triggers stay dispatch ONLY — never add pull_request/schedule.
-# Secrets (repo Settings -> Secrets): FRANTIC_AGENT_KID, FRANTIC_AGENT_TOKEN.
-# Inputs at dispatch: bounty (number), ext (Chrome Web Store ID or CRX url),
-#   tasks (JSON array of {url, action, selector, value} — per-brief, see README).
+# Secrets (repo Settings -> Secrets): SCRAMBLE (token wrapper key).
+# Optional: FRANTIC_AGENT_KID (public id, defaults to agent-4bc19b in code),
+# FRANTIC_AGENT_TOKEN (direct token; empty = resolve from keys/frantic-token.json).
+# Inputs at dispatch: bounty (number). EXT/TASKS optional: empty EXT derives
+# the extension from the sealed claim brief; empty TASKS runs a launch+shot smoke.
 on:
   workflow_dispatch:
     inputs:
@@ -12,10 +14,11 @@ on:
         required: true
         default: "147"
       ext:
-        description: "Extension: CWS id, CRX url, or unpacked dir in repo"
-        required: true
+        description: "Extension: CWS id, CRX url, or unpacked dir in repo (empty = derive from brief)"
+        required: false
+        default: ""
       tasks:
-        description: 'JSON task script, e.g. [{"url":"https://example.com","action":"shot"}]'
+        description: 'JSON task script, e.g. [{"url":"https://example.com","action":"shot"}] (empty = launch+shot smoke)'
         required: false
         default: "[]"
 permissions:
@@ -31,7 +34,7 @@ jobs:
           node-version: 20
       - run: npm i -g playwright@latest && npx playwright install chromium --with-deps
       # fail BEFORE the claim (fuse starts inside dogfood.mjs) on syntax errors
-      - run: node --check scripts/dogfood.mjs && node --check scripts/ext-audit.js && node --check scripts/token.mjs
+      - run: node --check scripts/dogfood.mjs && node --check scripts/deliver.mjs && node --check scripts/ext-audit.js && node --check scripts/token.mjs
       # fixture self-test: proves the audit fires BEFORE anything is staked
       - run: node scripts/ext-audit.test.mjs
       - run: node scripts/dogfood.mjs
@@ -39,7 +42,7 @@ jobs:
           FRANTIC_BASE: https://gofrantic.com
           FRANTIC_AGENT_KID: ${{ secrets.FRANTIC_AGENT_KID }}
           FRANTIC_AGENT_TOKEN: ${{ secrets.FRANTIC_AGENT_TOKEN }}
-          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }} # preferred: token resolves from keys/frantic-token.json, no new secret needed
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }} # token resolves from keys/frantic-token.json, no new secret needed
           BOUNTY: ${{ inputs.bounty }}
           EXT: ${{ inputs.ext }}
           TASKS: ${{ inputs.tasks }}
@@ -49,5 +52,15 @@ jobs:
           git add evidence/ || true
           git diff --cached --quiet || git commit -m "dogfood evidence bounty $BOUNTY $(date -u +%FT%TZ)"
           git push
+          echo "EVIDENCE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
         env:
           BOUNTY: ${{ inputs.bounty }}
+      - run: node scripts/deliver.mjs
+        env:
+          FRANTIC_BASE: https://gofrantic.com
+          FRANTIC_AGENT_KID: ${{ secrets.FRANTIC_AGENT_KID }}
+          FRANTIC_AGENT_TOKEN: ${{ secrets.FRANTIC_AGENT_TOKEN }}
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }}
+          BOUNTY: ${{ inputs.bounty }}
+          REPO: ${{ github.repository }}
+          EVIDENCE_SHA: ${{ env.EVIDENCE_SHA }}
