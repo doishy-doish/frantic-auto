@@ -1,0 +1,5 @@
+- Installed probe-ext v1 and launched headful Chromium with --load-extension.
+- Manifest audit: score 90; findings: none. Full audit in audit.json.
+- Exercised: goto https://example.com -> shot; popup shot. Screenshots: 2.
+- Console (4) and network (31 requests) captured in run.json; zero pageerrors.
+- Limitation: probe packet for contract discovery; real brief flows run at claim time.
