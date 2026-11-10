@@ -143,6 +143,8 @@ for (const s of steps) {
   if (s.action === "fill") { await page.fill(s.selector, s.value || "", { timeout: 15000 }); log.steps.push(`fill ${s.selector}`); }
   if (!s.action || s.action === "shot") { shots++; await page.screenshot({ path: `${evDir}/shot-${shots}.png`, fullPage: false }); log.steps.push(`shot-${shots}.png @ ${page.url()}`); }
 }
+// guarantee the required screenshot slot: at least one real capture per run
+if (shots === 0) { shots++; await page.screenshot({ path: `${evDir}/shot-${shots}.png`, fullPage: false }); log.steps.push(`shot-${shots}.png @ ${page.url()} (guaranteed)`); }
 log.network = summarizeNet(net);
 log.audit = { score: fullAudit.score, findings: fullAudit.findings, secrets: fullAudit.secrets };
 fs.writeFileSync(`${evDir}/audit.json`, JSON.stringify(fullAudit, null, 1));
