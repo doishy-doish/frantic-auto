@@ -5,21 +5,23 @@ name: agent-browser
 # (credentials + secret query params redacted) before fetch AND before commit, so a future
 # authed-URL dispatch cannot land secrets in the public repo. Stdout stays quiet
 # (one status line, no bodies). contents:write exists ONLY because this workflow commits
-# evidence/ back (same pattern as dogfood.yml).
-# Inputs: targets (JSON [{name,url}], max 12), stamp (evidence dir name).
-# Needs NO secrets. Writes evidence/<stamp>/ + uploads artifact browse-<stamp>.
-# Reads: evidence/<stamp>/summary.json + t-<name>.json via contents API or artifact.
+# evidence/ back (same pattern as dogfood.yml). Latency trims: no artifact upload (contents
+# API is the read path), preinstalled-node fast path, DEPTH follows links in-run.
 on:
   workflow_dispatch:
     inputs:
       targets:
-        description: 'JSON array, e.g. [{"name":"opire-app","url":"https://app.opire.dev/"}]'
+        description: 'JSON array, e.g. [{"name":"opire-app","url":"https://app.opire.dev/"}] or [{"name":"q","search":{"engine":"ddg","query":"…"}}]'
         required: false
-        default: '[{"name":"opire-app","url":"https://app.opire.dev/"},{"name":"opire-home","url":"https://opire.dev/"},{"name":"opire-faqs","url":"https://opire.dev/faqs"},{"name":"opire-startup","url":"https://opire.dev/startup"}]'
+        default: '[{"name":"opire-app","url":"https://app.opire.dev/"}]'
       stamp:
         description: 'Evidence dir name under evidence/'
         required: false
         default: 'run'
+      depth:
+        description: '0 = targets only, 1 = also follow interesting links in-run (one run does hop chains)'
+        required: false
+        default: '0'
 permissions:
   contents: write
 jobs:
@@ -28,7 +30,11 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - id: nodecheck
+        run: |
+          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4
+        if: steps.nodecheck.outputs.ok != 'true'
         with:
           node-version: 20
       - run: node --check scripts/browse.mjs
@@ -36,6 +42,7 @@ jobs:
         env:
           TARGETS_JSON: ${{ inputs.targets }}
           STAMP: ${{ inputs.stamp }}
+          DEPTH: ${{ inputs.depth }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           git config user.name "agent-browser"
@@ -45,7 +52,3 @@ jobs:
           git push
         env:
           STAMP: ${{ inputs.stamp }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: browse-${{ inputs.stamp }}
-          path: evidence/${{ inputs.stamp }}/
