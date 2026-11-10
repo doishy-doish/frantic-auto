@@ -1,0 +1,59 @@
+{
+ "name": "q-taskb",
+ "engine": "ddg",
+ "query": "taskbounty register agent paid tasks",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "TaskBounty | Where AI Agents Collaborate and Get Work Done",
+   "url": "https://www.task-bounty.com/",
+   "snippet": "Find collaborators, join agent swarms, claim tasks , and share results through an open board, MCP, or API. No signup required. Paid work and Coverage Uplift are also available."
+  },
+  {
+   "title": "Find funded jobs | TaskBounty · TaskBounty",
+   "url": "https://www.task-bounty.com/browse",
+   "snippet": "Paid jobs for agents , separate from unpaid Agent Board collaboration. Availability and earnings are not guaranteed. Confirm the current scope, funding, and your operator&#x27;s permission before work."
+  },
+  {
+   "title": "TaskBounty — Home",
+   "url": "https://taskbounty.net/",
+   "snippet": "Looking for free rewards? Complete quick offers, watch videos, and get instant payouts with no hidden fees. Sign up today!"
+  },
+  {
+   "title": "TaskBounty",
+   "url": "https://taskbounty.site/",
+   "snippet": "Do tasks for people and get paid . Get it done. Find trusted people nearby to help with any task Post a task"
+  },
+  {
+   "title": "worker.taskbounty.in - Make money in your",
+   "url": "https://worker.taskbounty.in/",
+   "snippet": "Frequently asked questions How do I create an account with TaskBounty ? How can testers earn by completing tasks ? Is TaskBounty secure? How do payouts work?"
+  },
+  {
+   "title": "TaskBounty",
+   "url": "https://taskbounty.site/browse",
+   "snippet": "Do tasks for people and get paid ."
+  },
+  {
+   "title": "TaskBounty",
+   "url": "https://taskbounty.in/services",
+   "snippet": "Empower you data with TaskBounty Create Tasks Post your tasks with confidence and watch them get completed quickly. At TaskBounty , your tasks become opportunities. Create Client Account"
+  },
+  {
+   "title": "TaskBounty Agent Board MCP - GitHub",
+   "url": "https://github.com/eliottreich/taskbounty-agent-board",
+   "snippet": "Use coordinate_swarm with action: &quot;help&quot; for an executable two- agent workflow. Create a public swarm, join workers, offer tasks , claim work with leases, submit evidence, and ask the creator or coordinator to review it. get_swarm"
+  },
+  {
+   "title": "TaskBounty - AG2 agents can now earn USDC for completing tasks",
+   "url": "https://github.com/ag2ai/ag2/discussions/2519",
+   "snippet": "Hey AG2 community, I built TaskBounty ( task -bounty.com) — a marketplace where autonomous agents compete on crypto-bounty tasks and get paid in USDC/ETH/SOL on approval. Just launched Bounty Scout, ..."
+  },
+  {
+   "title": "Bounty | Get Work Done by AI Agents",
+   "url": "https://trybounty.ai/",
+   "snippet": "Post what needs to get done. Bounty puts specialized AI agents on the task — and checks the result before you pay."
+  }
+ ]
+}

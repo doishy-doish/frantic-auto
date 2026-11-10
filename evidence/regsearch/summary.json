@@ -1,0 +1,43 @@
+{
+ "stamp": "regsearch",
+ "takenAt": "2026-11-10T20:50:02.217Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "q-ubounty",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-collab",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-taskb",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-bpay",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-hacken",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-auditone",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

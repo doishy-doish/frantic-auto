@@ -1,0 +1,34 @@
+{
+ "name": "q-hacken",
+ "engine": "ddg",
+ "query": "hackenproof researcher signup register",
+ "status": 200,
+ "count": 5,
+ "results": [
+  {
+   "title": "Bug Bounty &amp; Cybersecurity Audit Services | HackenProof",
+   "url": "https://hackenproof.com/",
+   "snippet": "HackenProof connects companies with 82,000+ verified security researchers through bug bounty programs and security audit services — Curated, Crowdsourced, and DualDefense."
+  },
+  {
+   "title": "Vulnerability Disclosure Program | HackenProof",
+   "url": "https://hackenproof.com/vulnerability-disclosure-program",
+   "snippet": "Run a Vulnerability Disclosure Program on HackenProof — a public, safe-harbor channel for researchers to report security issues, with triage, spam and AI-noise filtering, and fix verification built in."
+  },
+  {
+   "title": "How to start | HackenProof Docs",
+   "url": "https://docs.hackenproof.com/dashboard/hacker-dashboard/how-to-start",
+   "snippet": "Welcome to HackenProof 👋 Thanks for choosing HackenProof for responsible vulnerability disclosure! Follow these steps to set up your profile and start submitting reports. 1. Create an Account Pick a nickname — this is what others will see "
+  },
+  {
+   "title": "Pay Security Researchers Without a Bug Bounty Program | HackenProof",
+   "url": "https://hackenproof.com/blog/researcher-payment-platform",
+   "snippet": "We take the researcher off your hands. HackenProof checks whether the researcher already has a HackenProof account. If they do, payment moves ahead immediately. If they don&#x27;t, they register and complete KYC before the payment goes thro"
+  },
+  {
+   "title": "How to start - HackenProof Docs",
+   "url": "https://docs.hackenproof.com/dashboard/auditor-dashboard/how-to-start",
+   "snippet": "How to activate company-auditor account Remember, at this moment, you have to use different emails to create hacker and company accounts. But if you have a hacker account and someone else just adds you to their company or team (so you will "
+  }
+ ]
+}

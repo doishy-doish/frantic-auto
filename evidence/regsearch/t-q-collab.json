@@ -1,0 +1,59 @@
+{
+ "name": "q-collab",
+ "engine": "ddg",
+ "query": "collaborators.build solver escrow USDC Solana how it works",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Collaborators - GitHub Bounty Marketplace",
+   "url": "https://collaborators.build/",
+   "snippet": "How it works Find GitHub issues with USDC bounties, solve them with pull requests, and get paid automatically when your solution is merged. Our bot tracks everything and ensures fair, transparent payments. 1Browse GitHub issues and add USDC"
+  },
+  {
+   "title": "GitHub - al-paterson/solana-escrow-protocol: On-chain USDC escrow in ...",
+   "url": "https://github.com/al-paterson/solana-escrow-protocol",
+   "snippet": "An on-chain escrow program for funding deals in USDC . A deal is created with a target amount and a deadline, backers fund it , and the money leaves the vault by exactly three paths: released to the operator after both sides approve, refund"
+  },
+  {
+   "title": "Building a Trustless Escrow Smart Contract on Solana: The ... - Medium",
+   "url": "https://medium.com/@d7511162/building-a-trustless-escrow-smart-contract-on-solana-the-ultimate-guide-by-dhruv-patel-1fa7b41a63ac",
+   "snippet": "Building a Trustless Escrow Smart Contract on Solana : The Ultimate Guide By Dhruv patel Dhruv Patel Follow 16 min read"
+  },
+  {
+   "title": "GitHub - kobby-pentangeli/solana-escrow: An escrow program (smart ...",
+   "url": "https://github.com/kobby-pentangeli/solana-escrow",
+   "snippet": "The on-chain escrow program (written in Rust) is heavily inspired by the Solana Escrow program by Paul Schaaf."
+  },
+  {
+   "title": "PACT — Clear commitments. Shared records.",
+   "url": "https://builtwithpact.com/",
+   "snippet": "Plan everyday services, shared projects, and handovers with editable AI agreements. Invite your partner, or try a separate direct test-SOL transfer with a receipt on Solana devnet."
+  },
+  {
+   "title": "Solana Escrow Program Tutorial | Build an Escrow Smart Contract in ...",
+   "url": "https://www.youtube.com/watch?v=8FUlQda-8fU",
+   "snippet": "Learn how to build an escrow program on Solana step by step as part of this Solana Roadmap Series. In this tutorial, we create a Solana escrow smart contract..."
+  },
+  {
+   "title": "Escrow System | Solvela",
+   "url": "https://docs.solvela.ai/docs/concepts/escrow",
+   "snippet": "How it works Agent gets a 402 response The 402 response includes both exact and escrow payment options in the accepts array. The escrow option includes escrow_program_id. Agent builds a deposit transaction The agent builds a signed Solana t"
+  },
+  {
+   "title": "quiknode-labs/you-will-build-a-solana-program | DeepWiki",
+   "url": "https://deepwiki.com/quiknode-labs/you-will-build-a-solana-program",
+   "snippet": "An escrow system enables secure, trustless token exchanges between two parties on the Solana blockchain. The program acts as a temporary custodian that holds tokens from one party until predetermined conditions are met, then executes the ex"
+  },
+  {
+   "title": "Building a Trustless Escrow Contract on Solana with Anchor",
+   "url": "https://medium.com/@paullysmith.sol/building-a-trustless-escrow-contract-on-solana-with-anchor-4e03c4d2ccc0",
+   "snippet": "Building a Trustless Escrow Contract on Solana with Anchor An escrow program bridges that gap by holding each side&#x27;s tokens until preset conditions are satisfied, automating settlement and …"
+  },
+  {
+   "title": "3.1. Solana Escrow Architecture Explained — Make, Take, Refund | Part 1",
+   "url": "https://www.youtube.com/watch?v=JiSAgNe14oQ",
+   "snippet": "In Part 1 of this Solana escrow series, I break down: 🔹 What an escrow is, explained in plain language — using a simple example of two parties (A and B) swapping diamonds and squares through ..."
+  }
+ ]
+}

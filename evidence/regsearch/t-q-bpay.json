@@ -1,0 +1,59 @@
+{
+ "name": "q-bpay",
+ "engine": "ddg",
+ "query": "BountyPay luccilabs app bounty escrow",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Bounties | BountyPay",
+   "url": "https://bountypay.luccilabs.xyz/app",
+   "snippet": "Browse open bounties and start earning crypto for your open source contributions."
+  },
+  {
+   "title": "BountyPay - Automated GitHub Bounty Payments",
+   "url": "https://bountypay.luccilabs.xyz/",
+   "snippet": "Contributors link their wallet through BountyPay . When their PR is merged and closes a bounty issue, payment is automatically transferred to their linked wallet. If the bounty deadline passes without a merged PR, sponsors can request a ref"
+  },
+  {
+   "title": "GitHub - lucci-xyz/bounty: Instant payments for open-source ...",
+   "url": "https://github.com/lucci-xyz/bounty",
+   "snippet": "Automated, trust-minimised bounty payouts for open-source contributions. Fund with USDC on Base or MUSD on Mezo and let BountyPay handle the rest."
+  },
+  {
+   "title": "BountyPay - Sato Hub",
+   "url": "https://satohub.ai/resources/bountypay",
+   "snippet": "Overview BountyPay ( Lucci Labs) adds a Create a bounty action to GitHub issues. The funder picks a network and escrows funds; per its README it releases them to the contributor&#x27;s wallet when a pull request closes the issue, or refunds"
+  },
+  {
+   "title": "Announcing Mezo Hackathon Winners",
+   "url": "https://mezo.org/blog/mezo-hackathon-winners",
+   "snippet": "🥈 2nd place - BountyPay : MUSD payouts wired into GitHub Repo: BountyPay Lead: LucciLabs BountyPay connects GitHub issues to automatic MUSD payouts on Mezo. How it works A maintainer installs the BountyPay GitHub App . On any issue, they c"
+  },
+  {
+   "title": "Bounty - Get Rich Making Content",
+   "url": "https://www.bounty.app/",
+   "snippet": "Get rich making content Link an Instagram or TikTok account to a company"
+  },
+  {
+   "title": "Bounty",
+   "url": "https://link.bounty.app/",
+   "snippet": "Bounty ... Bounty"
+  },
+  {
+   "title": "Lucci - LinkedIn",
+   "url": "https://www.linkedin.com/company/lucci-labs",
+   "snippet": "Lucci Labs builds infrastructure and consumer-grade products at the intersection of AI and markets. We help teams coordinate incentives and move money with BountyPay , and help users understand and ..."
+  },
+  {
+   "title": "BountyEscrow",
+   "url": "https://bountyescrow.xyz/",
+   "snippet": "Arc Testnet · USDC escrow Hunt critical bugs. Get paid with certainty. Bounty programs with rewards locked before the first report. Researchers get transparent pools and direct USDC settlement; owners only pay validated findings."
+  },
+  {
+   "title": "Earn Crypto Instantly for Open Source Work | BountyPay",
+   "url": "https://www.youtube.com/watch?v=fm-Y88apoTg",
+   "snippet": "BountyPay by Lucci lets developers get paid instantly in crypto for their open-source contributions.No waiting, no middlemen — just transparent, on-chain bou..."
+  }
+ ]
+}

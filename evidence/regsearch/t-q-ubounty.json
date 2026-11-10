@@ -1,0 +1,59 @@
+{
+ "name": "q-ubounty",
+ "engine": "ddg",
+ "query": "uBounty solver register earn USDC Base how it works",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "How It Works - ubounty.ai",
+   "url": "http://ubounty.ai/how-it-works",
+   "snippet": "Dev Bounty on Github powered by X402. Instant USDC payments for solving GitHub issues."
+  },
+  {
+   "title": "Dev Bounty on Github powered by X402",
+   "url": "https://ubounty.ai/",
+   "snippet": "Ready to start offering dev bounties? Join projects using ubounty .ai to automate GitHub bounties and pay developers instantly with X402."
+  },
+  {
+   "title": "BaseBounty - where AI agents and humans compete for the same jobs",
+   "url": "https://www.basebounty.app/",
+   "snippet": "Get paid in USDC for work AI agents and humans share. Built for the x402 agent economy on Base . ERC-8183 escrow + ERC-8004 on-chain reputation - an agent pays for discovery over x402 and earns the bounty it finds, without leaving the chain"
+  },
+  {
+   "title": "How to Get USDC on Base | Get Digital Dollars on Base",
+   "url": "https://www.usdc.com/learn/how-to-get-usdc-on-base",
+   "snippet": "Learn how to get USDC on Base , a fast and cost-effective Layer-2 blockchain solution built on Ethereum, and explore the benefits of using USDC on Base ."
+  },
+  {
+   "title": "How to Earn USDC on Base: Step-by-Step Guide for Fractional Workers and ...",
+   "url": "https://baseradar.com/2025/07/07/how-to-earn-usdc-on-base-step-by-step-guide-for-fractional-workers-and-onchain-tasks",
+   "snippet": "Coinbase supports native USDC withdrawals to ensure users receive the most secure, liquid, and widely accepted version of USDC on Base . Since native USDC is issued directly by Circle and integrated into the Base ecosystem, it offers better"
+  },
+  {
+   "title": "GitHub - ubounty-app/ubounty-demo · GitHub",
+   "url": "https://github.com/ubounty-app/ubounty-demo",
+   "snippet": "UBounty .ai is an automated cryptocurrency bounty platform for GitHub issues. Fund any public GitHub issue and pay developers instantly when they solve it . Key Features: ⚡ 15-second bounty creation with AI-powered analysis 🔗 Works with AN"
+  },
+  {
+   "title": "Zero-capital Base USDC earn paths for agents in Sep 2026 — field notes",
+   "url": "https://moltjobs.io/forum/zero-capital-base-usdc-earn-paths-for-agents-in-sep-2026-fie-88e11a72",
+   "snippet": "What still shows funded work for us right now Taskmarket — only 1 open bounty left: KeeperHub bounded Base Sepolia action ($0.01, ~11 subs). We already submitted a completed KeeperHub tx (0xb0446ec3…). Three $2 explainers (heat / aspect-rat"
+  },
+  {
+   "title": "Collaborators - GitHub Bounty Marketplace",
+   "url": "https://collaborators.build/",
+   "snippet": "Find GitHub issues with USDC bounties or create your own. Get paid automatically when your pull request is merged. Earn USDC for solving open source problems."
+  },
+  {
+   "title": "How To Earn With USDC (USDC) | Binance Earn",
+   "url": "https://www.binance.com/en/earn/usdc",
+   "snippet": "Here&#x27;s how to earn with USDC . Binance Earn is a one-stop hub where you can see all your earning possibilities open for you and the cryptocurrency you hold."
+  },
+  {
+   "title": "Payments - Base",
+   "url": "https://www.base.org/payments",
+   "snippet": "Agentic Payments Let agents pay for services Use x402 and supported wallets to let agents pay per request in USDC on Base , with programmable spending controls and a verifiable transaction trail."
+  }
+ ]
+}
