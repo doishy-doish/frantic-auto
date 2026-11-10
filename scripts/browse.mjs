@@ -132,13 +132,15 @@ async function browseUrl(name, rawUrl) {
     row.bytes = buf.length;
     if (row.ct.includes('json') || /\/api\//.test(rawUrl)) {
       try {
-        const j = JSON.parse(buf.toString('utf8'));
+        const txt = buf.toString('utf8');
+        const j = JSON.parse(txt);
         const items = j.items || j.data || j.bounties || j.issues || j.rewards || (Array.isArray(j) ? j : null);
         row.json = {
           keys: (Array.isArray(j) ? ['<array>'] : Object.keys(j)).slice(0, 20),
           count: Array.isArray(items) ? items.length : (j.count ?? j.total ?? null),
           first: items && items[0] ? JSON.stringify(items[0]).slice(0, 600) : null,
         };
+        if (buf.length < 4096) row.json.body = txt.slice(0, 4000);
       } catch { row.json = { parse: 'fail' }; }
     } else {
       const html = buf.toString('utf8').slice(0, 500000);
