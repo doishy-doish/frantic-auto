@@ -1,0 +1,9 @@
+{
+ "enc": "AES-256-GCM-v1",
+ "nonce": "urxKby7nWWy4XwX0",
+ "data": "IFaq4czADwBxaZZxTXjelmJwy3ySoZheWzcjt6HoV4Pk4pwvqjKVfQ+HWOdJi8LKa5Ylro8NYK+vVie8b98IkqEFogN1",
+ "tag": "dFqrPsTNFaFu3YZZOjrhZA==",
+ "sha256": "5308db61331879e0ad9857bf485f6dd1df154a132075130c4aedc764f7b03f26",
+ "bytes": 69,
+ "date": "2026-11-10"
+}
