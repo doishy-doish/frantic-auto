@@ -1,0 +1,44 @@
+name: agent-browser
+# Minimal agentic browser — public GETs only. Triggers stay dispatch ONLY.
+# Inputs: targets (JSON [{name,url}], max 12), stamp (evidence dir name).
+# Needs NO secrets. Writes evidence/<stamp>/ + uploads artifact browse-<stamp>.
+# Reads: evidence/<stamp>/summary.json + t-<name>.json via contents API or artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: 'JSON array, e.g. [{"name":"opire-app","url":"https://app.opire.dev/"}]'
+        required: false
+        default: '[{"name":"opire-app","url":"https://app.opire.dev/"},{"name":"opire-home","url":"https://opire.dev/"},{"name":"opire-faqs","url":"https://opire.dev/faqs"},{"name":"opire-startup","url":"https://opire.dev/startup"}]'
+      stamp:
+        description: 'Evidence dir name under evidence/'
+        required: false
+        default: 'run'
+permissions:
+  contents: write
+jobs:
+  browse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/browse.mjs
+      - run: node scripts/browse.mjs
+        env:
+          TARGETS_JSON: ${{ inputs.targets }}
+          STAMP: ${{ inputs.stamp }}
+      - run: |
+          git config user.name "agent-browser"
+          git config user.email "agent-browser@users.noreply.github.com"
+          git add evidence/ || true
+          git diff --cached --quiet || git commit -m "browse $STAMP $(date -u +%FT%TZ)"
+          git push
+        env:
+          STAMP: ${{ inputs.stamp }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: browse-${{ inputs.stamp }}
+          path: evidence/${{ inputs.stamp }}/
