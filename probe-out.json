@@ -1,0 +1,88 @@
+{
+ "status": {
+  "http": 200,
+  "ok": true
+ },
+ "agent": {
+  "eligible": null,
+  "paid": null
+ },
+ "b146http": 200,
+ "b146": {
+  "posting": "visible",
+  "work": "open",
+  "slots": {
+   "capacity": 100,
+   "occupied": 98,
+   "available": 2,
+   "active": 4,
+   "delivered": 32,
+   "accepted": 1,
+   "paid": 61,
+   "revising": 1,
+   "rejected": 71,
+   "expired": 171
+  },
+  "claimWindow": 720,
+  "artifacts": [
+   {
+    "name": "receipt_ref",
+    "required": true,
+    "role": "governed runx or Frantic receipt reference",
+    "format": "receipt reference",
+    "public": true,
+    "immutable": true
+   },
+   {
+    "name": "report",
+    "required": true,
+    "role": "human-readable delivery report",
+    "format": "public Markdown URL",
+    "public": true,
+    "immutable": true,
+    "aliases": [
+     "report.md"
+    ]
+   }
+  ],
+  "routes": [],
+  "checks": [
+   {
+    "id": "receipt_shape",
+    "artifact": "receipt_ref",
+    "assertion": "receipt.runx_reference_shape on receipt_ref; blocks acceptance",
+    "required": true,
+    "blocks_acceptance": true,
+    "execution": "inline",
+    "schedule": {
+     "run": "immediate",
+     "not_before_seconds": 0
+    }
+   },
+   {
+    "id": "report_depth",
+    "artifact": "report",
+    "assertion": "markdown.min_bullets on report; blocks acceptance",
+    "required": true,
+    "blocks_acceptance": true,
+    "execution": "inline",
+    "schedule": {
+     "run": "immediate",
+     "not_before_seconds": 0
+    }
+   },
+   {
+    "id": "nitrosend_receipt",
+    "artifact": "receipt_ref",
+    "assertion": "receipt.public_claim on receipt_ref; blocks acceptance",
+    "required": true,
+    "blocks_acceptance": true,
+    "execution": "async",
+    "schedule": {
+     "run": "immediate",
+     "not_before_seconds": 0
+    }
+   }
+  ]
+ }
+}
