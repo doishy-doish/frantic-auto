@@ -15,6 +15,23 @@ const KW = ['payout', 'paid out', 'stripe', 'wallet', 'bank account', 'usdc', 'u
   'get paid', 'how it works', 'weekly', 'monthly', 'terms'];
 const cap = (s, n) => (s.length > n ? s.slice(0, n) + `…[trunc ${s.length}]` : s);
 
+// Scramble hygiene: evidence/ is PUBLIC. Never persist credentials or secret-bearing
+// query params — a future authed-URL dispatch must not land secrets in the repo.
+// Authed targets are out of scope for this lane (public GETs only); params get
+// redacted, which may break such targets by design.
+function sanitizeUrl(u) {
+  try {
+    const x = new URL(u);
+    let hit = false;
+    if (x.username || x.password) { x.username = ''; x.password = ''; hit = true; }
+    const secretKeys = ['key', 'token', 'secret', 'sig', 'signature', 'auth', 'apikey', 'api_key', 'access_token'];
+    for (const k of [...x.searchParams.keys()]) {
+      if (secretKeys.includes(k.toLowerCase())) { x.searchParams.set(k, '…redacted'); hit = true; }
+    }
+    return { url: x.toString().slice(0, 500), sanitized: hit };
+  } catch { return { url: String(u).slice(0, 500), sanitized: false }; }
+}
+
 function textOf(html) {
   return html.replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
@@ -56,14 +73,16 @@ function nextData(html) {
 
 const rows = [];
 for (const t of targets.slice(0, 12)) {
-  const row = { name: t.name, url: t.url };
+  const su = sanitizeUrl(t.url);
+  const row = { name: t.name, url: su.url };
+  if (su.sanitized) row.sanitized = true;
   try {
-    const r = await fetch(t.url, {
+    const r = await fetch(su.url, {
       headers: { 'User-Agent': 'agent-browser/1.0', Accept: 'text/html,application/json' },
       redirect: 'follow',
     });
     row.status = r.status;
-    if (r.url !== t.url) row.final = r.url.slice(0, 200);
+    if (r.url !== su.url) row.final = sanitizeUrl(r.url).url;
     row.ct = (r.headers.get('content-type') || '').slice(0, 60);
     const buf = Buffer.from(await r.arrayBuffer());
     row.bytes = buf.length;
