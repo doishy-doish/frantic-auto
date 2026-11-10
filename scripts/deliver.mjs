@@ -33,14 +33,16 @@ const packet = JSON.parse(fs.readFileSync(`${evDir}/delivery.json`, "utf8"));
 const claimId = packet.claim_id;
 if (!claimId) throw new Error("delivery.json carries no claim_id");
 const raw = `https://raw.githubusercontent.com/${REPO}/${SHA}/${evDir}`;
+// required contract (probed free pre-claim 2026-11-10, ok:true): report, screenshot, activity_query
 const refs = [
   `evidence_json=${raw}/evidence.json`,
   `report=${raw}/report.md`,
+  `activity_query=${raw}/run.json`,
+  `screenshot=${raw}/shot-1.png`,
   `source_url=https://github.com/${REPO}/tree/${SHA}/${evDir}`,
-  `run_log=${raw}/run.json`,
 ];
 for (const f of packet.files || []) {
-  if (f.startsWith("shot-")) refs.push(`${f.replace(/[^A-Za-z0-9]+/g, "_")}=${raw}/${f}`);
+  if (f.startsWith("shot-") && f !== "shot-1.png") refs.push(`${f.replace(/[^A-Za-z0-9]+/g, "_")}=${raw}/${f}`);
 }
 const limited = refs.slice(0, 20);
 console.log(JSON.stringify({ claimId, refs: limited.length, sha: SHA.slice(0, 12) }));
