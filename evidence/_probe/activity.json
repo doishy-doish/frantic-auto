@@ -1,0 +1,19 @@
+{
+ "activity": "dogfood",
+ "extension": {
+  "name": "probe-ext",
+  "version": "1"
+ },
+ "steps": [
+  "goto https://example.com -> https://example.com/",
+  "shot-1.png @ https://example.com/"
+ ],
+ "console": [
+  "log: loaded"
+ ],
+ "network_hosts": [
+  "example.com"
+ ],
+ "started": "2026-11-10T09:40:00Z",
+ "finished": "2026-11-10T09:41:00Z"
+}
