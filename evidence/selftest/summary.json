@@ -1,0 +1,16 @@
+{
+ "stamp": "selftest",
+ "takenAt": "2026-11-10T19:58:33.680Z",
+ "targets": [
+  {
+   "name": "selftest",
+   "status": 200,
+   "bytes": 577
+  },
+  {
+   "name": "redact",
+   "status": 200,
+   "bytes": 577
+  }
+ ]
+}
