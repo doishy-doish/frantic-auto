@@ -1,0 +1,38 @@
+{
+ "stamp": "reginv",
+ "takenAt": "2026-11-10T21:02:57.546Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 5,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "collab-app",
+   "status": 200,
+   "bytes": 41631
+  },
+  {
+   "name": "bb-browse",
+   "status": 200,
+   "bytes": 40243
+  },
+  {
+   "name": "bp-app",
+   "status": 200,
+   "bytes": 18461
+  },
+  {
+   "name": "tb-browse",
+   "status": 200,
+   "bytes": 60103
+  },
+  {
+   "name": "ub-app",
+   "status": 200,
+   "bytes": 40348
+  }
+ ]
+}
