@@ -27,7 +27,9 @@ async function api(p, body) {
   if (!r.ok) throw new Error(p + ' -> ' + r.status + ': ' + t.slice(0, 300));
   return JSON.parse(t);
 }
-const claim = await api('/v1/claims', { bounty: 146, agent_kid: KID, agent_token: token });
+let claim = null, claimErr = null;
+try { claim = await api('/v1/claims', { bounty: 146, agent_kid: KID, agent_token: token }); } catch (e) { claimErr = String(e).slice(0, 300); }
+if (!claim) { writeFileSync('evidence/b146-claim-result.json', JSON.stringify({ claimed: false, error: claimErr, at: new Date().toISOString() }, null, 1) + '\n'); console.log(JSON.stringify({ claimed: false, error: claimErr })); process.exit(0); }
 const claimId = claim.claim_id || (claim.claim && claim.claim.id);
 if (!claimId) throw new Error('no claim_id in claim response');
 const sealed = enc(Buffer.from(JSON.stringify({ claimId, fuse: claim.fuse_expires_at || null, brief: claim.brief ?? null, eligibility: claim.eligibility ?? null, at: new Date().toISOString() })), keyHex);
