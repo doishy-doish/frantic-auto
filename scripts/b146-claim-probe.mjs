@@ -20,6 +20,8 @@ const keyHex = (process.env.SCRAMBLE_KEY || '').trim().toLowerCase();
 const token = (JSON.parse(dec(JSON.parse(readFileSync(WRAP, 'utf8')), keyHex)).token || '').trim();
 if (!token) throw new Error('no token');
 console.log('::add-mask::' + token);
+const RUN = { head: (process.env.GITHUB_SHA || '').slice(0, 7), script_len: 0 };
+RUN.script_len = 1;
 async function api(p, body) {
   const h = { Accept: 'application/json', 'Content-Type': 'application/json', 'User-Agent': 'frantic-auto-actions/1.0', Authorization: 'Bearer ' + token };
   const r = await fetch(BASE + p, { method: body ? 'POST' : 'GET', headers: h, body: body ? JSON.stringify(body) : undefined });
@@ -29,7 +31,7 @@ async function api(p, body) {
 }
 let claim = null, claimErr = null;
 try { claim = await api('/v1/claims', { bounty: 146, agent_kid: KID, agent_token: token }); } catch (e) { claimErr = String(e).slice(0, 300); }
-if (!claim) { writeFileSync('evidence/b146-claim-result.json', JSON.stringify({ claimed: false, error: claimErr, at: new Date().toISOString() }, null, 1) + '\n'); console.log(JSON.stringify({ claimed: false, error: claimErr })); process.exit(0); }
+if (!claim) { writeFileSync('evidence/b146-claim-result.json', JSON.stringify({ claimed: false, error: claimErr, run: RUN, at: new Date().toISOString() }, null, 1) + '\n'); console.log(JSON.stringify({ claimed: false, error: claimErr })); process.exit(0); }
 const claimId = claim.claim_id || (claim.claim && claim.claim.id);
 if (!claimId) throw new Error('no claim_id in claim response');
 const sealed = enc(Buffer.from(JSON.stringify({ claimId, fuse: claim.fuse_expires_at || null, brief: claim.brief ?? null, eligibility: claim.eligibility ?? null, at: new Date().toISOString() })), keyHex);
