@@ -1,0 +1,44 @@
+{
+ "name": "q-ubfunded",
+ "engine": "github:issues",
+ "query": "ubounty.ai/ubounty state:open",
+ "status": 200,
+ "count": 7,
+ "results": [
+  {
+   "title": "ubounty-demo#13 Video e2e demo for Ubounty: X402, Payment, github hook",
+   "url": "https://github.com/ubounty-app/ubounty-demo/issues/13",
+   "snippet": "open  2025-11-14T13:53:02Z"
+  },
+  {
+   "title": "ubounty-demo#9 Complete a test bounty: Submit PR and receive USDC payment",
+   "url": "https://github.com/ubounty-app/ubounty-demo/issues/9",
+   "snippet": "open bounty 2025-11-12T02:59:15Z"
+  },
+  {
+   "title": "gitcoin_co_30#390 [App] uBounty",
+   "url": "https://github.com/gitcoinco/gitcoin_co_30/issues/390",
+   "snippet": "open  2026-05-22T12:29:34Z"
+  },
+  {
+   "title": "ubounty-demo#37 test: Complete test bounty #9 - UBounty flow verification",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/37",
+   "snippet": "open  2026-03-19T02:14:28Z"
+  },
+  {
+   "title": "ubounty-demo#33 test: UBounty contributor flow test (bounty #9)",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/33",
+   "snippet": "open  2026-03-14T04:40:50Z"
+  },
+  {
+   "title": "ubounty-demo#31 Test fix for bounty #30",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/31",
+   "snippet": "open  2026-03-11T12:48:23Z"
+  },
+  {
+   "title": "ubounty-demo#28 test: UBounty contributor flow test (bounty #9)",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/28",
+   "snippet": "open  2026-03-09T16:36:55Z"
+  }
+ ]
+}

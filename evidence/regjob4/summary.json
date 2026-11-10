@@ -1,0 +1,23 @@
+{
+ "stamp": "regjob4",
+ "takenAt": "2026-11-10T21:13:46.909Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "q-ubfunded",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-ubfunded2",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}
