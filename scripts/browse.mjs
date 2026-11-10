@@ -85,11 +85,18 @@ async function renderedHtml(url) {
   try {
     browser = await _pw.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage({ userAgent: 'agent-browser/1.0' });
+    const apiCalls = [];
+    page.on('request', (req) => {
+      const u = req.url();
+      if (/\/(api|graphql|trpc)|_next\/data|supabase|firebase|hasura|rest\/v1/i.test(u) && !/sockjs|socket|analytics|telemetry/i.test(u)) {
+        if (!apiCalls.includes(u) && apiCalls.length < 20) apiCalls.push(u.slice(0, 300));
+      }
+    });
     await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
     await page.waitForTimeout(3000);
     const html = await page.content();
     await browser.close();
-    return { html };
+    return { html, apiCalls };
   } catch (e) { try { await browser?.close(); } catch {} return { error: String(e).slice(0, 160) }; }
 }
 async function browseUrl(name, rawUrl) {
@@ -109,6 +116,7 @@ async function browseUrl(name, rawUrl) {
       row.links = linksOf(html);
       row.nextData = nextData(html);
       row.hits = windows(text);
+      if (rr.apiCalls && rr.apiCalls.length) row.apiCalls = rr.apiCalls;
       return row;
     }
   }
