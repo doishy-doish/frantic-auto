@@ -4,28 +4,46 @@ name: agent-browser
 # evidence/ holds third-party PUBLIC bytes only — never our numbers. URLs are sanitized
 # (credentials + secret query params redacted) before fetch AND before commit, so a future
 # authed-URL dispatch cannot land secrets in the public repo. Stdout stays quiet
-# (one status line, no bodies). contents:write exists ONLY because this workflow commits
-# evidence/ back (same pattern as dogfood.yml). Latency trims: no artifact upload (contents
-# API is the read path), preinstalled-node fast path, DEPTH follows links in-run.
+# (boot line + one status line, no bodies). contents:write exists ONLY because this workflow
+# commits evidence/ back (same pattern as dogfood.yml). Latency trims: no artifact upload
+# (contents API is the read path), preinstalled-node fast path, DEPTH follows links in-run.
+# CASE GUIDE (depth:breadth per case type — full table in scripts/browse.mjs header +
+# src/ops/AGENT_BROWSER.md): discover = wide+shallow (depth 0, 8-12 seeds); inventory =
+# render, don't crawl (depth 0 + apiCalls); proof = narrow+deep (depth 2, docs/faq/pricing
+# only — depth 1 MISSED opire proof pre-depth); api-hunt = depth 1 wide + bundle-mine;
+# repo-mine = raw files via CDN; search-sweep = 6-10 queries, depth 0; chain-read = RPC,
+# don't browse. Depth 1 is the DEFAULT, not the best — pick CASE per question.
 on:
   workflow_dispatch:
     inputs:
       targets:
-        description: 'JSON array, e.g. [{"name":"opire-app","url":"https://app.opire.dev/"}] or [{"name":"q","search":{"engine":"ddg","query":"…"}}]'
+        description: 'JSON array, e.g. [{"name":"opire-app","url":"https://app.opire.dev/"}] or [{"name":"q","search":{"engine":"ddg","query":"…"}}] or [{"name":"escrow","rpc":{"method":"eth_getBalance","params":["0xd0A0…","latest"]}}]'
         required: false
         default: '[{"name":"opire-app","url":"https://app.opire.dev/"}]'
       stamp:
         description: 'Evidence dir name under evidence/'
         required: false
         default: 'run'
+      case:
+        description: 'Preset depth:breadth ratio: discover | inventory | proof | api-hunt | repo-mine | search-sweep | chain-read (explicit depth/render/max_* override it)'
+        required: false
+        default: ''
       depth:
-        description: '0 = targets only, 1 = also follow interesting links in-run (one run does hop chains)'
+        description: '0 = targets only, 1 = follow links in-run, 2 = follow-of-follows (narrow docs/faq/pricing). Overrides CASE default.'
         required: false
-        default: '0'
+        default: ''
       render:
-        description: '0 = plain fetch (fast), 1 = headless Chromium render for JS shells (slower, +2-4 min install)'
+        description: '0 = plain fetch (fast), 1 = headless Chromium render for JS shells (slower, +2-4 min install). Overrides CASE default.'
         required: false
-        default: '0'
+        default: ''
+      max_targets:
+        description: 'Breadth cap: max seed/search/rpc targets (1-12). Overrides CASE default.'
+        required: false
+        default: ''
+      max_follows:
+        description: 'Breadth cap: max in-run follows (0-12). Overrides CASE default.'
+        required: false
+        default: ''
 permissions:
   contents: write
 jobs:
@@ -36,7 +54,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: nodecheck
         run: |
-          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]}')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4
         if: steps.nodecheck.outputs.ok != 'true'
         with:
@@ -48,8 +66,11 @@ jobs:
         env:
           TARGETS_JSON: ${{ inputs.targets }}
           STAMP: ${{ inputs.stamp }}
+          CASE: ${{ inputs.case }}
           DEPTH: ${{ inputs.depth }}
           RENDER: ${{ inputs.render }}
+          MAX_TARGETS: ${{ inputs.max_targets }}
+          MAX_FOLLOWS: ${{ inputs.max_follows }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           git config user.name "agent-browser"
