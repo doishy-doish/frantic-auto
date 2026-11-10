@@ -75,10 +75,43 @@ function nextData(html) {
   } catch { return { parse: 'fail', bytes: m[1].length }; }
 }
 
+const RENDER = process.env.RENDER === '1';
+let _pw = null;
+async function renderedHtml(url) {
+  try {
+    if (!_pw) _pw = (await import('playwright')).chromium;
+  } catch { return { error: 'playwright-missing' }; }
+  let browser = null;
+  try {
+    browser = await _pw.launch({ args: ['--no-sandbox'] });
+    const page = await browser.newPage({ userAgent: 'agent-browser/1.0' });
+    await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+    await page.waitForTimeout(3000);
+    const html = await page.content();
+    await browser.close();
+    return { html };
+  } catch (e) { try { await browser?.close(); } catch {} return { error: String(e).slice(0, 160) }; }
+}
 async function browseUrl(name, rawUrl) {
   const su = sanitizeUrl(rawUrl);
   const row = { name, url: su.url };
   if (su.sanitized) row.sanitized = true;
+  if (RENDER && !/\/api\//.test(rawUrl)) {
+    const rr = await renderedHtml(su.url);
+    if (rr.error) { row.renderError = rr.error; }
+    else {
+      row.rendered = true;
+      const html = rr.html.slice(0, 500000);
+      const text = textOf(html);
+      row.status = 200; row.ct = 'rendered-dom';
+      row.bytes = rr.html.length; row.textLen = text.length;
+      row.head = cap(text, 1200);
+      row.links = linksOf(html);
+      row.nextData = nextData(html);
+      row.hits = windows(text);
+      return row;
+    }
+  }
   try {
     const r = await fetch(su.url, {
       headers: { 'User-Agent': 'agent-browser/1.0', Accept: 'text/html,application/json' },
@@ -112,8 +145,7 @@ async function browseUrl(name, rawUrl) {
   return row;
 }
 
-async function doSearch(engine, query, count = 10, kind = 'repositories') {
-  count = Math.min(Math.max(count || 10, 1), 10);
+async function doSearch(engine, query, count = 10, kind = 'repositories') {  count = Math.min(Math.max(count || 10, 1), 10);
   const UA = { 'User-Agent': 'agent-browser/1.0' };
   if (engine === 'ddg') {
     const r = await fetch('https://html.duckduckgo.com/html/?q=' + encodeURIComponent(query), { headers: UA });
