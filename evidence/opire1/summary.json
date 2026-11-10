@@ -1,0 +1,26 @@
+{
+ "stamp": "opire1",
+ "takenAt": "2026-11-10T19:44:41.436Z",
+ "targets": [
+  {
+   "name": "opire-app",
+   "status": 200,
+   "bytes": 58514
+  },
+  {
+   "name": "opire-home",
+   "status": 200,
+   "bytes": 126550
+  },
+  {
+   "name": "opire-faqs",
+   "status": 404,
+   "bytes": 14452
+  },
+  {
+   "name": "opire-startup",
+   "status": 404,
+   "bytes": 14455
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "name": "opire-home",
+ "url": "https://opire.dev/",
+ "status": 200,
+ "final": "https://opire.dev/home",
+ "ct": "text/html; charset=utf-8",
+ "bytes": 126550,
+ "textLen": 6191,
+ "head": "Opire - the bounty platform for software developers WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Fund Open Source issues Anyone can create bounties in open-source projects and attract contributors, while developers can earn money by solving issues CREATE A BOUNTY EXPLORE REWARDED ISSUES WATCH THE PRODUCT TOUR Stop waiting for an issue to be solved, {reward it} It's easy. Open Source Projects We know that maintaining an open source project is not easy, so you can rely on the community to grow your project and reward their contributions. Developers Helping open source projects by solving issues and also being able to earn money from it! That's the dream of any developer. Teams & supporters Fund a public GitHub issue that matters to you, or join others to increase its reward. You only manage the bounty you create. How Does It Work? Find an issue you want to see solved Browse through the open issues and find the ones you want to see solved. Choose the issues that fit your needs or interests. Create a bounty for that issue Set a bounty to attract developers to tackle the issue. If someone already …[trunc 6191]",
+ "links": [
+  {
+   "h": "/open-startup",
+   "t": "OPEN STARTUP"
+  },
+  {
+   "h": "https://app.opire.dev",
+   "t": "SEE REWARDS"
+  },
+  {
+   "h": "/open-startup",
+   "t": "OPEN STARTUP"
+  },
+  {
+   "h": "https://app.opire.dev",
+   "t": "SEE REWARDS"
+  },
+  {
+   "h": "https://docs.opire.dev/faq",
+   "t": "full FAQ"
+  },
+  {
+   "h": "https://docs.opire.dev/rewards/pricing",
+   "t": "Read costs and payments"
+  },
+  {
+   "h": "/terms-of-service",
+   "t": "Terms of Service"
+  },
+  {
+   "h": "https://docs.opire.dev",
+   "t": "Docs"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "claim",
+   "w": " already set a bounty, you can add more funds to increase the reward. Review the proposed solution Developers can submit a pull request and claim the bounty. Review whether it meets the requirements in the issue. Arrange payment after approval When the pull request meets the issue requirements, arrange payment for your"
+  },
+  {
+   "k": "claim",
+   "w": "ory can use OpireBot commands there. Bounties created there appear on Opire, but people without repository access cannot solve the issue or claim its bounties. Read the full FAQ for the access implications. Who is Opire for? Opire helps code owners enable contributions, developers solve rewarded issues, and teams or su"
+  },
+  {
+   "k": "claim",
+   "w": "m the Opire app. In private repositories, commands are available only to people with repository access when OpireBot is installed. How do I claim a bounty? Submit a pull request that solves the associated issue, then claim its bounties. Each bounty creator reviews the pull request. A claim does not create an automatic "
+  },
+  {
+   "k": "reward",
+   "w": "Opire - the bounty platform for software developers WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Fund Open Source issues Anyone can create bounties in open-source projects and attract contributors, whi"
+  },
+  {
+   "k": "reward",
+   "w": " developers WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Fund Open Source issues Anyone can create bounties in open-source projects and attract contributors, while developers can earn money by solving issues CREATE A BOUNTY EXPLO"
+  },
+  {
+   "k": "reward",
+   "w": "create bounties in open-source projects and attract contributors, while developers can earn money by solving issues CREATE A BOUNTY EXPLORE REWARDED ISSUES WATCH THE PRODUCT TOUR Stop waiting for an issue to be solved, {reward it} It's easy. Open Source Projects We know that maintaining an open source project is not ea"
+  },
+  {
+   "k": "bounty",
+   "w": "Opire - the bounty platform for software developers WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Fund"
+  },
+  {
+   "k": "bounty",
+   "w": "ues Anyone can create bounties in open-source projects and attract contributors, while developers can earn money by solving issues CREATE A BOUNTY EXPLORE REWARDED ISSUES WATCH THE PRODUCT TOUR Stop waiting for an issue to be solved, {reward it} It's easy. Open Source Projects We know that maintaining an open source pr"
+  },
+  {
+   "k": "bounty",
+   "w": "ny developer. Teams & supporters Fund a public GitHub issue that matters to you, or join others to increase its reward. You only manage the bounty you create. How Does It Work? Find an issue you want to see solved Browse through the open issues and find the ones you want to see solved. Choose the issues that fit your n"
+  },
+  {
+   "k": "how it works",
+   "w": "contributions. It's a space where quality work is valued, and you can grow your skills while making a real impact! Join Our Discord Company How it Works? FAQs Blog Community Discord Reddit Twitter Legal Terms of Service Privacy Policy Cookie Policy Support FAQs Contact Us Ko-fi Resource Docs GitHub LinkedIn 2024 - Rewa"
+  },
+  {
+   "k": "terms",
+   "w": "ou can grow your skills while making a real impact! Join Our Discord Company How it Works? FAQs Blog Community Discord Reddit Twitter Legal Terms of Service Privacy Policy Cookie Policy Support FAQs Contact Us Ko-fi Resource Docs GitHub LinkedIn 2024 - Rewarded with Opire 💚"
+  }
+ ]
+}
