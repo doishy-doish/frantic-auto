@@ -1,0 +1,59 @@
+{
+ "name": "q-bugbounty-nokyc",
+ "engine": "ddg",
+ "query": "bug bounty smart contract crypto payout without KYC solidity audit",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Web3 Bug Bounty Programs in 2026: Payouts, Scope, and Strategy",
+   "url": "https://www.smartcontractaudit.com/guides/web3-bug-bounty-programs-2026",
+   "snippet": "Web3 Bug Bounty Programs in 2026: Payouts , Scope, and Strategy Updated 2026-09-28 Web3 bug bounty programs pay security researchers to find and responsibly disclose vulnerabilities in live protocols. Immunefi alone has facilitated over $10"
+  },
+  {
+   "title": "Bug Bounty Programs: Most Rewarding web3 Bug Bounties of 2026 | Immunefi",
+   "url": "https://immunefi.com/bug-bounty/",
+   "snippet": "Review and prevent vulnerabilities in the decentralised web. Check our latest web 3.0 bug bounties and start hunting bugs while getting rewarded."
+  },
+  {
+   "title": "Crypto Bug Bounty Programs 2026 | HackenProof",
+   "url": "https://hackenproof.com/programs?languages=Solidity,Rust&abilities=smart+contract",
+   "snippet": "Hinkal Bug Bounty Hinkal provides privacy infrastructure for stablecoin payments and on-chain financial operations, enabling users and businesses to transact without publicly exposing sensitive financial information such as balances, transa"
+  },
+  {
+   "title": "Crypto &amp; Smart Contract Bug Bounty Platform | Immunefi",
+   "url": "https://immunefi.com/",
+   "snippet": "Crypto and smart contract bug bounty programs. Immunefi has paid $140M+ across 650+ protocols, more than the rest of the market combined."
+  },
+  {
+   "title": "Sherlock — Best Web3 Bug Bounties in 2026: The Highest-Paying Programs ...",
+   "url": "https://sherlock.xyz/post/best-web3-bug-bounties-in-2026-the-highest-paying-programs-on-every-platform",
+   "snippet": "How much do Web3 bug bounty hunters earn? Earnings vary enormously. On Immunefi, the median confirmed payout is around $2,000, while the average is approximately $52,800 (skewed by occasional six- and seven-figure payouts ). Critical smart "
+  },
+  {
+   "title": "Smart Contract Bug Bounties: Beginner&#x27;s Guide To Web3 Bug Hunting",
+   "url": "https://hacken.io/discover/how-to-smart-contracts-bug-hunting/",
+   "snippet": "Wrapping Up Leveraging bug bounty programs, especially for smart contract vulnerabilities, is no longer just an option—it&#x27;s a necessity for all modern Web3 projects, creating an additional earning opportunity for developers and researc"
+  },
+  {
+   "title": "Top Platforms Hosting Web3 Bug Bounty Programs - Hashlock",
+   "url": "https://hashlock.com/blog/top-platforms-hosting-web3-bug-bounty-programs",
+   "snippet": "Top Platforms Hosting Web3 Bug Bounty Programs Web3 bug bounty programs are used by projects to crowdsource smart contract security researchers, auditors, and white hat hackers to help identify vulnerabilities and flaws in code and systems."
+  },
+  {
+   "title": "Awesome-Smart-Contract-Security - GitHub",
+   "url": "https://github.com/saeidshirazi/Awesome-Smart-Contract-Security",
+   "snippet": "Bounty Radar - Free live dashboard of Immunefi bug bounty programs, filterable by no- KYC payout and Safe Harbor status, cross-checked against GitHub code liveness for in-scope repos."
+  },
+  {
+   "title": "Bug Bounty Listing: Keep your IT infrastructure secure | AuditOne",
+   "url": "https://www.auditone.io/bug-bounty",
+   "snippet": "If you&#x27;ve completed a smart contract audit with us, your bounty programme is already partly funded: 20% of your audit fee is automatically allocated to the bounty pool, listed and live the day your contract deploys."
+  },
+  {
+   "title": "Top Crypto Bounty Sites In 2026 - tradersunion.com",
+   "url": "https://tradersunion.com/interesting-articles/crypto-bug-bounties/",
+   "snippet": "Best crypto bounty programs: HackenProof. Focus on smart contract flaws. Immunefi. Target DeFi bugs for crypto payouts . HackerOne. Great for blockchain and beyond. Bugcrowd. Earn from both crypto and web. Intigriti. Offers real-time and re"
+  }
+ ]
+}

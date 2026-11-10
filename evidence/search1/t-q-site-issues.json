@@ -1,0 +1,59 @@
+{
+ "name": "q-site-issues",
+ "engine": "ddg",
+ "query": "site:github.com funded issue bounty USDC reward open source",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "[App] uBounty · Issue #390 · gitcoinco/gitcoin_co_30 - GitHub",
+   "url": "https://github.com/gitcoinco/gitcoin_co_30/issues/390",
+   "snippet": "A developer solves the issue and submits a pull request. When the pull request is merged, GitHub webhook events notify uBounty. The sponsor releases the full bounty payment through x402, sending USDC directly to the developer wallet. uBount"
+  },
+  {
+   "title": "[Bounty] [Bounty $600 USDC] PagedAttention KV-Cache Block ... - GitHub",
+   "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4207",
+   "snippet": "漏洞描述 / Description [ Bounty $600 USDC ] PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption (drain_horizon_table_f52) Automated CI Regression Mirror Notice: Automated CI build and specification relay issue ; manual pull "
+  },
+  {
+   "title": "About GitHub Sponsors for open source contributors",
+   "url": "https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-github-sponsors-for-open-source-contributors",
+   "snippet": "Joining GitHub Sponsors Anyone who contributes to an open source project and lives in a supported region is eligible to become a sponsored developer. Contributions include but are not limited to bug reports, issue triage, code, documentatio"
+  },
+  {
+   "title": "Finding ways to contribute to open source on GitHub",
+   "url": "https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github",
+   "snippet": "Many open source projects use the good first issue or help wanted labels to make it easier for new contributors to find issues to work on. Testing a pull request: You can contribute by merging a pull request into your local copy of the proj"
+  },
+  {
+   "title": "GitHub Bug Bounty",
+   "url": "https://bounty.github.com/rewards.html",
+   "snippet": "Reward Guidelines Every submission is evaluated individually. The amounts below are general guidelines for our public and private programs, not guaranteed payouts. Actual rewards vary based on the affected product, demonstrated impact, expl"
+  },
+  {
+   "title": "Agent Bounty Feed: minimal agent-facing guide (MCP / earn-now / x402 ...",
+   "url": "https://gist.github.com/ciperx/4b5d7a8579b376085982e3043f93e44e",
+   "snippet": "Agent Bounty Feed — a minimal agent-facing guide (MCP / earn-now / x402) The Agent Bounty Feed (ABF) aggregates open , claimable, paid bounties for AI agents, collected hourly from public agent bounty boards (Frantic, Taskmarket, Superteam,"
+  },
+  {
+   "title": "GitHub.com | GitHub Bug Bounty",
+   "url": "https://bounty.github.com/targets/github.html",
+   "snippet": "GitHub employs a number of community and safety features, such as blocking users or locking conversations on issues /discussions/etc. In most cases, bypasses of these features via some edge case will not result in a bounty reward unless the"
+  },
+  {
+   "title": "NativeLink Open Source Bug Bounty Program · GitHub",
+   "url": "https://gist.github.com/MarcusSorealheis/17307f41b6c632cb751c397280c70ed4",
+   "snippet": "We want to buck some of the unsustainable paradigms of open source and support more community members. This document outlines the details of our bounty program, including how to participate, the rewards offered, and the criteria for winning"
+  },
+  {
+   "title": "GitHub - ubounty-app/ubounty-demo · GitHub",
+   "url": "https://github.com/ubounty-app/ubounty-demo",
+   "snippet": "UBounty.ai is an automated cryptocurrency bounty platform for GitHub issues . Fund any public GitHub issue and pay developers instantly when they solve it. Key Features: ⚡ 15-second bounty creation with AI-powered analysis 🔗 Works with ANY"
+  },
+  {
+   "title": "[Bounty] [3 USDC] [Open Competition V2] Write the shortest ... - GitHub",
+   "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/835",
+   "snippet": "赏金平台 / Platform GitHub 原始链接 / Source URL NSPG13/agent-bounties#1060 漏洞描述 / Description [3 USDC ] [ Open Competition V2] Write the shortest deterministic agent earning runbook Funded Open Competition V2 Produce an ordered, machine-readable r"
+  }
+ ]
+}

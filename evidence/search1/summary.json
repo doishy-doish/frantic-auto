@@ -1,0 +1,26 @@
+{
+ "stamp": "search1",
+ "takenAt": "2026-11-10T20:01:10.266Z",
+ "targets": [
+  {
+   "name": "q-bounty-platform",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-bugbounty-nokyc",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-site-issues",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-gh-repos",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

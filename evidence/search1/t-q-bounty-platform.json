@@ -1,0 +1,59 @@
+{
+ "name": "q-bounty-platform",
+ "engine": "ddg",
+ "query": "open source bounty platform earn money pull request crypto USDC",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "OSSTrust — Bug Bounty Treasuries for Open Source",
+   "url": "https://osstrust.org/",
+   "snippet": "Donate USDC to GitHub repositories, rank bug- bounty treasuries, and keep payout control inside guarded Safe vaults."
+  },
+  {
+   "title": "Collaborators - GitHub Bounty Marketplace",
+   "url": "https://collaborators.build/",
+   "snippet": "Find GitHub issues with USDC bounties or create your own. Get paid automatically when your pull request is merged. Earn USDC for solving open source problems."
+  },
+  {
+   "title": "BountyPay - Automated GitHub Bounty Payments",
+   "url": "https://bountypay.luccilabs.xyz/",
+   "snippet": "Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automatically when their pull requests merge. Get started github.com bountypay bot 3 days ago Bounty : 500 USDC"
+  },
+  {
+   "title": "Web3 USDC Bounty Aggregator for Developers · Apify",
+   "url": "https://apify.com/theaurora/bounty-aggregator",
+   "snippet": "Aggregates open USDC and crypto bounties from multiple developer platforms into a single structured dataset. What it does Fetches open bounties from: Collaborators.build — GitHub issues with USDC rewards, paid automatically on PR merge GitH"
+  },
+  {
+   "title": "For AI Agents: Earn USDC, ETH, BTC Fixing Real Bugs · TaskBounty",
+   "url": "https://www.task-bounty.com/for-agents",
+   "snippet": "Find funded JavaScript/TypeScript work for your agent. Sandbox verification supports award review; payment requires approval."
+  },
+  {
+   "title": "Dev Bounty on Github powered by X402",
+   "url": "https://ubounty.ai/",
+   "snippet": "A developer finds the bounty , writes the code, and submits a Pull Request on GitHub. When the PR is reviewed and merged by the repository maintainer, GitHub sends a webhook to ubounty.ai."
+  },
+  {
+   "title": "BountyBoard — Project management with on-chain bounties",
+   "url": "https://bountyboard.site/",
+   "snippet": "BountyBoard uses Solana for the part of project work that actually needs trust: getting paid. Contributors connect a Phantom or Backpack wallet, managers approve a submission, and the USDC bounty is transferred on-chain — every payout backe"
+  },
+  {
+   "title": "How to Make Money with GitHub Bounties (2026 Guide) — BountyHunter",
+   "url": "https://luw8072-gif.github.io/bountyhunter/blog/how-to-make-money-github-bounties.html",
+   "snippet": "Complete guide to making money with GitHub bounties in 2026. Find issues, write fixes, submit PRs, and get paid in crypto . Zero cost, no KYC, real earnings."
+  },
+  {
+   "title": "ClawTasks - Agent-to-Agent Bounty Marketplace",
+   "url": "https://clawtasks.com/docs",
+   "snippet": "ClawTasks is an agent-to-agent bounty marketplace where AI agents can post tasks and earn USDC by completing work for each other. All transactions happen on Base (Ethereum L2) using USDC stablecoins."
+  },
+  {
+   "title": "The Ultimate Crypto Bounty Platform Directory - SageRunner",
+   "url": "https://sagerunner.net/the-ultimate-crypto-bounty-platform-directory/",
+   "snippet": "Superteam Superteam Earn is one of the largest crypto bounty marketplaces in the Solana ecosystem. It connects contributors with projects looking for help in areas such as content creation, community management, design, development, researc"
+  }
+ ]
+}
