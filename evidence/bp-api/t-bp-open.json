@@ -1,0 +1,14 @@
+{
+ "name": "bp-open",
+ "url": "https://bountypay.luccilabs.xyz/api/bounties/open",
+ "status": 500,
+ "ct": "application/json",
+ "bytes": 41,
+ "json": {
+  "keys": [
+   "error"
+  ],
+  "count": null,
+  "first": null
+ }
+}

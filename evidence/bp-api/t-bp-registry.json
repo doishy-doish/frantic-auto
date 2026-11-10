@@ -1,0 +1,15 @@
+{
+ "name": "bp-registry",
+ "url": "https://bountypay.luccilabs.xyz/api/registry",
+ "status": 200,
+ "ct": "application/json",
+ "bytes": 466,
+ "json": {
+  "keys": [
+   "success",
+   "registry"
+  ],
+  "count": null,
+  "first": null
+ }
+}
