@@ -1,0 +1,12 @@
+{
+ "name": "sitemap",
+ "origin": "https://app.opire.dev",
+ "routes": [
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": []
+  }
+ ]
+}
