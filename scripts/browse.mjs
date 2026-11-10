@@ -71,8 +71,67 @@ function nextData(html) {
   } catch { return { parse: 'fail', bytes: m[1].length }; }
 }
 
+async function doSearch(engine, query, count = 10, kind = 'repositories') {
+  count = Math.min(Math.max(count || 10, 1), 10);
+  const UA = { 'User-Agent': 'agent-browser/1.0' };
+  if (engine === 'ddg') {
+    const r = await fetch('https://html.duckduckgo.com/html/?q=' + encodeURIComponent(query), { headers: UA });
+    const html = await r.text();
+    const out = [];
+    let m;
+    const re = /<a[^>]*class="result__a"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
+    while ((m = re.exec(html)) && out.length < count) {
+      let href = m[1];
+      const u = href.match(/[?&]uddg=([^&]+)/);
+      try { href = u ? decodeURIComponent(u[1]) : href; } catch { /* keep raw */ }
+      if (/duckduckgo\.com/.test(href)) continue;
+      out.push({ title: m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160), url: href.slice(0, 300) });
+    }
+    const snips = [];
+    const rs = /<a[^>]*class="result__snippet"[^>]*>([\s\S]*?)<\/a>/gi;
+    while ((m = rs.exec(html)) && snips.length < count) snips.push(m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 240));
+    out.forEach((o, i) => { if (snips[i]) o.snippet = snips[i]; });
+    return { engine, query, status: r.status, count: out.length, results: out };
+  }
+  if (engine === 'mojeek') {
+    const r = await fetch('https://www.mojeek.com/search?q=' + encodeURIComponent(query), { headers: UA });
+    const html = await r.text();
+    const out = [];
+    const seen = new Set();
+    let m;
+    const re = /<h2>\s*<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
+    while ((m = re.exec(html)) && out.length < count) {
+      const href = m[1];
+      if (!/^https?:\/\//.test(href) || /mojeek\.com/.test(href) || seen.has(href)) continue;
+      seen.add(href);
+      out.push({ title: m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160), url: href.slice(0, 300) });
+    }
+    return { engine, query, status: r.status, count: out.length, results: out };
+  }
+  if (engine === 'github') {
+    // kind: repositories | issues. Auth: Actions-provided GITHUB_TOKEN (never committed/logged).
+    const H = { Accept: 'application/vnd.github+json', 'User-Agent': 'agent-browser' };
+    if (process.env.GH_TOKEN) H.Authorization = 'Bearer ' + process.env.GH_TOKEN;
+    const r = await fetch(`https://api.github.com/search/${kind}?q=` + encodeURIComponent(query) + `&per_page=${count}&sort=updated`, { headers: H });
+    const jj = await r.json().catch(() => ({}));
+    const items = jj.items || [];
+    const out = items.slice(0, count).map((it) => kind === 'issues'
+      ? { title: `${(it.repository_url || '').split('/').slice(-1)}#${it.number} ${it.title}`.slice(0, 160), url: it.html_url, snippet: `${it.state} ${it.labels ? it.labels.map((l) => l.name).join(',') : ''} ${it.created_at || ''}`.slice(0, 240) }
+      : { title: it.full_name, url: it.html_url, snippet: `${it.description || ''} ★${it.stargazers_count} ${it.language || ''} upd:${(it.updated_at || '').slice(0, 10)}`.slice(0, 240) });
+    return { engine: 'github:' + kind, query, status: r.status, count: out.length, results: out };
+  }
+  return { engine, query, error: 'unknown engine (ddg | mojeek | github)' };
+}
 const rows = [];
 for (const t of targets.slice(0, 12)) {
+  if (t.search) {
+    const row = { name: t.name };
+    try { Object.assign(row, await doSearch(t.search.engine, t.search.query, t.search.count, t.search.kind)); }
+    catch (e) { row.error = String(e).slice(0, 160); }
+    rows.push(row);
+    await writeFile(`${outDir}/t-${t.name}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
+    continue;
+  }
   const su = sanitizeUrl(t.url);
   const row = { name: t.name, url: su.url };
   if (su.sanitized) row.sanitized = true;
