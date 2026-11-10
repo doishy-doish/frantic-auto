@@ -1,0 +1,46 @@
+{
+ "stamp": "browse-hubs",
+ "takenAt": "2026-11-10T20:03:12.303Z",
+ "targets": [
+  {
+   "name": "osstrust",
+   "status": 200,
+   "bytes": 62220
+  },
+  {
+   "name": "collaborators",
+   "status": 200,
+   "bytes": 41345
+  },
+  {
+   "name": "bountypay",
+   "status": 200,
+   "bytes": 42417
+  },
+  {
+   "name": "ubounty",
+   "status": 200,
+   "bytes": 40094
+  },
+  {
+   "name": "bountyboard",
+   "status": 200,
+   "bytes": 12006
+  },
+  {
+   "name": "taskbounty-agents",
+   "status": 200,
+   "bytes": 122530
+  },
+  {
+   "name": "hackenproof",
+   "status": 200,
+   "bytes": 360644
+  },
+  {
+   "name": "auditone",
+   "status": 200,
+   "bytes": 100881
+  }
+ ]
+}

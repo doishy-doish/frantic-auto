@@ -1,0 +1,86 @@
+{
+ "name": "hackenproof",
+ "url": "https://hackenproof.com/programs?languages=Solidity,Rust&abilities=smart+contract",
+ "status": 200,
+ "ct": "text/html;charset=utf-8",
+ "bytes": 360644,
+ "textLen": 10013,
+ "head": "Crypto Bug Bounty Programs 2026 | HackenProof Products & Services Services Bug Bounty Pay-for-results bounty programs for Web2 and Web3 teams Penetration Testing Vetted researchers test your app. Kick-off within 24 hours Vulnerability Triage Validated, prioritized reports without the AI-generated noise Vulnerability Disclosure (VDP) A safe, public channel for researchers to report flaws CTF Challenges CTF competitions for Web3 and digital product companies Security Audits Audit Types Compare Curated, Crowdsourced, and DualDefense audits Private Audit Hand-picked, vetted researchers review your code privately DualDefense Audit A crowdsourced layer on top of your third-party audit Crowdsourced Audit Verified researchers test only your defined scope Layer 1 Protocol Security audits for blockchain protocols and consensus layers Smart Contract Audit Crowdsourced security audits for your smart contract code Penetration Testing White-box, grey-box, or black-box testing from vetted security researchers. Testing starts within 24 hours, with a fixed-price quote after scoping. Solutions Industries Fintech Banks Neobanks Blockchain Government Healthcare AI Post-Quantum Use cases SUI Security E…[trunc 10013]",
+ "links": [
+  {
+   "h": "/programs/hinkal-bug-bounty",
+   "t": "Hinkal Bug Bounty"
+  },
+  {
+   "h": "/bug-bounty-platform",
+   "t": "Bug Bounty"
+  },
+  {
+   "h": "https://docs.hackenproof.com/dashboard/mcp-server",
+   "t": "Agentic AI Triager"
+  },
+  {
+   "h": "https://dashboard.hackenproof.com/register",
+   "t": "Start Hacking"
+  },
+  {
+   "h": "https://docs.hackenproof.com/",
+   "t": "Docs"
+  },
+  {
+   "h": "https://docs.hackenproof.com/good-to-know/branding",
+   "t": "Brandbook"
+  },
+  {
+   "h": "https://hproof-static.s3.us-east-1.amazonaws.com/main/policy/Terms_and_Conditions HackenProof.pdf",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "audit teams and their expertise Community Join 82,000+ researchers to trade tips and bounty news Docs Guides on programs, scope, rules, and payouts Join Our Discord Community Connect with 82,000+ security researchers, discuss programs, trade tips, and be the first to hear about new bounties. Company Company About us Wh"
+  },
+  {
+   "k": "paid out",
+   "w": "nProof’s programs below or filter the tech stack you work best with: let the bug hunt begin! 400+ Total bug bounty $26 000 000+ In bounties paid out 85 000+ Total received reports Hidden Gems Triaged by HackenProof CoinGecko Up to: $1,500 Started date: 22 Jul 2020 Last updated: 30 Oct 2026 Submissions: 435 Paid: $8,230"
+  },
+  {
+   "k": "crypto",
+   "w": "Crypto Bug Bounty Programs 2026 | HackenProof Products & Services Services Bug Bounty Pay-for-results bounty programs for Web2 and Web3 teams Penetration Testing Vetted researchers"
+  },
+  {
+   "k": "crypto",
+   "w": "ereum Security Program Program: Bug bounty for ERC-4337 account abstraction, up to $250K Case Study: OKX How one of the world&#39;s largest crypto exchanges, trusted by 50M users, built robust security framework through partnership with HackenProof. Hackers Hackers For AI Agents Directory of AI security agents for Web3"
+  },
+  {
+   "k": "fee",
+   "w": "acts Dexalot is a revolutionary non-custodial central limit order book dex aiming at bringing the traditional centralized exchange look and feel, through a decentralized on-chain application. Started date: 24 Mar 2026 Last updated: 21 Aug 2026 Submissions: 676 Up to: $20,000 Paid: $0 Triaged by HackenProof DEX smart co"
+  },
+  {
+   "k": "withdraw",
+   "w": "circuits that gate fund movement. We are looking for critical vulnerabilities that could result in loss of user funds, unauthorized minting/withdrawal of shielded balances, bypass of proof verification, or breaks in the privacy guarantees the protocol is designed to provide. Started date: 03 Sep 2026 Last updated: 17 S"
+  },
+  {
+   "k": "reward",
+   "w": "nd the team behind HackenProof Contacts Talk to our team about your security needs Referral Program Refer companies to HackenProof and earn rewards As Featured in Forbes HackenProof researchers uncovered unsecured database of 114 million records that impacted up to 60 million Americans — as covered by Forbes. Resources"
+  },
+  {
+   "k": "bounty",
+   "w": "Crypto Bug Bounty Programs 2026 | HackenProof Products & Services Services Bug Bounty Pay-for-results bounty programs for Web2 and Web3 teams Penetration Testing Vetted researchers test your "
+  },
+  {
+   "k": "bounty",
+   "w": "Crypto Bug Bounty Programs 2026 | HackenProof Products & Services Services Bug Bounty Pay-for-results bounty programs for Web2 and Web3 teams Penetration Testing Vetted researchers test your app. Kick-off within 24 hours Vulnerability Triage Validated, priori"
+  },
+  {
+   "k": "bounty",
+   "w": "Crypto Bug Bounty Programs 2026 | HackenProof Products & Services Services Bug Bounty Pay-for-results bounty programs for Web2 and Web3 teams Penetration Testing Vetted researchers test your app. Kick-off within 24 hours Vulnerability Triage Validated, prioritized reports without t"
+  },
+  {
+   "k": "terms",
+   "w": "andbook Company About us Contacts Subscribe to our newsletter 2026 Ⓒ HackenProof, Inc. All rights reserved. Referral Program Privacy notice Terms Cookies settings"
+  }
+ ]
+}

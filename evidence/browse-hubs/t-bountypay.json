@@ -1,0 +1,122 @@
+{
+ "name": "bountypay",
+ "url": "https://bountypay.luccilabs.xyz/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 42417,
+ "textLen": 2752,
+ "head": "BountyPay - Automated GitHub Bounty Payments BountyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automatically when their pull requests merge. Get started github.com bountypay bot 3 days ago Bounty: 500 USDC Deadline: Dec 15, 2025 Status: Open sarah-dev 2 days ago Fixed in #4522 maintainer merged PR #4522 · 1 hour ago bountypay bot just now Bounty: Paid Recipient: @sarah-dev Amount: 500 USDC Transaction: View on Explorer → Payment has been sent successfully. Simple by design For sponsors For contributors 01 Install the GitHub App Add BountyPay to your repository with a single click. 02 Fund an issue Attach a bounty to any GitHub issue with USDC or MUSD. 03 Automatic payment Contributors are paid when their PR merges and closes the issue. Built for absolute clarity Everything you need to fund and earn bounties, with tools that are simple and clear. Secure escrow Your funds are held in on-chain escrow. They are released only when a merged pull request closes the issue, and are refundable to you after the deadline. Automatic payouts When a PR merges and closes the bounty issue, payment …[trunc 2752]",
+ "links": [
+  {
+   "h": "/app",
+   "t": "Get started"
+  },
+  {
+   "h": "/app",
+   "t": "View all bounties →"
+  },
+  {
+   "h": "/app/attach-bounty",
+   "t": "Create a bounty"
+  },
+  {
+   "h": "/",
+   "t": "BountyPay"
+  },
+  {
+   "h": "/app",
+   "t": "Bounties"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "n-chain escrow. They are released only when a merged pull request closes the issue, and are refundable to you after the deadline. Automatic payouts When a PR merges and closes the bounty issue, payment is automatically transferred to the contributor. GitHub native Works seamlessly with your existing GitHub workflow. No"
+  },
+  {
+   "k": "wallet",
+   "w": "rt earning View all bounties → Frequently Asked Questions Everything you need to know about BountyPay. How do I fund a bounty? Connect your wallet, select a GitHub issue, set the bounty amount and deadline, then confirm the transaction. Your funds are securely held in escrow until the work is completed. Which cryptocur"
+  },
+  {
+   "k": "wallet",
+   "w": "ase and MUSD on Mezo. More tokens and chains will be added based on community demand. How do contributors get paid? Contributors link their wallet through BountyPay. When their PR is merged and closes a bounty issue, payment is automatically transferred to their linked wallet. What happens if work isn't completed? If t"
+  },
+  {
+   "k": "wallet",
+   "w": "ink their wallet through BountyPay. When their PR is merged and closes a bounty issue, payment is automatically transferred to their linked wallet. What happens if work isn't completed? If the bounty deadline passes without a merged PR, sponsors can request a refund from the escrow contract. Are there any fees? BountyP"
+  },
+  {
+   "k": "usdc",
+   "w": "o bounties. Contributors get paid automatically when their pull requests merge. Get started github.com bountypay bot 3 days ago Bounty: 500 USDC Deadline: Dec 15, 2025 Status: Open sarah-dev 2 days ago Fixed in #4522 maintainer merged PR #4522 · 1 hour ago bountypay bot just now Bounty: Paid Recipient: @sarah-dev Amoun"
+  },
+  {
+   "k": "usdc",
+   "w": "dev 2 days ago Fixed in #4522 maintainer merged PR #4522 · 1 hour ago bountypay bot just now Bounty: Paid Recipient: @sarah-dev Amount: 500 USDC Transaction: View on Explorer → Payment has been sent successfully. Simple by design For sponsors For contributors 01 Install the GitHub App Add BountyPay to your repository w"
+  },
+  {
+   "k": "usdc",
+   "w": "s 01 Install the GitHub App Add BountyPay to your repository with a single click. 02 Fund an issue Attach a bounty to any GitHub issue with USDC or MUSD. 03 Automatic payment Contributors are paid when their PR merges and closes the issue. Built for absolute clarity Everything you need to fund and earn bounties, with t"
+  },
+  {
+   "k": "crypto",
+   "w": "ted GitHub Bounty Payments BountyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automatically when their pull requests merge. Get started github.com bountypay bot 3 days ago Bounty: 500 USDC Deadline: Dec 15, 2025 Status:"
+  },
+  {
+   "k": "crypto",
+   "w": "set the bounty amount and deadline, then confirm the transaction. Your funds are securely held in escrow until the work is completed. Which cryptocurrencies are supported? We currently support USDC on Base and MUSD on Mezo. More tokens and chains will be added based on community demand. How do contributors get paid? Co"
+  },
+  {
+   "k": "fee",
+   "w": "k isn't completed? If the bounty deadline passes without a merged PR, sponsors can request a refund from the escrow contract. Are there any fees? BountyPay charges a small platform fee when you fund a bounty. Contributors receive the full bounty amount. Ready to fund your first bounty? Join the growing community of spo"
+  },
+  {
+   "k": "fee",
+   "w": " passes without a merged PR, sponsors can request a refund from the escrow contract. Are there any fees? BountyPay charges a small platform fee when you fund a bounty. Contributors receive the full bounty amount. Ready to fund your first bounty? Join the growing community of sponsors and contributors building the futur"
+  },
+  {
+   "k": "escrow",
+   "w": "nd closes the issue. Built for absolute clarity Everything you need to fund and earn bounties, with tools that are simple and clear. Secure escrow Your funds are held in on-chain escrow. They are released only when a merged pull request closes the issue, and are refundable to you after the deadline. Automatic payouts W"
+  },
+  {
+   "k": "escrow",
+   "w": " clarity Everything you need to fund and earn bounties, with tools that are simple and clear. Secure escrow Your funds are held in on-chain escrow. They are released only when a merged pull request closes the issue, and are refundable to you after the deadline. Automatic payouts When a PR merges and closes the bounty i"
+  },
+  {
+   "k": "escrow",
+   "w": "nnect your wallet, select a GitHub issue, set the bounty amount and deadline, then confirm the transaction. Your funds are securely held in escrow until the work is completed. Which cryptocurrencies are supported? We currently support USDC on Base and MUSD on Mezo. More tokens and chains will be added based on communit"
+  },
+  {
+   "k": "reward",
+   "w": "BountyPay - Automated GitHub Bounty Payments BountyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automatically when their pull requests merge. Get started github.com bountypay bot 3 days ago Boun"
+  },
+  {
+   "k": "bounty",
+   "w": "BountyPay - Automated GitHub Bounty Payments BountyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contr"
+  },
+  {
+   "k": "bounty",
+   "w": "BountyPay - Automated GitHub Bounty Payments BountyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automaticall"
+  },
+  {
+   "k": "bounty",
+   "w": "BountyPay - Automated GitHub Bounty Payments BountyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automatically when their pul"
+  },
+  {
+   "k": "get paid",
+   "w": "ntyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automatically when their pull requests merge. Get started github.com bountypay bot 3 days ago Bounty: 500 USDC Deadline: Dec 15, 2025 Status: Open sarah-dev 2 days ago Fix"
+  },
+  {
+   "k": "get paid",
+   "w": "ed? We currently support USDC on Base and MUSD on Mezo. More tokens and chains will be added based on community demand. How do contributors get paid? Contributors link their wallet through BountyPay. When their PR is merged and closes a bounty issue, payment is automatically transferred to their linked wallet. What hap"
+  },
+  {
+   "k": "how it works",
+   "w": "BountyPay - Automated GitHub Bounty Payments BountyPay How it works Features FAQ Log in Open source contributions, rewarded instantly Fund GitHub issues with crypto bounties. Contributors get paid automatically when their pull requests"
+  },
+  {
+   "k": "how it works",
+   "w": "ponsors and contributors building the future of open source. Create a bounty BountyPay The economic layer for open source. Product Features How it works Bounties Resources GitHub Company About Contact © 2026 Lucci. All rights reserved."
+  }
+ ]
+}

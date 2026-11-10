@@ -1,0 +1,73 @@
+{
+ "name": "osstrust",
+ "url": "https://osstrust.org/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 62220,
+ "textLen": 7809,
+ "head": "OSSTrust — Bug Bounty Treasuries for Open Source O OSSTrust How it works Leaderboard Roadmap Explore → USDC bug bounties · Ethereum · Safe custody Fund the repos you rely on. OSSTrust ranks GitHub repositories by committed USDC, lets maintainers claim their program, and keeps idle treasury funds behind a guarded Safe policy instead of an unlocked wallet. Ethereum mainnet USDC donations GitHub claims Safe multisig Compound III yield Explore leaderboard → Review custody model Treasury flow Donations stay simple. Payout authority does not. 01 Donate in USDC Fund any GitHub repo on Ethereum — it rises on the leaderboard immediately, claimed or not. 02 Claim via GitHub Repo owners authenticate and lock payout control away from the marketplace. 03 Guard the treasury A Safe plus delay policy buffers emergency exits while Compound III keeps idle USDC productive. Leaderboard TVL $768.1K Seeded example data until live indexing lands. Programs 8 GitHub repositories ready for donations. Claimed 5 Repos with maintainer-controlled bounty payouts. Yield-enabled 5 Programs with Compound III yield routing enabled. Custody model Three rules that keep the money safe. Every design decision comes back …[trunc 7809]",
+ "links": [],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "DC donations GitHub claims Safe multisig Compound III yield Explore leaderboard → Review custody model Treasury flow Donations stay simple. Payout authority does not. 01 Donate in USDC Fund any GitHub repo on Ethereum — it rises on the leaderboard immediately, claimed or not. 02 Claim via GitHub Repo owners authenticat"
+  },
+  {
+   "k": "payout",
+   "w": "ny GitHub repo on Ethereum — it rises on the leaderboard immediately, claimed or not. 02 Claim via GitHub Repo owners authenticate and lock payout control away from the marketplace. 03 Guard the treasury A Safe plus delay policy buffers emergency exits while Compound III keeps idle USDC productive. Leaderboard TVL $768"
+  },
+  {
+   "k": "payout",
+   "w": "ample data until live indexing lands. Programs 8 GitHub repositories ready for donations. Claimed 5 Repos with maintainer-controlled bounty payouts. Yield-enabled 5 Programs with Compound III yield routing enabled. Custody model Three rules that keep the money safe. Every design decision comes back to one question: who"
+  },
+  {
+   "k": "wallet",
+   "w": " by committed USDC, lets maintainers claim their program, and keeps idle treasury funds behind a guarded Safe policy instead of an unlocked wallet. Ethereum mainnet USDC donations GitHub claims Safe multisig Compound III yield Explore leaderboard → Review custody model Treasury flow Donations stay simple. Payout author"
+  },
+  {
+   "k": "wallet",
+   "w": "ainers get the social authority. The vault still needs technical guardrails. Claiming should map to GitHub repository ownership, not just a wallet signature. Once claimed, maintainers can shut out third-party payout processing while the treasury still sits behind a Safe policy. Capital efficiency The treasury can earn,"
+  },
+  {
+   "k": "usdc",
+   "w": "OSSTrust — Bug Bounty Treasuries for Open Source O OSSTrust How it works Leaderboard Roadmap Explore → USDC bug bounties · Ethereum · Safe custody Fund the repos you rely on. OSSTrust ranks GitHub repositories by committed USDC, lets maintainers claim their program, and keeps idle t"
+  },
+  {
+   "k": "usdc",
+   "w": "d Roadmap Explore → USDC bug bounties · Ethereum · Safe custody Fund the repos you rely on. OSSTrust ranks GitHub repositories by committed USDC, lets maintainers claim their program, and keeps idle treasury funds behind a guarded Safe policy instead of an unlocked wallet. Ethereum mainnet USDC donations GitHub claims "
+  },
+  {
+   "k": "usdc",
+   "w": "maintainers claim their program, and keeps idle treasury funds behind a guarded Safe policy instead of an unlocked wallet. Ethereum mainnet USDC donations GitHub claims Safe multisig Compound III yield Explore leaderboard → Review custody model Treasury flow Donations stay simple. Payout authority does not. 01 Donate i"
+  },
+  {
+   "k": "claim",
+   "w": "C bug bounties · Ethereum · Safe custody Fund the repos you rely on. OSSTrust ranks GitHub repositories by committed USDC, lets maintainers claim their program, and keeps idle treasury funds behind a guarded Safe policy instead of an unlocked wallet. Ethereum mainnet USDC donations GitHub claims Safe multisig Compound "
+  },
+  {
+   "k": "claim",
+   "w": "r program, and keeps idle treasury funds behind a guarded Safe policy instead of an unlocked wallet. Ethereum mainnet USDC donations GitHub claims Safe multisig Compound III yield Explore leaderboard → Review custody model Treasury flow Donations stay simple. Payout authority does not. 01 Donate in USDC Fund any GitHub"
+  },
+  {
+   "k": "claim",
+   "w": "tions stay simple. Payout authority does not. 01 Donate in USDC Fund any GitHub repo on Ethereum — it rises on the leaderboard immediately, claimed or not. 02 Claim via GitHub Repo owners authenticate and lock payout control away from the marketplace. 03 Guard the treasury A Safe plus delay policy buffers emergency exi"
+  },
+  {
+   "k": "bounty",
+   "w": "OSSTrust — Bug Bounty Treasuries for Open Source O OSSTrust How it works Leaderboard Roadmap Explore → USDC bug bounties · Ethereum · Safe custody Fund the repos you rely on. OSSTrust ranks GitHu"
+  },
+  {
+   "k": "bounty",
+   "w": "eded example data until live indexing lands. Programs 8 GitHub repositories ready for donations. Claimed 5 Repos with maintainer-controlled bounty payouts. Yield-enabled 5 Programs with Compound III yield routing enabled. Custody model Three rules that keep the money safe. Every design decision comes back to one questi"
+  },
+  {
+   "k": "bounty",
+   "w": " multisig Unclaimed 03 tailwindlabs / tailwindcss Utility-first CSS is deeply embedded in production web apps, making a visible, high-trust bounty pool attractive to donors. css frontend design systems Framework TypeScript $102,400 301 donors · 8 open Compound III supply 4.3 % APR Repo owner Repo owner Safe with challe"
+  },
+  {
+   "k": "how it works",
+   "w": "OSSTrust — Bug Bounty Treasuries for Open Source O OSSTrust How it works Leaderboard Roadmap Explore → USDC bug bounties · Ethereum · Safe custody Fund the repos you rely on. OSSTrust ranks GitHub repositories by committed USDC, lets mainta"
+  }
+ ]
+}

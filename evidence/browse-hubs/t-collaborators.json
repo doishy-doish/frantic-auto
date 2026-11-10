@@ -1,0 +1,94 @@
+{
+ "name": "collaborators",
+ "url": "https://collaborators.build/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 41345,
+ "textLen": 2830,
+ "head": "Collaborators - GitHub Bounty Marketplace Collaborators Transform your open source contributions into on-chain rewards and reputation Get started in 3 simple steps 1 Log in with GitHub 2 Link your Solana wallet 3 Start contributing and get rewarded Start Earning Rewards Collaborate seamlessly. Build together. GitHub Bounty Marketplace Discover Issues Browse GitHub issues across all public repositories. Find bugs to fix, features to build, and problems to solve for USDC rewards. Earn USDC Rewards Get paid in USDC for solving GitHub issues. Automatic verification when your pull request is merged. Rewards are escrowed upfront for guaranteed payment. Automatic Tracking Our GitHub bot automatically tracks issue status, PR merges, and solution verification. No manual intervention needed - just code and get paid. How it works Find GitHub issues with USDC bounties, solve them with pull requests, and get paid automatically when your solution is merged. Our bot tracks everything and ensures fair, transparent payments. 1 Browse GitHub issues and add USDC bounties 2 Developers submit pull request solutions 3 Bot automatically verifies when PR is merged 4 USDC payment is automatically released …[trunc 2830]",
+ "links": [
+  {
+   "h": "https://github.com/settings/connections/applications",
+   "t": "Manage GitHub Connection"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": "m your open source contributions into on-chain rewards and reputation Get started in 3 simple steps 1 Log in with GitHub 2 Link your Solana wallet 3 Start contributing and get rewarded Start Earning Rewards Collaborate seamlessly. Build together. GitHub Bounty Marketplace Discover Issues Browse GitHub issues across all"
+  },
+  {
+   "k": "wallet",
+   "w": " USDC payment is automatically released function grindCode(allNight = true) { while (bug) { debug(☕️) } return mergePR().then(rewards =&gt; wallet.mint(💰, { amount: '10 SOL' }) ) } Frequently Asked Questions How are bounties verified? Our GitHub bot automatically tracks when pull requests are merged that reference bou"
+  },
+  {
+   "k": "wallet",
+   "w": " when bounties are created and automatically released when your pull request is merged and verified. Payments go directly to your connected wallet. What repositories are supported? Any public GitHub repository! You can browse issues across all public repositories and add bounties to any issue you find interesting. No r"
+  },
+  {
+   "k": "usdc",
+   "w": "etplace Discover Issues Browse GitHub issues across all public repositories. Find bugs to fix, features to build, and problems to solve for USDC rewards. Earn USDC Rewards Get paid in USDC for solving GitHub issues. Automatic verification when your pull request is merged. Rewards are escrowed upfront for guaranteed pay"
+  },
+  {
+   "k": "usdc",
+   "w": "sues Browse GitHub issues across all public repositories. Find bugs to fix, features to build, and problems to solve for USDC rewards. Earn USDC Rewards Get paid in USDC for solving GitHub issues. Automatic verification when your pull request is merged. Rewards are escrowed upfront for guaranteed payment. Automatic Tra"
+  },
+  {
+   "k": "usdc",
+   "w": " across all public repositories. Find bugs to fix, features to build, and problems to solve for USDC rewards. Earn USDC Rewards Get paid in USDC for solving GitHub issues. Automatic verification when your pull request is merged. Rewards are escrowed upfront for guaranteed payment. Automatic Tracking Our GitHub bot auto"
+  },
+  {
+   "k": "escrow",
+   "w": "rewards. Earn USDC Rewards Get paid in USDC for solving GitHub issues. Automatic verification when your pull request is merged. Rewards are escrowed upfront for guaranteed payment. Automatic Tracking Our GitHub bot automatically tracks issue status, PR merges, and solution verification. No manual intervention needed - "
+  },
+  {
+   "k": "escrow",
+   "w": "en a PR closes an issue, the bot verifies the solution and releases the USDC payment. When do USDC payments get released? USDC payments are escrowed when bounties are created and automatically released when your pull request is merged and verified. Payments go directly to your connected wallet. What repositories are su"
+  },
+  {
+   "k": "reward",
+   "w": "Collaborators - GitHub Bounty Marketplace Collaborators Transform your open source contributions into on-chain rewards and reputation Get started in 3 simple steps 1 Log in with GitHub 2 Link your Solana wallet 3 Start contributing and get rewarded Start Earning Rewards Collaborate seamless"
+  },
+  {
+   "k": "reward",
+   "w": "o on-chain rewards and reputation Get started in 3 simple steps 1 Log in with GitHub 2 Link your Solana wallet 3 Start contributing and get rewarded Start Earning Rewards Collaborate seamlessly. Build together. GitHub Bounty Marketplace Discover Issues Browse GitHub issues across all public repositories. Find bugs to f"
+  },
+  {
+   "k": "reward",
+   "w": "reputation Get started in 3 simple steps 1 Log in with GitHub 2 Link your Solana wallet 3 Start contributing and get rewarded Start Earning Rewards Collaborate seamlessly. Build together. GitHub Bounty Marketplace Discover Issues Browse GitHub issues across all public repositories. Find bugs to fix, features to build, "
+  },
+  {
+   "k": "bounty",
+   "w": "Collaborators - GitHub Bounty Marketplace Collaborators Transform your open source contributions into on-chain rewards and reputation Get started in 3 simple steps 1 Log in with GitHub 2 Link your Solana"
+  },
+  {
+   "k": "bounty",
+   "w": "GitHub 2 Link your Solana wallet 3 Start contributing and get rewarded Start Earning Rewards Collaborate seamlessly. Build together. GitHub Bounty Marketplace Discover Issues Browse GitHub issues across all public repositories. Find bugs to fix, features to build, and problems to solve for USDC rewards. Earn USDC Rewar"
+  },
+  {
+   "k": "bounty",
+   "w": " ) } Frequently Asked Questions How are bounties verified? Our GitHub bot automatically tracks when pull requests are merged that reference bounty issues. When a PR closes an issue, the bot verifies the solution and releases the USDC payment. When do USDC payments get released? USDC payments are escrowed when bounties "
+  },
+  {
+   "k": "get paid",
+   "w": "itHub issues across all public repositories. Find bugs to fix, features to build, and problems to solve for USDC rewards. Earn USDC Rewards Get paid in USDC for solving GitHub issues. Automatic verification when your pull request is merged. Rewards are escrowed upfront for guaranteed payment. Automatic Tracking Our Git"
+  },
+  {
+   "k": "get paid",
+   "w": "cking Our GitHub bot automatically tracks issue status, PR merges, and solution verification. No manual intervention needed - just code and get paid. How it works Find GitHub issues with USDC bounties, solve them with pull requests, and get paid automatically when your solution is merged. Our bot tracks everything and "
+  },
+  {
+   "k": "get paid",
+   "w": "manual intervention needed - just code and get paid. How it works Find GitHub issues with USDC bounties, solve them with pull requests, and get paid automatically when your solution is merged. Our bot tracks everything and ensures fair, transparent payments. 1 Browse GitHub issues and add USDC bounties 2 Developers sub"
+  },
+  {
+   "k": "how it works",
+   "w": "GitHub bot automatically tracks issue status, PR merges, and solution verification. No manual intervention needed - just code and get paid. How it works Find GitHub issues with USDC bounties, solve them with pull requests, and get paid automatically when your solution is merged. Our bot tracks everything and ensures fa"
+  },
+  {
+   "k": "terms",
+   "w": "le, email, and contribution data to power product features. You can revoke access anytime from your GitHub account settings. Privacy Policy Terms of Use Manage GitHub Connection Follow us on X © 2025 Collaborators."
+  }
+ ]
+}
