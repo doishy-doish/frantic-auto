@@ -1,0 +1,94 @@
+{
+ "name": "lifecycle",
+ "url": "https://docs.opire.dev/rewards/lifecycle",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 16308,
+ "textLen": 1673,
+ "head": "Lifecycle | Opire Docs Skip to main content Opire GitHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ On this page Lifecycle At Opire, the lifecycle of a bounty begins when a code owner wants to incentivize the resolution of an issue in their repository. They create a bounty using our commands or the web platform. Upon creating the bounty, it will appear on the Opire platform , as well as on the issue itself. Any programmer can view the bounty and decide whether to attempt to resolve the issue, notifying others using the try command. Once the developer opens a pull request (PR) with the necessary changes, they can claim the bounties associated with the issue. This notifies each bounty creator with a link to the PR. Each creator reviews the solution and, if it meets the issue requirements, arranges payment for their own bounty. Claiming a bounty never creates an automatic payment. Multiple Bounties ​ An issue can have more than one bounty created by its code owners. If a code owner prefers to start with a more modest…[trunc 1673]",
+ "links": [
+  {
+   "h": "/rewards/lifecycle",
+   "t": "English"
+  },
+  {
+   "h": "/es/rewards/lifecycle",
+   "t": "Español"
+  },
+  {
+   "h": "/pt/rewards/lifecycle",
+   "t": "Portuguese"
+  },
+  {
+   "h": "/fr/rewards/lifecycle",
+   "t": "Français"
+  },
+  {
+   "h": "/de/rewards/lifecycle",
+   "t": "Deutsch"
+  },
+  {
+   "h": "/zh/rewards/lifecycle",
+   "t": "简体中文"
+  },
+  {
+   "h": "/overview/getting-started",
+   "t": "Getting started"
+  },
+  {
+   "h": "/rewards",
+   "t": "Rewards"
+  },
+  {
+   "h": "/rewards/introduction",
+   "t": "Introduction"
+  },
+  {
+   "h": "/rewards/pricing",
+   "t": "Costs &amp; payments"
+  },
+  {
+   "h": "/rewards/lifecycle",
+   "t": "Lifecycle"
+  },
+  {
+   "h": "/faq",
+   "t": "FAQ"
+  },
+  {
+   "h": "https://app.opire.dev",
+   "t": "Opire platform"
+  },
+  {
+   "h": "/rewards/pricing",
+   "t": "Previous Costs &amp; payments"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "claim",
+   "w": "esolve the issue, notifying others using the try command. Once the developer opens a pull request (PR) with the necessary changes, they can claim the bounties associated with the issue. This notifies each bounty creator with a link to the PR. Each creator reviews the solution and, if it meets the issue requirements, ar"
+  },
+  {
+   "k": "claim",
+   "w": "or with a link to the PR. Each creator reviews the solution and, if it meets the issue requirements, arranges payment for their own bounty. Claiming a bounty never creates an automatic payment. Multiple Bounties ​ An issue can have more than one bounty created by its code owners. If a code owner prefers to start with a"
+  },
+  {
+   "k": "reward",
+   "w": "itHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ On this page Lifecycle At Opire, the lifecycle of a bounty begins when a code owner wants to incenti"
+  },
+  {
+   "k": "bounty",
+   "w": "ommands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ On this page Lifecycle At Opire, the lifecycle of a bounty begins when a code owner wants to incentivize the resolution of an issue in their repository. They create a bounty using our commands or the web platform. Upon creating the "
+  },
+  {
+   "k": "bounty",
+   "w": "pire, the lifecycle of a bounty begins when a code owner wants to incentivize the resolution of an issue in their repository. They create a bounty using our commands or the web platform. Upon creating the bounty, it will appear on the Opire platform , as well as on the issue itself. Any programmer can view the bounty a"
+  },
+  {
+   "k": "bounty",
+   "w": " incentivize the resolution of an issue in their repository. They create a bounty using our commands or the web platform. Upon creating the bounty, it will appear on the Opire platform , as well as on the issue itself. Any programmer can view the bounty and decide whether to attempt to resolve the issue, notifying othe"
+  }
+ ]
+}

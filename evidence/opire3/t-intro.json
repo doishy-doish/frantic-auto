@@ -1,0 +1,102 @@
+{
+ "name": "intro",
+ "url": "https://docs.opire.dev/rewards/introduction",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 14717,
+ "textLen": 1178,
+ "head": "Introduction | Opire Docs Skip to main content Opire GitHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ Introduction Bounties help code owners fund work on issues in their own open-source projects through collaboration with developers. As they are directly tied to solving a specific issue, they must be created for an issue ; you only need to specify the amount you wish to associate with resolving the problem. Only a code owner of the repository can create a bounty. An issue may have more than one bounty when its code owners create them; each creator is responsible only for the bounty they created. Creating or claiming a bounty does not create an automatic payment. Read costs and payments before you create one. Here you can see how code owners create bounties using the corresponding command within repositories that have our bot installed . If the bot is not installed, code owners can create them from their dashboard on our platform . 5 Edit this page Previous Rewards Next Costs & payments Opire",
+ "links": [
+  {
+   "h": "/rewards/introduction",
+   "t": "English"
+  },
+  {
+   "h": "/es/rewards/introduction",
+   "t": "Español"
+  },
+  {
+   "h": "/pt/rewards/introduction",
+   "t": "Portuguese"
+  },
+  {
+   "h": "/fr/rewards/introduction",
+   "t": "Français"
+  },
+  {
+   "h": "/de/rewards/introduction",
+   "t": "Deutsch"
+  },
+  {
+   "h": "/zh/rewards/introduction",
+   "t": "简体中文"
+  },
+  {
+   "h": "/overview/getting-started",
+   "t": "Getting started"
+  },
+  {
+   "h": "/rewards",
+   "t": "Rewards"
+  },
+  {
+   "h": "/rewards/introduction",
+   "t": "Introduction"
+  },
+  {
+   "h": "/rewards/pricing",
+   "t": "Costs &amp; payments"
+  },
+  {
+   "h": "/rewards/lifecycle",
+   "t": "Lifecycle"
+  },
+  {
+   "h": "/faq",
+   "t": "FAQ"
+  },
+  {
+   "h": "/rewards/pricing",
+   "t": "costs and payments"
+  },
+  {
+   "h": "https://app.opire.dev/dashboard/creator/rewards",
+   "t": "our platform"
+  },
+  {
+   "h": "/rewards",
+   "t": "Previous Rewards"
+  },
+  {
+   "h": "/rewards/pricing",
+   "t": "Next Costs &amp; payments"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "claim",
+   "w": "e may have more than one bounty when its code owners create them; each creator is responsible only for the bounty they created. Creating or claiming a bounty does not create an automatic payment. Read costs and payments before you create one. Here you can see how code owners create bounties using the corresponding comm"
+  },
+  {
+   "k": "reward",
+   "w": "itHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ Introduction Bounties help code owners fund work on issues in their own open-source projects through"
+  },
+  {
+   "k": "reward",
+   "w": "r bot installed . If the bot is not installed, code owners can create them from their dashboard on our platform . 5 Edit this page Previous Rewards Next Costs & payments Opire"
+  },
+  {
+   "k": "bounty",
+   "w": "ue ; you only need to specify the amount you wish to associate with resolving the problem. Only a code owner of the repository can create a bounty. An issue may have more than one bounty when its code owners create them; each creator is responsible only for the bounty they created. Creating or claiming a bounty does no"
+  },
+  {
+   "k": "bounty",
+   "w": " you wish to associate with resolving the problem. Only a code owner of the repository can create a bounty. An issue may have more than one bounty when its code owners create them; each creator is responsible only for the bounty they created. Creating or claiming a bounty does not create an automatic payment. Read cost"
+  },
+  {
+   "k": "bounty",
+   "w": "tory can create a bounty. An issue may have more than one bounty when its code owners create them; each creator is responsible only for the bounty they created. Creating or claiming a bounty does not create an automatic payment. Read costs and payments before you create one. Here you can see how code owners create boun"
+  }
+ ]
+}
