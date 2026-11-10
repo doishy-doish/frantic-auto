@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm i -g playwright@latest && npx playwright install chromium --with-deps
+      - run: npm init -y >/dev/null 2>&1; npm i playwright@latest && npx playwright install chromium --with-deps
       # fail BEFORE the claim (fuse starts inside dogfood.mjs) on syntax errors
       - run: node --check scripts/dogfood.mjs && node --check scripts/deliver.mjs && node --check scripts/ext-audit.js && node --check scripts/token.mjs
       # fixture self-test: proves the audit fires BEFORE anything is staked
