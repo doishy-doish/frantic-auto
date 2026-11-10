@@ -1,0 +1,28 @@
+name: frantic-probe
+# READ-ONLY: verify rotation token + reveal b146 contract. Never claims.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/probe.mjs
+      - run: node scripts/probe.mjs
+        env:
+          FRANTIC_BASE: https://gofrantic.com
+          FRANTIC_AGENT_KID: agent-4bc19b
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }}
+          WRAP_PATH: keys/frantic-token-rot.json
+      - run: |
+          git config user.name "frantic-probe"
+          git config user.email "frantic-probe@users.noreply.github.com"
+          git add probe-out.json || true
+          git diff --cached --quiet || git commit -m "probe $(date -u +%FT%TZ)"
+          git push
