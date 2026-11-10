@@ -1,0 +1,71 @@
+{
+ "name": "d1-2",
+ "url": "https://ubounty.ai/bounties",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 24381,
+ "textLen": 581,
+ "head": "Browse Bounties - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Available Bounties Browse open bounties and start earning USDC by solving GitHub issues Filters Status Open Completed Paid Cancelled Difficulty Easy Medium Hard Amount (USDC) Under $50 $50 - $200 $200 - $500 Over $500 Tags Apply Filters Clear All ubounty .ai Dev Bounty on Github powered by X402. Instant USDC payments for solving GitHub issues. Company Jobs Legal Terms of Service Privacy Policy Acceptable Use Policy © 2025 ubounty.ai. All rights reserved.",
+ "links": [
+  {
+   "h": "/how-it-works",
+   "t": "How It Works"
+  },
+  {
+   "h": "/bounties",
+   "t": "Bounties"
+  },
+  {
+   "h": "/how-it-works",
+   "t": "How It Works"
+  },
+  {
+   "h": "/bounties",
+   "t": "Bounties"
+  },
+  {
+   "h": "/terms",
+   "t": "Terms of Service"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "usdc",
+   "w": "How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Available Bounties Browse open bounties and start earning USDC by solving GitHub issues Filters Status Open Completed Paid Cancelled Difficulty Easy Medium Hard Amount (USDC) Under $50 $50 - $200 $200 - $500 Over $500 Tags Apply Filters C"
+  },
+  {
+   "k": "usdc",
+   "w": "n bounties and start earning USDC by solving GitHub issues Filters Status Open Completed Paid Cancelled Difficulty Easy Medium Hard Amount (USDC) Under $50 $50 - $200 $200 - $500 Over $500 Tags Apply Filters Clear All ubounty .ai Dev Bounty on Github powered by X402. Instant USDC payments for solving GitHub issues. Com"
+  },
+  {
+   "k": "usdc",
+   "w": "nt (USDC) Under $50 $50 - $200 $200 - $500 Over $500 Tags Apply Filters Clear All ubounty .ai Dev Bounty on Github powered by X402. Instant USDC payments for solving GitHub issues. Company Jobs Legal Terms of Service Privacy Policy Acceptable Use Policy © 2025 ubounty.ai. All rights reserved."
+  },
+  {
+   "k": "bounty",
+   "w": "Browse Bounties - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Available Bounties Browse open bounties and start earning USDC by solving Gi"
+  },
+  {
+   "k": "bounty",
+   "w": "Browse Bounties - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Available Bounties Browse open bounties and start earning USDC by solving GitHub issues"
+  },
+  {
+   "k": "bounty",
+   "w": "Completed Paid Cancelled Difficulty Easy Medium Hard Amount (USDC) Under $50 $50 - $200 $200 - $500 Over $500 Tags Apply Filters Clear All ubounty .ai Dev Bounty on Github powered by X402. Instant USDC payments for solving GitHub issues. Company Jobs Legal Terms of Service Privacy Policy Acceptable Use Policy © 2025 ub"
+  },
+  {
+   "k": "how it works",
+   "w": "Browse Bounties - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Available Bounties Browse open bounties and start earning USDC by solving GitHub issues Filters St"
+  },
+  {
+   "k": "how it works",
+   "w": "Browse Bounties - ubounty.ai ubounty .ai How It Works Bounties Connect GitHub Connect How It Works Bounties Connect GitHub Available Bounties Browse open bounties and start earning USDC by solving GitHub issues Filters Status Open Completed Paid Cancelled Difficulty"
+  },
+  {
+   "k": "terms",
+   "w": "ply Filters Clear All ubounty .ai Dev Bounty on Github powered by X402. Instant USDC payments for solving GitHub issues. Company Jobs Legal Terms of Service Privacy Policy Acceptable Use Policy © 2025 ubounty.ai. All rights reserved."
+  }
+ ],
+ "followOf": "depthproof"
+}

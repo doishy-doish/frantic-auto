@@ -1,0 +1,27 @@
+{
+ "stamp": "depthproof",
+ "takenAt": "2026-11-10T20:18:50.128Z",
+ "depth": 1,
+ "targets": [
+  {
+   "name": "ub",
+   "status": 200,
+   "bytes": 40094
+  },
+  {
+   "name": "d1-1",
+   "status": 200,
+   "bytes": 21301
+  },
+  {
+   "name": "d1-2",
+   "status": 200,
+   "bytes": 24381
+  },
+  {
+   "name": "d1-3",
+   "status": 200,
+   "bytes": 13374
+  }
+ ]
+}
