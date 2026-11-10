@@ -1,0 +1,94 @@
+{
+ "name": "docs-faq",
+ "url": "https://docs.opire.dev/faq",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 16618,
+ "textLen": 2380,
+ "head": "FAQ | Opire Docs Skip to main content Opire GitHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ FAQ If you have any questions or encounter any issues while using Opire, you can contact us through the #ask-us channel on our Discord , and we will answer as soon as possible. Can Opire be used in private projects? Yes. OpireBot commands can be used in private repositories by people who already have access to them. Bounties created there appear on Opire, but developers without repository access cannot try to solve the issue or claim its bounties. If external people want to collaborate, they'll need to communicate directly with the project administrator to request access. Who is Opire for? Several groups can benefit from Opire: Developers: It is an opportunity to earn extra income without being tied to schedules or cumbersome procedures. Additionally, you'll enhance your skills by solving real problems in different languages. Companies: We facilitate problem resolution in your project dependencies without involving your d…[trunc 2380]",
+ "links": [
+  {
+   "h": "/faq",
+   "t": "English"
+  },
+  {
+   "h": "/es/faq",
+   "t": "Español"
+  },
+  {
+   "h": "/pt/faq",
+   "t": "Portuguese"
+  },
+  {
+   "h": "/fr/faq",
+   "t": "Français"
+  },
+  {
+   "h": "/de/faq",
+   "t": "Deutsch"
+  },
+  {
+   "h": "/zh/faq",
+   "t": "简体中文"
+  },
+  {
+   "h": "/overview/getting-started",
+   "t": "Getting started"
+  },
+  {
+   "h": "/rewards",
+   "t": "Rewards"
+  },
+  {
+   "h": "/rewards/introduction",
+   "t": "Introduction"
+  },
+  {
+   "h": "/rewards/pricing",
+   "t": "Costs &amp; payments"
+  },
+  {
+   "h": "/rewards/lifecycle",
+   "t": "Lifecycle"
+  },
+  {
+   "h": "/faq",
+   "t": "FAQ"
+  },
+  {
+   "h": "https://app.opire.dev/projects",
+   "t": "projects page"
+  },
+  {
+   "h": "https://app.opire.dev/dashboard/creator/rewards",
+   "t": "our platform"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "claim",
+   "w": "eady have access to them. Bounties created there appear on Opire, but developers without repository access cannot try to solve the issue or claim its bounties. If external people want to collaborate, they'll need to communicate directly with the project administrator to request access. Who is Opire for? Several groups "
+  },
+  {
+   "k": "reward",
+   "w": "itHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ FAQ If you have any questions or encounter any issues while using Opire, you can contact us through "
+  },
+  {
+   "k": "reward",
+   "w": " to see the repositories where our bot is installed, within which you can use our commands. You can use the search bar to find projects and rewarded issues to solve. If you are a code owner, create a bounty for one of your own repository's issues from our platform . Edit this page Previous Lifecycle Opire"
+  },
+  {
+   "k": "bounty",
+   "w": "ou will actively participate in project enhancement and growth. How do I know in which repositories I can create bounties? You can create a bounty only for an issue in a repository you own as a code owner. This rule applies to public and private repositories, whether you use the Opire app or OpireBot. Repository access"
+  },
+  {
+   "k": "bounty",
+   "w": "o public and private repositories, whether you use the Opire app or OpireBot. Repository access alone does not grant permission to create a bounty. On the projects page within Opire, you'll be able to see the repositories where our bot is installed, within which you can use our commands. You can use the search bar to f"
+  },
+  {
+   "k": "bounty",
+   "w": "which you can use our commands. You can use the search bar to find projects and rewarded issues to solve. If you are a code owner, create a bounty for one of your own repository's issues from our platform . Edit this page Previous Lifecycle Opire"
+  }
+ ]
+}

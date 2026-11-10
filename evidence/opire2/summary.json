@@ -1,0 +1,26 @@
+{
+ "stamp": "opire2",
+ "takenAt": "2026-11-10T19:46:32.517Z",
+ "targets": [
+  {
+   "name": "docs-faq",
+   "status": 200,
+   "bytes": 16618
+  },
+  {
+   "name": "rewards-pricing",
+   "status": 200,
+   "bytes": 16697
+  },
+  {
+   "name": "terms",
+   "status": 200,
+   "bytes": 69005
+  },
+  {
+   "name": "open-startup",
+   "status": 500,
+   "bytes": 47019
+  }
+ ]
+}

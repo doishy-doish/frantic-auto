@@ -1,0 +1,98 @@
+{
+ "name": "rewards-pricing",
+ "url": "https://docs.opire.dev/rewards/pricing",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 16697,
+ "textLen": 1706,
+ "head": "Costs & Payments | Opire Docs Skip to main content Opire GitHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ On this page Costs & Payments Use this page to understand the financial commitment before you create a bounty or a tip. Minimum amounts ​ Contribution Minimum Created for Bounty $20 USD Resolving a GitHub issue Tip $1 USD Thanking a contributor on an issue or pull request Only code owners can create bounties, and only for issues in their own repositories. More than one code owner may create a bounty for the same issue; each person is responsible only for the bounty they created. When a bounty is paid ​ Creating or claiming a bounty does not create an automatic payment. A developer submits a pull request, then each bounty creator reviews whether it meets the requirements described in the issue. If it does, that creator arranges payment for their own bounty. Opire publishes and tracks bounties and claims; payments are arranged directly by the people involved. Check the issue requirements and agree on any paymen…[trunc 1706]",
+ "links": [
+  {
+   "h": "/rewards/pricing",
+   "t": "English"
+  },
+  {
+   "h": "/es/rewards/pricing",
+   "t": "Español"
+  },
+  {
+   "h": "/pt/rewards/pricing",
+   "t": "Portuguese"
+  },
+  {
+   "h": "/fr/rewards/pricing",
+   "t": "Français"
+  },
+  {
+   "h": "/de/rewards/pricing",
+   "t": "Deutsch"
+  },
+  {
+   "h": "/zh/rewards/pricing",
+   "t": "简体中文"
+  },
+  {
+   "h": "/overview/getting-started",
+   "t": "Getting started"
+  },
+  {
+   "h": "/rewards",
+   "t": "Rewards"
+  },
+  {
+   "h": "/rewards/introduction",
+   "t": "Introduction"
+  },
+  {
+   "h": "/rewards/pricing",
+   "t": "Costs &amp; payments"
+  },
+  {
+   "h": "/rewards/lifecycle",
+   "t": "Lifecycle"
+  },
+  {
+   "h": "/faq",
+   "t": "FAQ"
+  },
+  {
+   "h": "/rewards/introduction",
+   "t": "Previous Introduction"
+  },
+  {
+   "h": "/rewards/lifecycle",
+   "t": "Next Lifecycle"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "claim",
+   "w": "er may create a bounty for the same issue; each person is responsible only for the bounty they created. When a bounty is paid ​ Creating or claiming a bounty does not create an automatic payment. A developer submits a pull request, then each bounty creator reviews whether it meets the requirements described in the issu"
+  },
+  {
+   "k": "claim",
+   "w": "equirements described in the issue. If it does, that creator arranges payment for their own bounty. Opire publishes and tracks bounties and claims; payments are arranged directly by the people involved. Check the issue requirements and agree on any payment details before you create or claim a bounty. Tips ​ Tips are no"
+  },
+  {
+   "k": "claim",
+   "w": "; payments are arranged directly by the people involved. Check the issue requirements and agree on any payment details before you create or claim a bounty. Tips ​ Tips are not tied to resolving an issue. Create one only when you want to thank a specific contributor. Like bounties, a tip is not an automatic platform pay"
+  },
+  {
+   "k": "reward",
+   "w": "itHub Discord English English Español Portuguese Français Deutsch 简体中文 Overview Introduction Use cases Getting started Install bot Commands Rewards Introduction Costs & payments Lifecycle Tips Introduction Lifecycle FAQ On this page Costs & Payments Use this page to understand the financial commitment before you create"
+  },
+  {
+   "k": "bounty",
+   "w": "ycle Tips Introduction Lifecycle FAQ On this page Costs & Payments Use this page to understand the financial commitment before you create a bounty or a tip. Minimum amounts ​ Contribution Minimum Created for Bounty $20 USD Resolving a GitHub issue Tip $1 USD Thanking a contributor on an issue or pull request Only code "
+  },
+  {
+   "k": "bounty",
+   "w": "se this page to understand the financial commitment before you create a bounty or a tip. Minimum amounts ​ Contribution Minimum Created for Bounty $20 USD Resolving a GitHub issue Tip $1 USD Thanking a contributor on an issue or pull request Only code owners can create bounties, and only for issues in their own reposit"
+  },
+  {
+   "k": "bounty",
+   "w": " or pull request Only code owners can create bounties, and only for issues in their own repositories. More than one code owner may create a bounty for the same issue; each person is responsible only for the bounty they created. When a bounty is paid ​ Creating or claiming a bounty does not create an automatic payment. "
+  }
+ ]
+}

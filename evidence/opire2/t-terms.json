@@ -1,0 +1,122 @@
+{
+ "name": "terms",
+ "url": "https://opire.dev/terms-of-service",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 69005,
+ "textLen": 15222,
+ "head": "WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Terms of Service These Terms of Service govern your use of the website located at https://opire.dev and any related services provided by Opire LLC. By accessing https://opire.dev, you agree to abide by these Terms of Service and to comply with all applicable laws and regulations. If you do not agree with these Terms of Service, you are prohibited from using or accessing this website or using any other services provided by Opire LLC. We, Opire LLC, reserve the right to review and amend any of these Terms of Service at our sole discretion. Upon doing so, we will update this page. Any changes to these Terms of Service will take effect immediately from the date of publication. These Terms of Service were last updated on August 24, 2024. Limitations of Use By using this website, you warrant on behalf of yourself, your users, and other parties you represent that you will not: modify, copy, prepare derivative works of, decompile, or reverse engineer any materials and software contained on this website; remove any copyright or other proprietary notations f…[trunc 15222]",
+ "links": [
+  {
+   "h": "/open-startup",
+   "t": "OPEN STARTUP"
+  },
+  {
+   "h": "https://app.opire.dev",
+   "t": "SEE REWARDS"
+  },
+  {
+   "h": "/open-startup",
+   "t": "OPEN STARTUP"
+  },
+  {
+   "h": "https://app.opire.dev",
+   "t": "SEE REWARDS"
+  },
+  {
+   "h": "/terms-of-service",
+   "t": "Terms of Service"
+  },
+  {
+   "h": "https://docs.opire.dev",
+   "t": "Docs"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "stripe",
+   "w": "hen making payments, users must provide financial information relevant to the chosen payment method, which may include credit card details. Stripe processes all payments on our platform. Opire LLC does not process or retain any financial information directly; instead, Stripe manages all financial data in accordance wit"
+  },
+  {
+   "k": "stripe",
+   "w": "d details. Stripe processes all payments on our platform. Opire LLC does not process or retain any financial information directly; instead, Stripe manages all financial data in accordance with their own Terms of Service, which you must agree to and comply with. Opire offers various subscription plans that provide benef"
+  },
+  {
+   "k": "stripe",
+   "w": "e for covering all associated costs, including a service fee of 4% to Opire and transaction fees charged by our payment processing partner, Stripe. The total amount paid by the Customer includes the Bounty, Opire's fee, and applicable Stripe transaction fees. Upon successful payment confirmation through Stripe Checkout"
+  },
+  {
+   "k": "fee",
+   "w": "rvice, which you must agree to and comply with. Opire offers various subscription plans that provide benefits, including discounted service fees and access to exclusive features, such as webhooks. These subscriptions are available with monthly or annual billing options. Subscription tiers cannot be changed until the ne"
+  },
+  {
+   "k": "fee",
+   "w": "wal period. However, subscriptions can be paused or cancelled at any time. No refunds will be provided for any portions of the subscription fee already paid, but users will retain access to subscribed services until the end of the current billing cycle. For example, if a user cancels a monthly subscription, access to t"
+  },
+  {
+   "k": "fee",
+   "w": "d to receive 100% of the Bounty amount. The user who posts the Bounty is responsible for covering all associated costs, including a service fee of 4% to Opire and transaction fees charged by our payment processing partner, Stripe. The total amount paid by the Customer includes the Bounty, Opire's fee, and applicable St"
+  },
+  {
+   "k": "claim",
+   "w": "isabled until such time as they have rectified their outstanding obligations and demonstrated compliance with our ethical use standards. Disclaimer and Limitations of Liability Opire LLC provides the website and all associated services on an \"as is\" and \"as available\" basis. This means that we do not represent or warra"
+  },
+  {
+   "k": "claim",
+   "w": "graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk. We disclaim all warranties, express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event wi"
+  },
+  {
+   "k": "claim",
+   "w": "ubsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys’ fees and expenses, made by any third party due to or arising out of: (1) your Contributions; (2) use of the website; (3) breach of"
+  },
+  {
+   "k": "reward",
+   "w": "WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Terms of Service These Terms of Service govern your use of the website located at https://opire.dev and "
+  },
+  {
+   "k": "reward",
+   "w": "WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Terms of Service These Terms of Service govern your use of the website located at https://opire.dev and any related services provided by Opire LLC. By accessing https://opi"
+  },
+  {
+   "k": "reward",
+   "w": "scord Reddit Twitter Legal Terms of Service Privacy Policy Cookie Policy Support FAQs Contact Us Ko-fi Resource Docs GitHub LinkedIn 2024 - Rewarded with Opire 💚"
+  },
+  {
+   "k": "bounty",
+   "w": " intended to attract developers who can address and resolve these issues. When a developer successfully resolves an issue associated with a Bounty, they are entitled to receive 100% of the Bounty amount. The user who posts the Bounty is responsible for covering all associated costs, including a service fee of 4% to Opi"
+  },
+  {
+   "k": "bounty",
+   "w": "nd resolve these issues. When a developer successfully resolves an issue associated with a Bounty, they are entitled to receive 100% of the Bounty amount. The user who posts the Bounty is responsible for covering all associated costs, including a service fee of 4% to Opire and transaction fees charged by our payment pr"
+  },
+  {
+   "k": "bounty",
+   "w": "per successfully resolves an issue associated with a Bounty, they are entitled to receive 100% of the Bounty amount. The user who posts the Bounty is responsible for covering all associated costs, including a service fee of 4% to Opire and transaction fees charged by our payment processing partner, Stripe. The total am"
+  },
+  {
+   "k": "how it works",
+   "w": "accordance with the laws of Delaware. You irrevocably submit to the exclusive jurisdiction of the courts in that State or location. Company How it Works? FAQs Blog Community Discord Reddit Twitter Legal Terms of Service Privacy Policy Cookie Policy Support FAQs Contact Us Ko-fi Resource Docs GitHub LinkedIn 2024 - Rewa"
+  },
+  {
+   "k": "monthly",
+   "w": "vide benefits, including discounted service fees and access to exclusive features, such as webhooks. These subscriptions are available with monthly or annual billing options. Subscription tiers cannot be changed until the next renewal period. However, subscriptions can be paused or cancelled at any time. No refunds wil"
+  },
+  {
+   "k": "monthly",
+   "w": "eady paid, but users will retain access to subscribed services until the end of the current billing cycle. For example, if a user cancels a monthly subscription, access to the services continues until a month has elapsed since the start of the subscription; for an annual subscription, access continues until the end of "
+  },
+  {
+   "k": "terms",
+   "w": "WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Terms of Service These Terms of Service govern your use of the website located at https://opire.dev and any related services provided by Opire LLC. By accessing https://opire.dev, "
+  },
+  {
+   "k": "terms",
+   "w": "DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS WHO IS IT FOR? HOW DOES IT WORK? FAQS OPEN STARTUP BLOG SEE REWARDS Terms of Service These Terms of Service govern your use of the website located at https://opire.dev and any related services provided by Opire LLC. By accessing https://opire.dev, you agree to abide by t"
+  },
+  {
+   "k": "terms",
+   "w": "te located at https://opire.dev and any related services provided by Opire LLC. By accessing https://opire.dev, you agree to abide by these Terms of Service and to comply with all applicable laws and regulations. If you do not agree with these Terms of Service, you are prohibited from using or accessing this website or"
+  }
+ ]
+}
