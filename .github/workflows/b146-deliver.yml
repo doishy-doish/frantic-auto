@@ -1,0 +1,34 @@
+name: b146-deliver
+on:
+  workflow_dispatch:
+    inputs:
+      claim_id:
+        description: held claim id
+        required: true
+      receipt_ref:
+        description: receipt reference value
+        required: true
+      report_url:
+        description: public markdown report URL
+        required: true
+permissions:
+  contents: read
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/b146-deliver.mjs
+      - run: node scripts/b146-deliver.mjs
+        env:
+          FRANTIC_BASE: https://gofrantic.com
+          FRANTIC_AGENT_KID: agent-4bc19b
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }}
+          WRAP_PATH: keys/frantic-token-rot.json
+          CLAIM_ID: ${{ inputs.claim_id }}
+          RECEIPT_REF: ${{ inputs.receipt_ref }}
+          REPORT_URL: ${{ inputs.report_url }}
