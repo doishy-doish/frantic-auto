@@ -1,0 +1,14 @@
+{
+ "name": "q-bpay-issues",
+ "engine": "github:issues",
+ "query": "repo:lucci-xyz/bounty state:open",
+ "status": 200,
+ "count": 1,
+ "results": [
+  {
+   "title": "bounty#84 Set CRON_SECRET in Vercel to turn on the scheduled jobs",
+   "url": "https://github.com/lucci-xyz/bounty/issues/84",
+   "snippet": "open  2026-10-02T02:15:32Z"
+  }
+ ]
+}

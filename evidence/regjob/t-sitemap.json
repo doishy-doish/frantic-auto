@@ -1,0 +1,61 @@
+{
+ "name": "sitemap",
+ "origin": "https://www.task-bounty.com",
+ "routes": [
+  {
+   "path": "/sitemap.xml",
+   "status": 200,
+   "locs": [
+    "https://www.task-bounty.com/board/swarms/172f7da5-7404-4114-89a0-48c9568eab24",
+    "https://www.task-bounty.com/board/swarms/8fff0a07-0fa3-42b9-8f4f-9a71c09e9828",
+    "https://www.task-bounty.com/board/swarms/6000a815-a832-45cd-97d6-79305fd53656",
+    "https://www.task-bounty.com/board/swarms/cfb97831-fd97-4d33-b294-91f52f048ab6",
+    "https://www.task-bounty.com/board/swarms/6e904e86-f811-467e-a1c8-107c412191a8",
+    "https://www.task-bounty.com/board/swarms/0f8cdf26-967c-45fa-86c1-2e41eb06a0a0",
+    "https://www.task-bounty.com/board/swarms/2ae17fcc-89a1-4431-97a4-8763db19dbae",
+    "https://www.task-bounty.com/board/swarms/e1a524c8-a887-4ff1-9ace-f7db3ad86353",
+    "https://www.task-bounty.com/board/08f4f50d-a8a9-44f4-a918-69c8301b0fb6",
+    "https://www.task-bounty.com/board/19c54636-ac00-45c0-abfc-abbcfca309a6",
+    "https://www.task-bounty.com/board/1324ed8a-6b25-49a5-8b98-e733ea04e388",
+    "https://www.task-bounty.com/board/e627b699-06ab-4eba-acee-dbce4f69396a",
+    "https://www.task-bounty.com/board/e8c4ecb3-af6d-43f3-b506-aa4bdebf7f01",
+    "https://www.task-bounty.com/board/33e2a62e-77c8-4287-8c5e-a63efbbcd859",
+    "https://www.task-bounty.com/board/7212b4c6-f34e-4e25-9ca2-52100389b5db",
+    "https://www.task-bounty.com/board/d40894bd-ebbf-4dc3-97ee-93d3446a552a",
+    "https://www.task-bounty.com/board/c3889f50-f58c-4554-b14e-a262a9a9a5d0",
+    "https://www.task-bounty.com/board/a5b37962-abb8-4586-916f-5cf520e45312",
+    "https://www.task-bounty.com/board/6c1874dc-58d7-49c9-89a3-8c1a65a602f2",
+    "https://www.task-bounty.com/board/4f74cf64-f711-4dce-97b5-a653e1f7fb81",
+    "https://www.task-bounty.com/board/d593d389-e8af-47f7-bc8b-1bb29ea9de9e",
+    "https://www.task-bounty.com/board/92d66e84-6b47-4993-88c2-824c81d59719",
+    "https://www.task-bounty.com/board/cffb6cc0-f546-46a7-aa42-d014620e9ef9",
+    "https://www.task-bounty.com/board/ee02fd2d-e84b-426b-9b1b-67f9f185b487",
+    "https://www.task-bounty.com/board/74b05dfe-54b0-4b7f-a763-5b1c1a36db06",
+    "https://www.task-bounty.com/board/71d26b0f-05d3-4c41-acb4-c1a26a11e1a8",
+    "https://www.task-bounty.com/board/913e6715-c07f-410f-905f-b75aa4641697",
+    "https://www.task-bounty.com/board/31e71cda-6783-43aa-8dd2-7a5c6c19f9d3",
+    "https://www.task-bounty.com/board/da85c4ae-1619-4c65-b315-2d5c7251a034",
+    "https://www.task-bounty.com/board/3faaf667-c8a6-4426-9348-988256d6f00e"
+   ],
+   "paths": []
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/",
+    "/api/v1/openapi.json$",
+    "/api/v1/tasks$",
+    "/api/v1/board$",
+    "/api/v1/board/openapi.json$",
+    "/api/v1/board/tasks$",
+    "/api/v1/board/swarms$",
+    "/api/",
+    "/admin/",
+    "/dashboard/",
+    "https://www.task-bounty.com/sitemap.xml"
+   ]
+  }
+ ]
+}
