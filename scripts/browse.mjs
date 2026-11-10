@@ -49,14 +49,22 @@ const CASES = {
   'search-sweep': { depth: 0, render: 0, maxTargets: 10, maxFollows: 0, bundle: 0, sitemap: 0 },
   'chain-read': { depth: 0, render: 0, maxTargets: 12, maxFollows: 0, bundle: 0, sitemap: 0 },
 };
-const caseName = (process.env.CASE || '').toLowerCase() || null;
+const caseName = (process.env.CASE || '').toLowerCase().trim() || null;
 const preset = (caseName && CASES[caseName]) || { depth: 1, render: 0, maxTargets: 8, maxFollows: 8, bundle: 0, sitemap: 0 };
-const DEPTH = Math.min(Math.max(parseInt(process.env.DEPTH ?? preset.depth, 10) || 0, 0), 2);
-const RENDER_ON = (process.env.RENDER ?? String(preset.render)) === '1';
-const MAX_TARGETS = Math.min(Math.max(parseInt(process.env.MAX_TARGETS ?? preset.maxTargets, 10) || 8, 1), 12);
-const MAX_FOLLOWS = Math.min(Math.max(parseInt(process.env.MAX_FOLLOWS ?? preset.maxFollows, 10) || 0, 0), 12);
-const BUNDLE_ON = (process.env.BUNDLE ?? String(preset.bundle || 0)) === '1';
-const SITEMAP_ON = (process.env.SITEMAP ?? String(preset.sitemap ?? 0)) === '1';
+// Empty-string env (undispatched workflow inputs default to '') means "unset" — fall
+// back to the CASE preset. Without this, '' overrides the preset (parseInt('')=NaN).
+const numOr = (v, d) => {
+  const s = (v ?? '').toString().trim();
+  if (!s) return d;
+  const n = parseInt(s, 10);
+  return Number.isFinite(n) ? n : d;
+};
+const DEPTH = Math.min(Math.max(numOr(process.env.DEPTH, preset.depth), 0), 2);
+const RENDER_ON = ((process.env.RENDER ?? '').toString().trim() === '' ? String(preset.render) : process.env.RENDER) === '1';
+const MAX_TARGETS = Math.min(Math.max(numOr(process.env.MAX_TARGETS, preset.maxTargets), 1), 12);
+const MAX_FOLLOWS = Math.min(Math.max(numOr(process.env.MAX_FOLLOWS, preset.maxFollows), 0), 12);
+const BUNDLE_ON = ((process.env.BUNDLE ?? '').toString().trim() === '' ? String(preset.bundle || 0) : process.env.BUNDLE) === '1';
+const SITEMAP_ON = ((process.env.SITEMAP ?? '').toString().trim() === '' ? String(preset.sitemap ?? 0) : process.env.SITEMAP) === '1';
 const RPC_URL = (process.env.RPC_URL || 'https://mainnet.base.org').slice(0, 200);
 console.log(`boot case=${caseName || 'default'} depth=${DEPTH} breadth=${MAX_TARGETS}+${MAX_FOLLOWS} render=${RENDER_ON ? 1 : 0} bundle=${BUNDLE_ON ? 1 : 0} sitemap=${SITEMAP_ON ? 1 : 0}`);
 
