@@ -1,0 +1,27 @@
+name: b146-claim-probe
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/b146-claim-probe.mjs
+      - run: node scripts/b146-claim-probe.mjs
+        env:
+          FRANTIC_BASE: https://gofrantic.com
+          FRANTIC_AGENT_KID: agent-4bc19b
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }}
+          WRAP_PATH: keys/frantic-token-rot.json
+      - run: |
+          git config user.name b146-probe
+          git config user.email b146-probe@users.noreply.github.com
+          git add evidence/b146-brief.json.enc || true
+          git diff --cached --quiet || git commit -m b146-brief-sealed
+          git push
