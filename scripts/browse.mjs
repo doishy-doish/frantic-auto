@@ -1,7 +1,35 @@
 // Minimal agentic browser — public GETs only. No secrets, no auth, quiet logs.
-// Env: TARGETS_JSON = [{name, url} | {name, search}], STAMP = evidence dir name,
-//   DEPTH = 0|1 (1 = follow interesting links inside the same run — one run does hop chains).
-// Writes evidence/<stamp>/t-<name>.json (+ t-d1-<n>.json follows) + evidence/<stamp>/summary.json.
+// Env: TARGETS_JSON, STAMP, CASE, DEPTH, RENDER, MAX_TARGETS, MAX_FOLLOWS, RPC_URL.
+// Case presets set the depth:breadth ratio; explicit env overrides the preset.
+// Writes evidence/<stamp>/t-<name>.json + evidence/<stamp>/summary.json.
+//
+// CASE GUIDE (depth:breadth per case type — measured on this lane, read at boot):
+// - discover   : breadth HIGH, depth 0. 8-12 seed URLs, no follows, render 0.
+//                Use: find new hubs. Why shallow: hub homepages diverge; follows burn
+//                runs. (search1: 30 results -> 8 hubs browsed, all verdicts from heads.)
+// - inventory  : breadth LOW (1-3 boards), depth 0, render 1 + apiCalls harvest.
+//                Use: JS-rendered bounty boards (uBounty filters, TaskBounty /board).
+//                Do NOT follow links — harvest the API routes instead (bp /api/bounties/open
+//                found via render, not via crawling).
+// - proof      : breadth LOW (1-2 seeds), depth 2 NARROW (docs/faq/pricing/terms only).
+//                Use: escrow / payout / KYC proof. Why depth 2: proof lives 2 hops down
+//                (home -> docs -> pricing/terms). Depth 1 MISSED it — opire needed 3
+//                dispatches before depth existed. Narrow FOLLOW_RE keeps it cheap.
+// - api-hunt   : breadth LOW (1-2 apps), depth 1 WIDE + bundle-mine + render apiCalls.
+//                Use: hidden /api routes, registry addresses, openapi.json. Mine JS
+//                chunks (__NEXT_DATA__ buildId, /_next/static/*.js) for /api/ strings.
+// - repo-mine  : breadth LOW (2-4 raw files), depth 1, via CDN (cdn.jsdelivr, NOT
+//                raw.githubusercontent which times out from worker/Actions).
+//                Use: docs repos (uBounty ProductFeatures), ABI, route lists.
+// - search-sweep: breadth HIGH (6-10 queries), depth 0, engines ddg+mojeek+github.
+//                Use: query expansion. No follows — next dispatch browses the hits.
+// - chain-read : breadth = contracts, depth = blocks. RPC targets bypass JS walls
+//                entirely (BountyPay escrow 0xd0A0… inventory via eth_getLogs).
+//                Use when the app is wallet-walled but the escrow is on-chain (OUR chain).
+//
+// Rule of thumb: discovery = wide+shallow, proof = narrow+deep, inventory = render
+// don't crawl, chain = don't browse at all. When unsure, proof-like questions take
+// depth 2 narrow; hub questions take depth 0 wide. Depth 1 is the DEFAULT, not the best.
 import { writeFile, mkdir } from 'node:fs/promises';
 
 const stamp = (process.env.STAMP || new Date().toISOString().replace(/[:.]/g, '-')).replace(/[^a-zA-Z0-9-_]/g, '').slice(0, 60) || 'run';
@@ -11,8 +39,30 @@ await mkdir(outDir, { recursive: true });
 let targets = [];
 try { targets = JSON.parse(process.env.TARGETS_JSON || '[]'); } catch { targets = []; }
 
-const DEPTH = Math.min(parseInt(process.env.DEPTH || '0', 10) || 0, 1);
-const FOLLOW_RE = /(docs|faq|pricing|terms|lifecycle|bount|board|how-it-works|\/api\/|attach|guide)/i;
+// ---- case presets (depth:breadth) ----
+const CASES = {
+  discover: { depth: 0, render: 0, maxTargets: 12, maxFollows: 0, bundle: 0, sitemap: 1 },
+  inventory: { depth: 0, render: 1, maxTargets: 3, maxFollows: 0, bundle: 0, sitemap: 0 },
+  proof: { depth: 2, render: 0, maxTargets: 2, maxFollows: 6, bundle: 0, sitemap: 1 },
+  'api-hunt': { depth: 1, render: 1, maxTargets: 2, maxFollows: 8, bundle: 1, sitemap: 1 },
+  'repo-mine': { depth: 1, render: 0, maxTargets: 4, maxFollows: 4, bundle: 0, sitemap: 0 },
+  'search-sweep': { depth: 0, render: 0, maxTargets: 10, maxFollows: 0, bundle: 0, sitemap: 0 },
+  'chain-read': { depth: 0, render: 0, maxTargets: 12, maxFollows: 0, bundle: 0, sitemap: 0 },
+};
+const caseName = (process.env.CASE || '').toLowerCase() || null;
+const preset = (caseName && CASES[caseName]) || { depth: 1, render: 0, maxTargets: 8, maxFollows: 8, bundle: 0, sitemap: 0 };
+const DEPTH = Math.min(Math.max(parseInt(process.env.DEPTH ?? preset.depth, 10) || 0, 0), 2);
+const RENDER_ON = (process.env.RENDER ?? String(preset.render)) === '1';
+const MAX_TARGETS = Math.min(Math.max(parseInt(process.env.MAX_TARGETS ?? preset.maxTargets, 10) || 8, 1), 12);
+const MAX_FOLLOWS = Math.min(Math.max(parseInt(process.env.MAX_FOLLOWS ?? preset.maxFollows, 10) || 0, 0), 12);
+const BUNDLE_ON = (process.env.BUNDLE ?? String(preset.bundle || 0)) === '1';
+const SITEMAP_ON = (process.env.SITEMAP ?? String(preset.sitemap ?? 0)) === '1';
+const RPC_URL = (process.env.RPC_URL || 'https://mainnet.base.org').slice(0, 200);
+console.log(`boot case=${caseName || 'default'} depth=${DEPTH} breadth=${MAX_TARGETS}+${MAX_FOLLOWS} render=${RENDER_ON ? 1 : 0} bundle=${BUNDLE_ON ? 1 : 0} sitemap=${SITEMAP_ON ? 1 : 0}`);
+
+const FOLLOW_NARROW = /(docs|faq|pricing|terms|lifecycle|guide|how-it-works|attach)/i;
+const FOLLOW_WIDE = /(docs|faq|pricing|terms|lifecycle|bount|board|how-it-works|\/api\/|attach|guide|openapi|\.json)/i;
+const FOLLOW_RE = DEPTH >= 2 ? FOLLOW_NARROW : FOLLOW_WIDE;
 
 const KW = ['payout', 'paid out', 'stripe', 'wallet', 'bank account', 'usdc', 'usdt', 'crypto',
   'kyc', 'interview', 'video call', 'fee', 'withdraw', 'claim', 'escrow', 'reward', 'bounty',
@@ -50,7 +100,7 @@ function linksOf(html) {
   while ((m = re.exec(html)) && out.length < 200) {
     out.push({ h: m[1].slice(0, 200), t: m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80) });
   }
-  return out.filter((l) => /faq|how|reward|bount|payout|pay|doc|term|price|open|app|issue|earn|start/i.test(l.h + ' ' + l.t)).slice(0, 40);
+  return out.filter((l) => /faq|how|reward|bount|payout|pay|doc|term|price|open|app|issue|earn|start|api|guide/i.test(l.h + ' ' + l.t)).slice(0, 40);
 }
 function windows(text) {
   const L = text.toLowerCase();
@@ -74,8 +124,17 @@ function nextData(html) {
     return { keys: Object.keys(j).slice(0, 20), page: j.page || j.path || null, buildId: j.buildId || null };
   } catch { return { parse: 'fail', bytes: m[1].length }; }
 }
+function scriptSrcs(html, base) {
+  const out = [];
+  const re = /<script[^>]+src="([^"]+\.js[^"]*)"/gi;
+  let m;
+  while ((m = re.exec(html)) && out.length < 15) {
+    try { out.push(new URL(m[1], base).toString().slice(0, 300)); } catch { /* skip */ }
+  }
+  return out.filter((u) => /_next\/static|static\/js|assets|chunks|bundle/i.test(u)).slice(0, 8);
+}
 
-const RENDER = process.env.RENDER === '1';
+const RENDER = RENDER_ON;
 let _pw = null;
 async function renderedHtml(url) {
   try {
@@ -99,7 +158,7 @@ async function renderedHtml(url) {
     return { html, apiCalls };
   } catch (e) { try { await browser?.close(); } catch {} return { error: String(e).slice(0, 160) }; }
 }
-async function browseUrl(name, rawUrl) {
+async function browseUrl(name, rawUrl, depthLeft = 0) {
   const su = sanitizeUrl(rawUrl);
   const row = { name, url: su.url };
   if (su.sanitized) row.sanitized = true;
@@ -150,9 +209,67 @@ async function browseUrl(name, rawUrl) {
       row.links = linksOf(html);
       row.nextData = nextData(html);
       row.hits = windows(text);
+      if (BUNDLE_ON) {
+        const chunks = scriptSrcs(html, row.final || row.url);
+        const hits = [];
+        for (const cu of chunks.slice(0, 5)) {
+          try {
+            const cr = await fetch(cu, { headers: { 'User-Agent': 'agent-browser/1.0' } });
+            if (!cr.ok) continue;
+            const js = await cr.text();
+            const re = /\/api\/[a-zA-Z0-9_\-/{}:?=.]{1,80}|0x[0-9a-fA-F]{40}|openapi\.json|_next\/data\/[^\s"']{1,80}/g;
+            let m; let n = 0;
+            while ((m = re.exec(js)) && n < 10) { hits.push(m[0].slice(0, 120)); n++; }
+            if (hits.length >= 15) break;
+          } catch { /* skip chunk */ }
+        }
+        if (hits.length) row.bundleHits = [...new Set(hits)].slice(0, 20);
+        row.bundlesChecked = chunks.length;
+      }
     }
   } catch (e) { row.error = String(e).slice(0, 160); }
   return row;
+}
+
+// NEW SKILL 1 — chain-read: public JSON-RPC (no key, no secret). Bypasses JS walls.
+// Target shape: {name, rpc:{url?, method, params}} — result capped, committed as public chain data.
+async function rpcCall(name, spec) {
+  const row = { name, rpc: { method: spec.method } };
+  const url = (spec.url || RPC_URL).slice(0, 200);
+  row.rpc.url = sanitizeUrl(url).url;
+  try {
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'User-Agent': 'agent-browser/1.0' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: spec.method, params: spec.params || [] }),
+    });
+    row.status = r.status;
+    const txt = await r.text();
+    const j = JSON.parse(txt);
+    if (j.error) row.rpcError = JSON.stringify(j.error).slice(0, 300);
+    else row.result = JSON.stringify(j.result).slice(0, 2000);
+  } catch (e) { row.error = String(e).slice(0, 160); }
+  return row;
+}
+
+// NEW SKILL 2 — sitemap discovery: /sitemap.xml + /robots.txt per origin (free breadth).
+async function sitemapOf(seedUrl) {
+  try {
+    const o = new URL(seedUrl);
+    const base = o.origin;
+    const out = { origin: base, routes: [] };
+    for (const p of ['/sitemap.xml', '/robots.txt']) {
+      try {
+        const r = await fetch(base + p, { headers: { 'User-Agent': 'agent-browser/1.0' } });
+        if (!r.ok) continue;
+        const t = (await r.text()).slice(0, 20000);
+        const locs = [...t.matchAll(/<loc>([^<]{1,200})<\/loc>/g)].map((m) => m[1]).slice(0, 30);
+        const paths = [...t.matchAll(/(?:Allow|Disallow|Sitemap):\s*(\S{1,200})/g)].map((m) => m[1]).slice(0, 30);
+        out.routes.push({ path: p, status: r.status, locs, paths });
+      } catch { /* skip */ }
+    }
+    return out.routes.length ? out : null;
+  } catch { return null; }
 }
 
 async function doSearch(engine, query, count = 10, kind = 'repositories') {  count = Math.min(Math.max(count || 10, 1), 10);
@@ -207,9 +324,10 @@ async function doSearch(engine, query, count = 10, kind = 'repositories') {  cou
 }
 
 const rows = [];
-const followQueue = [];
 const seen = new Set();
-for (const t of targets.slice(0, 12)) {
+// BFS across DEPTH levels: level 0 = seeds, level 1..DEPTH = follows. Breadth capped.
+let frontier = [];
+for (const t of targets.slice(0, MAX_TARGETS)) {
   if (t.search) {
     const row = { name: t.name };
     try { Object.assign(row, await doSearch(t.search.engine, t.search.query, t.search.count, t.search.kind)); }
@@ -218,8 +336,16 @@ for (const t of targets.slice(0, 12)) {
     await writeFile(`${outDir}/t-${t.name}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
     continue;
   }
+  if (t.rpc) {
+    const row = await rpcCall(t.name, t.rpc);
+    rows.push(row);
+    await writeFile(`${outDir}/t-${t.name}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
+    continue;
+  }
+  if (!t.url) continue;
   seen.add(sanitizeUrl(t.url).url);
   const row = await browseUrl(t.name, t.url);
+  row.depth = 0;
   rows.push(row);
   await writeFile(`${outDir}/t-${t.name}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
   if (DEPTH >= 1 && row.links) {
@@ -228,23 +354,53 @@ for (const t of targets.slice(0, 12)) {
       try { abs = new URL(l.h, row.final || row.url).toString(); } catch { continue; }
       if (!FOLLOW_RE.test(abs) || seen.has(sanitizeUrl(abs).url)) continue;
       seen.add(sanitizeUrl(abs).url);
-      if (followQueue.length < 8) followQueue.push(abs);
+      if (frontier.length < MAX_FOLLOWS) frontier.push({ url: abs, from: t.name, depth: 1 });
     }
   }
 }
-// DEPTH=1: hop chain inside the SAME run — same evidence format, no extra dispatches.
+// Sitemap free-breadth: first seed origin only (2 cheap fetches, no follow budget spent).
+if (SITEMAP_ON) {
+  const seed = targets.find((t) => t.url);
+  if (seed) {
+    const sm = await sitemapOf(seed.url);
+    if (sm) {
+      rows.push({ name: 'sitemap', ...sm });
+      await writeFile(`${outDir}/t-sitemap.json`, JSON.stringify({ name: 'sitemap', ...sm }, null, 1).slice(0, 60000));
+    }
+  }
+}
+// Follow levels 1..DEPTH inside the SAME run — same evidence format, no extra dispatches.
 let d = 0;
-for (const u of followQueue) {
-  d++;
-  const row = await browseUrl(`d1-${d}`, u);
-  row.followOf = stamp;
-  rows.push(row);
-  await writeFile(`${outDir}/t-d1-${d}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
+let level = 1;
+while (frontier.length && level <= DEPTH) {
+  const next = [];
+  for (const f of frontier) {
+    d++;
+    const row = await browseUrl(`d${level}-${d}`, f.url);
+    row.followOf = f.from;
+    row.depth = level;
+    rows.push(row);
+    await writeFile(`${outDir}/t-d${level}-${d}.json`, JSON.stringify(row, null, 1).slice(0, 60000));
+    if (level < DEPTH && row.links) {
+      for (const l of row.links) {
+        let abs;
+        try { abs = new URL(l.h, row.final || row.url).toString(); } catch { continue; }
+        if (!FOLLOW_RE.test(abs) || seen.has(sanitizeUrl(abs).url)) continue;
+        seen.add(sanitizeUrl(abs).url);
+        if (frontier.length + next.length < MAX_FOLLOWS) next.push({ url: abs, from: `d${level}-${d}`, depth: level + 1 });
+      }
+    }
+  }
+  frontier = next;
+  level++;
 }
 await writeFile(`${outDir}/summary.json`, JSON.stringify({
   stamp,
   takenAt: new Date().toISOString(),
+  case: caseName || 'default',
   depth: DEPTH,
+  breadth: { maxTargets: MAX_TARGETS, maxFollows: MAX_FOLLOWS },
+  render: RENDER_ON,
   targets: rows.map((r) => ({ name: r.name, status: r.status ?? r.error ?? '?', bytes: r.bytes ?? 0 })),
 }, null, 1));
 console.log('browse ok ' + rows.map((r) => `${r.name}=${r.status ?? r.error}`).join(' '));
