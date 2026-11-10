@@ -1,0 +1,49 @@
+{
+ "name": "q-ubounty-issues",
+ "engine": "github:issues",
+ "query": "ubounty state:open",
+ "status": 200,
+ "count": 8,
+ "results": [
+  {
+   "title": "BountyScout#1061 🎯 Bounty Alert: 9 New Opportunityies found",
+   "url": "https://github.com/freedom-winds/BountyScout/issues/1061",
+   "snippet": "open bounty-alert 2026-09-15T11:05:24Z"
+  },
+  {
+   "title": "ubounty-demo#13 Video e2e demo for Ubounty: X402, Payment, github hook",
+   "url": "https://github.com/ubounty-app/ubounty-demo/issues/13",
+   "snippet": "open  2025-11-14T13:53:02Z"
+  },
+  {
+   "title": "ubounty-demo#51 test: contributor workflow validation script for bounty #9",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/51",
+   "snippet": "open  2026-07-10T05:45:41Z"
+  },
+  {
+   "title": "ubounty-demo#9 Complete a test bounty: Submit PR and receive USDC payment",
+   "url": "https://github.com/ubounty-app/ubounty-demo/issues/9",
+   "snippet": "open bounty 2025-11-12T02:59:15Z"
+  },
+  {
+   "title": "ubounty-demo#48 docs: add x402 GitHub hook demo kit",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/48",
+   "snippet": "open  2026-06-12T16:51:09Z"
+  },
+  {
+   "title": "gitcoin_co_30#390 [App] uBounty",
+   "url": "https://github.com/gitcoinco/gitcoin_co_30/issues/390",
+   "snippet": "open  2026-05-22T12:29:34Z"
+  },
+  {
+   "title": "ubounty-demo#45 docs: add UBounty issue #9 contributor flow claim",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/45",
+   "snippet": "open  2026-05-23T01:05:30Z"
+  },
+  {
+   "title": "ubounty-demo#42 docs: add e2e demo artifact for #13 (video workflow doc + AI agent section)",
+   "url": "https://github.com/ubounty-app/ubounty-demo/pull/42",
+   "snippet": "open  2026-04-27T04:28:33Z"
+  }
+ ]
+}

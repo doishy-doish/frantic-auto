@@ -1,0 +1,54 @@
+{
+ "name": "sitemap",
+ "origin": "https://ubounty.ai",
+ "routes": [
+  {
+   "path": "/sitemap.xml",
+   "status": 200,
+   "locs": [
+    "https://ubounty.ai/",
+    "https://ubounty.ai/how-it-works",
+    "https://ubounty.ai/bounties",
+    "https://ubounty.ai/create",
+    "https://ubounty.ai/privacy",
+    "https://ubounty.ai/terms",
+    "https://ubounty.ai/ubounty/cascade-protocol/splits/5",
+    "https://ubounty.ai/ubounty/ubounty-app/ubounty-demo/9",
+    "https://ubounty.ai/ubounty/ubounty-app/ubounty-demo/7",
+    "https://ubounty.ai/ubounty/ubounty-app/ubounty-demo/13",
+    "https://ubounty.ai/ubounty/ubounty-app/ubounty-demo/3",
+    "https://ubounty.ai/ubounty/ubounty-app/ubounty/1",
+    "https://ubounty.ai/ubounty/PayAINetwork/x402-solana-react/11",
+    "https://ubounty.ai/ubounty/ubounty-app/ubounty-demo/8",
+    "https://ubounty.ai/ubounty/bekhamit/agentic-bureau/1",
+    "https://ubounty.ai/stacks-network/stacks-core",
+    "https://ubounty.ai/zeta-chain/node",
+    "https://ubounty.ai/matter-labs/zksync-era",
+    "https://ubounty.ai/graphprotocol/graph-node",
+    "https://ubounty.ai/NethermindEth/juno",
+    "https://ubounty.ai/bluealloy/revm",
+    "https://ubounty.ai/solana-playground/solana-playground",
+    "https://ubounty.ai/CosmWasm/wasmd",
+    "https://ubounty.ai/dymensionxyz/dymension",
+    "https://ubounty.ai/crypto-org-chain/cronos",
+    "https://ubounty.ai/safe-global/safe-smart-account",
+    "https://ubounty.ai/duneanalytics/spellbook",
+    "https://ubounty.ai/lambdaclass/ethrex",
+    "https://ubounty.ai/coinbase/x402",
+    "https://ubounty.ai/OpenRouterTeam/ai-sdk-provider"
+   ],
+   "paths": []
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/api/",
+    "/pay-create-bounty/",
+    "/",
+    "https://ubounty.ai/sitemap.xml"
+   ]
+  }
+ ]
+}

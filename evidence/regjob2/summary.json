@@ -1,0 +1,73 @@
+{
+ "stamp": "regjob2",
+ "takenAt": "2026-11-10T21:10:26.307Z",
+ "case": "api-hunt",
+ "depth": 1,
+ "breadth": {
+  "maxTargets": 3,
+  "maxFollows": 8
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "q-ubounty-issues",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "ub-settings",
+   "status": 200,
+   "bytes": 46453
+  },
+  {
+   "name": "tb-docs",
+   "status": 200,
+   "bytes": 60130
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  },
+  {
+   "name": "d1-1",
+   "status": 403,
+   "bytes": 773
+  },
+  {
+   "name": "d1-2",
+   "status": 200,
+   "bytes": 366687
+  },
+  {
+   "name": "d1-3",
+   "status": 200,
+   "bytes": 304835
+  },
+  {
+   "name": "d1-4",
+   "status": 200,
+   "bytes": 56499
+  },
+  {
+   "name": "d1-5",
+   "status": 200,
+   "bytes": 154951
+  },
+  {
+   "name": "d1-6",
+   "status": 200,
+   "bytes": 107746
+  },
+  {
+   "name": "d1-7",
+   "status": 200,
+   "bytes": 101825
+  },
+  {
+   "name": "d1-8",
+   "status": 200,
+   "bytes": 77775
+  }
+ ]
+}

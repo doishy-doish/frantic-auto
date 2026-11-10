@@ -1,0 +1,124 @@
+{
+ "name": "d1-4",
+ "url": "https://docs.github.com/",
+ "status": 200,
+ "final": "https://docs.github.com/en",
+ "ct": "text/html; charset=utf-8",
+ "bytes": 56499,
+ "textLen": 1539,
+ "head": "GitHub Docs Skip to main content Skip to content GitHub Docs Search or ask Copilot / Menu GitHub Docs Help for wherever you are on your GitHub journey. Search for anything... / All docs Get started Get started Migrations Account and profile Subscriptions & notifications Authentication Billing and payments Site policy Collaborative coding Codespaces Repositories Pull requests GitHub Discussions Integrations GitHub Copilot GitHub Copilot Plans Copilot cloud agent Tutorials GitHub Copilot Cookbook Customization library Copilot CLI CI/CD and DevOps GitHub Actions GitHub Packages GitHub Pages Security and code quality Security and code quality Secure your secrets Find and fix code vulnerabilities Secure your supply chain Maintain quality code Secure at scale Client apps GitHub CLI GitHub Mobile GitHub Desktop Project management GitHub Issues Projects Search on GitHub Enterprise and teams Organizations Secure at scale Enterprise onboarding Enterprise administrators Developers Apps REST API GraphQL API Webhooks Community Building communities GitHub Sponsors GitHub Education GitHub for Nonprofits GitHub Support Contribute to GitHub Docs More docs CodeQL query writing Electron npm GitHub We…[trunc 1539]",
+ "links": [
+  {
+   "h": "/en/get-started",
+   "t": "Get started"
+  },
+  {
+   "h": "/en/billing",
+   "t": "Billing and payments"
+  },
+  {
+   "h": "/en/copilot/get-started/plans",
+   "t": "Plans"
+  },
+  {
+   "h": "/en/copilot/how-tos/use-copilot-agents/cloud-agent",
+   "t": "Copilot cloud agent"
+  },
+  {
+   "h": "/en/copilot/how-tos/copilot-cli",
+   "t": "Copilot CLI"
+  },
+  {
+   "h": "/en/code-security/how-tos/secure-your-secrets",
+   "t": "Secure your secrets"
+  },
+  {
+   "h": "/en/code-security/how-tos/find-and-fix-code-vulnerabilities",
+   "t": "Find and fix code vulnerabilities"
+  },
+  {
+   "h": "/en/code-security/how-tos/secure-your-supply-chain",
+   "t": "Secure your supply chain"
+  },
+  {
+   "h": "/en/code-security/how-tos/maintain-quality-code",
+   "t": "Maintain quality code"
+  },
+  {
+   "h": "/en/code-security/how-tos/secure-at-scale",
+   "t": "Secure at scale"
+  },
+  {
+   "h": "/en/get-started/using-github/github-mobile",
+   "t": "GitHub Mobile"
+  },
+  {
+   "h": "/en/issues",
+   "t": "GitHub Issues"
+  },
+  {
+   "h": "/en/issues/planning-and-tracking-with-projects",
+   "t": "Projects"
+  },
+  {
+   "h": "/en/code-security/how-tos/secure-at-scale",
+   "t": "Secure at scale"
+  },
+  {
+   "h": "/en/apps",
+   "t": "Apps"
+  },
+  {
+   "h": "/en/rest",
+   "t": "REST API"
+  },
+  {
+   "h": "/en/graphql",
+   "t": "GraphQL API"
+  },
+  {
+   "h": "/en/contributing",
+   "t": "Contribute to GitHub Docs"
+  },
+  {
+   "h": "https://github.com/github/docs/blob/main/content/index.md",
+   "t": "Make a contribution"
+  },
+  {
+   "h": "/en/site-policy/github-terms/github-terms-of-service",
+   "t": "Terms"
+  }
+ ],
+ "nextData": {
+  "keys": [
+   "props",
+   "page",
+   "query",
+   "buildId",
+   "isFallback",
+   "isExperimentalCompile",
+   "gssp",
+   "appGip",
+   "locale",
+   "locales",
+   "defaultLocale",
+   "scriptLoader"
+  ],
+  "page": "/",
+  "buildId": "7xLKIf5N5KchQW3gGkEo5"
+ },
+ "hits": [
+  {
+   "k": "terms",
+   "w": "ubmit a pull request. Make a contribution Still need help? Ask the GitHub community Contact support Expert services Blog GitHub Inc. © 2026 Terms Privacy Status Pricing"
+  }
+ ],
+ "bundleHits": [
+  "_next/data/${this.buildId}${r}${m}`,!0)}_isSsg(e){return",
+  "_next/data/${e.buildId}`),",
+  "/api/events"
+ ],
+ "bundlesChecked": 8,
+ "followOf": "ub-settings",
+ "depth": 1
+}

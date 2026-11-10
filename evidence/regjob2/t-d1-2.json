@@ -1,0 +1,132 @@
+{
+ "name": "d1-2",
+ "url": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+ "status": 200,
+ "final": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+ "ct": "text/html; charset=utf-8",
+ "bytes": 366687,
+ "textLen": 48748,
+ "head": "GitHub Terms of Service - GitHub Docs Skip to main content Skip to content GitHub Docs Search or ask Copilot / Menu Collapse sidebar Expand sidebar Home Site policy GitHub Terms GitHub Terms of Service Site policy GitHub Terms GitHub Terms of Service GitHub Corporate Terms of Service GitHub Terms for Additional Products and Features GitHub Community Guidelines GitHub Community Code of Conduct GitHub Pre-release License Terms GitHub DPA-Covered Previews GitHub Sponsors Additional Terms GitHub Registered Developer Agreement GitHub Marketplace Terms of Service GitHub Marketplace Developer Agreement GitHub Research Program Terms GitHub Open Source Applications Terms and Conditions GitHub Event Terms GitHub Event Code of Conduct GitHub Educational Use Agreement GitHub Copilot Extension Developer Policy GitHub Secret Scanning Partner Program Agreement Acceptable Use Policies GitHub Acceptable Use Policies Active Malware or Exploits Bullying and Harassment Disrupting the Experience of Other Users Doxxing and Invasion of Privacy Hate Speech and Discrimination Impersonation Disinformation Policy Sexually Obscene Content Threats of Violence and Gratuitously Violent Content Terrorism and Viol…[trunc 48748]",
+ "links": [
+  {
+   "h": "/en/site-policy/github-terms",
+   "t": "GitHub Terms"
+  },
+  {
+   "h": "/en/site-policy",
+   "t": "docs.github.com/categories/site-policy"
+  },
+  {
+   "h": "/en/site-policy/site-policy-deprecated/amendment-to-github-terms-of-service-applicable-to-us-federal-government-users",
+   "t": "Government Amendment to GitHub Terms of Service"
+  },
+  {
+   "h": "/en/site-policy/github-terms/github-community-guidelines",
+   "t": "Community Guidelines"
+  },
+  {
+   "h": "/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+   "t": "GitHub Additional Product Terms"
+  },
+  {
+   "h": "/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
+   "t": "GitHub Additional Product Terms for Details"
+  },
+  {
+   "h": "/en/billing/how-tos/manage-plan-and-licenses/downgrade-plan",
+   "t": "cancel your Account at any time"
+  },
+  {
+   "h": "https://github.com/github/docs/blob/main/content/site-policy/github-terms/github-terms-of-service.md",
+   "t": "Make a contribution"
+  },
+  {
+   "h": "/en/site-policy/github-terms/github-terms-of-service",
+   "t": "Terms"
+  }
+ ],
+ "nextData": {
+  "keys": [
+   "props",
+   "page",
+   "query",
+   "buildId",
+   "isFallback",
+   "isExperimentalCompile",
+   "gssp",
+   "appGip",
+   "locale",
+   "locales",
+   "defaultLocale",
+   "scriptLoader"
+  ],
+  "page": "/[versionId]/[productId]/[...restPage]",
+  "buildId": "7xLKIf5N5KchQW3gGkEo5"
+ },
+ "hits": [
+  {
+   "k": "fee",
+   "w": "elated to the Website and Service. We reserve all rights that are not expressly granted to you under this Agreement or by law. The look and feel of the Website and Service is copyright © GitHub, Inc. All rights reserved. You may not duplicate, copy, or reuse any portion of the HTML/CSS, JavaScript, or visual design ele"
+  },
+  {
+   "k": "fee",
+   "w": " You may receive confidential information through those programs that must remain confidential while the program is private. We'd love your feedback to make our Beta Previews better. 1. Subject to Change Beta Previews may not be supported and may be changed at any time without notice. In addition, Beta Previews are not"
+  },
+  {
+   "k": "fee",
+   "w": "tion pursuant to operation of law, provided GitHub has been given reasonable advance written notice to object, unless prohibited by law. 3. Feedback We’re always trying to improve our products and services, and your feedback as a Beta Preview user will help us do that. If you choose to give us any ideas, know-how, algo"
+  },
+  {
+   "k": "claim",
+   "w": "rms J. AI Features, Training, and Your Data K. Beta Previews L. Payment M. Cancellation and Termination N. Communications with GitHub O. Disclaimer of Warranties P. Limitation of Liability Q. Release and Indemnification R. Changes to These Terms S. Miscellaneous Thank you for using GitHub! We're happy you're here. Plea"
+  },
+  {
+   "k": "claim",
+   "w": "unications with GitHub We only use email and other electronic means to stay in touch with our users. We do not provide phone support. O. Disclaimer of Warranties We provide our service as is, and we make no promises or guarantees about this service. Please read this section carefully; you should understand what to expe"
+  },
+  {
+   "k": "claim",
+   "w": "e agreements govern the use of your data in connection with AI Features and Section J.3 does not apply to you. 2. Ownership GitHub does not claim ownership of your Input or Output. Output may contain material that resembles code or content in the model's training data or that is subject to third-party copyrights or ope"
+  },
+  {
+   "k": "bounty",
+   "w": "A Counter Notice Guide to Submitting a DMCA Takedown Notice Security Policies Coordinated Disclosure of Security Vulnerabilities GitHub Bug Bounty Program Legal Safe Harbor GitHub SIRT description RFC 2350 GitHub Company Policies GitHub Statement Against Modern Slavery and Child Labor GitHub Anti-Bribery Statement GitH"
+  },
+  {
+   "k": "how it works",
+   "w": "ment to license that Content under different terms, such as a contributor license agreement, that agreement will supersede. Isn't this just how it works already? Yep. This is widely accepted as the norm in the open-source community; it's commonly referred to by the shorthand \"inbound=outbound\". We're just making it exp"
+  },
+  {
+   "k": "monthly",
+   "w": "s Section D.9 does not apply to Access solely for the purpose of academic research or if, on the date you Access the Content, the number of monthly active users of the products or services made available by you is less than 700 million in the preceding calendar month. For the purposes of this Section, \"you\" shall refer"
+  },
+  {
+   "k": "monthly",
+   "w": "Upgrades, Downgrades, and Changes We will immediately bill you when you upgrade from the free plan to any paying plan. If you change from a monthly billing plan to a yearly billing plan, GitHub will bill you for a full year at the next monthly billing date. If you upgrade to a higher level of service, we will bill you "
+  },
+  {
+   "k": "monthly",
+   "w": "an to any paying plan. If you change from a monthly billing plan to a yearly billing plan, GitHub will bill you for a full year at the next monthly billing date. If you upgrade to a higher level of service, we will bill you for the upgraded plan immediately. You may change your level of service at any time by choosing "
+  },
+  {
+   "k": "terms",
+   "w": "GitHub Terms of Service - GitHub Docs Skip to main content Skip to content GitHub Docs Search or ask Copilot / Menu Collapse sidebar Expand sidebar Home Site policy GitHub Terms GitHub Te"
+  },
+  {
+   "k": "terms",
+   "w": " Docs Skip to main content Skip to content GitHub Docs Search or ask Copilot / Menu Collapse sidebar Expand sidebar Home Site policy GitHub Terms GitHub Terms of Service Site policy GitHub Terms GitHub Terms of Service GitHub Corporate Terms of Service GitHub Terms for Additional Products and Features GitHub Community "
+  },
+  {
+   "k": "terms",
+   "w": " main content Skip to content GitHub Docs Search or ask Copilot / Menu Collapse sidebar Expand sidebar Home Site policy GitHub Terms GitHub Terms of Service Site policy GitHub Terms GitHub Terms of Service GitHub Corporate Terms of Service GitHub Terms for Additional Products and Features GitHub Community Guidelines Gi"
+  }
+ ],
+ "bundleHits": [
+  "_next/data/${this.buildId}${r}${m}`,!0)}_isSsg(e){return",
+  "_next/data/${e.buildId}`),",
+  "/api/events"
+ ],
+ "bundlesChecked": 8,
+ "followOf": "ub-settings",
+ "depth": 1
+}

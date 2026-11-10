@@ -1,0 +1,108 @@
+{
+ "name": "d1-3",
+ "url": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+ "status": 200,
+ "final": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+ "ct": "text/html; charset=utf-8",
+ "bytes": 304835,
+ "textLen": 43671,
+ "head": "GitHub General Privacy Statement - GitHub Docs Skip to main content Skip to content GitHub Docs Search or ask Copilot / Menu Collapse sidebar Expand sidebar Home Site policy Privacy Policies GitHub General Privacy Statement Site policy GitHub Terms GitHub Terms of Service GitHub Corporate Terms of Service GitHub Terms for Additional Products and Features GitHub Community Guidelines GitHub Community Code of Conduct GitHub Pre-release License Terms GitHub DPA-Covered Previews GitHub Sponsors Additional Terms GitHub Registered Developer Agreement GitHub Marketplace Terms of Service GitHub Marketplace Developer Agreement GitHub Research Program Terms GitHub Open Source Applications Terms and Conditions GitHub Event Terms GitHub Event Code of Conduct GitHub Educational Use Agreement GitHub Copilot Extension Developer Policy GitHub Secret Scanning Partner Program Agreement Acceptable Use Policies GitHub Acceptable Use Policies Active Malware or Exploits Bullying and Harassment Disrupting the Experience of Other Users Doxxing and Invasion of Privacy Hate Speech and Discrimination Impersonation Disinformation Policy Sexually Obscene Content Threats of Violence and Gratuitously Violent Cont…[trunc 43671]",
+ "links": [
+  {
+   "h": "https://github.com/customer-terms/github-data-protection-agreement",
+   "t": "GitHub Data Protection Agreement"
+  },
+  {
+   "h": "/en/site-policy/other-site-policies/guidelines-for-legal-requests-of-user-data",
+   "t": "Guidelines for Legal Requests of User Data"
+  },
+  {
+   "h": "https://code.visualstudio.com/docs/configure/telemetry",
+   "t": "VS Code website"
+  },
+  {
+   "h": "https://docs.github.com/",
+   "t": "https://docs.github.com/"
+  },
+  {
+   "h": "https://github.com/github/docs/blob/main/content/site-policy/privacy-policies/github-general-privacy-statement.md",
+   "t": "Make a contribution"
+  },
+  {
+   "h": "/en/site-policy/github-terms/github-terms-of-service",
+   "t": "Terms"
+  }
+ ],
+ "nextData": {
+  "keys": [
+   "props",
+   "page",
+   "query",
+   "buildId",
+   "isFallback",
+   "isExperimentalCompile",
+   "gssp",
+   "appGip",
+   "locale",
+   "locales",
+   "defaultLocale",
+   "scriptLoader"
+  ],
+  "page": "/[versionId]/[productId]/[...restPage]",
+  "buildId": "7xLKIf5N5KchQW3gGkEo5"
+ },
+ "hits": [
+  {
+   "k": "fee",
+   "w": "ces, we collect Personal Data included as part of the information you provide such as code, inputs, AI outputs, text, documents, images, or feedback. Demographic information: In some cases, you provide us with ethnicity, gender, or similar demographic details. Feedback Data: This consists of information you submit thro"
+  },
+  {
+   "k": "fee",
+   "w": "uments, images, or feedback. Demographic information: In some cases, you provide us with ethnicity, gender, or similar demographic details. Feedback Data: This consists of information you submit through surveys, reviews, or interactive features. Payment Information: For paid subscriptions, we collect details like name,"
+  },
+  {
+   "k": "fee",
+   "w": " extra information before addressing your data-related request. Please contact our Data Protection Officer at dpo[at]github[dot]com for any feedback or concerns. Depending on your region, you have the right to complain to your local Data Protection Authority. European users can find authority contacts on the European D"
+  },
+  {
+   "k": "withdraw",
+   "w": "t: We process data when you have explicitly consented to such processing. When we rely on consent as the legal basis, you have the right to withdraw your consent for data processing at any time. The procedures for withdrawal are detailed in this Statement and available on our website. Your Privacy Rights Depending on y"
+  },
+  {
+   "k": "withdraw",
+   "w": "When we rely on consent as the legal basis, you have the right to withdraw your consent for data processing at any time. The procedures for withdrawal are detailed in this Statement and available on our website. Your Privacy Rights Depending on your residence location, you may have specific legal rights regarding your "
+  },
+  {
+   "k": "withdraw",
+   "w": "sonal Data under specific conditions The right to object to the processing of your Personal Data, as allowed by applicable law The right to withdraw consent, where processing is based on your consent The right to receive your collected Personal Data in a structured, commonly used, and machine-readable format to facilit"
+  },
+  {
+   "k": "claim",
+   "w": "rements. Please note that we may retain certain data as necessary for legal obligations or for establishing, exercising, or defending legal claims. International data transfers GitHub stores and processes Personal Data in a variety of locations, including your local region, the United States, and other countries where "
+  },
+  {
+   "k": "bounty",
+   "w": "A Counter Notice Guide to Submitting a DMCA Takedown Notice Security Policies Coordinated Disclosure of Security Vulnerabilities GitHub Bug Bounty Program Legal Safe Harbor GitHub SIRT description RFC 2350 GitHub Company Policies GitHub Statement Against Modern Slavery and Child Labor GitHub Anti-Bribery Statement GitH"
+  },
+  {
+   "k": "terms",
+   "w": "or ask Copilot / Menu Collapse sidebar Expand sidebar Home Site policy Privacy Policies GitHub General Privacy Statement Site policy GitHub Terms GitHub Terms of Service GitHub Corporate Terms of Service GitHub Terms for Additional Products and Features GitHub Community Guidelines GitHub Community Code of Conduct GitHu"
+  },
+  {
+   "k": "terms",
+   "w": "t / Menu Collapse sidebar Expand sidebar Home Site policy Privacy Policies GitHub General Privacy Statement Site policy GitHub Terms GitHub Terms of Service GitHub Corporate Terms of Service GitHub Terms for Additional Products and Features GitHub Community Guidelines GitHub Community Code of Conduct GitHub Pre-release"
+  },
+  {
+   "k": "terms",
+   "w": "idebar Home Site policy Privacy Policies GitHub General Privacy Statement Site policy GitHub Terms GitHub Terms of Service GitHub Corporate Terms of Service GitHub Terms for Additional Products and Features GitHub Community Guidelines GitHub Community Code of Conduct GitHub Pre-release License Terms GitHub DPA-Covered "
+  }
+ ],
+ "bundleHits": [
+  "_next/data/${this.buildId}${r}${m}`,!0)}_isSsg(e){return",
+  "_next/data/${e.buildId}`),",
+  "/api/events"
+ ],
+ "bundlesChecked": 8,
+ "followOf": "ub-settings",
+ "depth": 1
+}

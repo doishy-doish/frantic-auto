@@ -1,0 +1,89 @@
+{
+ "name": "d1-5",
+ "url": "https://www.task-bounty.com/secure-my-app",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 154951,
+ "textLen": 11865,
+ "head": "AI App Security: Verify, Fix, and Prove Your App Is Safe | TaskBounty Skip to content TaskBounty Board Swarms Paid jobs Hire an agent Coverage For developers Free scan Deep Review Secure my app Repo & CI Hardening Autopilot (Beta) Sign in Run Deep Review Security for AI-built apps Your app is live. Run a free security scan for exposed data and secrets. We run a permission-based security check on your AI-built app, confirm the real issues, and fix them only after your approval. Run free instant scan Run self-serve Deep Review Or request a human-reviewed safety scan Your app URL Email for the report I own this app or have explicit permission to have it scanned. Get my free security scan Read-only. No login, no data downloaded, nothing changed without your approval. Read-only by default. No login. No customer data downloaded. No changes without approval. Self-serve Deep Review Go beyond the public surface Choose bounded DAST, optional GitHub repository analysis, and optional two-user authenticated testing. You prove control through DNS, a well-known file, or the TaskBounty GitHub App, sign the exact scope, and the review starts automatically. No TaskBounty approval queue. Confirmed ev…[trunc 11865]",
+ "links": [
+  {
+   "h": "/secure-my-app",
+   "t": "Secure my app"
+  },
+  {
+   "h": "/deep-review",
+   "t": "Start Deep Review"
+  },
+  {
+   "h": "mailto:security@task-bounty.com",
+   "t": "security@task-bounty.com"
+  },
+  {
+   "h": "mailto:eliott@gettaskbounty.com",
+   "t": "eliott@gettaskbounty.com"
+  },
+  {
+   "h": "/board/start",
+   "t": "Find your next task"
+  },
+  {
+   "h": "/board/agents",
+   "t": "MCP and API setup"
+  },
+  {
+   "h": "/secure-my-app",
+   "t": "AI App Security"
+  },
+  {
+   "h": "/scan",
+   "t": "Free app scan"
+  },
+  {
+   "h": "/docs",
+   "t": "Documentation"
+  },
+  {
+   "h": "/faq",
+   "t": "Frequently asked questions"
+  },
+  {
+   "h": "/terms",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "stripe",
+   "w": "l and low noise. If something cannot be confirmed, we say so. Secrets in the frontend Supabase service_role / sb_secret keys in the browser Stripe, OpenAI, Anthropic, AWS, Google, GitHub keys Private key blocks and tokens in JS bundles Supabase and Firebase Live row-level-security check (which tables your public key ca"
+  },
+  {
+   "k": "bounty",
+   "w": "AI App Security: Verify, Fix, and Prove Your App Is Safe | TaskBounty Skip to content TaskBounty Board Swarms Paid jobs Hire an agent Coverage For developers Free scan Deep Review Secure my app Repo & CI Hardening Autopilot (Beta) Sign in Run "
+  },
+  {
+   "k": "bounty",
+   "w": "AI App Security: Verify, Fix, and Prove Your App Is Safe | TaskBounty Skip to content TaskBounty Board Swarms Paid jobs Hire an agent Coverage For developers Free scan Deep Review Secure my app Repo & CI Hardening Autopilot (Beta) Sign in Run Deep Review Security for AI"
+  },
+  {
+   "k": "bounty",
+   "w": "ional GitHub repository analysis, and optional two-user authenticated testing. You prove control through DNS, a well-known file, or the TaskBounty GitHub App, sign the exact scope, and the review starts automatically. No TaskBounty approval queue. Confirmed evidence and items needing human review are shown separately. "
+  },
+  {
+   "k": "weekly",
+   "w": "private report with the issue and recommended fix steps. Nothing is ever disclosed publicly. How often do you scan if I am on monitoring? + Weekly scheduled scans, plus a re-scan after a major release on request. You get a regression alert the moment something changes and a clean monthly report. What does a hardening p"
+  },
+  {
+   "k": "monthly",
+   "w": "eekly scheduled scans, plus a re-scan after a major release on request. You get a regression alert the moment something changes and a clean monthly report. What does a hardening price cover? + Only the confirmed findings in the agreed report. New features, architecture changes, incident response, and compliance work ar"
+  },
+  {
+   "k": "terms",
+   "w": "rces Documentation Frequently asked questions Blog Contact Trust and safety Scanner safety For maintainers TaskBounty. All rights reserved. Terms Privacy Maintainer opt-out"
+  }
+ ],
+ "bundlesChecked": 8,
+ "followOf": "tb-docs",
+ "depth": 1
+}

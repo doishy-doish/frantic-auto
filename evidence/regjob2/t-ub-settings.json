@@ -1,0 +1,37 @@
+{
+ "name": "ub-settings",
+ "url": "https://ubounty.ai/settings",
+ "status": 200,
+ "final": "https://github.com/login?client_id=Ov23li17yoFf9uWdeXBX&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23li17yoFf9uWdeXBX%26redirect_uri%3Dhttps%253A%252F%252Fubounty.ai%252Fapi%252Fauth%252Fcallback%26scope%3Duser%253Aemail%252Cread%253Auser",
+ "ct": "text/html; charset=utf-8",
+ "bytes": 46453,
+ "textLen": 632,
+ "head": "Sign in to GitHub · GitHub Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Sign in to GitHub {{ message }} --> Username or email address Password Forgot password? Uh oh! There was an error while loading. Please reload this page . New to GitHub? Create an account Sign in with a passkey Terms Privacy Docs Contact GitHub Support Manage cookies Do not share my personal information You can’t perform that action at this time.",
+ "links": [
+  {
+   "h": "/join?return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23li17yoFf9uWdeXBX%26redirect_uri%3Dhttps%253A%252F%252Fubounty.ai%252Fapi%252Fauth%252Fcallback%26scope%3Duser%253Aemail%252Cread%253Auser",
+   "t": "Create an account"
+  },
+  {
+   "h": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+   "t": "Terms"
+  },
+  {
+   "h": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+   "t": "Privacy"
+  },
+  {
+   "h": "https://docs.github.com",
+   "t": "Docs"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "terms",
+   "w": "Forgot password? Uh oh! There was an error while loading. Please reload this page . New to GitHub? Create an account Sign in with a passkey Terms Privacy Docs Contact GitHub Support Manage cookies Do not share my personal information You can’t perform that action at this time."
+  }
+ ],
+ "bundlesChecked": 5,
+ "depth": 0
+}
