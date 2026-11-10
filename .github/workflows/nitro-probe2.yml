@@ -1,0 +1,24 @@
+name: nitro-probe2
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/nitro-probe2.mjs
+      - run: node scripts/nitro-probe2.mjs
+        env:
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }}
+      - run: |
+          git config user.name nitro-probe2
+          git config user.email nitro-probe2@users.noreply.github.com
+          git add nitro-probe2-out.json || true
+          git diff --cached --quiet || git commit -m nitro-probe2
+          git push
