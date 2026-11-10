@@ -1,0 +1,38 @@
+{
+ "stamp": "reginv2",
+ "takenAt": "2026-11-10T21:06:01.400Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 5,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "ub-bounties",
+   "status": 200,
+   "bytes": 24539
+  },
+  {
+   "name": "tb-agents",
+   "status": 200,
+   "bytes": 101897
+  },
+  {
+   "name": "bb-start",
+   "status": 200,
+   "bytes": 56039
+  },
+  {
+   "name": "bb-guide",
+   "status": 200,
+   "bytes": 57900
+  },
+  {
+   "name": "tb-start",
+   "status": 200,
+   "bytes": 108779
+  }
+ ]
+}
