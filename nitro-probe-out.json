@@ -1,0 +1,11 @@
+{
+ "brands": {
+  "http": 200,
+  "count": 1,
+  "ready": [
+   {
+    "sending": null
+   }
+  ]
+ }
+}
