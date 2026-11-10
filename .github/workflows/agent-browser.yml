@@ -36,6 +36,7 @@ jobs:
         env:
           TARGETS_JSON: ${{ inputs.targets }}
           STAMP: ${{ inputs.stamp }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           git config user.name "agent-browser"
           git config user.email "agent-browser@users.noreply.github.com"
