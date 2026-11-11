@@ -1,0 +1,8 @@
+{
+ "name": "s-feedjson",
+ "engine": "ddg",
+ "query": "\"feed.json\" open bounties claim fund",
+ "status": 202,
+ "count": 0,
+ "results": []
+}

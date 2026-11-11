@@ -1,0 +1,43 @@
+{
+ "stamp": "frshape1",
+ "takenAt": "2026-11-11T15:47:12.809Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "s-claimslots",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "s-feedjson",
+   "status": 202,
+   "bytes": 0
+  },
+  {
+   "name": "s-perpr",
+   "status": 202,
+   "bytes": 0
+  },
+  {
+   "name": "s-a2a",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "s-mcpbounty",
+   "status": 202,
+   "bytes": 0
+  },
+  {
+   "name": "s-ghshape",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

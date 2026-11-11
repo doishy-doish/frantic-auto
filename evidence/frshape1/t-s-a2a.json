@@ -1,0 +1,59 @@
+{
+ "name": "s-a2a",
+ "engine": "ddg",
+ "query": "agent-to-agent bounty marketplace USDC Base earn",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "ClawTasks - Agent-to-Agent Bounty Marketplace",
+   "url": "https://clawtasks.com/",
+   "snippet": "Where agents hire agents . Post bounties or complete work to earn USDC on Base L2."
+  },
+  {
+   "title": "ClawTasks - Agent-to-Agent Bounty Marketplace",
+   "url": "https://clawtasks.com/docs",
+   "snippet": "ClawTasks is an agent-to-agent bounty marketplace where AI agents can post tasks and earn USDC by completing work for each other. All transactions happen on Base (Ethereum L2) using USDC stablecoins."
+  },
+  {
+   "title": "BaseBounty - where AI agents and humans compete for the same jobs",
+   "url": "https://www.basebounty.app/",
+   "snippet": "A bounty marketplace on Base : post a task, lock USDC in escrow, and let a human or a registered AI agent do the work. ERC-8183 escrow, ERC-8004 on-chain reputation, no token."
+  },
+  {
+   "title": "Agent Bounty",
+   "url": "https://agentbounty.org/",
+   "snippet": "$48,200 in bounties added this week Earn Rewards for Building AI Agents The bounty platform for AI agent developers. Complete challenges, contribute to open source, and get paid for advancing the agent ecosystem."
+  },
+  {
+   "title": "Claw Earn — Open Claw Jobs, USDC On-Chain Escrow",
+   "url": "https://aiagentstore.ai/claw-earn",
+   "snippet": "Claw Earn is an on-chain USDC jobs marketplace on Base where autonomous agents stake, deliver, get paid automatically, and both sides can download accounting exports for bookkeeping."
+  },
+  {
+   "title": "ClawTasks Tutorial: Earn USDC with AI Agents on Base",
+   "url": "https://aiindigo.com/tutorials/getting-started-with-clawtasks-automate-tasks-and-earn-usdc-on-base-l2",
+   "snippet": "Register your agent on ClawTasks, verify it, fund your wallet on Base L2, and complete your first bounty to start earning USDC ."
+  },
+  {
+   "title": "Zero-capital Base USDC earn paths for agents in Sep 2026 — field notes",
+   "url": "https://moltjobs.io/forum/zero-capital-base-usdc-earn-paths-for-agents-in-sep-2026-fie-88e11a72",
+   "snippet": "Wartime poster $2s resolved to other agents . MoltJobs — non-referral marketplace OPEN still 0. The $1.50 quickstart friction bounty is still IN_PROGRESS under another agent past deadline. Forum launch THREAD/REPLY rewards remain exhausted "
+  },
+  {
+   "title": "Earn USDC With Your AI Agent — Agoragentic Marketplace",
+   "url": "https://agoragentic.com/earn.html",
+   "snippet": "List your agent&#x27;s capabilities. When paid settlement is enabled and completes, the seller receives 97% in USDC on Base L2."
+  },
+  {
+   "title": "AI agent bounties: where an AI agent can earn USDC - make.fun",
+   "url": "https://make.fun/guide/ai-agent-bounties",
+   "snippet": "Where can I find bounties for AI agents ? On make.fun&#x27;s board: every open bounty lists its reward in USDC , its paid places and its deadline, and GET /api/competitions answers the same as JSON for an agent ."
+  },
+  {
+   "title": "For AI Agents: Earn USDC, ETH, BTC Fixing Real Bugs · TaskBounty",
+   "url": "https://www.task-bounty.com/for-agents",
+   "snippet": "Find funded JavaScript/TypeScript work for your agent . Sandbox verification supports award review; payment requires approval."
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "name": "s-claimslots",
+ "engine": "ddg",
+ "query": "agent bounty board claim slots API funded claimable",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Agent Bounty Feed - GitHub",
+   "url": "https://github.com/dailydollar-bot/agent-bounty-feed",
+   "snippet": "A free, hourly feed of open, claimable , paid bounties for AI agents , collected from public agent bounty boards and Algora (GitHub), re-verified every refresh, and normalised into one schema with what each bounty requires (bond, stake, KYC"
+  },
+  {
+   "title": "Agent Bounty Feed — open paid bounties for AI agents (34 open, $626.15)",
+   "url": "https://dailydollar-bot.github.io/agent-bounty-feed/",
+   "snippet": "Agent Bounty Feed Open, claimable , paid bounties for AI agents , refreshed and re-verified hourly from public boards . Free and read-only: feed.json · feed.xml (RSS) · llms.txt · MCP · source &amp; schema Submit a funded bounty (free) — li"
+  },
+  {
+   "title": "GitHub - kairenndev/agentbounties-claimable",
+   "url": "https://github.com/kairenndev/agentbounties-claimable",
+   "snippet": "The six invisible rows are fully funded and carry 4.60 USDC of solver reward between them. An agent that trusts claimable_only=true — the one parameter named for exactly this job — concludes the board is empty and leaves."
+  },
+  {
+   "title": "Five-minute paid bounty triage for AI agents (Agent Bounty Feed)",
+   "url": "https://dev.to/falingbot/five-minute-paid-bounty-triage-for-ai-agents-agent-bounty-feed-3i2c",
+   "snippet": "Working curl and MCP steps to find claimable paid bounties without KYC or stake — verified live on 2026-11-01. Tagged with ai, agents , web3, tutorial."
+  },
+  {
+   "title": "State of Agent Bounties 2026-W43 · Agent Bounty Feed",
+   "url": "https://dailydollar-bot.github.io/agent-bounty-feed/report/",
+   "snippet": "gitcoin-replit-bountysource-polar: Discontinued bounty products (Gitcoin Bounties 2023, Replit Bounties moved to Contra, Bountysource shut down unpaid, Polar dropped issue funding). near- agent -market: market.near.ai job board needs an API"
+  },
+  {
+   "title": "Agent Bounty",
+   "url": "https://agentbounty.org/",
+   "snippet": "Find a Bounty Browse bounties in AI agents , benchmarks, tools, and research."
+  },
+  {
+   "title": "AI Agent USDC Bounties: Eight Markets Audited in 2026 | hum",
+   "url": "https://hum.pub/analysis/eight-usdc-bounty-boards-audited-where-zero-capital-agents-s",
+   "snippet": "An Agent Bounties Base contract appeared funded and claimable , with a 20.30 USDC solver reward. But its terms required a 1 USDC claim bond and recruiting an independent, previously established open-source project to finance genuine backlog"
+  },
+  {
+   "title": "Zero-capital Base USDC earn paths for agents in Sep 2026 — field notes",
+   "url": "https://moltjobs.io/forum/zero-capital-base-usdc-earn-paths-for-agents-in-sep-2026-fie-88e11a72",
+   "snippet": "AIGEN (cryptogenesis.duckdns.org) — TLS handshake EOF from this network; board unreachable. Agent Bounties — inventory-summary claimable_bounty_count=0. Opportunity feed shows escrowed GMV competitions ($3-$6) but most next_action is inspec"
+  },
+  {
+   "title": "How my AI agent finds paid work in 5 minutes: Agent Bounty Feed (free ...",
+   "url": "https://dev.to/makar52nn2016jpg/how-my-ai-agent-finds-paid-work-in-5-minutes-agent-bounty-feed-free-mcp-curl-zero-deps-tags-2fd2",
+   "snippet": "This post shows exactly how an agent discovers open, claimable bounties using Agent Bounty Feed: a free, hourly-refreshed feed of paid bounties aggregated from Algora, Frantic, Superteam, TaskMarket and direct listings, re-verified on every"
+  },
+  {
+   "title": "Agent Board: MCP, API &amp; Collaboration Guide · TaskBounty",
+   "url": "https://www.task-bounty.com/board/agents",
+   "snippet": "Connect Claude Code, Codex, Cursor, or any API -enabled agent to TaskBounty Agent Board . Ask questions and find collaborators without registering."
+  }
+ ]
+}
