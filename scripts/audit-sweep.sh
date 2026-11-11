@@ -21,20 +21,13 @@ else
 fi
 echo "{\"repo\":\"$REPO\",\"ref\":\"$REF\",\"sha\":\"$(git -C sweep-target rev-parse HEAD 2>/dev/null || echo unknown)\",\"at\":\"$(date -u +%FT%TZ)\"}" > "$EV/meta.json"
 
-export PATH="$HOME/.foundry/bin:$HOME/.cyfrin/bin:$PATH"
+export PATH="$HOME/.foundry/bin:$HOME/.config/.foundry/bin:$HOME/.cyfrin/bin:$PATH"
 
-# --- foundry: bootstrap, else nightly tarball from github (no apt) ---
+# --- foundry: bootstrap (installer now targets ~/.config/.foundry), then foundryup ---
 if ! command -v forge >/dev/null; then
   curl -sSL --max-time 90 https://foundry.paradigm.xyz 2>>"$EV/install.log" | bash >>"$EV/install.log" 2>&1 || echo "foundry-bootstrap FAIL" >>"$EV/install.log"
-  "$HOME/.foundry/bin/foundryup" >>"$EV/install.log" 2>&1 || true
-fi
-if ! command -v forge >/dev/null; then
-  echo "trying foundry nightly tarball" >>"$EV/install.log"
-  code=$(curl -sSL --max-time 120 -o /tmp/foundry.tar.gz -w "%{http_code}" "https://github.com/foundry-rs/foundry/releases/download/nightly/foundry_nightly_linux_x86_64.tar.gz" 2>>"$EV/install.log") || code="curlfail"
-  echo "foundry-tarball http=$code bytes=$(stat -c%s /tmp/foundry.tar.gz 2>/dev/null || echo 0)" >>"$EV/install.log"
-  mkdir -p "$HOME/.foundry/bin"
-  tar -xzf /tmp/foundry.tar.gz -C "$HOME/.foundry/bin" >>"$EV/install.log" 2>&1 || true
-  chmod +x "$HOME/.foundry/bin/"* >/dev/null 2>&1 || true
+  command -v foundryup >/dev/null || export PATH="$PATH:$HOME/.config/.foundry/bin"
+  foundryup >>"$EV/install.log" 2>&1 || echo "foundryup FAIL" >>"$EV/install.log"
 fi
 echo "forge: $(forge --version 2>/dev/null || echo MISSING)"
 
@@ -46,7 +39,13 @@ if ! command -v aderyn >/dev/null; then
   echo "aderyn-tarball http=$code bytes=$(stat -c%s /tmp/aderyn.tar.xz 2>/dev/null || echo 0)" >>"$EV/install.log"
   tar -xJf /tmp/aderyn.tar.xz -C "$HOME/.cyfrin/bin" >>"$EV/install.log" 2>&1 || echo "aderyn-extract FAIL" >>"$EV/install.log"
   chmod +x "$HOME/.cyfrin/bin/"* >/dev/null 2>&1 || true
-  ls "$HOME/.cyfrin/bin" >>"$EV/install.log" 2>&1 || true
+  # release binary carries platform suffix; link the canonical name
+  if ! command -v aderyn >/dev/null; then
+    BIN=$(find "$HOME/.cyfrin/bin" -maxdepth 2 -type f -name "aderyn*" | head -1)
+    [ -n "$BIN" ] && ln -sf "$BIN" "$HOME/.cyfrin/bin/aderyn"
+    chmod +x "$HOME/.cyfrin/bin/aderyn" >/dev/null 2>&1 || true
+  fi
+  ls -la "$HOME/.cyfrin/bin" >>"$EV/install.log" 2>&1 || true
 fi
 echo "aderyn: $(aderyn --version 2>/dev/null || echo MISSING)"
 
