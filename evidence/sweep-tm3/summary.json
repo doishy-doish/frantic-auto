@@ -1,0 +1,28 @@
+{
+ "stamp": "sweep-tm3",
+ "takenAt": "2026-11-11T08:03:51.017Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 3,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "tm-abf",
+   "status": 200,
+   "bytes": 125817
+  },
+  {
+   "name": "tm-q96",
+   "status": 200,
+   "bytes": 125830
+  },
+  {
+   "name": "tm-art",
+   "status": 200,
+   "bytes": 125817
+  }
+ ]
+}
