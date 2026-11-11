@@ -45,7 +45,7 @@ if (PHASE === 'upload') {
   const tries = xpays.length ? xpays : [''];
   for (let i = 0; i < tries.length; i++) {
     if (tries[i]) process.env.XPAY = tries[i];
-    const r = await post(`/api/tasks/${TASK}/submissions/from-keys`, body, IDEM + (i ? '-r' + i : ''));
+    const r = await post(`/api/tasks/${TASK}/submissions/from-keys`, body, IDEM);
     console.log('fromkeys[' + i + '] status=' + r.status);
     console.log(r.body.slice(0, 400));
     if (r.status === 200) break;
