@@ -32,8 +32,8 @@ on:
         description: 'Worker-computed transcripts sha256 hex — rebuild must match'
         required: false
         default: ''
-      require_reg:
-        description: '1 = fail unless the account wallet register reads back (Run A probe)'
+      await_reg:
+        description: '1 = mid-run handshake: publish SIWS identity, await worker-signed wallet-link'
         required: false
         default: ''
       reg_message:
@@ -64,7 +64,8 @@ jobs:
           ENTRY_SIG: ${{ inputs.entry_signature }}
           EXPECT_BUNDLE_SHA: ${{ inputs.expect_bundle_sha }}
           EXPECT_TRANSCRIPTS_SHA: ${{ inputs.expect_transcripts_sha }}
-          REQUIRE_REG: ${{ inputs.require_reg }}
+          AWAIT_REG: ${{ inputs.await_reg }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REG_MESSAGE: ${{ inputs.reg_message }}
           REG_SIG: ${{ inputs.reg_signature }}
       - name: publish result

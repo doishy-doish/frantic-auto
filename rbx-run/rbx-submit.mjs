@@ -81,7 +81,43 @@ console.log(`signed in as @${handle}`);
   const j = await r.json().catch(() => null);
   if (r.ok && j && j.register) { regDomain = j.register.domain || null; regAccount = j.register.account || null; }
   console.log(`reg domain=${regDomain} account=${regAccount}`);
-  if (process.env.REQUIRE_REG === '1' && !regDomain) fail('reg-get', { http: r.status });
+  if (!regDomain) fail('reg-get', { http: r.status });
+}
+
+// ---- mid-run handshake (AWAIT_REG): publish SIWS identity for the worker,
+// then await the worker-signed wallet-link (never stored, never logged) ----
+if (process.env.AWAIT_REG === '1') {
+  const runId = process.env.GITHUB_RUN_ID;
+  const ghTok = process.env.GH_TOKEN;
+  if (!runId || !ghTok) fail('await-env');
+  if (!regAccount) fail('await-no-account');
+  const { execSync } = await import('node:child_process');
+  const { writeFileSync, mkdirSync } = await import('node:fs');
+  mkdirSync('/tmp/hs', { recursive: true });
+  writeFileSync('/tmp/hs/handshake.json', JSON.stringify({ runId, handle, account: regAccount, authWallet, at: new Date().toISOString() }) + '\n');
+  const remote = `https://x-access-token:${ghTok}@github.com/doishy-doish/frantic-auto.git`;
+  try {
+    execSync('cd /tmp/hs && rm -rf .git && git init -qb main && git config user.name rbx-fresh && git config user.email rbx-fresh@local.invalid && git add -A && git commit -qm "handshake" && git remote add origin "' + remote + '" && git push -qf origin HEAD:rbx-handshake', { stdio: 'pipe' });
+  } catch (e) { fail('await-push', { err: String((e && e.message) || e).slice(0, 150) }); }
+  console.log(`handshake published for run ${runId}, awaiting reg file...`);
+  const hh = { Accept: 'application/vnd.github+json', Authorization: `Bearer ${ghTok}` };
+  const t0 = Date.now();
+  let reg = null;
+  while (Date.now() - t0 < 7 * 60 * 1000) {
+    await new Promise((r) => setTimeout(r, 20000));
+    try {
+      const r = await fetch(`https://api.github.com/repos/doishy-doish/frantic-auto/contents/rbx-reg/${runId}.json?ref=rbx-reg&t=${Date.now()}`, { headers: hh });
+      if (r.ok) {
+        const j = await r.json();
+        const o = JSON.parse(Buffer.from(j.content, 'base64').toString('utf8'));
+        if (o && o.reg_message && o.reg_signature) { reg = o; break; }
+      }
+    } catch (e) { /* keep polling */ }
+  }
+  if (!reg) fail('await-reg-timeout');
+  process.env.REG_MESSAGE = reg.reg_message;
+  process.env.REG_SIG = reg.reg_signature;
+  console.log('reg inputs received, proceeding');
 }
 
 // ---- round + timestamps ----
