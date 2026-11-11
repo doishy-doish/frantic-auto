@@ -1,0 +1,189 @@
+{
+  "competition": "roblox-up-and-coming-forecast-01",
+  "phase": "dev",
+  "kit": "/home/runner/work/frantic-auto/frantic-auto/kit/roblox-up-and-coming-forecast-01-kit",
+  "repo": "/tmp/rbx-repo",
+  "commit": "af5dac429bd5342e355f84847d2244750b808c8f",
+  "source": "commit",
+  "source_bundle": true,
+  "received_at": "2026-11-11T12:44:35.234Z",
+  "transcripts": "/tmp/session.json",
+  "env_file": null,
+  "checks": [
+    {
+      "check": "competition_open",
+      "phase": "intake",
+      "title": "Competition is not taking entries",
+      "status": "pass",
+      "reason": "now (2026-11-11T12:44:35.234Z) is between the opening, 2026-11-11T06:00:00.000Z, and the entry deadline, 2026-11-13T06:00:00.000Z; the site also checks the competition is open when you submit",
+      "fix": null
+    },
+    {
+      "check": "snapshot",
+      "phase": "local",
+      "title": "Repository within the intake caps",
+      "status": "pass",
+      "reason": "4 files, 4,154 bytes at af5dac429bd5342e355f84847d2244750b808c8f: within the intake's caps (each file at most 100 MiB, at most 100,000 entries, the archive at most 1 GiB and the repository at most 512 MiB)",
+      "fix": null
+    },
+    {
+      "check": "license_osi",
+      "phase": "intake",
+      "title": "No OSI-approved license",
+      "status": "pass",
+      "reason": "LICENSE declares SPDX-License-Identifier: MIT, OSI-approved",
+      "fix": null
+    },
+    {
+      "check": "entrypoint",
+      "phase": "local",
+      "title": "Entrypoint at the root",
+      "status": "pass",
+      "reason": "main.py at the root selects python3.13, which roblox-up-and-coming-forecast-01 accepts",
+      "fix": null
+    },
+    {
+      "check": "strategy_note",
+      "phase": "local",
+      "title": "Strategy note at the root",
+      "status": "skip",
+      "reason": "roblox-up-and-coming-forecast-01 does not ask for a strategy note",
+      "fix": null
+    },
+    {
+      "check": "repo_created_after_open",
+      "phase": "intake",
+      "title": "Repository predates the competition",
+      "status": "pass",
+      "reason": "its history begins at the beacon root 3b47543357e950963a43cdd0848ad2f4b15ca350: drand round 33865783, emitted 2026-11-11T12:38:33.000Z, at or after the opening (2026-11-11T06:00:00.000Z)",
+      "fix": null
+    },
+    {
+      "check": "committed_secret",
+      "phase": "intake",
+      "title": "Entry's history holds a submitted secret",
+      "status": "skip",
+      "reason": "no --env-file given, so no secret value to look for here: when you submit, the site reads the entry's whole history for every form of each secret you pushed for roblox-up-and-coming-forecast-01 (makefun secrets push); pass --env-file <the .env you push> to look for them here first",
+      "fix": null
+    },
+    {
+      "check": "transcripts_present",
+      "phase": "transcripts",
+      "title": "No transcripts parsed",
+      "status": "pass",
+      "reason": "1 agent session parsed (1 chat-log)",
+      "fix": null
+    },
+    {
+      "check": "thinking_wellformed",
+      "phase": "transcripts",
+      "title": "Transcripts are malformed or name no harness",
+      "status": "pass",
+      "reason": "1 session, 20 messages: every timestamp present and in order, 9 tool results each answering its own earlier call",
+      "fix": null
+    },
+    {
+      "check": "thinking_in_window",
+      "phase": "transcripts",
+      "title": "Transcript activity outside the window",
+      "status": "pass",
+      "reason": "all 20 timestamps lie between the opening at 2026-11-11T06:00:00.000Z and the receipt at 2026-11-11T12:44:35.234Z",
+      "fix": null
+    },
+    {
+      "check": "thinking_committed",
+      "phase": "transcripts",
+      "title": "Transcripts differ from the signed entry",
+      "status": "skip",
+      "reason": "the entry is not signed: no entry message commits its transcripts; where the prizes are escrowed, submit --keypair signs the entry message over exactly the transcripts it uploads, and the site checks it at submission",
+      "fix": null
+    },
+    {
+      "check": "thinking_reproduces",
+      "phase": "transcripts",
+      "title": "Transcripts do not account for the code",
+      "status": "pass",
+      "reason": "the transcripts account for 63 of 63 counted lines (100.0%: 63 authored, 0 pasted), at least 30% required; the entrypoint main.py has 63 authored lines",
+      "fix": null
+    },
+    {
+      "check": "thinking_on_task",
+      "phase": "transcripts",
+      "title": "Transcripts are off task",
+      "status": "skip",
+      "reason": "the harness names no task terms",
+      "fix": null
+    },
+    {
+      "check": "thinking_turns",
+      "phase": "transcripts",
+      "title": "Too few assistant turns with text or thinking",
+      "status": "pass",
+      "reason": "10 assistant turns with text or thinking, at least 5 required",
+      "fix": null
+    },
+    {
+      "check": "thinking_priced",
+      "phase": "transcripts",
+      "title": "Usage records missing, impossible or unpriced",
+      "status": "pass",
+      "reason": "10 usage records, each priced to a known model",
+      "fix": null
+    },
+    {
+      "check": "thinking_revised",
+      "phase": "transcripts",
+      "title": "No file revised across assistant messages",
+      "status": "pass",
+      "reason": "the entrypoint main.py takes its final content from 2 messages that write or edit it, at least 2 required",
+      "fix": null
+    },
+    {
+      "check": "thinking_fresh",
+      "phase": "transcripts",
+      "title": "Transcripts predate their anchor",
+      "status": "pass",
+      "reason": "all 63 credited lines come from sessions that show the anchor line (makefun anchor 3b47543357e950963a43cdd0848ad2f4b15ca350 round 33865783) before their first counted write, every one required; 1 of 2 git commit outputs after the quote names a commit of the history after the anchor",
+      "fix": null
+    },
+    {
+      "check": "repo_public",
+      "phase": "intake",
+      "title": "Repository is not public",
+      "status": "skip",
+      "reason": "a source bundle entry (its history begins at a beacon root) has no GitHub repository to make public: submit --source uploads its history",
+      "fix": null
+    },
+    {
+      "check": "repo_owner",
+      "phase": "intake",
+      "title": "Repository is not proven yours",
+      "status": "submission",
+      "reason": "the wallet the anchor names, 11111111111111111111111111111111, must be one of the entry wallets of the account that submits it (a wallet linked to it, or a connected agent's wallet)",
+      "fix": "Sign in with that wallet (node cli/makefun.mjs register --keypair <its keypair file>), link it to your account, or connect it as your agent (node cli/makefun.mjs login --keypair <its keypair file>), then submit before 2026-11-13T06:00:00.000Z."
+    },
+    {
+      "check": "source_bundle",
+      "phase": "intake",
+      "title": "Source bundle is not a usable git bundle",
+      "status": "submission",
+      "reason": "submit --source bundles the history at the commit (git bundle create <file> refs/heads/submission) and the site reads the upload",
+      "fix": "Bundle the repository's whole history at the commit you enter (node cli/makefun.mjs submit --source <your repository>, run from inside the unpacked kit, bundles, signs and uploads it; by hand: git bundle create <file> refs/heads/submission, with no revision range and no --version=3), then submit it before 2026-11-13T06:00:00.000Z."
+    },
+    {
+      "check": "duplicate_snapshot",
+      "phase": "intake",
+      "title": "Same files as an earlier entry",
+      "status": "submission",
+      "reason": "the files must differ from every other account's earlier entry: an unchanged starter or baseline is refused once someone has entered it",
+      "fix": "Submit your own work: an entry's files must differ from every other account's earlier entry's. Submit it before 2026-11-13T06:00:00.000Z."
+    }
+  ],
+  "failed": [],
+  "notes": [
+    "gitleaks is not installed: the transcripts were redacted with the built-in rules only (the site also runs gitleaks; a secret only gitleaks finds could change authorship)",
+    "transcripts: no session carries a system prompt and no instruction file was uploaded: this never rejects the entry. To add it, write the instructions you were started with to a file, redacted as you like (or one line saying why it is withheld), and pass it with --system-prompt <file>",
+    "grading is grade-local's, not check's: it runs the entry twice as the server does and prints the score, the guardrails and whether it could take a prize (RULES.txt, Grade locally)"
+  ],
+  "ok": true
+}
