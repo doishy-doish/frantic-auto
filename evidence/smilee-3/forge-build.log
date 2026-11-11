@@ -1,0 +1,63 @@
+pAdapter.sol:52:106
+   │
+52 │     function getInputAmount(address tokenIn, address tokenOut, uint256 amountOut) external view returns (uint) {
+   │                                                                                                          ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+
+warning[inconsistent-type-names]: contract mixes shorthand and explicit integer type names; use `uint256` and `int256` consistently
+   ╭▸ src/testnet/TestnetSwapAdapter.sol:57:109
+   │
+57 │     function getInputAmountMax(address tokenIn, address tokenOut, uint256 amountOut) external view returns (uint) {
+   │                                                                                                             ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+
+warning[inconsistent-type-names]: contract mixes shorthand and explicit integer type names; use `uint256` and `int256` consistently
+   ╭▸ src/testnet/TestnetSwapAdapter.sol:99:63
+   │
+99 │     function _getAmountOut(address tokenIn, address tokenOut, uint amountIn) internal view returns (uint) {
+   │                                                               ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+
+warning[inconsistent-type-names]: contract mixes shorthand and explicit integer type names; use `uint256` and `int256` consistently
+   ╭▸ src/testnet/TestnetSwapAdapter.sol:99:101
+   │
+99 │     function _getAmountOut(address tokenIn, address tokenOut, uint amountIn) internal view returns (uint) {
+   │                                                                                                     ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+
+warning[inconsistent-type-names]: contract mixes shorthand and explicit integer type names; use `uint256` and `int256` consistently
+    ╭▸ src/testnet/TestnetSwapAdapter.sol:100:9
+    │
+100 │         uint tokenOutPrice = _priceOracle.getPrice(tokenIn, tokenOut);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+
+warning[inconsistent-type-names]: contract mixes shorthand and explicit integer type names; use `uint256` and `int256` consistently
+    ╭▸ src/testnet/TestnetSwapAdapter.sol:105:62
+    │
+105 │     function _getAmountIn(address tokenIn, address tokenOut, uint amountOut) internal view returns (uint) {
+    │                                                              ━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+
+warning[inconsistent-type-names]: contract mixes shorthand and explicit integer type names; use `uint256` and `int256` consistently
+    ╭▸ src/testnet/TestnetSwapAdapter.sol:105:101
+    │
+105 │     function _getAmountIn(address tokenIn, address tokenOut, uint amountOut) internal view returns (uint) {
+    │                                                                                                     ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+
+warning[inconsistent-type-names]: contract mixes shorthand and explicit integer type names; use `uint256` and `int256` consistently
+    ╭▸ src/testnet/TestnetSwapAdapter.sol:106:9
+    │
+106 │         uint tokenInPrice = _priceOracle.getPrice(tokenOut, tokenIn);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/inconsistent-type-names
+

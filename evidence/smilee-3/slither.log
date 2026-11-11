@@ -1,0 +1,39 @@
+ss parameters but no indexed parameters
+Event FeeManager.TransferVaultFee(address,uint256) (src/FeeManager.sol#85) has address parameters but no indexed parameters
+Event Vault.ChangedToken(address,address) (src/Vault.sol#105) has address parameters but no indexed parameters
+Event PositionManager.Buy(address,uint256,uint256,address) (src/periphery/PositionManager.sol#46) has address parameters but no indexed parameters
+Event PositionManager.Sell(address,uint256,uint256) (src/periphery/PositionManager.sol#47) has address parameters but no indexed parameters
+Event Registry.Registered(address) (src/periphery/Registry.sol#25) has address parameters but no indexed parameters
+Event Registry.Unregistered(address) (src/periphery/Registry.sol#26) has address parameters but no indexed parameters
+Event SwapAdapterRouter.ChangedAdapter(address,address,address) (src/providers/SwapAdapterRouter.sol#40) has address parameters but no indexed parameters
+Event SwapAdapterRouter.ChangedSlippage(address,address,uint256) (src/providers/SwapAdapterRouter.sol#41) has address parameters but no indexed parameters
+Event SwapAdapterRouter.Swapped(address,address,bool,uint256,uint256) (src/providers/SwapAdapterRouter.sol#42) has address parameters but no indexed parameters
+Event ChainlinkPriceOracle.ChangedTokenPriceFeed(address,address) (src/providers/chainlink/ChainlinkPriceOracle.sol#38) has address parameters but no indexed parameters
+Event ChainlinkPriceOracle.ChangedTokenPriceFeedMaxDelay(address,uint256) (src/providers/chainlink/ChainlinkPriceOracle.sol#39) has address parameters but no indexed parameters
+Event ChainlinkPriceOracle.ChangedSequencerUptimeFeed(address) (src/providers/chainlink/ChainlinkPriceOracle.sol#40) has address parameters but no indexed parameters
+Event UniswapAdapter.PathSet(address,address,bytes) (src/providers/uniswap/UniswapAdapter.sol#60) has address parameters but no indexed parameters
+Event UniswapAdapter.PathUnset(address,address) (src/providers/uniswap/UniswapAdapter.sol#61) has address parameters but no indexed parameters
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unindexed-event-address-parameters
+
+Detector: constable-states
+MasterChefSmilee.rewardToken (src/periphery/MasterChefSmilee.sol#36) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+
+Detector: immutable-states
+AdminAccess.Admin (src/testnet/AdminAccess.sol#5) should be immutable 
+ChainlinkPriceOracle._defaultMaxDelay (src/providers/chainlink/ChainlinkPriceOracle.sol#24) should be immutable 
+ChainlinkPriceOracle.timeLockDelay (src/providers/chainlink/ChainlinkPriceOracle.sol#25) should be immutable 
+FinanceDataProxy._ap (src/periphery/FinanceDataProxy.sol#11) should be immutable 
+MasterChefSmilee.addressProvider (src/periphery/MasterChefSmilee.sol#37) should be immutable 
+MasterChefSmilee.smileePerSec (src/periphery/MasterChefSmilee.sol#38) should be immutable 
+MasterChefSmilee.startTimestamp (src/periphery/MasterChefSmilee.sol#39) should be immutable 
+SwapAdapterRouter._ap (src/providers/SwapAdapterRouter.sol#30) should be immutable 
+SwapAdapterRouter.timeLockDelay (src/providers/SwapAdapterRouter.sol#24) should be immutable 
+TestnetPriceOracle.referenceToken (src/testnet/TestnetPriceOracle.sol#17) should be immutable 
+UniswapAdapter._timeLockDelay (src/providers/uniswap/UniswapAdapter.sol#28) should be immutable 
+VaultProxy._addressProvider (src/periphery/VaultProxy.sol#15) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+. analyzed (102 contracts with 102 detectors), 406 result(s) found
+'forge clean' running (wd: /home/runner/work/frantic-auto/frantic-auto/sweep-target)
+'forge config --json' running
+'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: /home/runner/work/frantic-auto/frantic-auto/sweep-target)
