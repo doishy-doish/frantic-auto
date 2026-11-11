@@ -55,6 +55,18 @@ on:
         description: 'Phase submit: X-PAYMENT base64 for x402 gate (optional)'
         required: false
         default: ''
+      xpay2:
+        description: 'Phase submit: retry variant 2'
+        required: false
+        default: ''
+      xpay3:
+        description: 'Phase submit: retry variant 3'
+        required: false
+        default: ''
+      xpay4:
+        description: 'Phase submit: retry variant 4'
+        required: false
+        default: ''
 permissions:
   contents: read
 jobs:
@@ -79,3 +91,6 @@ jobs:
           KEYSIG: ${{ inputs.keysig }}
           IDEMKEY: ${{ inputs.idem }}
           XPAY: ${{ inputs.xpay }}
+          XPAY2: ${{ inputs.xpay2 }}
+          XPAY3: ${{ inputs.xpay3 }}
+          XPAY4: ${{ inputs.xpay4 }}
