@@ -6,7 +6,7 @@ name: rbx-gate
 on:
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   gate:
     runs-on: ubuntu-latest
@@ -90,3 +90,19 @@ jobs:
           cat /tmp/check.json
           echo "CHECK_EXIT=$CODE"
           exit $CODE
+      - name: publish gate result
+        if: always()
+        run: |
+          set +e
+          mkdir -p /tmp/gateout && cd /tmp/gateout
+          cp /tmp/check.json ./check.json 2>/dev/null || echo '{"no_check_output":true}' > ./check.json
+          cp /tmp/session.json ./session.json 2>/dev/null || true
+          git init -qb main
+          git config user.name "rbx-gate" && git config user.email "rbx-gate@local.invalid"
+          git add -A
+          git commit -qm "gate result ${GITHUB_RUN_ID}"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/doishy-doish/frantic-auto.git"
+          git push -qf origin HEAD:rbx-gate-logs
+          echo "published gate result"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
