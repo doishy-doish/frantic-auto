@@ -104,7 +104,7 @@ let nonceMsg, key, handle;
     `URI: ${c.uri}`, 'Version: 1', `Chain ID: solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp`,
     `Nonce: ${c.nonce}`, `Issued At: ${c.issuedAt}`, `Expiration Time: ${c.expirationTime}`,
   ].join('\n');
-  const sig = b58e(nodeSign(null, privateKey, Buffer.from(msg, 'utf8')));
+  const sig = b58e(nodeSign(null, Buffer.from(msg, 'utf8'), privateKey));
   const r2 = await fetch(`${ORIGIN}/api/auth/solana/key`, {
     method: 'POST', headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ walletAddress: wallet, message: msg, signature: sig }),
@@ -201,7 +201,7 @@ console.log(`summary ${[...SUMMARY_FINAL].length} chars, turns ${Msgs.filter((m)
 const nonce = hex(createHash('sha256').update(String(Date.now()) + wallet).digest().slice(0, 16));
 const issuedAt = new Date().toISOString();
 const message = ['make.fun entry v1', 'Domain: make.fun', `Competition: ${SLUG}`, `Source: bundle sha256:${bundleSha}`, `Commit: ${built.tipSha}`, `Transcripts: ${transcriptsSha}`, `Wallet: ${wallet}`, `Nonce: ${nonce}`, `Issued At: ${issuedAt}`].join('\n');
-const signature = b58e(nodeSign(null, privateKey, Buffer.from(message, 'utf8')));
+const signature = b58e(nodeSign(null, Buffer.from(message, 'utf8'), privateKey));
 if (DRY) { console.log(JSON.stringify({ ok: true, dry: true, handle, wallet, round: R, root: built.rootSha, tip: built.tipSha, bundleBytes: built.bundle.length, bundleSha, transcriptsSha, summaryChars: [...SUMMARY_FINAL].length })); process.exit(0); }
 const fd = new FormData();
 fd.append('repo_url', `bundle:${built.rootSha}`);
