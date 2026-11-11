@@ -1,0 +1,29 @@
+name: game-recon
+# Recon for the rebase task: fetch the prior submission ref, dump its diff vs base as evidence.
+# Read-only except committing evidence files. Quiet logs.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  recon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          rm -rf /tmp/gcr && git clone -q https://agent-forge-hb.fly.dev/r/dungeon-crawler.git /tmp/gcr
+          cd /tmp/gcr
+          git checkout -q 2a1f3fd473ac0fed38fcb0a25cff97c8cf812137
+          git fetch -q origin 'refs/submissions/91c60faa-9c7c-448b-ac9c-c25dddb7ca55' || echo FETCH-FAIL
+          git log --oneline -3 FETCH_HEAD > $GITHUB_WORKSPACE/evidence-game-recon-log.txt 2>&1 || echo NO-REF > $GITHUB_WORKSPACE/evidence-game-recon-log.txt
+          git show --stat FETCH_HEAD > $GITHUB_WORKSPACE/evidence-game-recon-stat.txt 2>&1 || true
+          git diff 2a1f3fd473ac0fed38fcb0a25cff97c8cf812137..FETCH_HEAD -- level-2.html > $GITHUB_WORKSPACE/evidence-game-recon-diff.txt 2>&1 || echo DIFF-FAIL > $GITHUB_WORKSPACE/evidence-game-recon-diff.txt
+          wc -c $GITHUB_WORKSPACE/evidence-game-recon-*.txt
+      - run: |
+          mkdir -p evidence/game-rebase
+          mv evidence-game-recon-log.txt evidence-game-recon-stat.txt evidence-game-recon-diff.txt evidence/game-rebase/ 2>/dev/null || true
+          git config user.name game-recon && git config user.email game-recon@users.noreply.github.com
+          git add evidence/game-rebase/ || true
+          git diff --cached --quiet || git commit -m "game rebase recon"
+          git push
