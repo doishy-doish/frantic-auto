@@ -23,20 +23,30 @@ echo "{\"repo\":\"$REPO\",\"ref\":\"$REF\",\"sha\":\"$(git -C sweep-target rev-p
 
 export PATH="$HOME/.foundry/bin:$HOME/.cyfrin/bin:$PATH"
 
-# --- foundry (binary, no apt) ---
+# --- foundry: bootstrap, else nightly tarball from github (no apt) ---
 if ! command -v forge >/dev/null; then
-  curl -sSL https://foundry.paradigm.xyz 2>/dev/null | bash >/dev/null 2>&1 || true
-  "$HOME/.foundry/bin/foundryup" >/dev/null 2>&1 || true
+  curl -sSL --max-time 90 https://foundry.paradigm.xyz 2>>"$EV/install.log" | bash >>"$EV/install.log" 2>&1 || echo "foundry-bootstrap FAIL" >>"$EV/install.log"
+  "$HOME/.foundry/bin/foundryup" >>"$EV/install.log" 2>&1 || true
+fi
+if ! command -v forge >/dev/null; then
+  echo "trying foundry nightly tarball" >>"$EV/install.log"
+  code=$(curl -sSL --max-time 120 -o /tmp/foundry.tar.gz -w "%{http_code}" "https://github.com/foundry-rs/foundry/releases/download/nightly/foundry_nightly_linux_x86_64.tar.gz" 2>>"$EV/install.log") || code="curlfail"
+  echo "foundry-tarball http=$code bytes=$(stat -c%s /tmp/foundry.tar.gz 2>/dev/null || echo 0)" >>"$EV/install.log"
+  mkdir -p "$HOME/.foundry/bin"
+  tar -xzf /tmp/foundry.tar.gz -C "$HOME/.foundry/bin" >>"$EV/install.log" 2>&1 || true
+  chmod +x "$HOME/.foundry/bin/"* >/dev/null 2>&1 || true
 fi
 echo "forge: $(forge --version 2>/dev/null || echo MISSING)"
 
-# --- aderyn (pinned binary, no apt) ---
+# --- aderyn (pinned binary, no apt) + diagnostics ---
 if ! command -v aderyn >/dev/null; then
   AVER="aderyn-v0.6.8"
   mkdir -p "$HOME/.cyfrin/bin"
-  curl -sSL -o /tmp/aderyn.tar.xz "https://github.com/Cyfrin/aderyn/releases/download/$AVER/aderyn-x86_64-unknown-linux-gnu.tar.xz" >/dev/null 2>&1 || true
-  tar -xJf /tmp/aderyn.tar.xz -C "$HOME/.cyfrin/bin" >/dev/null 2>&1 || true
+  code=$(curl -sSL --max-time 120 -o /tmp/aderyn.tar.xz -w "%{http_code}" "https://github.com/Cyfrin/aderyn/releases/download/$AVER/aderyn-x86_64-unknown-linux-gnu.tar.xz" 2>>"$EV/install.log") || code="curlfail"
+  echo "aderyn-tarball http=$code bytes=$(stat -c%s /tmp/aderyn.tar.xz 2>/dev/null || echo 0)" >>"$EV/install.log"
+  tar -xJf /tmp/aderyn.tar.xz -C "$HOME/.cyfrin/bin" >>"$EV/install.log" 2>&1 || echo "aderyn-extract FAIL" >>"$EV/install.log"
   chmod +x "$HOME/.cyfrin/bin/"* >/dev/null 2>&1 || true
+  ls "$HOME/.cyfrin/bin" >>"$EV/install.log" 2>&1 || true
 fi
 echo "aderyn: $(aderyn --version 2>/dev/null || echo MISSING)"
 
@@ -52,6 +62,9 @@ fi
 echo "slither: $(slither --version 2>/dev/null || echo MISSING)"
 
 cd sweep-target || exit 0
+
+# --- submodules via plain git (no forge needed) ---
+git submodule update --init --recursive --depth 1 >"../$EV/submodules.log" 2>&1 && echo "submodules: OK" || echo "submodules: FAIL (see log)"
 
 # --- forge deps + build ---
 [ -f foundry.toml ] && forge install --no-commit --quiet >/dev/null 2>&1 || true
