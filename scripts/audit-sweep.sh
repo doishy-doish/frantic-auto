@@ -79,10 +79,9 @@ if command -v slither >/dev/null; then
     echo "slither: OK"
   else
     echo "slither: project-mode FAIL, trying solc-direct fallback"
-    FILES=$(ls contracts/*.sol contracts/libraries/*.sol contracts/interfaces/*.sol 2>/dev/null | grep -v -i test || true)
+    FILES=$(ls contracts/*.sol contracts/libraries/*.sol contracts/interfaces/*.sol 2>/dev/null | grep -v -i test | paste -sd "," - || true)
     if [ -n "$FILES" ]; then
-      # shellcheck disable=SC2086
-      slither $FILES --solc solc --json "../$EV/slither.json" >"../$EV/slither.log" 2>&1 && echo "slither: OK (solc-direct)" || echo "slither: FAIL (see log)"
+      slither "$FILES" --solc solc --json "../$EV/slither.json" >"../$EV/slither.log" 2>&1 && echo "slither: OK (solc-direct)" || echo "slither: FAIL (see log)"
     else
       echo "slither: FAIL (see log, no fallback files)"
     fi
