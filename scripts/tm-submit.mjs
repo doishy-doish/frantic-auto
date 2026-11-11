@@ -10,7 +10,9 @@ const WORKER = (process.env.WORKER || '').trim();
 const IDEM = process.env.IDEMKEY || '';
 const j = (o) => JSON.stringify(o);
 async function post(path, body, idem) {
-  const r = await fetch(API + path, { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Taskmarket-Idempotency-Key': idem }, body: j(body) });
+  const headers = { 'Content-Type': 'application/json', 'X-Taskmarket-Idempotency-Key': idem };
+  if (process.env.XPAY) headers['X-PAYMENT'] = process.env.XPAY;
+  const r = await fetch(API + path, { method: 'POST', headers, body: j(body) });
   const t = await r.text();
   return { status: r.status, body: t };
 }
