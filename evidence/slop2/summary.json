@@ -1,0 +1,28 @@
+{
+ "stamp": "slop2",
+ "takenAt": "2026-11-11T15:23:09.721Z",
+ "case": "proof",
+ "depth": 2,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 6
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "slop-home",
+   "status": 200,
+   "bytes": 3303
+  },
+  {
+   "name": "slop-skill",
+   "status": 200,
+   "bytes": 15228
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

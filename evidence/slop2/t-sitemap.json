@@ -1,0 +1,53 @@
+{
+ "name": "sitemap",
+ "origin": "https://slop.cash",
+ "routes": [
+  {
+   "path": "/sitemap.xml",
+   "status": 200,
+   "locs": [
+    "https://slop.cash/",
+    "https://slop.cash/how-it-works",
+    "https://slop.cash/sponsors",
+    "https://slop.cash/cycles",
+    "https://slop.cash/points",
+    "https://slop.cash/projects/new",
+    "https://slop.cash/projects/hyperliquid-source",
+    "https://slop.cash/projects/bruhos",
+    "https://slop.cash/projects/eliza",
+    "https://slop.cash/projects/slopdotcash",
+    "https://slop.cash/projects/unbrowse",
+    "https://slop.cash/projects/feed",
+    "https://slop.cash/projects/thenetwork",
+    "https://slop.cash/projects/asi",
+    "https://slop.cash/projects/beam",
+    "https://slop.cash/projects/bountix",
+    "https://slop.cash/projects/canonry",
+    "https://slop.cash/projects/darling-arm64",
+    "https://slop.cash/projects/delta-git",
+    "https://slop.cash/projects/delta-star",
+    "https://slop.cash/projects/eliza-valhallaos",
+    "https://slop.cash/projects/fly-ai",
+    "https://slop.cash/projects/fortune-launchpad",
+    "https://slop.cash/projects/gocode",
+    "https://slop.cash/projects/inscrib3-wallet",
+    "https://slop.cash/projects/monna-agent-permission-diff",
+    "https://slop.cash/projects/nurosos",
+    "https://slop.cash/projects/ohio-project-south",
+    "https://slop.cash/projects/oldest",
+    "https://slop.cash/projects/orbio-contracts"
+   ],
+   "paths": []
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/",
+    "/admin",
+    "https://slop.cash/sitemap.xml"
+   ]
+  }
+ ]
+}
