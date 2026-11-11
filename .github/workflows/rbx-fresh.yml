@@ -1,0 +1,39 @@
+name: rbx-fresh
+# Roblox forecast submit — same mechanics as mf-news-fresh: SIWS key mint in-run,
+# drand-anchored v2 bundle, gate-proof transcript, x-api-key POST (full egress).
+# LIVE requires RBX_SOLANA_SECRET (persistent payout key, never logged). DRY needs nothing.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '1 = build + verify only, no POST (default 1)'
+        required: false
+        default: '1'
+permissions:
+  contents: write
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: cd rbx-run && node --check rbx-submit.mjs && node --check bundle.mjs
+      - run: cd rbx-run && node rbx-submit.mjs 2>&1 | tee /tmp/rbx-out.txt; test ${PIPESTATUS[0]} -eq 0
+        env:
+          DRY: ${{ inputs.dry_run }}
+          SOLANA_SECRET: ${{ secrets.RBX_SOLANA_SECRET }}
+      - name: publish result
+        if: always()
+        run: |
+          set +e
+          { echo "RUN_ID=${GITHUB_RUN_ID} DRY=${{ inputs.dry_run }}"; echo '---'; cat /tmp/rbx-out.txt 2>/dev/null || echo NO_OUTPUT; } > /tmp/rbx-result.txt
+          cd /tmp && rm -rf rbxres && mkdir rbxres && cp /tmp/rbx-result.txt rbxres/ && cd rbxres
+          git init -qb main && git config user.name rbx-fresh && git config user.email rbx-fresh@local.invalid
+          git add -A && git commit -qm "rbx submit result ${GITHUB_RUN_ID} dry=${{ inputs.dry_run }}"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/doishy-doish/frantic-auto.git"
+          git push -qf origin HEAD:rbx-submit-logs && echo published
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
