@@ -1,0 +1,60 @@
+From b8b1daee4c6323cb4ec850057997179ce0a93c53 Mon Sep 17 00:00:00 2001
+From: game-ship <game-ship@users.noreply.github.com>
+Date: Wed, 11 Nov 2026 08:26:29 +0000
+Subject: [PATCH] feat(title): title per task spec
+
+---
+ level-2.html | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+
+diff --git a/level-2.html b/level-2.html
+index 2c70313..f46c3f2 100644
+--- a/level-2.html
++++ b/level-2.html
+@@ -42,6 +42,7 @@ function readBestDepth() {
+ }
+ let bestDepth = readBestDepth()
+ let newBestThisRun = false
++let title = true
+ function recordDepth() {
+   // Never lower an existing record, including one saved by another tab.
+   bestDepth = Math.max(bestDepth, readBestDepth())
+@@ -245,6 +246,14 @@ function turn(dx, dy) {
+ }
+ 
+ function draw() {
++  if (title) {
++    document.getElementById('map').innerHTML = '<span class="stairs">DUNGEON CRAWLER</span>'
++    document.getElementById('depth').textContent = 'Depth 1'
++    document.getElementById('best').textContent = ''
++    document.getElementById('hp').textContent = ''
++    document.getElementById('msg').textContent = 'Arrows or WASD to move - R to restart - Press any key'
++    return
++  }
+   const vis = computeFov()
+   for (const key of vis) state.seen.add(key)
+   const html = state.grid.map((row, y) => row.map((c, x) => {
+@@ -270,13 +279,19 @@ const KEYS = {
+   w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0],
+ }
+ addEventListener('keydown', (e) => {
+-  if (e.key === 'r' || e.key === 'R') { reset(); return }
++  if (title) { title = false; reset(); return }
++  if (e.key === 'r' || e.key === 'R') {
++    if (state.over) { title = true; draw(); return }
++    reset(); return
++  }
+   const move = KEYS[e.key] ?? KEYS[e.key.toLowerCase()]
+   if (!move) return
+   e.preventDefault()
+   turn(...move)
+ })
+ reset()
++title = true
++draw()
+ </script>
+ </body>
+ </html>
+-- 
+2.56.0
+

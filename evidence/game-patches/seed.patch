@@ -1,0 +1,67 @@
+From 19e7d8770ff1c035d13c5ce60b99a55d5659b274 Mon Sep 17 00:00:00 2001
+From: game-ship <game-ship@users.noreply.github.com>
+Date: Wed, 11 Nov 2026 08:26:30 +0000
+Subject: [PATCH] feat(seed): seed per task spec
+
+---
+ level-2.html | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/level-2.html b/level-2.html
+index 2c70313..7065fdd 100644
+--- a/level-2.html
++++ b/level-2.html
+@@ -22,7 +22,7 @@
+ </head>
+ <body>
+ <main>
+-  <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="hp"></span></span></div>
++  <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="seed"></span> <span id="hp"></span></span></div>
+   <pre id="map" aria-label="dungeon"></pre>
+   <div id="msg"></div>
+ </main>
+@@ -53,7 +53,13 @@ function recordDepth() {
+   }
+ }
+ 
+-const rand = (min, max) => min + Math.floor(Math.random() * (max - min + 1))
++const SEED_PARAM = new URLSearchParams(location.search).get('seed')
++const SEED = SEED_PARAM === null ? String(Math.floor(Math.random() * 1000000000)) : SEED_PARAM
++let __sd = 1779033703 ^ SEED.length
++for (let i = 0; i < SEED.length; i++) { __sd = Math.imul(__sd ^ SEED.charCodeAt(i), 3432918353); __sd = (__sd << 13) | (__sd >>> 19) }
++__sd >>>= 0
++const rng = () => { __sd |= 0; __sd = (__sd + 0x6D2B79F5) | 0; let t = Math.imul(__sd ^ (__sd >>> 15), 1 | __sd); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296 }
++const rand = (min, max) => min + Math.floor(rng() * (max - min + 1))
+ 
+ // Allocate an exact room budget while retaining enough space in each partition.
+ const capacity = (area) => Math.floor(area.w / 7) * Math.floor(area.h / 5)
+@@ -94,7 +100,7 @@ function carve(grid, x, y) {
+ }
+ 
+ function corridor(grid, a, b) {
+-  const horizontalFirst = Math.random() < 0.5
++  const horizontalFirst = rng() < 0.5
+   const corner = horizontalFirst ? { x: b.x, y: a.y } : { x: a.x, y: b.y }
+   for (const [from, to] of [[a, corner], [corner, b]]) {
+     for (let x = Math.min(from.x, to.x); x <= Math.max(from.x, to.x); x++) carve(grid, x, from.y)
+@@ -124,7 +130,8 @@ function generate(roomCount = rand(4, 6), monsterCount = MONSTERS) {
+       pool.push({ x, y })
+     }))
+     // Prefer distant spawns; never overlap the player, stairs, or other monsters.
+-    const spawns = floor.sort(() => Math.random() - 0.5).concat(nearby.sort(() => Math.random() - 0.5))
++    const shuffle = (arr) => { for (let i = arr.length - 1; i > 0; i--) { const k = Math.floor(rng() * (i + 1)); const tmp = arr[i]; arr[i] = arr[k]; arr[k] = tmp } return arr }
++    const spawns = shuffle(floor).concat(shuffle(nearby))
+     // Very deep runs need more floor space, rather than silently capping monsters.
+     if (spawns.length < monsterCount) { H += 5; continue }
+     const monsters = spawns.slice(0, monsterCount).map((spawn) => ({ ...spawn, hp: MONSTER_HP }))
+@@ -261,6 +268,7 @@ function draw() {
+   document.getElementById('map').innerHTML = html
+   document.getElementById('depth').textContent = `Depth ${state.depth}`
+   document.getElementById('best').textContent = `Best ${bestDepth}`
++  document.getElementById('seed').textContent = `Seed ${SEED}`
+   document.getElementById('hp').textContent = '♥'.repeat(state.hp) + '·'.repeat(MAX_HP - state.hp) + `  ${state.hp}/${MAX_HP}`
+   document.getElementById('msg').textContent = state.over ? `${state.over}${newBestThisRun ? ' - New best' : ''} — press R for a new dungeon` : ''
+ }
+-- 
+2.56.0
+

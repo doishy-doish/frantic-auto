@@ -1,0 +1,84 @@
+From 238baa3166608f9d3eba51b00269f66473bb2c39 Mon Sep 17 00:00:00 2001
+From: game-ship <game-ship@users.noreply.github.com>
+Date: Wed, 11 Nov 2026 08:26:30 +0000
+Subject: [PATCH] feat(gold): gold per task spec
+
+---
+ level-2.html | 18 ++++++++++++++----
+ 1 file changed, 14 insertions(+), 4 deletions(-)
+
+diff --git a/level-2.html b/level-2.html
+index 2c70313..a611fb2 100644
+--- a/level-2.html
++++ b/level-2.html
+@@ -16,13 +16,14 @@
+   .player { color: #f0f6fc; font-weight: 700; }
+   .monster { color: #ff7b72; }
+   .stairs { color: #e3b341; }
++  .gold { color: #e3b341; }
+   .dim { opacity: .32; }
+   #msg { min-height: 1.4em; text-align: center; color: #f0f6fc; }
+ </style>
+ </head>
+ <body>
+ <main>
+-  <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="hp"></span></span></div>
++  <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="gold"></span> <span id="hp"></span></span></div>
+   <pre id="map" aria-label="dungeon"></pre>
+   <div id="msg"></div>
+ </main>
+@@ -128,6 +129,12 @@ function generate(roomCount = rand(4, 6), monsterCount = MONSTERS) {
+     // Very deep runs need more floor space, rather than silently capping monsters.
+     if (spawns.length < monsterCount) { H += 5; continue }
+     const monsters = spawns.slice(0, monsterCount).map((spawn) => ({ ...spawn, hp: MONSTER_HP }))
++    const taken = new Set(monsters.map((m) => `${m.x},${m.y}`))
++    taken.add(`${start.x},${start.y}`)
++    taken.add(`${exit.x},${exit.y}`)
++    const goldCells = []
++    grid.forEach((row, y) => row.forEach((c, x) => { if (c === '.' && !taken.has(`${x},${y}`)) goldCells.push({ x, y }) }))
++    for (const c of goldCells.sort(() => Math.random() - 0.5).slice(0, rand(3, 6))) grid[c.y][c.x] = '$'
+     return { grid, player: { ...start }, monsters, rooms: rooms.length }
+   }
+ }
+@@ -191,7 +198,7 @@ function computeFov() {
+ function reset() {
+   newBestThisRun = false
+   H = 20
+-  state = { ...generate(), depth: 1, hp: MAX_HP, over: null, seen: new Set() }
++  state = { ...generate(), depth: 1, hp: MAX_HP, gold: 0, over: null, seen: new Set() }
+   recordDepth()
+   draw()
+ }
+@@ -229,10 +236,11 @@ function turn(dx, dy) {
+   }
+   // A surviving monster blocks movement; a slain one frees its square immediately.
+   if (!occupied(nx, ny)) { player.x = nx; player.y = ny }
++  if (state.grid[player.y][player.x] === '$') { state.grid[player.y][player.x] = '.'; state.gold += 1 }
+   if (state.grid[player.y][player.x] === '>') {
+-    const { hp, depth, rooms } = state
++    const { hp, depth, rooms, gold } = state
+     state = { ...generate(Math.min(9, rooms + 1), MONSTERS + depth),
+-      depth: depth + 1, hp, over: null, seen: new Set() }
++      depth: depth + 1, hp, gold, over: null, seen: new Set() }
+     recordDepth()
+     return draw()
+   }
+@@ -254,6 +262,7 @@ function draw() {
+     const dim = lit ? '' : ' dim'
+     if (state.player.x === x && state.player.y === y) return '<span class="player">@</span>'
+     if (lit && occupied(x, y)) return `<span class="monster">g</span>`
++    if (c === '$') return `<span class="gold${dim}">$</span>`
+     if (c === '#') return `<span class="wall${dim}">#</span>`
+     if (c === '>') return `<span class="stairs${dim}">&gt;</span>`
+     return `<span class="floor${dim}">.</span>`
+@@ -261,6 +270,7 @@ function draw() {
+   document.getElementById('map').innerHTML = html
+   document.getElementById('depth').textContent = `Depth ${state.depth}`
+   document.getElementById('best').textContent = `Best ${bestDepth}`
++  document.getElementById('gold').textContent = `Gold ${state.gold}`
+   document.getElementById('hp').textContent = '♥'.repeat(state.hp) + '·'.repeat(MAX_HP - state.hp) + `  ${state.hp}/${MAX_HP}`
+   document.getElementById('msg').textContent = state.over ? `${state.over}${newBestThisRun ? ' - New best' : ''} — press R for a new dungeon` : ''
+ }
+-- 
+2.56.0
+

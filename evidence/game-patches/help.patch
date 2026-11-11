@@ -1,0 +1,34 @@
+From 391246247356a3c340bb3820e42d60ca534ba59b Mon Sep 17 00:00:00 2001
+From: game-ship <game-ship@users.noreply.github.com>
+Date: Wed, 11 Nov 2026 08:26:30 +0000
+Subject: [PATCH] feat(help): help per task spec
+
+---
+ level-2.html | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/level-2.html b/level-2.html
+index 2c70313..fd01b08 100644
+--- a/level-2.html
++++ b/level-2.html
+@@ -25,6 +25,7 @@
+   <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="hp"></span></span></div>
+   <pre id="map" aria-label="dungeon"></pre>
+   <div id="msg"></div>
++  <div id="help" hidden>Arrows/WASD: move - R: restart - ?: toggle this help</div>
+ </main>
+ <script>
+ const W = 40
+@@ -270,6 +271,9 @@ const KEYS = {
+   w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0],
+ }
+ addEventListener('keydown', (e) => {
++  if (e.key === '?') { const el = document.getElementById('help'); el.hidden = !el.hidden; return }
++  if (e.key === 'Escape') { document.getElementById('help').hidden = true; return }
++  if (!document.getElementById('help').hidden) return
+   if (e.key === 'r' || e.key === 'R') { reset(); return }
+   const move = KEYS[e.key] ?? KEYS[e.key.toLowerCase()]
+   if (!move) return
+-- 
+2.56.0
+

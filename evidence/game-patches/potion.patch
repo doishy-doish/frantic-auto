@@ -1,0 +1,50 @@
+From 90d7e241c3cf82530789078258ae2874bf8187b0 Mon Sep 17 00:00:00 2001
+From: game-ship <game-ship@users.noreply.github.com>
+Date: Wed, 11 Nov 2026 08:26:31 +0000
+Subject: [PATCH] feat(potion): potion per task spec
+
+---
+ level-2.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/level-2.html b/level-2.html
+index 2c70313..fa91d26 100644
+--- a/level-2.html
++++ b/level-2.html
+@@ -16,6 +16,7 @@
+   .player { color: #f0f6fc; font-weight: 700; }
+   .monster { color: #ff7b72; }
+   .stairs { color: #e3b341; }
++  .potion { color: #7ee787; }
+   .dim { opacity: .32; }
+   #msg { min-height: 1.4em; text-align: center; color: #f0f6fc; }
+ </style>
+@@ -128,6 +129,9 @@ function generate(roomCount = rand(4, 6), monsterCount = MONSTERS) {
+     // Very deep runs need more floor space, rather than silently capping monsters.
+     if (spawns.length < monsterCount) { H += 5; continue }
+     const monsters = spawns.slice(0, monsterCount).map((spawn) => ({ ...spawn, hp: MONSTER_HP }))
++    const free = []
++    grid.forEach((row, y) => row.forEach((c, x) => { if (c === '.' && !(x === start.x && y === start.y) && !(x === exit.x && y === exit.y) && !monsters.some((m) => m.x === x && m.y === y)) free.push({ x, y }) }))
++    if (free.length) { const pp = free[Math.floor(Math.random() * free.length)]; grid[pp.y][pp.x] = '!' }
+     return { grid, player: { ...start }, monsters, rooms: rooms.length }
+   }
+ }
+@@ -229,6 +233,7 @@ function turn(dx, dy) {
+   }
+   // A surviving monster blocks movement; a slain one frees its square immediately.
+   if (!occupied(nx, ny)) { player.x = nx; player.y = ny }
++  if (state.grid[player.y][player.x] === '!') { state.grid[player.y][player.x] = '.'; state.hp = Math.min(MAX_HP, state.hp + 2) }
+   if (state.grid[player.y][player.x] === '>') {
+     const { hp, depth, rooms } = state
+     state = { ...generate(Math.min(9, rooms + 1), MONSTERS + depth),
+@@ -254,6 +259,7 @@ function draw() {
+     const dim = lit ? '' : ' dim'
+     if (state.player.x === x && state.player.y === y) return '<span class="player">@</span>'
+     if (lit && occupied(x, y)) return `<span class="monster">g</span>`
++    if (c === '!') return `<span class="potion${dim}">!</span>`
+     if (c === '#') return `<span class="wall${dim}">#</span>`
+     if (c === '>') return `<span class="stairs${dim}">&gt;</span>`
+     return `<span class="floor${dim}">.</span>`
+-- 
+2.56.0
+

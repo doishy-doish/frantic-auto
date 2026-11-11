@@ -1,0 +1,72 @@
+From 4ea76ad036012382dc970e3dccbe865f4c6f2aab Mon Sep 17 00:00:00 2001
+From: game-ship <game-ship@users.noreply.github.com>
+Date: Wed, 11 Nov 2026 08:26:29 +0000
+Subject: [PATCH] feat(log): log per task spec
+
+---
+ level-2.html | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+diff --git a/level-2.html b/level-2.html
+index 2c70313..7f8703e 100644
+--- a/level-2.html
++++ b/level-2.html
+@@ -25,6 +25,7 @@
+   <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="hp"></span></span></div>
+   <pre id="map" aria-label="dungeon"></pre>
+   <div id="msg"></div>
++  <div id="log" aria-label="message log"></div>
+ </main>
+ <script>
+ const W = 40
+@@ -42,6 +43,13 @@ function readBestDepth() {
+ }
+ let bestDepth = readBestDepth()
+ let newBestThisRun = false
++let logMsgs = []
++function say(m) {
++  logMsgs.unshift(m)
++  logMsgs = logMsgs.slice(0, 3)
++  const el = document.getElementById('log')
++  if (el) el.innerHTML = logMsgs.map((t) => `<div>${t}</div>`).join('')
++}
+ function recordDepth() {
+   // Never lower an existing record, including one saved by another tab.
+   bestDepth = Math.max(bestDepth, readBestDepth())
+@@ -190,6 +198,8 @@ function computeFov() {
+ 
+ function reset() {
+   newBestThisRun = false
++  logMsgs = []
++  document.getElementById('log').innerHTML = ''
+   H = 20
+   state = { ...generate(), depth: 1, hp: MAX_HP, over: null, seen: new Set() }
+   recordDepth()
+@@ -225,7 +235,8 @@ function turn(dx, dy) {
+   const target = state.monsters.find((m) => m.x === nx && m.y === ny)
+   if (target) {
+     target.hp -= 1
+-    if (target.hp <= 0) state.monsters = state.monsters.filter((m) => m !== target)
++    say('You hit the monster')
++    if (target.hp <= 0) { state.monsters = state.monsters.filter((m) => m !== target); say('The monster dies') }
+   }
+   // A surviving monster blocks movement; a slain one frees its square immediately.
+   if (!occupied(nx, ny)) { player.x = nx; player.y = ny }
+@@ -233,12 +244,13 @@ function turn(dx, dy) {
+     const { hp, depth, rooms } = state
+     state = { ...generate(Math.min(9, rooms + 1), MONSTERS + depth),
+       depth: depth + 1, hp, over: null, seen: new Set() }
++    say('You go deeper')
+     recordDepth()
+     return draw()
+   }
+   for (const m of state.monsters) {
+     const adjacent = Math.abs(m.x - player.x) + Math.abs(m.y - player.y) === 1
+-    if (adjacent || stepToward(m)) state.hp -= 1
++    if (adjacent || stepToward(m)) { state.hp -= 1; say('You take 1 damage') }
+   }
+   if (state.hp <= 0) { state.hp = 0; state.over = 'Game over' }
+   draw()
+-- 
+2.56.0
+
