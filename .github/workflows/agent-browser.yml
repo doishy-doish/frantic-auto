@@ -69,6 +69,13 @@ jobs:
         with:
           node-version: 20
       - run: node --check scripts/browse.mjs
+      # QUEUED (do not push until demand7 proves browser-only install): cache the
+      # 150MB Chromium download so later runs skip it. Pinned version + cache key
+      # must change together, so this ships as one variable AFTER demand7 lands.
+      # - uses: actions/cache@v4
+      #   with:
+      #     path: ~/.cache/ms-playwright
+      #     key: playwright-chromium-1-49-1
       - run: |
           NEED_PW=0
           if [ "${{ inputs.render }}" = "1" ]; then NEED_PW=1; fi
@@ -98,6 +105,6 @@ jobs:
           git config user.email "agent-browser@users.noreply.github.com"
           git add evidence/ || true
           git diff --cached --quiet || git commit -m "browse $STAMP $(date -u +%FT%TZ)"
-          git push
+          for i in 1 2 3; do git fetch origin main >/dev/null 2>&1; git rebase origin/main >/dev/null 2>&1 || git rebase --abort; git push && break || sleep 10; done
         env:
           STAMP: ${{ inputs.stamp }}
