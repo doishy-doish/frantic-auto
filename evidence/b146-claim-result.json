@@ -1,0 +1,9 @@
+{
+ "claimed": false,
+ "error": "Error: /v1/claims -> 403: {\"ok\":false,\"error\":\"claim_not_allowed\",\"message\":\"This bounty allows at most 1 claims per operator.\"}",
+ "run": {
+  "head": "e82734c",
+  "script_len": 1
+ },
+ "at": "2026-11-11T07:17:03.770Z"
+}
