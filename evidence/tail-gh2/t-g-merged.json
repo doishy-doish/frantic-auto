@@ -1,0 +1,59 @@
+{
+ "name": "g-merged",
+ "engine": "github:issues",
+ "query": "\"for merged PR\" state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "bc-origo-bifrost-language-models#113 L1: LLM.Prompt.Ask html output mode",
+   "url": "https://github.com/businesscentralal/bc-origo-bifrost-language-models/issues/113",
+   "snippet": "open enhancement,intake:ready,intake:handed-off,wip:codex 2026-11-04T13:15:24Z"
+  },
+  {
+   "title": "start-technologies#4553 feat(registry): prefer BitTorrent downloads with opt-in software sharing",
+   "url": "https://github.com/Start9Labs/start-technologies/pull/4553",
+   "snippet": "open start-docs,start-cli,StartOS,StartSDK,StartWRT,StartTunnel,start-registry,repo,minor 2026-11-03T00:11:28Z"
+  },
+  {
+   "title": "PilotODIN#2 Build E QA: Master defect, validation and consolidated release register",
+   "url": "https://github.com/Sonkhe-Shongwe/PilotODIN/issues/2",
+   "snippet": "open  2026-10-23T08:05:59Z"
+  },
+  {
+   "title": "stephan-os#1889 Goal: Autonomous Battle Bridge Outbound Health Beacon V1",
+   "url": "https://github.com/Cheekyfellastef/stephan-os/issues/1889",
+   "snippet": "open  2026-08-18T14:31:58Z"
+  },
+  {
+   "title": "cloudstack#112 CSTACKEX-262: Support for Compute + Volume migration and Volume migration ",
+   "url": "https://github.com/NetApp/cloudstack/pull/112",
+   "snippet": "open  2026-10-05T05:54:57Z"
+  },
+  {
+   "title": "isoloop#171 docs: when to pool and when not to, from the plant dashboard's figures (M3d task 12)",
+   "url": "https://github.com/isoloop/isoloop/pull/171",
+   "snippet": "open  2026-11-11T15:56:43Z"
+  },
+  {
+   "title": "trusty-tools#8021 Prompt-feedback rollup: unique, actionable brief/skill/prompt defects (append-only)",
+   "url": "https://github.com/bobmatnyc/trusty-tools/issues/8021",
+   "snippet": "open type:chore,trusty-mpm,P3,self-improvement,area:agent-prompts 2026-09-15T11:22:31Z"
+  },
+  {
+   "title": "bainluck#11852 NOW — the only priority list",
+   "url": "https://github.com/alexander-bain/bainluck/issues/11852",
+   "snippet": "open taxonomy-exempt 2026-11-02T01:15:00Z"
+  },
+  {
+   "title": "seyal#1481 docs(arch): propose Block-native primary content authority for Seyal (#1480)",
+   "url": "https://github.com/seyal-org/seyal/pull/1481",
+   "snippet": "open  2026-11-11T15:56:37Z"
+  },
+  {
+   "title": "personal-knowledge-assistant#37 Leafspan Study Workspace: evidence-linked PDF, Markdown and Mind Map workflow",
+   "url": "https://github.com/moretea-labs/personal-knowledge-assistant/issues/37",
+   "snippet": "open  2026-11-07T08:27:56Z"
+  }
+ ]
+}

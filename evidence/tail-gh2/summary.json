@@ -1,0 +1,28 @@
+{
+ "stamp": "tail-gh2",
+ "takenAt": "2026-11-11T15:57:07.378Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "g-small",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "g-merged",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "g-repos",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

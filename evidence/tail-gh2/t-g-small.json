@@ -1,0 +1,59 @@
+{
+ "name": "g-small",
+ "engine": "github:issues",
+ "query": "bounty state:open comments:<5",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "ethereum-org-website#19745 Update execution-bounty-hunters.json",
+   "url": "https://github.com/ethereum/ethereum-org-website/pull/19745",
+   "snippet": "open  2026-11-11T15:56:14Z"
+  },
+  {
+   "title": "twclone#530 V4 Enhanced Play Epic: Mercenary security, escorts and territorial influence",
+   "url": "https://github.com/rdearman/twclone/issues/530",
+   "snippet": "open  2026-11-11T15:56:11Z"
+  },
+  {
+   "title": "frantic-board#589 Frantic bounty #148: Write one draft in a famous voice with Silvertongue's MCP server",
+   "url": "https://github.com/auscaster/frantic-board/issues/589",
+   "snippet": "open bounty,funded,available,claimed,delivered,needs-work 2026-11-10T21:22:21Z"
+  },
+  {
+   "title": "platform#8178 fix(marketing): serve the landing pages as indexable on tuturuuu.com",
+   "url": "https://github.com/tutur3u/platform/pull/8178",
+   "snippet": "open security-review-required,ready-for-ci 2026-11-11T14:25:56Z"
+  },
+  {
+   "title": "arkham-unfolded#165 State each option's effective cost once and annotate empty-location investigation",
+   "url": "https://github.com/joeloverbeck/arkham-unfolded/issues/165",
+   "snippet": "open ready-for-agent 2026-11-11T15:54:25Z"
+  },
+  {
+   "title": "Jellyfight#247 Add seven Risk of Rain-inspired Treasures",
+   "url": "https://github.com/Chanksyou/Jellyfight/pull/247",
+   "snippet": "open  2026-11-11T15:39:16Z"
+  },
+  {
+   "title": "openpilot#39113 BYD: Atto 3 port support",
+   "url": "https://github.com/commaai/openpilot/pull/39113",
+   "snippet": "open  2026-10-18T09:22:45Z"
+  },
+  {
+   "title": "x4-pirates-life-mod#90 Where the SWI build and its docs live beside the 9.x line",
+   "url": "https://github.com/ecarlste/x4-pirates-life-mod/issues/90",
+   "snippet": "open wayfinder:grilling 2026-11-11T06:14:11Z"
+  },
+  {
+   "title": "elgora-skills#3 Solver skill: subscribe an A2A agent by card or ERC-8004 identity",
+   "url": "https://github.com/moleculeprotocol/elgora-skills/pull/3",
+   "snippet": "open  2026-11-10T16:29:42Z"
+  },
+  {
+   "title": "sonar-deploy-action#68 Update dependency axios to v0.33.0 [SECURITY]",
+   "url": "https://github.com/TakeScoop/sonar-deploy-action/pull/68",
+   "snippet": "open  2023-05-28T12:02:12Z"
+  }
+ ]
+}

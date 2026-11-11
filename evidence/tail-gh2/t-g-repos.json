@@ -1,0 +1,59 @@
+{
+ "name": "g-repos",
+ "engine": "github:repositories",
+ "query": "agent bounty escrow",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "CRYPTOPRINCESS04/bounty-hunter-agents",
+   "url": "https://github.com/CRYPTOPRINCESS04/bounty-hunter-agents",
+   "snippet": "AI agents bid for paid tasks; a NEAR escrow contract pays the winner once a judge agent verifies the work. NEAR Hackathon 2026, AI Swarms track. ★0 TypeScript upd:2026-11-11"
+  },
+  {
+   "title": "Meet-hybrid/agentflow",
+   "url": "https://github.com/Meet-hybrid/agentflow",
+   "snippet": "AI-agent bounty marketplace on Stellar: clients fund tasks into a Soroban escrow, agents execute them, payment releases on approval. Testnet only; not audited. ★0 TypeScript upd:2026-11-10"
+  },
+  {
+   "title": "ariefms/taskbounty",
+   "url": "https://github.com/ariefms/taskbounty",
+   "snippet": "TaskBounty — pay-per-task AI agent marketplace on NEAR testnet. Post a task, lock the bounty in a Rust escrow contract; the agent only gets paid when you approve its work. ★0 JavaScript upd:2026-11-09"
+  },
+  {
+   "title": "averray-agent/agent",
+   "url": "https://github.com/averray-agent/agent",
+   "snippet": "Agent-native work rail on Polkadot Hub: escrowed USDC bounties, machine-readable onboarding, verifier-gated settlement, signed receipts. Agents start from a zero-fund wallet; posters pay only for verified work. ★0 JavaScript upd:2026-11-08"
+  },
+  {
+   "title": "reshui-btc/agent-market-recon",
+   "url": "https://github.com/reshui-btc/agent-market-recon",
+   "snippet": "Measure whether an AI-agent marketplace actually pays, before you spend a week listing on it. ★0 JavaScript upd:2026-11-06"
+  },
+  {
+   "title": "odiseo159-beep/mergit",
+   "url": "https://github.com/odiseo159-beep/mergit",
+   "snippet": "Trustless bounty escrow on GIWA. An AI agent verifies real developer work and releases payment instantly. GASOK 2026, Track 04 AI/Web3. ★0 JavaScript upd:2026-11-06"
+  },
+  {
+   "title": "DSP-AID/dail-testnet-escrow-demo",
+   "url": "https://github.com/DSP-AID/dail-testnet-escrow-demo",
+   "snippet": "End-to-end NEAR testnet escrow demo (agent-to-agent): lock, deliver, release. DAiL bounty bnty_0450. ★0 JavaScript upd:2026-11-05"
+  },
+  {
+   "title": "emk4652/gibwork-mcp-cli",
+   "url": "https://github.com/emk4652/gibwork-mcp-cli",
+   "snippet": "Autonomous Developer Agent Kit, MCP Server, and CLI for Gibwork Bounties and Solana SPL USDC Escrow Verification ★0 TypeScript upd:2026-10-20"
+  },
+  {
+   "title": "LootDeer/gibwork-solana-security-agent",
+   "url": "https://github.com/LootDeer/gibwork-solana-security-agent",
+   "snippet": "Gibwork Solana Security Agent: Non-web CLI & MCP server for token risk analysis and bounty escrow auditing ★0 Python upd:2026-10-19"
+  },
+  {
+   "title": "apexfaucet-hub/g2-agentkit",
+   "url": "https://github.com/apexfaucet-hub/g2-agentkit",
+   "snippet": "G2 for Coinbase AgentKit: a USDC bounty board on Base, and G2 Jobs, an ERC-8183-readable job escrow on Base and Arc that pays the worker. Immutable, no owner. ★0 Solidity upd:2026-10-14"
+  }
+ ]
+}
