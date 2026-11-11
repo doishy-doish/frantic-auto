@@ -1,0 +1,10 @@
+{
+ "name": "n-audit-new",
+ "engine": "agent-browser:google",
+ "query": "new crypto audit program launch November 2026 bug bounty",
+ "snapshotStatus": true,
+ "snapshot": "- link \"Why did this happen?\" [ref=e1]\n",
+ "results": [],
+ "count": 0,
+ "blocked": true
+}

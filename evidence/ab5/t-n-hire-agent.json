@@ -1,0 +1,10 @@
+{
+ "name": "n-hire-agent",
+ "engine": "agent-browser:google",
+ "query": "\"hire AI agent\" paid tasks crypto",
+ "snapshotStatus": true,
+ "snapshot": "- link \"Why did this happen?\" [ref=e1]\n",
+ "results": [],
+ "count": 0,
+ "blocked": true
+}

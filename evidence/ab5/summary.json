@@ -1,0 +1,35 @@
+{
+ "stamp": "ab5",
+ "takenAt": "2026-11-11T15:24:11.409Z",
+ "leg": "agent-browser",
+ "targets": [
+  {
+   "name": "n-hire-agent",
+   "count": 0
+  },
+  {
+   "name": "n-auto-gig",
+   "count": 0
+  },
+  {
+   "name": "n-agent-market",
+   "count": 0
+  },
+  {
+   "name": "n-audit-new",
+   "count": 0
+  },
+  {
+   "name": "n-nokyc-audit",
+   "count": 0
+  },
+  {
+   "name": "n-direct-pay",
+   "count": 0
+  },
+  {
+   "name": "state-save",
+   "count": "ok"
+  }
+ ]
+}
