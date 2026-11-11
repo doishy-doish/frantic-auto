@@ -13,6 +13,9 @@ name: agent-browser
 # only — depth 1 MISSED opire proof pre-depth); api-hunt = depth 1 wide + bundle-mine;
 # repo-mine = raw files via CDN; search-sweep = 6-10 queries, depth 0; chain-read = RPC,
 # don't browse. Depth 1 is the DEFAULT, not the best — pick CASE per question.
+# GOOGLE MODE (2026-11-11): engine "google" runs through headless Chromium with a
+# saved anonymous session (.browser-state.json via artifacts, NEVER committed) + stable
+# fingerprint. Plain-fetch Google is OUT; runner browser is the only Google path.
 on:
   workflow_dispatch:
     inputs:
@@ -52,16 +55,25 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: restore browser session (anonymous cookies only, never committed)
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: browser-state
+          path: .
       - id: nodecheck
         run: |
-          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]}')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4
         if: steps.nodecheck.outputs.ok != 'true'
         with:
           node-version: 20
       - run: node --check scripts/browse.mjs
       - run: |
-          if [ "${{ inputs.render }}" = "1" ]; then npm init -y >/dev/null 2>&1; npm pkg set type=module >/dev/null 2>&1; npm i playwright@latest && npx playwright install chromium --with-deps; fi
+          NEED_PW=0
+          if [ "${{ inputs.render }}" = "1" ]; then NEED_PW=1; fi
+          case "${{ inputs.targets }}" in *google*) NEED_PW=1;; esac
+          if [ "$NEED_PW" = "1" ]; then npm init -y >/dev/null 2>&1; npm pkg set type=module >/dev/null 2>&1; npm i playwright@latest && npx playwright install chromium --with-deps; fi
       - run: node scripts/browse.mjs
         env:
           TARGETS_JSON: ${{ inputs.targets }}
@@ -72,6 +84,15 @@ jobs:
           MAX_TARGETS: ${{ inputs.max_targets }}
           MAX_FOLLOWS: ${{ inputs.max_follows }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BROWSER_STATE: .browser-state.json
+      - name: save browser session (anonymous cookies only)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-state
+          path: .browser-state.json
+          if-no-files-found: ignore
+          retention-days: 14
       - run: |
           git config user.name "agent-browser"
           git config user.email "agent-browser@users.noreply.github.com"
