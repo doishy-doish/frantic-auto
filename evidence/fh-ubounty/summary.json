@@ -1,0 +1,18 @@
+{
+ "stamp": "fh-ubounty",
+ "takenAt": "2026-11-11T15:57:17.086Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 3,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "ub-bounties",
+   "status": 200,
+   "bytes": 24539
+  }
+ ]
+}
