@@ -1,0 +1,76 @@
+name: tm-submit
+# Relay-replacement Taskmarket writer (page-signed, key never leaves operator page).
+# Phase 1 (upload): request-upload-url + R2 PUT -> prints ARTIFACTKEY.
+# Page signs keys-msg with that key, then phase 2 (submit): from-keys -> submissionId.
+# Sigs are message-bound + expire in minutes; inputs never committed. Quiet logs.
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Task ID, e.g. TSK-SSV791KQ'
+        required: true
+      phase:
+        description: 'upload | submit'
+        required: true
+      worker:
+        description: 'Worker EVM address'
+        required: false
+        default: '0x9592d926920D99758fD3394c88f35959af6aD888'
+      filename:
+        description: 'Artifact file name'
+        required: false
+        default: 'deliverable.md'
+      mimetype:
+        description: 'Artifact mime'
+        required: false
+        default: 'text/markdown'
+      fileb64:
+        description: 'Phase upload: base64 artifact bytes'
+        required: false
+        default: ''
+      exp:
+        description: 'Phase upload: expiresAt (unix s) signed in upload-msg'
+        required: false
+        default: '0'
+      upsig:
+        description: 'Phase upload: EIP-191 of taskmarket:market:submit:<task>:upload:<exp>'
+        required: false
+        default: ''
+      artkey:
+        description: 'Phase submit: artifactKey from phase 1'
+        required: false
+        default: ''
+      artmeta:
+        description: 'Phase submit: JSON {size, sha256, keccak}'
+        required: false
+        default: '{}'
+      keysig:
+        description: 'Phase submit: EIP-191 of taskmarket:market:submit:<task>:<artkey>'
+        required: false
+        default: ''
+      idem:
+        description: 'Idempotency UUID for this phase'
+        required: true
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check scripts/tm-submit.mjs
+      - run: node scripts/tm-submit.mjs
+        env:
+          TASK: ${{ inputs.task }}
+          PHASE: ${{ inputs.phase }}
+          WORKER: ${{ inputs.worker }}
+          FILENAME: ${{ inputs.filename }}
+          MIMETYPE: ${{ inputs.mimetype }}
+          FILEB64: ${{ inputs.fileb64 }}
+          EXP: ${{ inputs.exp }}
+          UPSIG: ${{ inputs.upsig }}
+          ARTKEY: ${{ inputs.artkey }}
+          ARTMETA: ${{ inputs.artmeta }}
+          KEYSIG: ${{ inputs.keysig }}
+          IDEMKEY: ${{ inputs.idem }}
