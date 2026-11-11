@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level 2</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0d0f12; color: #c9d1d9; font: 16px/1.4 ui-monospace, Menlo, monospace; }
+  main { display: grid; gap: 12px; }
+  #hud { display: flex; justify-content: space-between; color: #8b949e; }
+  #hp { color: #f85149; letter-spacing: 2px; }
+  pre { margin: 0; font-size: 22px; line-height: 1.05; letter-spacing: 4px; }
+  .wall { color: #30363d; }
+  .floor { color: #21262d; }
+  .player { color: #f0f6fc; font-weight: 700; }
+  .monster { color: #ff7b72; }
+  .stairs { color: #e3b341; }
+  .dim { opacity: .32; }
+  #msg { min-height: 1.4em; text-align: center; color: #f0f6fc; }
+</style>
+</head>
+<body>
+<main>
+  <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="hp"></span></span></div>
+  <pre id="map" aria-label="dungeon"></pre>
+  <div id="msg"></div>
+  <div id="help" hidden>Arrows/WASD: move - R: restart - ?: toggle this help</div>
+</main>
+<script>
+const W = 40
+let H = 20
+const MAX_HP = 5
+const MONSTERS = 3
+const MONSTER_HP = 2
+let state
+const BEST_DEPTH_KEY = 'dungeon-crawler.level-2.best-depth'
+function readBestDepth() {
+  try {
+    const value = Number(localStorage.getItem(BEST_DEPTH_KEY))
+    return Number.isSafeInteger(value) && value > 0 ? value : 0
+  } catch { return 0 }
+}
+let bestDepth = readBestDepth()
+let newBestThisRun = false
+function recordDepth() {
+  // Never lower an existing record, including one saved by another tab.
+  bestDepth = Math.max(bestDepth, readBestDepth())
+  if (state.depth <= bestDepth) return
+  bestDepth = state.depth
+  newBestThisRun = true
+  try { localStorage.setItem(BEST_DEPTH_KEY, String(bestDepth)) } catch {
+    // Storage can be unavailable; keep the game and session record working.
+  }
+}
+
+const rand = (min, max) => min + Math.floor(Math.random() * (max - min + 1))
+
+// Allocate an exact room budget while retaining enough space in each partition.
+const capacity = (area) => Math.floor(area.w / 7) * Math.floor(area.h / 5)
+function split(area, count, leaves) {
+  if (count === 1) { leaves.push(area); return }
+  const choices = []
+  for (const vertical of [true, false]) {
+    const size = vertical ? area.w : area.h
+    const minimum = vertical ? 7 : 5
+    for (let cut = minimum; cut <= size - minimum; cut++) {
+      const a = vertical ? { ...area, w: cut } : { ...area, h: cut }
+      const b = vertical
+        ? { ...area, x: area.x + cut, w: size - cut }
+        : { ...area, y: area.y + cut, h: size - cut }
+      const low = Math.max(1, count - capacity(b))
+      const high = Math.min(count - 1, capacity(a))
+      if (low <= high) choices.push({ a, b, low, high })
+    }
+  }
+  const { a, b, low, high } = choices[rand(0, choices.length - 1)]
+  const leftCount = rand(low, high)
+  split(a, leftCount, leaves)
+  split(b, count - leftCount, leaves)
+}
+
+function roomIn(area) {
+  const w = rand(3, Math.max(3, area.w - 3))
+  const h = rand(2, Math.max(2, area.h - 3))
+  const x = rand(area.x + 1, area.x + area.w - w - 1)
+  const y = rand(area.y + 1, area.y + area.h - h - 1)
+  return { x, y, w, h }
+}
+
+const center = (r) => ({ x: r.x + Math.floor(r.w / 2), y: r.y + Math.floor(r.h / 2) })
+
+function carve(grid, x, y) {
+  if (x > 0 && y > 0 && x < W - 1 && y < H - 1) grid[y][x] = '.'
+}
+
+function corridor(grid, a, b) {
+  const horizontalFirst = Math.random() < 0.5
+  const corner = horizontalFirst ? { x: b.x, y: a.y } : { x: a.x, y: b.y }
+  for (const [from, to] of [[a, corner], [corner, b]]) {
+    for (let x = Math.min(from.x, to.x); x <= Math.max(from.x, to.x); x++) carve(grid, x, from.y)
+    for (let y = Math.min(from.y, to.y); y <= Math.max(from.y, to.y); y++) carve(grid, to.x, y)
+  }
+}
+
+function generate(roomCount = rand(4, 6), monsterCount = MONSTERS) {
+  for (;;) {
+    const leaves = []
+    split({ x: 0, y: 0, w: W, h: H }, roomCount, leaves)
+    const rooms = leaves
+      .map(roomIn)
+      .sort((a, b) => a.x - b.x || a.y - b.y)
+    const grid = Array.from({ length: H }, () => Array(W).fill('#'))
+    for (const r of rooms) for (let y = r.y; y < r.y + r.h; y++) for (let x = r.x; x < r.x + r.w; x++) carve(grid, x, y)
+    for (let i = 1; i < rooms.length; i++) corridor(grid, center(rooms[i - 1]), center(rooms[i]))
+    const start = center(rooms[0])
+    const exit = center(rooms[rooms.length - 1])
+    if (!reachable(grid, start, exit)) continue
+    grid[exit.y][exit.x] = '>'
+    const floor = []
+    const nearby = []
+    grid.forEach((row, y) => row.forEach((c, x) => {
+      if (c !== '.' || (x === start.x && y === start.y)) return
+      const pool = Math.abs(x - start.x) + Math.abs(y - start.y) > 8 ? floor : nearby
+      pool.push({ x, y })
+    }))
+    // Prefer distant spawns; never overlap the player, stairs, or other monsters.
+    const spawns = floor.sort(() => Math.random() - 0.5).concat(nearby.sort(() => Math.random() - 0.5))
+    // Very deep runs need more floor space, rather than silently capping monsters.
+    if (spawns.length < monsterCount) { H += 5; continue }
+    const monsters = spawns.slice(0, monsterCount).map((spawn) => ({ ...spawn, hp: MONSTER_HP }))
+    return { grid, player: { ...start }, monsters, rooms: rooms.length }
+  }
+}
+
+function reachable(grid, from, to) {
+  const seen = new Set([`${from.x},${from.y}`])
+  const queue = [from]
+  while (queue.length) {
+    const { x, y } = queue.shift()
+    if (x === to.x && y === to.y) return true
+    for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+      const nx = x + dx
+      const ny = y + dy
+      const key = `${nx},${ny}`
+      if (grid[ny]?.[nx] && grid[ny][nx] !== '#' && !seen.has(key)) {
+        seen.add(key)
+        queue.push({ x: nx, y: ny })
+      }
+    }
+  }
+  return false
+}
+
+const SIGHT = 6
+
+// Bresenham line from a to b, inclusive of b, exclusive of a.
+function line(ax, ay, bx, by) {
+  const points = []
+  const dx = Math.abs(bx - ax)
+  const dy = Math.abs(by - ay)
+  const sx = ax < bx ? 1 : -1
+  const sy = ay < by ? 1 : -1
+  let err = dx - dy
+  let x = ax
+  let y = ay
+  for (;;) {
+    if (x !== ax || y !== ay) points.push([x, y])
+    if (x === bx && y === by) return points
+    const e2 = 2 * err
+    if (e2 > -dy) { err -= dy; x += sx }
+    if (e2 < dx) { err += dx; y += sy }
+  }
+}
+
+// Tiles within SIGHT steps with no wall between them and the player.
+function computeFov() {
+  const vis = new Set()
+  const { player } = state
+  for (let y = Math.max(0, player.y - SIGHT); y <= Math.min(H - 1, player.y + SIGHT); y++) {
+    for (let x = Math.max(0, player.x - SIGHT); x <= Math.min(W - 1, player.x + SIGHT); x++) {
+      if (Math.hypot(x - player.x, y - player.y) > SIGHT + 0.5) continue
+      for (const [cx, cy] of line(player.x, player.y, x, y)) {
+        vis.add(`${cx},${cy}`)
+        if (state.grid[cy][cx] === '#') break
+      }
+    }
+  }
+  return vis
+}
+
+function reset() {
+  newBestThisRun = false
+  H = 20
+  state = { ...generate(), depth: 1, hp: MAX_HP, over: null, seen: new Set() }
+  recordDepth()
+  draw()
+}
+
+const passable = (x, y) => state.grid[y]?.[x] !== undefined && state.grid[y][x] !== '#'
+const occupied = (x, y) => state.monsters.some((m) => m.x === x && m.y === y)
+
+function stepToward(m) {
+  const { player } = state
+  const dx = Math.sign(player.x - m.x)
+  const dy = Math.sign(player.y - m.y)
+  const tries = Math.abs(player.x - m.x) >= Math.abs(player.y - m.y)
+    ? [[dx, 0], [0, dy]]
+    : [[0, dy], [dx, 0]]
+  for (const [sx, sy] of tries) {
+    if (!sx && !sy) continue
+    const nx = m.x + sx
+    const ny = m.y + sy
+    if (nx === player.x && ny === player.y) return true
+    if (passable(nx, ny) && !occupied(nx, ny)) { m.x = nx; m.y = ny; return false }
+  }
+  return false
+}
+
+function turn(dx, dy) {
+  if (state.over) return
+  const { player } = state
+  const nx = player.x + dx
+  const ny = player.y + dy
+  if (!passable(nx, ny)) return
+  const target = state.monsters.find((m) => m.x === nx && m.y === ny)
+  if (target) {
+    target.hp -= 1
+    if (target.hp <= 0) state.monsters = state.monsters.filter((m) => m !== target)
+  }
+  // A surviving monster blocks movement; a slain one frees its square immediately.
+  if (!occupied(nx, ny)) { player.x = nx; player.y = ny }
+  if (state.grid[player.y][player.x] === '>') {
+    const { hp, depth, rooms } = state
+    state = { ...generate(Math.min(9, rooms + 1), MONSTERS + depth),
+      depth: depth + 1, hp, over: null, seen: new Set() }
+    recordDepth()
+    return draw()
+  }
+  for (const m of state.monsters) {
+    const adjacent = Math.abs(m.x - player.x) + Math.abs(m.y - player.y) === 1
+    if (adjacent || stepToward(m)) state.hp -= 1
+  }
+  if (state.hp <= 0) { state.hp = 0; state.over = 'Game over' }
+  draw()
+}
+
+function draw() {
+  const vis = computeFov()
+  for (const key of vis) state.seen.add(key)
+  const html = state.grid.map((row, y) => row.map((c, x) => {
+    const key = `${x},${y}`
+    if (!state.seen.has(key)) return '<span class="floor"> </span>'
+    const lit = vis.has(key)
+    const dim = lit ? '' : ' dim'
+    if (state.player.x === x && state.player.y === y) return '<span class="player">@</span>'
+    if (lit && occupied(x, y)) return `<span class="monster">g</span>`
+    if (c === '#') return `<span class="wall${dim}">#</span>`
+    if (c === '>') return `<span class="stairs${dim}">&gt;</span>`
+    return `<span class="floor${dim}">.</span>`
+  }).join('')).join('\n')
+  document.getElementById('map').innerHTML = html
+  document.getElementById('depth').textContent = `Depth ${state.depth}`
+  document.getElementById('best').textContent = `Best ${bestDepth}`
+  document.getElementById('hp').textContent = '♥'.repeat(state.hp) + '·'.repeat(MAX_HP - state.hp) + `  ${state.hp}/${MAX_HP}`
+  document.getElementById('msg').textContent = state.over ? `${state.over}${newBestThisRun ? ' - New best' : ''} — press R for a new dungeon` : ''
+}
+
+const KEYS = {
+  ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0],
+  w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0],
+}
+addEventListener('keydown', (e) => {
+  if (e.key === '?') { const el = document.getElementById('help'); el.hidden = !el.hidden; return }
+  if (e.key === 'Escape') { document.getElementById('help').hidden = true; return }
+  if (!document.getElementById('help').hidden) return
+  if (e.key === 'r' || e.key === 'R') { reset(); return }
+  const move = KEYS[e.key] ?? KEYS[e.key.toLowerCase()]
+  if (!move) return
+  e.preventDefault()
+  turn(...move)
+})
+reset()
+</script>
+</body>
+</html>
