@@ -1,0 +1,9 @@
+{
+ "name": "v-base-bounty",
+ "engine": "google-fallback-ddg",
+ "query": "intitle:bounty inurl:issues \"Base\" -video",
+ "status": 202,
+ "count": 0,
+ "results": [],
+ "googleBlocked": true
+}

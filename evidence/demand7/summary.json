@@ -1,0 +1,23 @@
+{
+ "stamp": "demand7",
+ "takenAt": "2026-11-11T15:15:34.155Z",
+ "case": "demand",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "v-per-merge",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "v-base-bounty",
+   "status": 202,
+   "bytes": 0
+  }
+ ]
+}

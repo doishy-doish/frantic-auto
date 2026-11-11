@@ -1,0 +1,15 @@
+{
+ "name": "v-per-merge",
+ "engine": "google-fallback-ddg",
+ "query": "\"per merged PR\" (USDC OR crypto) -video -lottery",
+ "status": 200,
+ "count": 1,
+ "results": [
+  {
+   "title": "Forge on X: &quot;October 11, 2026 @_Volleyfun - Token Launchpad | Testnet ...",
+   "url": "https://x.com/Forge_pulse/status/2109260374394487098",
+   "snippet": "Trading fees split 50 percent to burn, 30 percent. @SlopCash - Open Source Funding | Upcoming Token Launch Slop Cash funds open-source maintenance and review, paying contributors USDC per merged PR while SLOP governs the project treasury."
+  }
+ ],
+ "googleBlocked": true
+}
