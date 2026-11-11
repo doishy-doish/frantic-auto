@@ -1,0 +1,92 @@
+name: rbx-gate
+# Roblox gate-proof: kit CLI `check` (transcript gate) over the locked entry +
+# a gate-proof loose transcript built in-run. No secrets, no submission.
+# Downloads the public kit, builds a 2-commit entry repo (freshness anchor root
+# + entry tip), smoke-runs the entry twice, builds the transcript, runs check.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: python3 --version
+      - name: fetch kit
+        run: |
+          curl -sSL "https://make.fun/c/roblox-up-and-coming-forecast-01/kit" -o kit.tar.gz
+          mkdir -p kit && tar xzf kit.tar.gz -C kit
+          ls kit/roblox-up-and-coming-forecast-01-kit/input/
+      - name: fresh drand round
+        run: |
+          R=$(curl -sSL "https://api.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971/public/latest")
+          echo "$R" | python3 -c "import json,sys; d=json.load(sys.stdin); assert d['round']>=33857812, d; print('round', d['round'])"
+          echo "RBX_ROUND=$(echo "$R" | python3 -c "import json,sys; print(json.load(sys.stdin)['round'])")" >> $GITHUB_ENV
+          echo "RBX_SIG=$(echo "$R" | python3 -c "import json,sys; print(json.load(sys.stdin)['signature'])")" >> $GITHUB_ENV
+      - name: build entry git repo (root anchor + tip)
+        run: |
+          set -e
+          rm -rf /tmp/rbx-repo && mkdir -p /tmp/rbx-repo/.makefun
+          cd /tmp/rbx-repo
+          git init -qb main
+          git config user.name "rbx-gate" && git config user.email "rbx-gate@local.invalid"
+          WALLET="11111111111111111111111111111111"
+          FRESH=$(python3 -c "import json;print(json.dumps({'scheme':'drand-quicknet','chain':'52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971','round':int('$RBX_ROUND'),'signature':'$RBX_SIG','wallet':'$WALLET'},separators=(',',':')))")
+          printf '%s\n' "$FRESH" > .makefun/freshness.json
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          GIT_AUTHOR_DATE="$TS" GIT_COMMITTER_DATE="$TS" git add .makefun/freshness.json
+          GIT_AUTHOR_DATE="$TS" GIT_COMMITTER_DATE="$TS" git commit -qm "drand quicknet round $RBX_ROUND anchor"
+          cp "${GITHUB_WORKSPACE}/rbx-gate/entry/main.py" main.py
+          cp "${GITHUB_WORKSPACE}/rbx-gate/entry/LICENSE" LICENSE
+          printf '{"wallet":"%s"}\n' "$WALLET" > .makefun/owner.json
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          git add main.py LICENSE .makefun/owner.json
+          GIT_AUTHOR_DATE="$TS" GIT_COMMITTER_DATE="$TS" git commit -qm "roblox up-and-coming forecaster H=0.4 R=0.2 L=3"
+          echo "RBX_ROOT=$(git rev-list --max-parents=0 HEAD)" >> $GITHUB_ENV
+          echo "RBX_TIP=$(git rev-parse HEAD)" >> $GITHUB_ENV
+          git log --oneline | head
+      - name: smoke entry twice (determinism + shape)
+        run: |
+          set -e
+          KIT=kit/roblox-up-and-coming-forecast-01-kit
+          mkdir -p /tmp/rbx-in /tmp/rbx-out1 /tmp/rbx-out2
+          cp $KIT/input/history.ndjson /tmp/rbx-in/ && cp $KIT/input/task.json /tmp/rbx-in/
+          MAKEFUN_INPUT_DIR=/tmp/rbx-in MAKEFUN_OUTPUT_DIR=/tmp/rbx-out1 python3 /tmp/rbx-repo/main.py
+          MAKEFUN_INPUT_DIR=/tmp/rbx-in MAKEFUN_OUTPUT_DIR=/tmp/rbx-out2 python3 /tmp/rbx-repo/main.py
+          cmp /tmp/rbx-out1/forecast.json /tmp/rbx-out2/forecast.json && echo DETERMINISTIC
+          python3 - <<'EOF'
+          import json
+          fc = json.load(open('/tmp/rbx-out1/forecast.json'))
+          assert set(fc.keys()) == {'probabilities', 'top10'}, fc.keys()
+          assert len(fc['top10']) == 10 and len(set(fc['top10'])) == 10
+          sums = {}
+          for r in fc['probabilities']:
+              assert set(r.keys()) == {'universe_id', 'place', 'p'}
+              assert 1 <= r['place'] <= 10 and 0 <= r['p'] <= 1
+              sums[r['place']] = sums.get(r['place'], 0) + r['p']
+          assert all(s <= 1.0 + 1e-9 for s in sums.values()), sums
+          print('SHAPE OK places:', sorted(sums.items()))
+          EOF
+      - name: build gate-proof transcript
+        run: |
+          set -e
+          node --check "${GITHUB_WORKSPACE}/rbx-gate/make-transcript.mjs"
+          START_MS=$(( $(date +%s%3N) - 300000 ))
+          ROOT_SHA="$RBX_ROOT" TIP_SHA="$RBX_TIP" ROUND="$RBX_ROUND" SIG="$RBX_SIG" \
+            ENTRY_DIR=/tmp/rbx-repo OUT=/tmp/session.json START_MS="$START_MS" \
+            node "${GITHUB_WORKSPACE}/rbx-gate/make-transcript.mjs"
+          ls -la /tmp/session.json
+      - name: kit CLI check (transcript gate)
+        run: |
+          set +e
+          cd kit/roblox-up-and-coming-forecast-01-kit
+          node cli/makefun.mjs check --kit . --repo /tmp/rbx-repo --transcripts /tmp/session.json --json > /tmp/check.json
+          CODE=$?
+          cat /tmp/check.json
+          echo "CHECK_EXIT=$CODE"
+          exit $CODE
