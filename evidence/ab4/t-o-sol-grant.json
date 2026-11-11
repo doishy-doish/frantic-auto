@@ -1,0 +1,10 @@
+{
+ "name": "o-sol-grant",
+ "engine": "agent-browser:google",
+ "query": "Solana micro grant developers small 2026",
+ "snapshotStatus": true,
+ "snapshot": "- link \"Why did this happen?\" [ref=e1]\n",
+ "results": [],
+ "count": 0,
+ "blocked": true
+}

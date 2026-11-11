@@ -1,0 +1,35 @@
+{
+ "stamp": "ab4",
+ "takenAt": "2026-11-11T15:22:01.006Z",
+ "leg": "agent-browser",
+ "targets": [
+  {
+   "name": "o-sol-bounty",
+   "count": 0
+  },
+  {
+   "name": "o-superteam",
+   "count": 0
+  },
+  {
+   "name": "o-sol-task",
+   "count": 0
+  },
+  {
+   "name": "o-sol-usdc",
+   "count": 0
+  },
+  {
+   "name": "o-sol-small",
+   "count": 0
+  },
+  {
+   "name": "o-sol-grant",
+   "count": 0
+  },
+  {
+   "name": "state-save",
+   "count": "ok"
+  }
+ ]
+}
