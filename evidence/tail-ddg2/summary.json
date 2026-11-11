@@ -1,0 +1,28 @@
+{
+ "stamp": "tail-ddg2",
+ "takenAt": "2026-11-11T15:57:08.877Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "d-nokyc",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "d-whitehat",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "d-perm",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

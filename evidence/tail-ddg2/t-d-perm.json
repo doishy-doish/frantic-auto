@@ -1,0 +1,59 @@
+{
+ "name": "d-perm",
+ "engine": "ddg",
+ "query": "security bounty permissionless new project",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Launching a Permissionless Bounty Program for Protocol Development",
+   "url": "https://chainscorelabs.com/guides/first-principles-philosophy-and-culture-of-decentralization/open-source-culture/launching-a-permissionless-bounty-program-for-protocol-development",
+   "snippet": "A permissionless bounty program is a decentralized incentive mechanism that allows anyone to contribute to a protocol&#x27;s development or security without requiring prior approval. Unlike traditional grants or closed teams, these programs"
+  },
+  {
+   "title": "Bug Bounty Program List | Bugcrowd",
+   "url": "https://www.bugcrowd.com/bug-bounty-list/",
+   "snippet": "The most comprehensive, up-to-date crowdsourced bug bounty list and vulnerability disclosure programs from across the web — curated by the hacker community."
+  },
+  {
+   "title": "ProjectDiscovery OSS Bounty Program - GitHub",
+   "url": "https://github.com/projectdiscovery/oss-bounty-program",
+   "snippet": "The ProjectDiscovery OSS Bounty Program exists to democratize security by rewarding meaningful contributions from the global community. Our tools are used by researchers, defenders, and builders worldwide. This program ensures that anyone, "
+  },
+  {
+   "title": "Rewarding defenders with bigger bug bounties - OpenAI",
+   "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties/",
+   "snippet": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers."
+  },
+  {
+   "title": "Solana Foundation on X: &quot;We&#x27;ve launched a new security bounty program ...",
+   "url": "https://x.com/SolanaFndn/status/1979204100400038113",
+   "snippet": "We&#x27;ve launched a new security bounty program for Anchor, offering rewards of up to $100k for vulnerabilities that affect production code. If you think you&#x27;ve found an issue, we want to hear from you. Details on scope and eligibili"
+  },
+  {
+   "title": "GitHub - BehiSecc/First-Bounty: A complete, beginner-friendly bug ...",
+   "url": "https://github.com/BehiSecc/First-Bounty",
+   "snippet": "First- Bounty Introduction Note The goal of this guide is to take someone from zero knowledge in bug bounties and web application security to earning their first bounty (monetary reward). A lot of people ask me how to get started in bug bou"
+  },
+  {
+   "title": "Bug Bounty Programs in Web3: Setup, Platforms &amp; Best Practices for 2026",
+   "url": "https://thesignal.directory/n/web3-bug-bounty-programs-guide",
+   "snippet": "Web3 bug bounty programs have paid out over $200 million since 2020, making them the most cost-effective ongoing security investment for blockchain projects . This guide covers platform selection, reward structures, scope definition, and op"
+  },
+  {
+   "title": "The Vercel Bug Bounty Program is now publicly available",
+   "url": "https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available",
+   "snippet": "Vercel&#x27;s Bug Bounty Program is now public on HackerOne, covering all Vercel products and open-source projects . Learn how to participate and report findings."
+  },
+  {
+   "title": "TOP Bug Bounty Programs &amp; Websites List (Nov 2026 Update) - Guru99",
+   "url": "https://www.guru99.com/bug-bounty-programs.html",
+   "snippet": "Engage with the TOP Bug Bounty Programs to secure your digital assets. These programs enlist ethical hackers to pinpoint vulnerabilities, fortifying your defense against malicious attacks."
+  },
+  {
+   "title": "Morpheus Bug Bounty Program ($100,000) - mor.org",
+   "url": "https://mor.org/bug-bounty",
+   "snippet": "Morpheus Bug Bounty Program ($100,000) Version 2 — effective 2026-08-07. Supersedes all prior versions. Calling all independent security researchers. Synopsis The Morpheus community cares about strong property rights. The Morpheus smart con"
+  }
+ ]
+}

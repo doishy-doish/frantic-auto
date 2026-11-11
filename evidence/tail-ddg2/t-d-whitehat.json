@@ -1,0 +1,59 @@
+{
+ "name": "d-whitehat",
+ "engine": "ddg",
+ "query": "accepting whitehat small defi audit reward",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Whitehat - Accredible",
+   "url": "https://www.accredible.com/whitehat",
+   "snippet": "Before reporting any security vulnerabilities to Accredible, please review the information on our Whitehat page including the process and exceptions sections."
+  },
+  {
+   "title": "Participating in Audit Competitions | Hats.finance",
+   "url": "https://docs.hats.finance/for-security-researchers/participating-in-audit-competitions",
+   "snippet": "Welcome White Hats! Welcome to Hats Finance, a platform where White Hat auditors and security experts like you play a critical role in enhancing the resilience of the Web3 ecosystem. Our Audit Competitions are designed to challenge, reward "
+  },
+  {
+   "title": "Audit Competitions | Hats.finance",
+   "url": "https://docs.hats.finance/welcome-to-hats-finance/audit-competitions",
+   "snippet": "Our audit competitions are time-sensitive events where a community of security experts, including auditors and white-hat hackers, engage in a collaborative yet competitive environment to identify and report vulnerabilities in smart contract"
+  },
+  {
+   "title": "Explore Audit Competitions: Exclusive and Time-Bound ... - Immunefi",
+   "url": "https://immunefi.com/audit-competition/",
+   "snippet": "Check the list of Audit Competitions on Immunefi along with their rewards and timelines. Browse exclusive Web 3 security audit opportunities on the most rewarding platform for Whitehat researchers."
+  },
+  {
+   "title": "Audit Where Hacks Pay: Budgeted Strong-Verifier Audits",
+   "url": "https://arxiv.org/html/2610.35716v1",
+   "snippet": "Abstract Reinforcement learning with verifiable rewards trains on cheap checks, such as unit tests, that a policy can learn to game, while a stronger check is too expensive to run on every rollout. We study how to spend a limited strong-ver"
+  },
+  {
+   "title": "Smart Contract Bug Bounties &amp; Audit Competitions | SCH",
+   "url": "https://smartcontractshacking.com/tools/web3-auditing-competitions-and-bug-bounties",
+   "snippet": "The leading Web3 bug bounty platforms are Immunefi (largest, $15M max payouts on DeFi protocols), Cantina (Spearbit&#x27;s bounty program plus audit competitions), HackenProof (managed Web3 bounties and crowdsourced audits ), Sherlock ( aud"
+  },
+  {
+   "title": "Audita - DeFi Audit",
+   "url": "https://audita.io/defi-audits",
+   "snippet": "DeFi Audit . Smart contract security audits for DeFi protocols. Our team conducts thorough code reviews and vulnerability assessments to safeguard decentralized finance applications. Protect your users&#x27; assets with an industry-leading "
+  },
+  {
+   "title": "1inch joins SEAL Whitehat Safe Harbor for DeFi security | 1inch Blog",
+   "url": "https://1inch.com/blog/post/how-white-hat-hackers-help-secure-defi",
+   "snippet": "1inch has adopted the SEAL Whitehat Safe Harbor Agreement, giving white hats clearer legal protection to help respond to active DeFi exploits."
+  },
+  {
+   "title": "DeFi United: The White-Hat Coup That Saved the Rewards",
+   "url": "https://www.pulsechain.nexus/defi-united-the-white-hat-coup-that-saved-the-rewards/",
+   "snippet": "A coordinated, centralised intervention by an ad-hoc group of developers and protocol leads, operating under the name &quot; DeFi United&quot;, pre-empted a widespread exploit targeting the rewards distribution mechanisms of several Liquid "
+  },
+  {
+   "title": "Audit Where Hacks Pay: Budgeted Strong-Verifier Audits Against Reward ...",
+   "url": "https://arxiv.org/pdf/2610.35716v1",
+   "snippet": "An audit design makes two choices: which weakly passing rollouts to send to the strong verifier (selection) and what reward a caught hack receives (correction). Two defaults are natural: random audits with an inverse-propensity correction, "
+  }
+ ]
+}
