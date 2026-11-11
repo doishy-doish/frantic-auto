@@ -1,0 +1,28 @@
+{
+ "stamp": "tail-ddg1",
+ "takenAt": "2026-11-11T15:57:07.716Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "d-willpay",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "d-lookpay",
+   "status": 202,
+   "bytes": 0
+  },
+  {
+   "name": "d-budget",
+   "status": 202,
+   "bytes": 0
+  }
+ ]
+}
