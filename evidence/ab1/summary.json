@@ -1,0 +1,19 @@
+{
+ "stamp": "ab1",
+ "takenAt": "2026-11-11T15:18:58.445Z",
+ "leg": "agent-browser",
+ "targets": [
+  {
+   "name": "v-per-merge",
+   "count": 0
+  },
+  {
+   "name": "v-base-bounty",
+   "count": 0
+  },
+  {
+   "name": "state-save",
+   "count": "ok"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "name": "v-per-merge",
+ "engine": "agent-browser:google",
+ "query": "\"per merged PR\" (USDC OR crypto) -video -lottery",
+ "snapshotStatus": true,
+ "snapshot": "- link \"Why did this happen?\" [ref=e1]\n",
+ "results": [],
+ "count": 0,
+ "blocked": true
+}

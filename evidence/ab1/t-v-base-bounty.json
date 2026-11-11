@@ -1,0 +1,10 @@
+{
+ "name": "v-base-bounty",
+ "engine": "agent-browser:google",
+ "query": "intitle:bounty inurl:issues \"Base\" -video",
+ "snapshotStatus": true,
+ "snapshot": "- link \"Why did this happen?\" [ref=e1]\n",
+ "results": [],
+ "count": 0,
+ "blocked": true
+}
