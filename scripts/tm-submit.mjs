@@ -11,7 +11,7 @@ const IDEM = process.env.IDEMKEY || '';
 const j = (o) => JSON.stringify(o);
 async function post(path, body, idem) {
   const headers = { 'Content-Type': 'application/json', 'X-Taskmarket-Idempotency-Key': idem };
-  if (process.env.XPAY) headers['X-PAYMENT'] = process.env.XPAY;
+  if (process.env.XPAY) { headers['payment-signature'] = process.env.XPAY; headers['X-PAYMENT'] = process.env.XPAY; }
   const r = await fetch(API + path, { method: 'POST', headers, body: j(body) });
   const t = await r.text();
   return { status: r.status, body: t };
