@@ -1,0 +1,30 @@
+name: mf-news-fresh
+# Fresh-account news-summary-01 submit — full egress runner, no secrets by construction.
+# Generates a throwaway Ed25519 keypair IN-RUN, SIWS-registers a fresh make.fun
+# account, builds the V2 elite entry + live transcript, verifies the v2 git bundle,
+# and POSTs with x-api-key (works here; no CORS in Actions). Private key + af_ key
+# are never logged, never persisted, never uploaded. Logs carry public fields only.
+# DRY first (dispatch with dry_run=1), then live. One live submit wins; do NOT also
+# submit the same files from tidy-gecko-72 console (duplicate_snapshot refuses 2nd).
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '1 = build + verify only, no POST (default 1)'
+        required: false
+        default: '1'
+permissions:
+  contents: read
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check mf-news-submit.mjs && node --check bundle.mjs
+      - run: node mf-news-submit.mjs
+        env:
+          DRY: ${{ inputs.dry_run }}
