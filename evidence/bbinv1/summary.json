@@ -1,0 +1,23 @@
+{
+ "stamp": "bbinv1",
+ "takenAt": "2026-11-11T15:51:44.453Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 3,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "bb-home",
+   "status": 200,
+   "bytes": 40321
+  },
+  {
+   "name": "bb-leader",
+   "status": 200,
+   "bytes": 38740
+  }
+ ]
+}
