@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --check mf-news-submit.mjs && node --check bundle.mjs
-      - run: node mf-news-submit.mjs
+      - run: cd makefun-fresh && node --check mf-news-submit.mjs && node --check bundle.mjs
+      - run: cd makefun-fresh && node mf-news-submit.mjs
         env:
           DRY: ${{ inputs.dry_run }}
