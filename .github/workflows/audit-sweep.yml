@@ -1,0 +1,42 @@
+name: audit-sweep
+# Automated static-analysis sweep over an in-scope repo: forge build + aderyn + slither.
+# Dispatch ONLY. Zero spend, no secrets in lane (GITHUB_TOKEN only). Evidence = third-party
+# PUBLIC code scan output under evidence/<stamp>/, committed back (rebase+retry push).
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Target repo owner/name, e.g. smilee-finance/v2-contracts-public'
+        required: true
+        default: 'smilee-finance/v2-contracts-public'
+      ref:
+        description: 'Branch, tag or full SHA to scan'
+        required: false
+        default: 'master'
+      stamp:
+        description: 'Evidence dir name under evidence/'
+        required: false
+        default: 'audit-1'
+      solc:
+        description: 'solc version for slither, e.g. 0.8.19 or 0.5.16'
+        required: false
+        default: '0.8.19'
+permissions:
+  contents: write
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/audit-sweep.sh "${{ inputs.repo }}" "${{ inputs.ref }}" "${{ inputs.stamp }}" "${{ inputs.solc }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          git config user.name "audit-sweep"
+          git config user.email "audit-sweep@users.noreply.github.com"
+          git add evidence/ || true
+          git diff --cached --quiet || git commit -m "audit $STAMP $(date -u +%FT%TZ)"
+          for i in 1 2 3; do git fetch origin main >/dev/null 2>&1; git rebase origin/main >/dev/null 2>&1 || git rebase --abort; git push && break || sleep 10; done
+        env:
+          STAMP: ${{ inputs.stamp }}
