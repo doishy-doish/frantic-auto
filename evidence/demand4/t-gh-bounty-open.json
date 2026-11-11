@@ -1,0 +1,59 @@
+{
+ "name": "gh-bounty-open",
+ "engine": "github:issues",
+ "query": "bounty state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "cycloop-portal#422 fix(deps): update dependency next to v15 [security]",
+   "url": "https://github.com/sportloop/cycloop-portal/pull/422",
+   "snippet": "open  2024-09-26T21:39:05Z"
+  },
+  {
+   "title": "frantic-board#1 Frantic Oath check-in",
+   "url": "https://github.com/auscaster/frantic-board/issues/1",
+   "snippet": "open  2026-06-11T11:18:57Z"
+  },
+  {
+   "title": "agent-bounty-experiment#1 AI Agent Bounty — 0.001 Arbitrum Sepolia test ETH or propose your own terms",
+   "url": "https://github.com/PinkBoxTerminal/agent-bounty-experiment/issues/1",
+   "snippet": "open  2026-11-11T14:30:17Z"
+  },
+  {
+   "title": "Knos#17 Knos relay log",
+   "url": "https://github.com/drexthealpha/Knos/issues/17",
+   "snippet": "open knos-relay 2026-10-02T01:52:08Z"
+  },
+  {
+   "title": "iqasport.org#310 Update dependency next to v15 [SECURITY]",
+   "url": "https://github.com/iqasport/iqasport.org/pull/310",
+   "snippet": "open  2024-09-25T14:15:57Z"
+  },
+  {
+   "title": "ai-ugc-pipeline#39 chore: RSS draft posts - 2026-10-01",
+   "url": "https://github.com/jondmarien/ai-ugc-pipeline/pull/39",
+   "snippet": "open  2026-10-01T00:50:00Z"
+  },
+  {
+   "title": "xcm-tools#2465 [Bug bounty] Type-and-then: existential deposit added twice for non-sufficient fee assets",
+   "url": "https://github.com/paraspell/xcm-tools/issues/2465",
+   "snippet": "open Bug bounty 💰 2026-11-08T13:52:20Z"
+  },
+  {
+   "title": "ai-research#651 🤖 Bot 健康检查 (2026-11-11)",
+   "url": "https://github.com/zhangjiayang6835-cyber/ai-research/issues/651",
+   "snippet": "open bot-health 2026-07-07T19:43:17Z"
+  },
+  {
+   "title": "monots#105 chore(deps): update dependency next to v16 [security]",
+   "url": "https://github.com/monots/monots/pull/105",
+   "snippet": "open  2024-09-25T12:41:12Z"
+  },
+  {
+   "title": "Fork-The-World#5 MetaMaps Simple Mapping",
+   "url": "https://github.com/MetaFam/Fork-The-World/issues/5",
+   "snippet": "open bounty 2020-07-20T00:44:33Z"
+  }
+ ]
+}

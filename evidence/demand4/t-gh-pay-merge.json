@@ -1,0 +1,59 @@
+{
+ "name": "gh-pay-merge",
+ "engine": "github:issues",
+ "query": "pay on merge state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "rush-hour#116 chore(deps): update dependency fastlane to v2.241.2",
+   "url": "https://github.com/SphericalKat/rush-hour/pull/116",
+   "snippet": "open  2026-09-07T16:21:54Z"
+  },
+  {
+   "title": "translated-content#302 [pull] main from mdn:main",
+   "url": "https://github.com/cogor/translated-content/pull/302",
+   "snippet": "open :arrow_heading_down: pull,system,l10n-de,merge-conflict 2022-02-22T06:57:50Z"
+  },
+  {
+   "title": "humaniq#1028 refactor(pay-transparency): move the minimum group setting out of SettingsService",
+   "url": "https://github.com/ConductionNL/humaniq/pull/1028",
+   "snippet": "open  2026-11-11T15:12:40Z"
+  },
+  {
+   "title": "marktmorgen#2271 Broken move repair: delete the untouched copy however the store changed since",
+   "url": "https://github.com/solrenning-llc/marktmorgen/pull/2271",
+   "snippet": "open  2026-11-04T19:54:21Z"
+  },
+  {
+   "title": "remotion#13099 `@remotion/web-renderer`: Fix SVG text with CSS data fonts",
+   "url": "https://github.com/remotion-dev/remotion/pull/13099",
+   "snippet": "open  2026-11-08T20:20:37Z"
+  },
+  {
+   "title": "nbr-taxpay#707 Pay Again: preserve Return-only multi-beneficiary allocations and independent assessment years",
+   "url": "https://github.com/shihab-tech04/nbr-taxpay/pull/707",
+   "snippet": "open  2026-11-11T15:10:58Z"
+  },
+  {
+   "title": "overplay#136 fix(playback): play a gone library-only song from a strict catalog match",
+   "url": "https://github.com/xurble/overplay/pull/136",
+   "snippet": "open  2026-11-11T14:31:18Z"
+  },
+  {
+   "title": "KiroCrew#34882 perf(crew-log): replay each unit's log from a watermark on boot",
+   "url": "https://github.com/kirodotdev/KiroCrew/pull/34882",
+   "snippet": "open readiness: checking 2026-11-10T23:00:03Z"
+  },
+  {
+   "title": "Baci#4198 fix(ci): get the Gemini reviewer working again and give Diff Guardian a second voter",
+   "url": "https://github.com/ogabasseyy/Baci/pull/4198",
+   "snippet": "open  2026-11-11T13:14:27Z"
+  },
+  {
+   "title": "core#190600 Add recorder database usage report",
+   "url": "https://github.com/home-assistant/core/pull/190600",
+   "snippet": "open core,integration: recorder,cla-signed,new-feature,has-tests,Quality Scale: internal 2026-11-05T11:14:02Z"
+  }
+ ]
+}

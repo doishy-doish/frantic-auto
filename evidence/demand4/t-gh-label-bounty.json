@@ -1,0 +1,59 @@
+{
+ "name": "gh-label-bounty",
+ "engine": "github:issues",
+ "query": "label:bounty state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Fork-The-World#5 MetaMaps Simple Mapping",
+   "url": "https://github.com/MetaFam/Fork-The-World/issues/5",
+   "snippet": "open bounty 2020-07-20T00:44:33Z"
+  },
+  {
+   "title": "frantic-board#589 Frantic bounty #148: Write one draft in a famous voice with Silvertongue's MCP server",
+   "url": "https://github.com/auscaster/frantic-board/issues/589",
+   "snippet": "open bounty,funded,available,claimed,delivered,needs-work 2026-11-10T21:22:21Z"
+  },
+  {
+   "title": "frantic-board#277 Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)",
+   "url": "https://github.com/auscaster/frantic-board/issues/277",
+   "snippet": "open bounty,funded,available,delivered 2026-07-08T01:14:12Z"
+  },
+  {
+   "title": "MisakaNet#4692 [Bounty] Answer the 2 linked question(s)",
+   "url": "https://github.com/Ikalus1988/MisakaNet/issues/4692",
+   "snippet": "open ready,bounty 2026-11-11T14:41:44Z"
+  },
+  {
+   "title": "MisakaNet#4494 [Bounty] Answer the 2 linked question(s)",
+   "url": "https://github.com/Ikalus1988/MisakaNet/issues/4494",
+   "snippet": "open ready,bounty 2026-11-05T10:50:59Z"
+  },
+  {
+   "title": "wasm-component-canonical-abi#2 [Escrowed $600 USDC] Verify zero-reallocation UTF-8 frame lifting under deterministic fuel metering (`wasm-component-canonical-ab",
+   "url": "https://github.com/IES-BoilerRoom/wasm-component-canonical-abi/issues/2",
+   "snippet": "open help wanted,bounty 2026-11-10T23:17:29Z"
+  },
+  {
+   "title": "CoreGuard#31 Community bounties & contributor program (open call)",
+   "url": "https://github.com/coreguard-global/CoreGuard/issues/31",
+   "snippet": "open documentation,help wanted,good first issue,stellar,pilot,adoption,integration,developer-experience,high-impact,ecosystem,grant-ready,open-call,ai-agents,bounty,community 2026-11-10T23:09:39Z"
+  },
+  {
+   "title": "bounty-plaza#4308 [Bounty] [Escrowed $450 USDC] Fix canonical string frame ceiling and align deterministic ",
+   "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4308",
+   "snippet": "open bounty,real 2026-11-11T01:28:11Z"
+  },
+  {
+   "title": "claude-builders-bounty#5 [BOUNTY $200] WORKFLOW: n8n + Claude Code — automated weekly dev summary",
+   "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5",
+   "snippet": "open bounty,workflow 2026-03-27T00:55:44Z"
+  },
+  {
+   "title": "claude-builders-bounty#4 [BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment",
+   "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
+   "snippet": "open bounty,agent 2026-03-27T00:55:42Z"
+  }
+ ]
+}

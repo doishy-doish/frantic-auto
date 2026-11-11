@@ -1,0 +1,43 @@
+{
+ "stamp": "demand4",
+ "takenAt": "2026-11-11T15:12:48.506Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "gh-bounty-open",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "gh-label-bounty",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "gh-usdc",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "gh-pay-merge",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "gh-escrow",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "gh-base",
+   "status": 404,
+   "bytes": 0
+  }
+ ]
+}

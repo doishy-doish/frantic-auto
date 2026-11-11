@@ -1,0 +1,8 @@
+{
+ "name": "gh-base",
+ "engine": "github:repos",
+ "query": "bounty USDC Base",
+ "status": 404,
+ "count": 0,
+ "results": []
+}

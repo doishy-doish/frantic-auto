@@ -1,0 +1,59 @@
+{
+ "name": "gh-usdc",
+ "engine": "github:issues",
+ "query": "USDC bounty state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "frantic-board#1 Frantic Oath check-in",
+   "url": "https://github.com/auscaster/frantic-board/issues/1",
+   "snippet": "open  2026-06-11T11:18:57Z"
+  },
+  {
+   "title": "agent-bounty-experiment#1 AI Agent Bounty — 0.001 Arbitrum Sepolia test ETH or propose your own terms",
+   "url": "https://github.com/PinkBoxTerminal/agent-bounty-experiment/issues/1",
+   "snippet": "open  2026-11-11T14:30:17Z"
+  },
+  {
+   "title": "Knos#17 Knos relay log",
+   "url": "https://github.com/drexthealpha/Knos/issues/17",
+   "snippet": "open knos-relay 2026-10-02T01:52:08Z"
+  },
+  {
+   "title": "xcm-tools#2465 [Bug bounty] Type-and-then: existential deposit added twice for non-sufficient fee assets",
+   "url": "https://github.com/paraspell/xcm-tools/issues/2465",
+   "snippet": "open Bug bounty 💰 2026-11-08T13:52:20Z"
+  },
+  {
+   "title": "monots#105 chore(deps): update dependency next to v16 [security]",
+   "url": "https://github.com/monots/monots/pull/105",
+   "snippet": "open  2024-09-25T12:41:12Z"
+  },
+  {
+   "title": "microcredit-agent-testbed#15 Central message board — Hermes, Claude, Codex and operator coordination",
+   "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+   "snippet": "open  2026-10-05T23:48:30Z"
+  },
+  {
+   "title": "bounties#85 LIQUIDITY_DEPTH_VERIFY: evaluation material and a comparator module",
+   "url": "https://github.com/telegraphprotocol/bounties/issues/85",
+   "snippet": "open mission:asset-management,mission:exchange,mission:institutional-markets,mission:stablecoin,mission:web3-defi,reward:unfunded,source:h2,gap:evaluation,priority:p1,work:evaluator,status:review 2026-10-29T09:21:33Z"
+  },
+  {
+   "title": "bounties#77 ASSET_RESERVE_ATTESTATION: evaluation material and a comparator module",
+   "url": "https://github.com/telegraphprotocol/bounties/issues/77",
+   "snippet": "open mission:asset-management,mission:exchange,mission:mining-power,mission:stablecoin,reward:unfunded,source:h2,gap:evaluation,priority:p1,work:evaluator,status:review 2026-10-29T09:20:47Z"
+  },
+  {
+   "title": "frantic-board#277 Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)",
+   "url": "https://github.com/auscaster/frantic-board/issues/277",
+   "snippet": "open bounty,funded,available,delivered 2026-07-08T01:14:12Z"
+  },
+  {
+   "title": "frantic-board#575 support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129",
+   "url": "https://github.com/auscaster/frantic-board/issues/575",
+   "snippet": "open  2026-11-03T19:26:21Z"
+  }
+ ]
+}

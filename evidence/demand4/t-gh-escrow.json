@@ -1,0 +1,59 @@
+{
+ "name": "gh-escrow",
+ "engine": "github:issues",
+ "query": "escrow state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "stephan-os#1889 Goal: Autonomous Battle Bridge Outbound Health Beacon V1",
+   "url": "https://github.com/Cheekyfellastef/stephan-os/issues/1889",
+   "snippet": "open  2026-08-18T14:31:58Z"
+  },
+  {
+   "title": "Sails-Protocol#105 [Day-0] Multi-Operator Network + Partner Beta Completion Gate",
+   "url": "https://github.com/sails-protocol/Sails-Protocol/issues/105",
+   "snippet": "open architecture,protocol-sensitive,security-sensitive 2026-09-09T13:18:20Z"
+  },
+  {
+   "title": "FootballForecast#304 M4: private prospective RPL shadow forecasting and production-readiness gates (8 stages)",
+   "url": "https://github.com/StanleyLl0yd/FootballForecast/issues/304",
+   "snippet": "open  2026-11-11T11:04:56Z"
+  },
+  {
+   "title": "frantic-board#1 Frantic Oath check-in",
+   "url": "https://github.com/auscaster/frantic-board/issues/1",
+   "snippet": "open  2026-06-11T11:18:57Z"
+  },
+  {
+   "title": "Autonomous-IT-Hardware-Services-OS#1 [WIP] Phases 1–10.3: signed PostgreSQL context and transactional service-domain staging",
+   "url": "https://github.com/sahilk267/Autonomous-IT-Hardware-Services-OS/pull/1",
+   "snippet": "open  2026-11-06T16:52:12Z"
+  },
+  {
+   "title": "matmove-admin#10 Security lockdown: fail-closed staff access and signed Monime webhooks",
+   "url": "https://github.com/matmovesl-oss/matmove-admin/pull/10",
+   "snippet": "open  2026-11-08T20:34:13Z"
+  },
+  {
+   "title": "attendance-proto#1492 SECURITY-AUTOPILOT — 복구·운영보안 18건 + AISEC 7건 재현 가능한 실행 원장",
+   "url": "https://github.com/koith/attendance-proto/issues/1492",
+   "snippet": "open  2026-11-04T01:30:36Z"
+  },
+  {
+   "title": "Knos#17 Knos relay log",
+   "url": "https://github.com/drexthealpha/Knos/issues/17",
+   "snippet": "open knos-relay 2026-10-02T01:52:08Z"
+  },
+  {
+   "title": "wire-sysio#762 Bill sysio.bond Bonds Rows to the Sysio RAM Pool",
+   "url": "https://github.com/Wire-Network/wire-sysio/pull/762",
+   "snippet": "open  2026-11-10T18:57:28Z"
+  },
+  {
+   "title": "matmove.ent#11 Security lockdown: signed Monime webhook inbox and payment verification",
+   "url": "https://github.com/matmovesl-oss/matmove.ent/pull/11",
+   "snippet": "open  2026-11-09T09:23:16Z"
+  }
+ ]
+}
