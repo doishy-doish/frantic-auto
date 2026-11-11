@@ -1,0 +1,59 @@
+name: ab-probe
+# Google leg via vercel-labs/agent-browser CLI (daemon browser, a11y snapshots,
+# built-in state save). Dispatch-only. Auth state (.ab-state.json) travels via
+# artifacts, NEVER committed. evidence/ holds public result snapshots only.
+on:
+  workflow_dispatch:
+    inputs:
+      queries:
+        description: 'JSON array, e.g. [{"name":"v1","query":"per merged PR USDC"}]'
+        required: false
+        default: '[{"name":"v1","query":"per merged PR USDC crypto"}]'
+      stamp:
+        description: 'Evidence dir name under evidence/'
+        required: false
+        default: 'ab1'
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - id: nodecheck
+        run: |
+          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]}')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-node@v4
+        if: steps.nodecheck.outputs.ok != 'true'
+        with:
+          node-version: 20
+      - run: node --check scripts/ab-probe.mjs
+      - run: npm install -g agent-browser
+      - run: agent-browser install
+      - name: restore ab session (anonymous cookies only, never committed)
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: ab-state
+          path: .
+      - run: node scripts/ab-probe.mjs
+        env:
+          QUERIES_JSON: ${{ inputs.queries }}
+          STAMP: ${{ inputs.stamp }}
+      - name: save ab session (anonymous cookies only)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ab-state
+          path: .ab-state.json
+          if-no-files-found: ignore
+          retention-days: 14
+      - run: |
+          git config user.name "ab-probe"
+          git config user.email "ab-probe@users.noreply.github.com"
+          git add evidence/ || true
+          git diff --cached --quiet || git commit -m "ab-probe $STAMP $(date -u +%FT%TZ)"
+          git push
+        env:
+          STAMP: ${{ inputs.stamp }}
