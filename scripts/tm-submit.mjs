@@ -42,5 +42,5 @@ if (PHASE === 'upload') {
     signature: process.env.KEYSIG,
   }, IDEM);
   console.log('fromkeys status=' + r.status);
-  console.log(r.body.slice(0, 500));
+  console.log(r.body.slice(0, 2000));
 }
