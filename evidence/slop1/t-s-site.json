@@ -1,0 +1,59 @@
+{
+ "name": "s-site",
+ "engine": "ddg",
+ "query": "SlopCash funds open-source maintenance review contributors",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Slop Cash: Paying for Open Source Without Holding the Money",
+   "url": "https://x.com/SlopCash/status/2107429744719401142",
+   "snippet": "If you maintain a project, list it with a pull request at slop.cash/projects/new. If you contribute, pick a pool at slop.cash , install the skill, and ship. If you fund developers, every merge, review and transfer is at record.slop.cash, an"
+  },
+  {
+   "title": "slop.cash",
+   "url": "https://slop.cash/SKILL.md",
+   "snippet": "Slop pays for accepted open-source work on registered projects. This document finds a project and installs its verified, versioned skill. It is a discovery surface, not permission to run arbitrary remote code, publish private data, create a"
+  },
+  {
+   "title": "Slop Cash: Paying for Open Source Without Holding the Money",
+   "url": "https://x.com/SlopCash/article/2107429744719401142",
+   "snippet": "A third listing, Delta Star, points contributors at the Ethereum Foundation&#x27;s $1M Proximity Prize. Four outside teams have listed by pull request and two more are in review . New listings start paused until their setup passes review . "
+  },
+  {
+   "title": "Slop: make money shipping open source",
+   "url": "https://slop.cash/",
+   "snippet": "Pick important public work, run your best coding agent, and ship an accepted result on GitHub."
+  },
+  {
+   "title": "Slop Cash Project Introduction, Team, Financing and News_RootData",
+   "url": "https://www.rootdata.com/projects/detail/Slop%20Cash?k=MjYxODg%3D",
+   "snippet": "Slop Cash is a non-custodial funding rail for open source . Projects set a monthly budget; anyone can submit work via agents, but only maintainer-accepted and merged pull requests and reviews earn scores and potential rewards. Projects send"
+  },
+  {
+   "title": "Slop Cash - Organizations | IQ.wiki",
+   "url": "https://iq.wiki/wiki/slop-cash",
+   "snippet": "Slop Cash is a privately held technology company and platform for coordinating and funding open-source software contributions. Also called Slop, it connects project owners with human contributors and AI coding agents, and bases rewards on w"
+  },
+  {
+   "title": "Slop Cash - Bounty Project | Crypto-Fundraising",
+   "url": "https://crypto-fundraising.info/projects/slop-cash/",
+   "snippet": "Slop Cash is a funding platform for open-source software that pays contributors , human or AI agent, only for work a maintainer accepts on GitHub: merged pull requests, useful reviews and confirmed critical security findings. Projects and s"
+  },
+  {
+   "title": "Slop Cash live record",
+   "url": "https://record.slop.cash/",
+   "snippet": "The project creator signed and broadcast these transfers directly from the project&#x27;s own wallet, which is how Slop is designed: Slop never holds funds or keys. They went out before the verified settlement flow (proposal, 14-day public "
+  },
+  {
+   "title": "Slop Cash | Umia",
+   "url": "https://app.umia.finance/p/slop-cash",
+   "snippet": "Slop Cash is a funding rail for open source . It pays contributors for work that gets merged, not work that gets submitted."
+  },
+  {
+   "title": "GitHub - SlopDotCash/slopdotcash: Make money shipping slop",
+   "url": "https://github.com/SlopDotCash/slopdotcash",
+   "snippet": "Slop is a GitHub-native incentive network for open-source work. Project owners publish a concrete goal, an acceptance policy, and a reward pool. Contributors use any agent, model, or development workflow to complete the work. Maintainers ac"
+  }
+ ]
+}

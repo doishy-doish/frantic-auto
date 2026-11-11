@@ -1,0 +1,8 @@
+{
+ "name": "s-gh",
+ "engine": "github:repositories",
+ "query": "SlopCash",
+ "status": 200,
+ "count": 0,
+ "results": []
+}

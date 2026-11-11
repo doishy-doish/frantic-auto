@@ -1,0 +1,59 @@
+{
+ "name": "s-claim",
+ "engine": "ddg",
+ "query": "SlopCash how to contribute claim payout",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Slop Cash live record",
+   "url": "https://record.slop.cash/",
+   "snippet": "The project creator signed and broadcast these transfers directly from the project&#x27;s own wallet, which is how Slop is designed: Slop never holds funds or keys. They went out before the verified settlement flow (proposal, 14-day public "
+  },
+  {
+   "title": "slop.cash",
+   "url": "https://slop.cash/SKILL.md",
+   "snippet": "--- name: slop description: &quot; Contribute to a registered open-source project through slop.cash , or report a security finding privately. Use to find paid work (accepted pull requests, useful reviews, private security bounties), install"
+  },
+  {
+   "title": "Slop Cash on X: &quot;Slop Cash payouts are built for Base, Solana, Ethereum ...",
+   "url": "https://x.com/SlopCash/status/2115741548067328419",
+   "snippet": "Slop Cash payouts are built for Base, Solana, Ethereum and Robinhood Chain. Payouts go to the wallet you register. Nothing reaches you without one. One EVM address covers Base, Ethereum and Robinhood Chain (one signature per chain). Solana "
+  },
+  {
+   "title": "Slop Cash: Paying for Open Source Without Holding the Money",
+   "url": "https://x.com/SlopCash/status/2107429744719401142",
+   "snippet": "If you maintain a project, list it with a pull request at slop.cash/projects/new. If you contribute , pick a pool at slop.cash , install the skill, and ship. If you fund developers, every merge, review and transfer is at record.slop.cash, a"
+  },
+  {
+   "title": "Slop: make money shipping open source",
+   "url": "https://slop.cash/",
+   "snippet": "Pick important public work, run your best coding agent, and ship an accepted result on GitHub."
+  },
+  {
+   "title": "Slop.Cash Token Transparency Filing - Blockworks",
+   "url": "https://blockworks.com/token-transparency/filing/slop-cash",
+   "snippet": "The published schedule ( slop.cash ): 2% of each payout , deducted from the approved award (an approved 100 USDC pays 98 to the contributor and 2 to Slop); 2% of any unused funds a project withdraws from its vault; and 25% of each private s"
+  },
+  {
+   "title": "slopdotcash/docs at main · SlopDotCash/slopdotcash · GitHub",
+   "url": "https://github.com/SlopDotCash/slopdotcash/tree/main/docs",
+   "snippet": "Make money shipping slop. Contribute to SlopDotCash/slopdotcash development by creating an account on GitHub."
+  },
+  {
+   "title": "Transparent Payout Process at Slop Cash - LinkedIn",
+   "url": "https://www.linkedin.com/posts/slop-cash_at-slop-cash-every-payout-list-is-a-pull-activity-7512270933215223808-uMoK",
+   "snippet": "At Slop Cash, every payout list is a pull request. On the 1st of each month, the previous month&#x27;s merged work is scored and frozen into a public proposal on GitHub. Then a 14-day review window ..."
+  },
+  {
+   "title": "Slop.cash — verified-work payouts, agent-to-human | Devpost",
+   "url": "https://devpost.com/software/slop-cash-verified-work-payouts-agent-to-human",
+   "snippet": "What&#x27;s next for Slop.cash — verified-work payouts , agent- to -human Slop.cash : delta-git ship attestations + hash-chain replay + Workers AI adjudicator + real PayPal Payouts + forge write-back + HTTP-402 PayPal premium lane."
+  },
+  {
+   "title": "Slop Cash - LinkedIn",
+   "url": "https://www.linkedin.com/company/slop-cash",
+   "snippet": "Slop Cash | 9 followers on LinkedIn. Make money shipping open source. | Anyone can now ship code with an AI agent, but open source still has no good way to fund the people doing it well. Slop Cash ..."
+  }
+ ]
+}

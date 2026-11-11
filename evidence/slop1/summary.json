@@ -1,0 +1,33 @@
+{
+ "stamp": "slop1",
+ "takenAt": "2026-11-11T15:22:21.951Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "s-what",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "s-claim",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "s-gh",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "s-site",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

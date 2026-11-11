@@ -1,0 +1,59 @@
+{
+ "name": "s-what",
+ "engine": "ddg",
+ "query": "SlopCash open source funding USDC per merged PR",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Slop Cash: Get paid for merged open-source work — MCG Signal",
+   "url": "https://mcgsignal.com/feed/mcg-2026-11-06/0xfeb4e36fa4a2a494ff25ae4a63491e4c584a67ae",
+   "snippet": "Slop Cash is a bounty program for AI agents: projects put up money, and people whose agents fix open-source issues or find contract bugs get paid. The team thinks its Umia raise was at least at $600,000 before opening to the public, against"
+  },
+  {
+   "title": "Slop Cash ICO Launch and Open Source Funding Initiative",
+   "url": "https://www.qoory.ai/narratives/2026-11-02-slop-cash-ico-launch-and-open-source-funding-initiative",
+   "snippet": "Slop Cash, an open-source funding incentive system addressing AI-era PR spam and maintainer compensation, is launching an ICO on Umia platform. The project has already processed real payments and aims to reward valuable open-source contribu"
+  },
+  {
+   "title": "Slop Cash ($SLOP) | Umia",
+   "url": "https://app.umia.finance/p/slop-cash/auction",
+   "snippet": "Slop Cash is a funding rail for open source . It pays contributors for work that gets merged , not work that gets submitted."
+  },
+  {
+   "title": "Slop Cash Project Introduction, Team, Financing and News_RootData",
+   "url": "https://www.rootdata.com/projects/detail/Slop%20Cash?k=MjYxODg%3D",
+   "snippet": "Slop Cash is a non-custodial funding rail for open source . Projects set a monthly budget; anyone can submit work via agents, but only maintainer-accepted and merged pull requests and reviews earn scores and potential rewards. Projects send"
+  },
+  {
+   "title": "Slop Cash on X: &quot;Every merged PR. Every confirmed vuln. One record. Nov ...",
+   "url": "https://x.com/SlopCash/status/2114766464632619519",
+   "snippet": "Slop Cash is the first project launching on Umia: a funding layer for open source code and security, where only work a human accepts counts. pre-bid opens Nov 5, 17:00 UTC (12pm ET) bidding opens Nov 7,"
+  },
+  {
+   "title": "Slop Cash, From elizaOS Creator Shaw Walters, Opens Public Bidding on ...",
+   "url": "https://markets.businessinsider.com/news/currencies/slop-cash-from-elizaos-creator-shaw-walters-opens-public-bidding-on-umia-after-passing-its-400k-minimum-1036732946?op=1",
+   "snippet": "Slop Cash is a non-custodial funding rail for open-source software. Funding projects put up monthly prize pools against their repositories, and contributors, human or AI agent, work on GitHub as ..."
+  },
+  {
+   "title": "Slop Cash on X: &quot;Slop Cash is in the first cohort of projects launching ...",
+   "url": "https://x.com/SlopCash/status/2106027842718912911",
+   "snippet": "We are announcing @ SlopCash as one of the first confirmed projects launching in Cohort 1. Make money shipping open source ."
+  },
+  {
+   "title": "Slop Cash | Umia",
+   "url": "https://app.umia.finance/p/slop-cash",
+   "snippet": "Slop Cash is a funding rail for open source . It pays contributors for work that gets merged , not work that gets submitted."
+  },
+  {
+   "title": "Slop Cash (SLOP): Ratings &amp; Details | CryptoTotem",
+   "url": "https://cryptototem.com/slop-cash/",
+   "snippet": "Slop Cash is a non-custodial funding rail for open source . It pays contributors for work that gets merged , not work that gets submitted."
+  },
+  {
+   "title": "Slop Cash live record",
+   "url": "https://record.slop.cash/",
+   "snippet": "Live numbers for Slop Cash from public files: scored contributors, accepted outcomes, and every USDC transfer that has reached a contributor."
+  }
+ ]
+}
