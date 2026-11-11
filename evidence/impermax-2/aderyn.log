@@ -1,0 +1,28 @@
+
+---------------------------------------------------------------------------
+# Configuration
+---------------------------------------------------------------------------
+Root - /home/runner/work/frantic-auto/frantic-auto/sweep-target
+Source - /home/runner/work/frantic-auto/frantic-auto/sweep-target/contracts
+Remappings - []
+EVM version - prague
+---------------------------------------------------------------------------
+# Source Scope
+---------------------------------------------------------------------------
+Include Filepaths Containing - No specific criteria.
+Exclude Filepaths Containing - No specific criteria.
+Auto Excluding - No Files.
+---------------------------------------------------------------------------
+# Compiling Abstract Syntax Trees
+---------------------------------------------------------------------------
+Ingesting 39 compiled files [solc : v0.5.16]
+---------------------------------------------------------------------------
+# Scanning Contracts
+---------------------------------------------------------------------------
+Running 88 detectors
+Detectors run, printing report.
+Report printed to ../evidence/impermax-2/aderyn.json
+
+🛡️ Together we make Solidity safer.
+✨ Support open-source security — star Aderyn:
+https://github.com/Cyfrin/aderyn

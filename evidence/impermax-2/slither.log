@@ -1,0 +1,8 @@
+usage: slither target [flag]
+
+target can be:
+	- file.sol // a Solidity file
+	- project_directory // a project directory. See https://github.com/crytic/crytic-compile/#crytic-compile for the supported platforms
+	- 0x.. // a contract on mainnet
+	- NETWORK:0x.. // a contract on a different network. Supported networks: mainnet,sepolia,holesky,hoodi,bsc,testnet.bsc,poly,amoy.poly,base,sepolia.base,arbi,nova.arbi,sepolia.arbi,linea,sepolia.linea,blast,sepolia.blast,optim,sepolia.optim,avax,testnet.avax,bttc,testnet.bttc,celo,sepolia.celo,frax,hoodi.frax,gno,mantle,sepolia.mantle,memecore,moonbeam,moonriver,moonbase,opbnb,testnet.opbnb,scroll,sepolia.scroll,taiko,hoodi.taiko,era.zksync,sepoliaera.zksync,xdc,testnet.xdc,apechain,curtis.apechain,world,sepolia.world,sophon,testnet.sophon,sonic,testnet.sonic,unichain,sepolia.unichain,abstract,sepolia.abstract,berachain,testnet.berachain,swellchain,testnet.swellchain,testnet.monad,hyperevm,katana,bokuto.katana,sei,testnet.sei
+slither: error: unrecognized arguments: contracts/LVAllocatorV2.sol contracts/LVDeployerV2.sol contracts/LVSetterV2.sol contracts/LVStorageV2.sol contracts/LendingVaultV2.sol contracts/LendingVaultV2Factory.sol contracts/LendingVaultWatcher01.sol contracts/PoolToken.sol contracts/interfaces/IBorrowable.sol contracts/interfaces/IERC20.sol contracts/interfaces/ILVDeployerV2.sol contracts/interfaces/ILendingVaultCallee.sol contracts/interfaces/ILendingVaultV2.sol contracts/interfaces/ILendingVaultV2Factory.sol contracts/interfaces/IPoolToken.sol contracts/libraries/BorrowableHelpers.sol contracts/libraries/BorrowableObject.sol contracts/libraries/Math.sol contracts/libraries/SafeMath.sol contracts/libraries/SafeToken.sol contracts/libraries/StringHelpers.sol
