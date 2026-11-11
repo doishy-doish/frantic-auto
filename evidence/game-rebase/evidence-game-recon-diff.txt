@@ -1,0 +1,197 @@
+diff --git a/level-2.html b/level-2.html
+index 2c70313..d8816d7 100644
+--- a/level-2.html
++++ b/level-2.html
+@@ -16,13 +16,12 @@
+   .player { color: #f0f6fc; font-weight: 700; }
+   .monster { color: #ff7b72; }
+   .stairs { color: #e3b341; }
+-  .dim { opacity: .32; }
+   #msg { min-height: 1.4em; text-align: center; color: #f0f6fc; }
+ </style>
+ </head>
+ <body>
+ <main>
+-  <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="best"></span> <span id="hp"></span></span></div>
++  <div id="hud"><span>Level 2</span><span><span id="depth"></span> <span id="hp"></span></span></div>
+   <pre id="map" aria-label="dungeon"></pre>
+   <div id="msg"></div>
+ </main>
+@@ -31,27 +30,7 @@ const W = 40
+ let H = 20
+ const MAX_HP = 5
+ const MONSTERS = 3
+-const MONSTER_HP = 2
+ let state
+-const BEST_DEPTH_KEY = 'dungeon-crawler.level-2.best-depth'
+-function readBestDepth() {
+-  try {
+-    const value = Number(localStorage.getItem(BEST_DEPTH_KEY))
+-    return Number.isSafeInteger(value) && value > 0 ? value : 0
+-  } catch { return 0 }
+-}
+-let bestDepth = readBestDepth()
+-let newBestThisRun = false
+-function recordDepth() {
+-  // Never lower an existing record, including one saved by another tab.
+-  bestDepth = Math.max(bestDepth, readBestDepth())
+-  if (state.depth <= bestDepth) return
+-  bestDepth = state.depth
+-  newBestThisRun = true
+-  try { localStorage.setItem(BEST_DEPTH_KEY, String(bestDepth)) } catch {
+-    // Storage can be unavailable; keep the game and session record working.
+-  }
+-}
+ 
+ const rand = (min, max) => min + Math.floor(Math.random() * (max - min + 1))
+ 
+@@ -127,7 +106,7 @@ function generate(roomCount = rand(4, 6), monsterCount = MONSTERS) {
+     const spawns = floor.sort(() => Math.random() - 0.5).concat(nearby.sort(() => Math.random() - 0.5))
+     // Very deep runs need more floor space, rather than silently capping monsters.
+     if (spawns.length < monsterCount) { H += 5; continue }
+-    const monsters = spawns.slice(0, monsterCount).map((spawn) => ({ ...spawn, hp: MONSTER_HP }))
++    const monsters = spawns.slice(0, monsterCount)
+     return { grid, player: { ...start }, monsters, rooms: rooms.length }
+   }
+ }
+@@ -151,48 +130,26 @@ function reachable(grid, from, to) {
+   return false
+ }
+ 
+-const SIGHT = 6
+-
+-// Bresenham line from a to b, inclusive of b, exclusive of a.
+-function line(ax, ay, bx, by) {
+-  const points = []
+-  const dx = Math.abs(bx - ax)
+-  const dy = Math.abs(by - ay)
+-  const sx = ax < bx ? 1 : -1
+-  const sy = ay < by ? 1 : -1
+-  let err = dx - dy
+-  let x = ax
+-  let y = ay
+-  for (;;) {
+-    if (x !== ax || y !== ay) points.push([x, y])
+-    if (x === bx && y === by) return points
+-    const e2 = 2 * err
+-    if (e2 > -dy) { err -= dy; x += sx }
+-    if (e2 < dx) { err += dx; y += sy }
+-  }
+-}
+-
+-// Tiles within SIGHT steps with no wall between them and the player.
+-function computeFov() {
+-  const vis = new Set()
+-  const { player } = state
+-  for (let y = Math.max(0, player.y - SIGHT); y <= Math.min(H - 1, player.y + SIGHT); y++) {
+-    for (let x = Math.max(0, player.x - SIGHT); x <= Math.min(W - 1, player.x + SIGHT); x++) {
+-      if (Math.hypot(x - player.x, y - player.y) > SIGHT + 0.5) continue
+-      for (const [cx, cy] of line(player.x, player.y, x, y)) {
+-        vis.add(`${cx},${cy}`)
+-        if (state.grid[cy][cx] === '#') break
+-      }
+-    }
+-  }
+-  return vis
++function showTitle() {
++  state = { title: true }
++  document.getElementById('depth').textContent = ''
++  document.getElementById('hp').textContent = ''
++  document.getElementById('map').innerHTML = [
++    '',
++    '        DUNGEON CRAWLER        ',
++    '',
++    '   Controls: Arrows or WASD    ',
++    '         R to restart          ',
++    '',
++    '         Press any key         ',
++    ''
++  ].join('\n')
++  document.getElementById('msg').textContent = 'Press any key to start at Depth 1'
+ }
+ 
+ function reset() {
+-  newBestThisRun = false
+   H = 20
+-  state = { ...generate(), depth: 1, hp: MAX_HP, over: null, seen: new Set() }
+-  recordDepth()
++  state = { ...generate(), depth: 1, hp: MAX_HP, over: null, title: false }
+   draw()
+ }
+ 
+@@ -222,18 +179,11 @@ function turn(dx, dy) {
+   const nx = player.x + dx
+   const ny = player.y + dy
+   if (!passable(nx, ny)) return
+-  const target = state.monsters.find((m) => m.x === nx && m.y === ny)
+-  if (target) {
+-    target.hp -= 1
+-    if (target.hp <= 0) state.monsters = state.monsters.filter((m) => m !== target)
+-  }
+-  // A surviving monster blocks movement; a slain one frees its square immediately.
+   if (!occupied(nx, ny)) { player.x = nx; player.y = ny }
+   if (state.grid[player.y][player.x] === '>') {
+     const { hp, depth, rooms } = state
+     state = { ...generate(Math.min(9, rooms + 1), MONSTERS + depth),
+-      depth: depth + 1, hp, over: null, seen: new Set() }
+-    recordDepth()
++      depth: depth + 1, hp, over: null }
+     return draw()
+   }
+   for (const m of state.monsters) {
+@@ -245,24 +195,17 @@ function turn(dx, dy) {
+ }
+ 
+ function draw() {
+-  const vis = computeFov()
+-  for (const key of vis) state.seen.add(key)
+   const html = state.grid.map((row, y) => row.map((c, x) => {
+-    const key = `${x},${y}`
+-    if (!state.seen.has(key)) return '<span class="floor"> </span>'
+-    const lit = vis.has(key)
+-    const dim = lit ? '' : ' dim'
+     if (state.player.x === x && state.player.y === y) return '<span class="player">@</span>'
+-    if (lit && occupied(x, y)) return `<span class="monster">g</span>`
+-    if (c === '#') return `<span class="wall${dim}">#</span>`
+-    if (c === '>') return `<span class="stairs${dim}">&gt;</span>`
+-    return `<span class="floor${dim}">.</span>`
++    if (occupied(x, y)) return '<span class="monster">g</span>'
++    if (c === '#') return '<span class="wall">#</span>'
++    if (c === '>') return '<span class="stairs">&gt;</span>'
++    return '<span class="floor">.</span>'
+   }).join('')).join('\n')
+   document.getElementById('map').innerHTML = html
+   document.getElementById('depth').textContent = `Depth ${state.depth}`
+-  document.getElementById('best').textContent = `Best ${bestDepth}`
+   document.getElementById('hp').textContent = '♥'.repeat(state.hp) + '·'.repeat(MAX_HP - state.hp) + `  ${state.hp}/${MAX_HP}`
+-  document.getElementById('msg').textContent = state.over ? `${state.over}${newBestThisRun ? ' - New best' : ''} — press R for a new dungeon` : ''
++  document.getElementById('msg').textContent = state.over ? `${state.over} — press R for a new dungeon` : ''
+ }
+ 
+ const KEYS = {
+@@ -270,13 +213,23 @@ const KEYS = {
+   w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0],
+ }
+ addEventListener('keydown', (e) => {
+-  if (e.key === 'r' || e.key === 'R') { reset(); return }
++  if (state?.title) {
++    e.preventDefault()
++    reset()
++    return
++  }
++  if (e.key === 'r' || e.key === 'R') {
++    e.preventDefault()
++    if (state?.over) showTitle()
++    else reset()
++    return
++  }
+   const move = KEYS[e.key] ?? KEYS[e.key.toLowerCase()]
+   if (!move) return
+   e.preventDefault()
+   turn(...move)
+ })
+-reset()
++showTitle()
+ </script>
+ </body>
+ </html>
