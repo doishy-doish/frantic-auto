@@ -32,6 +32,18 @@ on:
         description: 'Worker-computed transcripts sha256 hex — rebuild must match'
         required: false
         default: ''
+      require_reg:
+        description: '1 = fail unless the account wallet register reads back (Run A probe)'
+        required: false
+        default: ''
+      reg_message:
+        description: 'Worker-signed wallet-link message for POST /api/me/wallets'
+        required: false
+        default: ''
+      reg_signature:
+        description: 'Payout-wallet signature of reg_message'
+        required: false
+        default: ''
 permissions:
   contents: write
 jobs:
@@ -52,6 +64,9 @@ jobs:
           ENTRY_SIG: ${{ inputs.entry_signature }}
           EXPECT_BUNDLE_SHA: ${{ inputs.expect_bundle_sha }}
           EXPECT_TRANSCRIPTS_SHA: ${{ inputs.expect_transcripts_sha }}
+          REQUIRE_REG: ${{ inputs.require_reg }}
+          REG_MESSAGE: ${{ inputs.reg_message }}
+          REG_SIG: ${{ inputs.reg_signature }}
       - name: publish result
         if: always()
         run: |

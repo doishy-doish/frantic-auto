@@ -62,6 +62,7 @@ if (!DRY && !DET) fail('no-presig-legacy');
 if (!DRY && DET && (!process.env.ENTRY_MESSAGE || !process.env.ENTRY_SIG)) fail('no-presig');
 
 let key, handle;
+let regDomain = null, regAccount = null;
 {
   const r = await fetch(`${ORIGIN}/api/auth/siws/nonce`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ walletAddress: authWallet }) });
   const c = await r.json().catch(() => null);
@@ -75,6 +76,13 @@ let key, handle;
   handle = j2.user?.handle ?? '?';
 }
 console.log(`signed in as @${handle}`);
+{
+  const r = await fetch(`${ORIGIN}/api/me/wallets`, { headers: { Accept: 'application/json', 'x-api-key': key } });
+  const j = await r.json().catch(() => null);
+  if (r.ok && j && j.register) { regDomain = j.register.domain || null; regAccount = j.register.account || null; }
+  console.log(`reg domain=${regDomain} account=${regAccount}`);
+  if (process.env.REQUIRE_REG === '1' && !regDomain) fail('reg-get', { http: r.status });
+}
 
 // ---- round + timestamps ----
 let R, SIG, roundTimeMs, rootTs, tipTs, TICK_BASE;
@@ -151,11 +159,18 @@ if (DET) {
 }
 
 if (DRY) {
-  console.log(JSON.stringify({ ok: true, dry: true, det: DET, handle, payoutWallet, round: R, root: built.rootSha, tip: built.tipSha, bundleBytes: built.bundle.length, bundleSha, transcriptsSha, entryChars: MAIN_FINAL.length }));
+  console.log(JSON.stringify({ ok: true, dry: true, det: DET, handle, payoutWallet, regDomain, regAccount, round: R, root: built.rootSha, tip: built.tipSha, bundleBytes: built.bundle.length, bundleSha, transcriptsSha, entryChars: MAIN_FINAL.length }));
   process.exit(0);
 }
 const message = process.env.ENTRY_MESSAGE;
 const signature = process.env.ENTRY_SIG;
+if (process.env.REG_MESSAGE && process.env.REG_SIG) {
+  const rr = await fetch(`${ORIGIN}/api/me/wallets`, { method: 'POST', headers: { 'content-type': 'application/json', Accept: 'application/json', 'x-api-key': key }, body: JSON.stringify({ message: process.env.REG_MESSAGE, signature: process.env.REG_SIG }) });
+  const rb = await rr.text();
+  console.log(`reg-post http=${rr.status}`);
+  console.log(JSON.stringify({ regOk: rr.ok, regHttp: rr.status, regResp: rb.slice(0, 1000) }));
+  if (!rr.ok) fail('reg-post', { http: rr.status });
+}
 const fd = new FormData();
 fd.append('repo_url', `bundle:${built.rootSha}`);
 fd.append('commit_sha', built.tipSha);
