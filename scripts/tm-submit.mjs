@@ -36,11 +36,18 @@ if (PHASE === 'upload') {
 } else {
   const artKey = process.env.ARTKEY;
   const meta = JSON.parse(process.env.ARTMETA || '{}');
-  const r = await post(`/api/tasks/${TASK}/submissions/from-keys`, {
+  const body = {
     workerAddress: WORKER,
     artifacts: [{ artifactKey: artKey, fileName: process.env.FILENAME, mimeType: process.env.MIMETYPE, role: 'final', sizeBytes: meta.size, sha256Hash: meta.sha256, keccak256Hash: meta.keccak }],
     signature: process.env.KEYSIG,
-  }, IDEM);
-  console.log('fromkeys status=' + r.status);
-  console.log(r.body.slice(0, 2000));
+  };
+  const xpays = [process.env.XPAY, process.env.XPAY2, process.env.XPAY3, process.env.XPAY4].filter(Boolean);
+  const tries = xpays.length ? xpays : [''];
+  for (let i = 0; i < tries.length; i++) {
+    if (tries[i]) process.env.XPAY = tries[i];
+    const r = await post(`/api/tasks/${TASK}/submissions/from-keys`, body, IDEM + (i ? '-r' + i : ''));
+    console.log('fromkeys[' + i + '] status=' + r.status);
+    console.log(r.body.slice(0, 400));
+    if (r.status === 200) break;
+  }
 }
