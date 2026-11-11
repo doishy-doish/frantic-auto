@@ -1,0 +1,23 @@
+{
+ "stamp": "slop3",
+ "takenAt": "2026-11-11T15:24:19.365Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "record",
+   "status": 200,
+   "bytes": 23970
+  },
+  {
+   "name": "api-root",
+   "status": 200,
+   "bytes": 3303
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "name": "record",
+ "url": "https://record.slop.cash/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 23970,
+ "textLen": 4022,
+ "head": "Slop Cash live record Slop Cash, by the public record. Live data, pulled straight from slop.cash and the public Slop repository on GitHub. Every number links back to its source. Loading snapshot… Money that has reached contributors USDC transfers on Solana mainnet, finalized on chain, for the August 2026 contribution month . Every signature is published in the repository and reconciled row by row against the frozen preparation for each pool. Pool Cap Allocated Paid Transfers Unclaimed Sent Record How the August transfers were sent. The project creator signed and broadcast these transfers directly from the project's own wallet, which is how Slop is designed: Slop never holds funds or keys. They went out before the verified settlement flow (proposal, 14-day public review, approval, fail-closed verifier) ran for August, so slop.cash still shows August as unsettled. The repository records them as sent-outside-verified-flow with a reconciliation that found zero unmatched transfers and no row with a registered wallet above the $2.00 minimum left unpaid. The first cycle to run through the verified flow end to end is the next milestone. Unclaimed amounts belong to contributors who had not …[trunc 4022]",
+ "links": [
+  {
+   "h": "https://slop.cash/how-it-works",
+   "t": "slop.cash/how-it-works"
+  },
+  {
+   "h": "https://slop.cash/api/v1/projects",
+   "t": "slop.cash/api/v1/projects"
+  },
+  {
+   "h": "https://github.com/SlopDotCash/slopdotcash/blob/109c7640298f9e0652eed9056e78705b776f79a6/disclosures/${esc(p.file || `${p.projectId}-${p.month}-direct-payments.json`)}",
+   "t": "JSON"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": " cycle to run through the verified flow end to end is the next milestone. Unclaimed amounts belong to contributors who had not registered a payout wallet when the month was frozen. Monthly cycles scored since July Each month is frozen from the same scoring ledger into a file in the repository. Counts below come straigh"
+  },
+  {
+   "k": "wallet",
+   "w": "ed Sent Record How the August transfers were sent. The project creator signed and broadcast these transfers directly from the project's own wallet, which is how Slop is designed: Slop never holds funds or keys. They went out before the verified settlement flow (proposal, 14-day public review, approval, fail-closed veri"
+  },
+  {
+   "k": "wallet",
+   "w": "epository records them as sent-outside-verified-flow with a reconciliation that found zero unmatched transfers and no row with a registered wallet above the $2.00 minimum left unpaid. The first cycle to run through the verified flow end to end is the next milestone. Unclaimed amounts belong to contributors who had not "
+  },
+  {
+   "k": "wallet",
+   "w": "to run through the verified flow end to end is the next milestone. Unclaimed amounts belong to contributors who had not registered a payout wallet when the month was frozen. Monthly cycles scored since July Each month is frozen from the same scoring ledger into a file in the repository. Counts below come straight from "
+  },
+  {
+   "k": "usdc",
+   "w": "cash and the public Slop repository on GitHub. Every number links back to its source. Loading snapshot… Money that has reached contributors USDC transfers on Solana mainnet, finalized on chain, for the August 2026 contribution month . Every signature is published in the repository and reconciled row by row against the "
+  },
+  {
+   "k": "claim",
+   "w": " is published in the repository and reconciled row by row against the frozen preparation for each pool. Pool Cap Allocated Paid Transfers Unclaimed Sent Record How the August transfers were sent. The project creator signed and broadcast these transfers directly from the project's own wallet, which is how Slop is design"
+  },
+  {
+   "k": "claim",
+   "w": "registered wallet above the $2.00 minimum left unpaid. The first cycle to run through the verified flow end to end is the next milestone. Unclaimed amounts belong to contributors who had not registered a payout wallet when the month was frozen. Monthly cycles scored since July Each month is frozen from the same scoring"
+  },
+  {
+   "k": "monthly",
+   "w": "nd to end is the next milestone. Unclaimed amounts belong to contributors who had not registered a payout wallet when the month was frozen. Monthly cycles scored since July Each month is frozen from the same scoring ledger into a file in the repository. Counts below come straight from those frozen files, so they do not"
+  },
+  {
+   "k": "monthly",
+   "w": "r.cpp, ghostty-org/ghostty and openclaw/openclaw, among others. Snapshot, method and caveats: slop.cash/sponsors . Pools Project Repository Monthly cap Rail Status Where the numbers come from slop.cash/data/leaderboard.json : scored contributors, the ledger of merged pull requests and accepted reviews, rejected attribu"
+  }
+ ],
+ "depth": 0
+}
