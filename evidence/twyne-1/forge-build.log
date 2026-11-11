@@ -1,0 +1,87 @@
+|         LiquidationSnapshot memory snapshot = _snapshotBeforeLiquidation(); //9325 LTV
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/twyne/mainnet/euler/EulerTestPostFallbackAccounting.t.sol:489:9:
+    |
+489 |         LiquidationSnapshot memory snapshot = _snapshotBeforeLiquidation(); //9564 LTV
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/twyne/mainnet/euler/EulerTestPostFallbackAccounting.t.sol:520:9:
+    |
+520 |         LiquidationSnapshot memory snapshot = _snapshotBeforeLiquidation(); //9946 LTV
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/twyne/mainnet/euler/EulerTestPostFallbackAccounting.t.sol:1662:9:
+     |
+1662 |         LiquidationSnapshot memory snapshot = _snapshotBeforeLiquidation();
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/twyne/mainnet/morpho/MorphoLiquidationTest.t.sol:778:10:
+    |
+778 |         (uint256 seized, uint256 repaid) = IMorpho(morpho).liquidate({
+    |          ^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/twyne/mainnet/morpho/MorphoLiquidationTest.t.sol:778:26:
+    |
+778 |         (uint256 seized, uint256 repaid) = IMorpho(morpho).liquidate({
+    |                          ^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/twyne/mainnet/morpho/MorphoLiquidationTest.t.sol:947:9:
+    |
+947 |         uint256 maxRelease = alice_morpho_vault.maxRelease();
+    |         ^^^^^^^^^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+  --> test/mocks/MockCollateralVault.sol:84:5:
+   |
+84 |     function maxBorrow() public view override returns (uint) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+  --> test/mocks/MockCollateralVault.sol:88:5:
+   |
+88 |     function _convertCollateralToTargetAsset(uint) internal view override returns (uint) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+  --> test/mocks/MockDivergentMorphoIRM.sol:20:5:
+   |
+20 |     function borrowRate(MarketParams calldata, Market calldata) external returns (uint256) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+  --> test/mocks/MockDivergentMorphoIRM.sol:24:5:
+   |
+24 |     function borrowRateView(MarketParams calldata, Market calldata) external view returns (uint256) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+    --> test/twyne/mainnet/euler/EulerTestPostFallbackAccounting.t.sol:1703:5:
+     |
+1703 |     function testFuzz_splitCollateralAfterExtLiq_Conservation(
+     |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+    --> test/twyne/mainnet/euler/EulerTestPostFallbackAccounting.t.sol:1748:5:
+     |
+1748 |     function testFuzz_splitCollateralAfterExtLiq_Bounds(
+     |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+    --> test/twyne/mainnet/euler/EulerTestPostFallbackAccounting.t.sol:1799:5:
+     |
+1799 |     function testFuzz_splitCollateralAfterExtLiq_Relationships(
+     |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+    --> test/twyne/mainnet/euler/EulerTestPostFallbackAccounting.t.sol:1850:5:
+     |
+1850 |     function testFuzz_splitCollateralAfterExtLiq_SmallValues(
+     |     ^ (Relevant source part starts here and spans across multiple lines).
+

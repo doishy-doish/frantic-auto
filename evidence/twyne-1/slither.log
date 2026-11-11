@@ -1,0 +1,41 @@
+yne/EulerCollateralVault.sol#83) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+
+Detector: low-level-calls
+Low level call in WstethHandler.wrapETH(address,address) (src/operators/handlers/WstethHandler.sol#31-37):
+	- (success,None) = wrapper.call{value: msg.value}() (src/operators/handlers/WstethHandler.sol#33)
+Low level call in WstethHandler.wrapWETH(uint256,address) (src/operators/handlers/WstethHandler.sol#42-49):
+	- (success,None) = WSTETH.call{value: amountIn}() (src/operators/handlers/WstethHandler.sol#45)
+Low level call in VaultManager.doCall(address,uint256,bytes) (src/twyne/VaultManager.sol#284-288):
+	- (success,_data) = to.call{value: value}(data) (src/twyne/VaultManager.sol#285)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+
+Detector: unindexed-event-address
+Event IAaveV3ATokenWrapper.Paused(address) (src/interfaces/IAaveV3ATokenWrapper.sol#60) has address parameters but no indexed parameters
+Event IAaveV3ATokenWrapper.Unpaused(address) (src/interfaces/IAaveV3ATokenWrapper.sol#65) has address parameters but no indexed parameters
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unindexed-event-address-parameters
+
+Detector: unused-state
+CollateralVaultFactory.__gap (src/TwyneFactory/CollateralVaultFactory.sol#48) is never used in CollateralVaultFactory (src/TwyneFactory/CollateralVaultFactory.sol#33-218)
+AaveV3CollateralVault.tenPowVAssetDecimals (src/twyne/AaveV3CollateralVault.sol#41) is never used in AaveV3CollateralVault (src/twyne/AaveV3CollateralVault.sol#26-381)
+AaveV3CollateralVault.__gap (src/twyne/AaveV3CollateralVault.sol#43) is never used in AaveV3CollateralVault (src/twyne/AaveV3CollateralVault.sol#26-381)
+CollateralVaultBase._borrowLTVExcessSnapshot (src/twyne/CollateralVaultBase.sol#43) is never used in EulerCollateralVault (src/twyne/EulerCollateralVault.sol#20-356)
+CollateralVaultBase._userCollateralSnapshot (src/twyne/CollateralVaultBase.sol#44) is never used in EulerCollateralVault (src/twyne/EulerCollateralVault.sol#20-356)
+CollateralVaultBase._maxRepaySnapshot (src/twyne/CollateralVaultBase.sol#45) is never used in EulerCollateralVault (src/twyne/EulerCollateralVault.sol#20-356)
+EulerCollateralVault.__gap (src/twyne/EulerCollateralVault.sol#24) is never used in EulerCollateralVault (src/twyne/EulerCollateralVault.sol#20-356)
+MorphoCollateralVault.__gap (src/twyne/MorphoCollateralVault.sol#34) is never used in MorphoCollateralVault (src/twyne/MorphoCollateralVault.sol#23-420)
+VaultManager.__deprecated_oracleRouter (src/twyne/VaultManager.sol#38) is never used in VaultManager (src/twyne/VaultManager.sol#21-313)
+VaultManager.__deprecated_intermediateVaults (src/twyne/VaultManager.sol#39) is never used in VaultManager (src/twyne/VaultManager.sol#21-313)
+VaultManager.__deprecated_allowedTargetVaultList (src/twyne/VaultManager.sol#43) is never used in VaultManager (src/twyne/VaultManager.sol#21-313)
+VaultManager.__gap (src/twyne/VaultManager.sol#58) is never used in VaultManager (src/twyne/VaultManager.sol#21-313)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
+
+Detector: constable-states
+AaveV3CollateralVault.tenPowVAssetDecimals (src/twyne/AaveV3CollateralVault.sol#41) should be constant 
+CollateralVaultBase.__deprecatedSnapshot (src/twyne/CollateralVaultBase.sol#31) should be constant 
+VaultManager.__deprecated_oracleRouter (src/twyne/VaultManager.sol#38) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+. analyzed (130 contracts with 101 detectors), 136 result(s) found
+'forge clean' running (wd: /home/runner/work/frantic-auto/frantic-auto/sweep-target)
+'forge config --json' running
+'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: /home/runner/work/frantic-auto/frantic-auto/sweep-target)

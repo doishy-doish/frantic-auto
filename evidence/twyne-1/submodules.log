@@ -1,0 +1,376 @@
+Submodule 'lib/aave-v3-origin' (https://github.com/aave-dao/aave-v3-origin) registered for path 'lib/aave-v3-origin'
+Submodule 'lib/euler-price-oracle' (https://github.com/euler-xyz/euler-price-oracle) registered for path 'lib/euler-price-oracle'
+Submodule 'lib/euler-vault-kit' (https://github.com/euler-xyz/euler-vault-kit) registered for path 'lib/euler-vault-kit'
+Submodule 'lib/forge-safe' (https://github.com/bunbun295/forge-safe) registered for path 'lib/forge-safe'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/forge-std'
+Submodule 'lib/morpho-blue' (https://github.com/morpho-org/morpho-blue) registered for path 'lib/morpho-blue'
+Submodule 'lib/openzeppelin-contracts-upgradeable' (https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable) registered for path 'lib/openzeppelin-contracts-upgradeable'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/morpho-blue'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable'...
+From https://github.com/aave-dao/aave-v3-origin
+ * branch            cff15de6d1271b0c800fc001f4aea4c263e8a597 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin': checked out 'cff15de6d1271b0c800fc001f4aea4c263e8a597'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/aave-v3-origin/lib/forge-std'
+Submodule 'lib/solidity-utils' (https://github.com/aave-dao/solidity-utils) registered for path 'lib/aave-v3-origin/lib/solidity-utils'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils'...
+From https://github.com/foundry-rs/forge-std
+ * branch            999be66ec94c78090087f674bbf52ce1cca12b75 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/forge-std': checked out '999be66ec94c78090087f674bbf52ce1cca12b75'
+From https://github.com/aave-dao/solidity-utils
+ * branch            fdc69f984036585d508889147734902dc0c64bf3 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils': checked out 'fdc69f984036585d508889147734902dc0c64bf3'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/forge-std'
+Submodule 'lib/openzeppelin-contracts-upgradeable' (https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable'...
+From https://github.com/foundry-rs/forge-std
+ * branch            999be66ec94c78090087f674bbf52ce1cca12b75 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/forge-std': checked out '999be66ec94c78090087f674bbf52ce1cca12b75'
+From https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable
+ * branch            fa525310e45f91eb20a6d3baa2644be8e0adba31 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable': checked out 'fa525310e45f91eb20a6d3baa2644be8e0adba31'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/forge-std'
+Submodule 'lib/halmos-cheatcodes' (https://github.com/a16z/halmos-cheatcodes) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts.git) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            ae570fec082bfe1c1f45b0acca4a2b4f84d345ce -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/forge-std': checked out 'ae570fec082bfe1c1f45b0acca4a2b4f84d345ce'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/a16z/halmos-cheatcodes
+ * branch            c0d865508c0fee0a11b97732c5e90f9cad6b65a5 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes': checked out 'c0d865508c0fee0a11b97732c5e90f9cad6b65a5'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            69c8def5f222ff96f2b5beff05dfba996368aa79 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts': checked out '69c8def5f222ff96f2b5beff05dfba996368aa79'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std'
+Submodule 'lib/halmos-cheatcodes' (https://github.com/a16z/halmos-cheatcodes) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/halmos-cheatcodes'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/halmos-cheatcodes'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            ae570fec082bfe1c1f45b0acca4a2b4f84d345ce -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std': checked out 'ae570fec082bfe1c1f45b0acca4a2b4f84d345ce'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/a16z/halmos-cheatcodes
+ * branch            c0d865508c0fee0a11b97732c5e90f9cad6b65a5 -> FETCH_HEAD
+Submodule path 'lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/halmos-cheatcodes': checked out 'c0d865508c0fee0a11b97732c5e90f9cad6b65a5'
+From https://github.com/euler-xyz/euler-price-oracle
+ * branch            f52cb43b587c7fa90a7e722d52698003451feb62 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle': checked out 'f52cb43b587c7fa90a7e722d52698003451feb62'
+Submodule 'lib/ethereum-vault-connector' (https://github.com/euler-xyz/ethereum-vault-connector) registered for path 'lib/euler-price-oracle/lib/ethereum-vault-connector'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-price-oracle/lib/forge-std'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/euler-price-oracle/lib/openzeppelin-contracts'
+Submodule 'lib/pendle-core-v2-public' (https://github.com/pendle-finance/pendle-core-v2-public) registered for path 'lib/euler-price-oracle/lib/pendle-core-v2-public'
+Submodule 'lib/pyth-sdk-solidity' (https://github.com/pyth-network/pyth-sdk-solidity) registered for path 'lib/euler-price-oracle/lib/pyth-sdk-solidity'
+Submodule 'lib/redstone-oracles-monorepo' (https://github.com/redstone-finance/redstone-oracles-monorepo) registered for path 'lib/euler-price-oracle/lib/redstone-oracles-monorepo'
+Submodule 'lib/solady' (https://github.com/Vectorized/solady) registered for path 'lib/euler-price-oracle/lib/solady'
+Submodule 'lib/v3-core' (https://github.com/Uniswap/v3-core) registered for path 'lib/euler-price-oracle/lib/v3-core'
+Submodule 'lib/v3-periphery' (https://github.com/Uniswap/v3-periphery) registered for path 'lib/euler-price-oracle/lib/v3-periphery'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/ethereum-vault-connector'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/openzeppelin-contracts'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/pendle-core-v2-public'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/pyth-sdk-solidity'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/redstone-oracles-monorepo'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/solady'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/v3-core'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/v3-periphery'...
+From https://github.com/euler-xyz/ethereum-vault-connector
+ * branch            084b32284ba643921f8d21bff3ddaf0c4e08d754 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/ethereum-vault-connector': checked out '084b32284ba643921f8d21bff3ddaf0c4e08d754'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/forge-std'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/ethereum-vault-connector/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts'...
+From https://github.com/foundry-rs/forge-std
+ * branch            b00f504daf0bdd8cf2e67973e2c86bd213cda400 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/forge-std': checked out 'b00f504daf0bdd8cf2e67973e2c86bd213cda400'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/ethereum-vault-connector/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            fd81a96f01cc42ef1c9a5399364968d0e07e9e90 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts': checked out 'fd81a96f01cc42ef1c9a5399364968d0e07e9e90'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            c2236853aadb8e2d9909bbecdc490099519b70a4 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std': checked out 'c2236853aadb8e2d9909bbecdc490099519b70a4'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test': checked out '6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f'
+From https://github.com/foundry-rs/forge-std
+ * branch            bf6606142994b1e47e2882ce0cd477c020d77623 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/forge-std': checked out 'bf6606142994b1e47e2882ce0cd477c020d77623'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            dc44c9f1a4c3b10af99492eed84f83ed244203f6 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/openzeppelin-contracts': checked out 'dc44c9f1a4c3b10af99492eed84f83ed244203f6'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/euler-price-oracle/lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-price-oracle/lib/openzeppelin-contracts/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/openzeppelin-contracts/lib/forge-std'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            c2236853aadb8e2d9909bbecdc490099519b70a4 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/openzeppelin-contracts/lib/forge-std': checked out 'c2236853aadb8e2d9909bbecdc490099519b70a4'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-price-oracle/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test': checked out '6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f'
+From https://github.com/pendle-finance/pendle-core-v2-public
+ * branch            a904c7d98ae3e41980de475fa7ba196ddb0008e9 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/pendle-core-v2-public': checked out 'a904c7d98ae3e41980de475fa7ba196ddb0008e9'
+From https://github.com/pyth-network/pyth-sdk-solidity
+ * branch            c24b3e0173a5715c875ae035c20e063cb900f481 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/pyth-sdk-solidity': checked out 'c24b3e0173a5715c875ae035c20e063cb900f481'
+From https://github.com/redstone-finance/redstone-oracles-monorepo
+ * branch            930da8235b65434016585afae1461dd913b86211 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/redstone-oracles-monorepo': checked out '930da8235b65434016585afae1461dd913b86211'
+Submodule 'packages/casper-connector/rust/rust-sdk' (https://github.com/redstone-finance/rust-sdk.git) registered for path 'lib/euler-price-oracle/lib/redstone-oracles-monorepo/packages/casper-connector/rust/rust-sdk'
+Submodule 'packages/fuel-connector/sway/redstone-fuel-sdk' (https://github.com/redstone-finance/redstone-fuel-sdk.git) registered for path 'lib/euler-price-oracle/lib/redstone-oracles-monorepo/packages/fuel-connector/sway/redstone-fuel-sdk'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/redstone-oracles-monorepo/packages/casper-connector/rust/rust-sdk'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-price-oracle/lib/redstone-oracles-monorepo/packages/fuel-connector/sway/redstone-fuel-sdk'...
+From https://github.com/redstone-finance/rust-sdk
+ * branch            9fa7cd774197dc4d7b5c0292a53999b94e03816f -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/redstone-oracles-monorepo/packages/casper-connector/rust/rust-sdk': checked out '9fa7cd774197dc4d7b5c0292a53999b94e03816f'
+Submodule path 'lib/euler-price-oracle/lib/redstone-oracles-monorepo/packages/fuel-connector/sway/redstone-fuel-sdk': checked out 'b0f4cf36f569bc4d7e0c7ec57754de1dafd8b7d5'
+From https://github.com/Vectorized/solady
+ * branch            0123b4c0509ce253e41e5abd2c75a64c06389640 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/solady': checked out '0123b4c0509ce253e41e5abd2c75a64c06389640'
+From https://github.com/Uniswap/v3-core
+ * branch            6562c52e8f75f0c10f9deaf44861847585fc8129 -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/v3-core': checked out '6562c52e8f75f0c10f9deaf44861847585fc8129'
+From https://github.com/Uniswap/v3-periphery
+ * branch            b325bb0905d922ae61fcc7df85ee802e8df5e96c -> FETCH_HEAD
+Submodule path 'lib/euler-price-oracle/lib/v3-periphery': checked out 'b325bb0905d922ae61fcc7df85ee802e8df5e96c'
+From https://github.com/euler-xyz/euler-vault-kit
+ * branch            5b98b42048ba11ae82fb62dfec06d1010c8e41e6 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit': checked out '5b98b42048ba11ae82fb62dfec06d1010c8e41e6'
+Submodule 'lib/ethereum-vault-connector' (https://github.com/euler-xyz/ethereum-vault-connector) registered for path 'lib/euler-vault-kit/lib/ethereum-vault-connector'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-vault-kit/lib/forge-std'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/euler-vault-kit/lib/openzeppelin-contracts'
+Submodule 'lib/permit2' (https://github.com/Uniswap/permit2) registered for path 'lib/euler-vault-kit/lib/permit2'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/ethereum-vault-connector'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/openzeppelin-contracts'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2'...
+From https://github.com/euler-xyz/ethereum-vault-connector
+ * branch            084b32284ba643921f8d21bff3ddaf0c4e08d754 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/ethereum-vault-connector': checked out '084b32284ba643921f8d21bff3ddaf0c4e08d754'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/forge-std'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/ethereum-vault-connector/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts'...
+From https://github.com/foundry-rs/forge-std
+ * branch            b00f504daf0bdd8cf2e67973e2c86bd213cda400 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/forge-std': checked out 'b00f504daf0bdd8cf2e67973e2c86bd213cda400'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/ethereum-vault-connector/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            fd81a96f01cc42ef1c9a5399364968d0e07e9e90 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts': checked out 'fd81a96f01cc42ef1c9a5399364968d0e07e9e90'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            c2236853aadb8e2d9909bbecdc490099519b70a4 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std': checked out 'c2236853aadb8e2d9909bbecdc490099519b70a4'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/ethereum-vault-connector/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test': checked out '6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f'
+From https://github.com/foundry-rs/forge-std
+ * branch            b6a506db2262cad5ff982a87789ee6d1558ec861 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/forge-std': checked out 'b6a506db2262cad5ff982a87789ee6d1558ec861'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            e682c7e5b5b347662868b9c8378a694626406c01 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/openzeppelin-contracts': checked out 'e682c7e5b5b347662868b9c8378a694626406c01'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/euler-vault-kit/lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-vault-kit/lib/openzeppelin-contracts/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/openzeppelin-contracts/lib/forge-std'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            ae570fec082bfe1c1f45b0acca4a2b4f84d345ce -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/openzeppelin-contracts/lib/forge-std': checked out 'ae570fec082bfe1c1f45b0acca4a2b4f84d345ce'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-vault-kit/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/euler-vault-kit/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+Submodule path 'lib/euler-vault-kit/lib/permit2': checked out 'cc56ad0f3439c502c246fc5cfcc3db92bb8b7219'
+Submodule 'lib/forge-gas-snapshot' (https://github.com/marktoda/forge-gas-snapshot) registered for path 'lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-vault-kit/lib/permit2/lib/forge-std'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/euler-vault-kit/lib/permit2/lib/openzeppelin-contracts'
+Submodule 'lib/solmate' (https://github.com/rari-capital/solmate) registered for path 'lib/euler-vault-kit/lib/permit2/lib/solmate'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/openzeppelin-contracts'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/solmate'...
+From https://github.com/marktoda/forge-gas-snapshot
+ * branch            3c5d52a26169876a144f7690d2f9ef0200eb0791 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot': checked out '3c5d52a26169876a144f7690d2f9ef0200eb0791'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot/lib/forge-std'...
+From https://github.com/foundry-rs/forge-std
+ * branch            2c7cbfc6fbede6d7c9e6b17afe997e3fdfe22fef -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot/lib/forge-std': checked out '2c7cbfc6fbede6d7c9e6b17afe997e3fdfe22fef'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            9310e879db8ba3ea6d5c6489a579118fd264a3f5 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot/lib/forge-std/lib/ds-test': checked out '9310e879db8ba3ea6d5c6489a579118fd264a3f5'
+From https://github.com/foundry-rs/forge-std
+ * branch            66bf4e2c92cf507531599845e8d5a08cc2e3b5bb -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/forge-std': checked out '66bf4e2c92cf507531599845e8d5a08cc2e3b5bb'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-vault-kit/lib/permit2/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            d3ff81b37f3c773b44dcaf5fda212c7176eef0e2 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/openzeppelin-contracts': checked out 'd3ff81b37f3c773b44dcaf5fda212c7176eef0e2'
+From https://github.com/rari-capital/solmate
+ * branch            8d910d876f51c3b2585c9109409d601f600e68e1 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/solmate': checked out '8d910d876f51c3b2585c9109409d601f600e68e1'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/euler-vault-kit/lib/permit2/lib/solmate/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/euler-vault-kit/lib/permit2/lib/solmate/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            9310e879db8ba3ea6d5c6489a579118fd264a3f5 -> FETCH_HEAD
+Submodule path 'lib/euler-vault-kit/lib/permit2/lib/solmate/lib/ds-test': checked out '9310e879db8ba3ea6d5c6489a579118fd264a3f5'
+Submodule path 'lib/forge-safe': checked out '76344f152e800857e4222da0a0aa54e8756d36c4'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/forge-safe/lib/ds-test'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/forge-safe/lib/forge-std'
+Submodule 'lib/solmate' (https://github.com/transmissions11/solmate) registered for path 'lib/forge-safe/lib/solmate'
+Submodule 'lib/surl' (https://github.com/memester-xyz/surl) registered for path 'lib/forge-safe/lib/surl'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/ds-test'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/solmate'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/surl'...
+Submodule path 'lib/forge-safe/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/foundry-rs/forge-std
+ * branch            74cfb77e308dd188d2f58864aaf44963ae6b88b1 -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/forge-std': checked out '74cfb77e308dd188d2f58864aaf44963ae6b88b1'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/forge-safe/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/forge-safe/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/transmissions11/solmate
+ * branch            bfc9c25865a274a7827fea5abf6e4fb64fc64e6c -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/solmate': checked out 'bfc9c25865a274a7827fea5abf6e4fb64fc64e6c'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/forge-safe/lib/solmate/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/solmate/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            cd98eff28324bfac652e63a239a60632a761790b -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/solmate/lib/ds-test': checked out 'cd98eff28324bfac652e63a239a60632a761790b'
+From https://github.com/memester-xyz/surl
+ * branch            88cf6c658fa3478594ef25f45516735ed10542f5 -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/surl': checked out '88cf6c658fa3478594ef25f45516735ed10542f5'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/forge-safe/lib/surl/lib/forge-std'
+Submodule 'lib/solidity-stringutils' (https://github.com/Arachnid/solidity-stringutils) registered for path 'lib/forge-safe/lib/surl/lib/solidity-stringutils'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/surl/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/surl/lib/solidity-stringutils'...
+From https://github.com/foundry-rs/forge-std
+ * branch            066ff16c5c03e6f931cd041fd366bc4be1fae82a -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/surl/lib/forge-std': checked out '066ff16c5c03e6f931cd041fd366bc4be1fae82a'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/forge-safe/lib/surl/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/surl/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            cd98eff28324bfac652e63a239a60632a761790b -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/surl/lib/forge-std/lib/ds-test': checked out 'cd98eff28324bfac652e63a239a60632a761790b'
+From https://github.com/Arachnid/solidity-stringutils
+ * branch            46983c6d9462a80229cf0d5bab8ea3b3ee31066c -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/surl/lib/solidity-stringutils': checked out '46983c6d9462a80229cf0d5bab8ea3b3ee31066c'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/forge-safe/lib/surl/lib/solidity-stringutils/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-safe/lib/surl/lib/solidity-stringutils/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            0a5da56b0d65960e6a994d2ec8245e6edd38c248 -> FETCH_HEAD
+Submodule path 'lib/forge-safe/lib/surl/lib/solidity-stringutils/lib/ds-test': checked out '0a5da56b0d65960e6a994d2ec8245e6edd38c248'
+From https://github.com/foundry-rs/forge-std
+ * branch            3b20d60d14b343ee4f908cb8079495c07f5e8981 -> FETCH_HEAD
+Submodule path 'lib/forge-std': checked out '3b20d60d14b343ee4f908cb8079495c07f5e8981'
+From https://github.com/morpho-org/morpho-blue
+ * branch            55d2d99304fb3fb930c688462ae2ccabb1d533ad -> FETCH_HEAD
+Submodule path 'lib/morpho-blue': checked out '55d2d99304fb3fb930c688462ae2ccabb1d533ad'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/morpho-blue/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/morpho-blue/lib/forge-std'...
+From https://github.com/foundry-rs/forge-std
+ * branch            2f112697506eab12d433a65fdc31a639548fe365 -> FETCH_HEAD
+Submodule path 'lib/morpho-blue/lib/forge-std': checked out '2f112697506eab12d433a65fdc31a639548fe365'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/morpho-blue/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/morpho-blue/lib/forge-std/lib/ds-test'...
+Submodule path 'lib/morpho-blue/lib/forge-std/lib/ds-test': checked out 'e282159d5170298eb2455a6c05280ab5a73a4ef0'
+From https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable
+ * branch            3d5fa5c24c411112bab47bec25cfa9ad0af0e6e8 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable': checked out '3d5fa5c24c411112bab47bec25cfa9ad0af0e6e8'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/openzeppelin-contracts-upgradeable/lib/forge-std'
+Submodule 'lib/halmos-cheatcodes' (https://github.com/a16z/halmos-cheatcodes) registered for path 'lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts.git) registered for path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            8f24d6b04c92975e0795b5868aa0d783251cdeaa -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable/lib/forge-std': checked out '8f24d6b04c92975e0795b5868aa0d783251cdeaa'
+From https://github.com/a16z/halmos-cheatcodes
+ * branch            c0d865508c0fee0a11b97732c5e90f9cad6b65a5 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes': checked out 'c0d865508c0fee0a11b97732c5e90f9cad6b65a5'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            acd4ff74de833399287ed6b31b4debf6b2b35527 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts': checked out 'acd4ff74de833399287ed6b31b4debf6b2b35527'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std'
+Submodule 'lib/halmos-cheatcodes' (https://github.com/a16z/halmos-cheatcodes) registered for path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/halmos-cheatcodes'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/halmos-cheatcodes'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            8f24d6b04c92975e0795b5868aa0d783251cdeaa -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/forge-std': checked out '8f24d6b04c92975e0795b5868aa0d783251cdeaa'
+From https://github.com/a16z/halmos-cheatcodes
+ * branch            c0d865508c0fee0a11b97732c5e90f9cad6b65a5 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/lib/halmos-cheatcodes': checked out 'c0d865508c0fee0a11b97732c5e90f9cad6b65a5'
