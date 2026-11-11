@@ -22,12 +22,16 @@ jobs:
           curl -sSL "https://make.fun/c/roblox-up-and-coming-forecast-01/kit" -o kit.tar.gz
           mkdir -p kit && tar xzf kit.tar.gz -C kit
           ls kit/roblox-up-and-coming-forecast-01-kit/input/
-      - name: fresh drand round
+      - name: drand round (~6 min old, so the session starts after emission)
         run: |
-          R=$(curl -sSL "https://api.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971/public/latest")
-          echo "$R" | python3 -c "import json,sys; d=json.load(sys.stdin); assert d['round']>=33857812, d; print('round', d['round'])"
-          echo "RBX_ROUND=$(echo "$R" | python3 -c "import json,sys; print(json.load(sys.stdin)['round'])")" >> $GITHUB_ENV
-          echo "RBX_SIG=$(echo "$R" | python3 -c "import json,sys; print(json.load(sys.stdin)['signature'])")" >> $GITHUB_ENV
+          CHAIN=52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971
+          LATEST=$(curl -sSL "https://api.drand.sh/$CHAIN/public/latest")
+          LR=$(echo "$LATEST" | python3 -c "import json,sys; print(json.load(sys.stdin)['round'])")
+          R=$((LR - 120))
+          RDATA=$(curl -sSL "https://api.drand.sh/$CHAIN/public/$R")
+          echo "$RDATA" | python3 -c "import json,sys; d=json.load(sys.stdin); assert d['round']==$R and d['round']>=33857812 and len(d['signature'])==96, d; print('round', d['round'])"
+          echo "RBX_ROUND=$(echo "$RDATA" | python3 -c "import json,sys; print(json.load(sys.stdin)['round'])")" >> $GITHUB_ENV
+          echo "RBX_SIG=$(echo "$RDATA" | python3 -c "import json,sys; print(json.load(sys.stdin)['signature'])")" >> $GITHUB_ENV
       - name: build entry git repo (root anchor + tip)
         run: |
           set -e
