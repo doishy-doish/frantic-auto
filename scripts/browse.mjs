@@ -23,6 +23,10 @@
 //                Use: docs repos (uBounty ProductFeatures), ABI, route lists.
 // - search-sweep: breadth HIGH (6-10 queries), depth 0, engines ddg+mojeek+github.
 //                Use: query expansion. No follows — next dispatch browses the hits.
+// - demand     : breadth HIGH (6-10 queries), depth 0, engines google (+ddg fallback).
+//                Use: business gap hunt — high-demand / low-supply niches. Google runs
+//                through Chromium with saved anonymous session + stable fingerprint;
+//                plain-fetch Google is OUT. googleBlocked auto-falls-back to ddg.
 // - chain-read : breadth = contracts, depth = blocks. RPC targets bypass JS walls
 //                entirely (BountyPay escrow 0xd0A0… inventory via eth_getLogs).
 //                Use when the app is wallet-walled but the escrow is on-chain (OUR chain).
@@ -30,7 +34,28 @@
 // Rule of thumb: discovery = wide+shallow, proof = narrow+deep, inventory = render
 // don't crawl, chain = don't browse at all. When unsure, proof-like questions take
 // depth 2 narrow; hub questions take depth 0 wide. Depth 1 is the DEFAULT, not the best.
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
+
+// Persistent browser session ("special print"): anonymous Google cookies only,
+// stored OUTSIDE evidence/ (never committed to the public repo). The workflow
+// restores .browser-state.json from the last run's artifact and re-uploads it
+// after. No auth, no our-numbers, no secrets — just NID/AEC-style bot-wall
+// cookies + a stable fingerprint so Google sees one consistent browser.
+const STATE_PATH = (process.env.BROWSER_STATE || '.browser-state.json').slice(0, 200);
+const FINGERPRINT = {
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+  viewport: { width: 1366, height: 768 },
+  locale: 'en-US',
+  timezoneId: 'America/New_York',
+};
+async function loadState() {
+  try {
+    const txt = await readFile(STATE_PATH, 'utf8');
+    const j = JSON.parse(txt);
+    if (j && (j.cookies || j.origins)) return j;
+  } catch { /* first run: no state yet */ }
+  return undefined;
+}
 
 const stamp = (process.env.STAMP || new Date().toISOString().replace(/[:.]/g, '-')).replace(/[^a-zA-Z0-9-_]/g, '').slice(0, 60) || 'run';
 const outDir = `evidence/${stamp}`;
@@ -47,6 +72,7 @@ const CASES = {
   'api-hunt': { depth: 1, render: 1, maxTargets: 2, maxFollows: 8, bundle: 1, sitemap: 1 },
   'repo-mine': { depth: 1, render: 0, maxTargets: 4, maxFollows: 4, bundle: 0, sitemap: 0 },
   'search-sweep': { depth: 0, render: 0, maxTargets: 10, maxFollows: 0, bundle: 0, sitemap: 0 },
+  demand: { depth: 0, render: 0, maxTargets: 10, maxFollows: 0, bundle: 0, sitemap: 0 },
   'chain-read': { depth: 0, render: 0, maxTargets: 12, maxFollows: 0, bundle: 0, sitemap: 0 },
 };
 const caseName = (process.env.CASE || '').toLowerCase().trim() || null;
@@ -144,14 +170,64 @@ function scriptSrcs(html, base) {
 
 const RENDER = RENDER_ON;
 let _pw = null;
+async function pwChromium() {
+  if (!_pw) _pw = (await import('playwright')).chromium;
+  return _pw;
+}
+// Google-through-Chromium (runner browser, NOT plain fetch). Uses the saved
+// anonymous session + stable fingerprint so datacenter IPs don't get instant
+// 429/sorry. Returns {engine:'google', results:[{title,url,snippet}]} or
+// {engine:'google', blocked:true, ...} so the caller can fall back to ddg.
+async function googleSearch(query, count = 10) {
+  count = Math.min(Math.max(count || 10, 1), 10);
+  let pw;
+  try { pw = await pwChromium(); }
+  catch { return { engine: 'google', query, error: 'playwright-missing' }; }
+  let browser = null;
+  try {
+    browser = await pw.launch({ args: ['--no-sandbox', '--disable-blink-features=AutomationControlled'] });
+    const state = await loadState();
+    const ctx = await browser.newContext({
+      ...FINGERPRINT,
+      ...(state ? { storageState: state } : {}),
+    });
+    const page = await ctx.newPage();
+    await page.goto('https://www.google.com/search?q=' + encodeURIComponent(query) + `&num=${count}&hl=en&complete=0`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    await page.waitForTimeout(2500);
+    // Consent wall (EU/anon): click through once, then it lives in saved state.
+    try {
+      const consent = page.getByRole('button', { name: /accept all|reject all|accept|agree/i });
+      if (await consent.count()) { await consent.first().click({ timeout: 5000 }).catch(() => {}); await page.waitForTimeout(2000); }
+    } catch { /* no consent wall */ }
+    const url = page.url();
+    if (/\/sorry\//.test(url) || /unusual traffic|captcha|désolé/i.test(await page.content().catch(() => ''))) {
+      try { await ctx.storageState({ path: STATE_PATH }); } catch { /* keep old state */ }
+      await browser.close();
+      return { engine: 'google', query, blocked: true, error: 'google-bot-wall' };
+    }
+    const results = await page.$$eval('div.g', (els, n) => els.slice(0, n).map((el) => {
+      const a = el.querySelector('a:has(h3)') || el.querySelector('a[href^="http"]');
+      const h = el.querySelector('h3');
+      const sn = el.querySelector('[data-sncf], div[style*="webkit-line"], span');
+      const href = a ? a.getAttribute('href') : '';
+      return { title: (h ? h.innerText : '').slice(0, 160), url: (href || '').slice(0, 300), snippet: (el.innerText || '').slice(0, 240) };
+    }), count).catch(() => []);
+    const clean = (results || []).filter((r) => r.url && /^https?:\/\//.test(r.url) && !/google\.com/.test(r.url)).slice(0, count);
+    try { await ctx.storageState({ path: STATE_PATH }); } catch { /* non-fatal */ }
+    await browser.close();
+    return { engine: 'google', query, status: 200, count: clean.length, results: clean, persistent: true };
+  } catch (e) { try { await browser?.close(); } catch {} return { engine: 'google', query, error: String(e).slice(0, 160) }; }
+}
 async function renderedHtml(url) {
   try {
-    if (!_pw) _pw = (await import('playwright')).chromium;
+    await pwChromium();
   } catch { return { error: 'playwright-missing' }; }
   let browser = null;
   try {
-    browser = await _pw.launch({ args: ['--no-sandbox'] });
-    const page = await browser.newPage({ userAgent: 'agent-browser/1.0' });
+    browser = await _pw.launch({ args: ['--no-sandbox', '--disable-blink-features=AutomationControlled'] });
+    const state = await loadState();
+    const ctx = await browser.newContext({ ...FINGERPRINT, ...(state ? { storageState: state } : {}) });
+    const page = await ctx.newPage();
     const apiCalls = [];
     page.on('request', (req) => {
       const u = req.url();
@@ -162,6 +238,7 @@ async function renderedHtml(url) {
     await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
     await page.waitForTimeout(3000);
     const html = await page.content();
+    try { await ctx.storageState({ path: STATE_PATH }); } catch { /* non-fatal */ }
     await browser.close();
     return { html, apiCalls };
   } catch (e) { try { await browser?.close(); } catch {} return { error: String(e).slice(0, 160) }; }
@@ -328,7 +405,18 @@ async function doSearch(engine, query, count = 10, kind = 'repositories') {  cou
       : { title: it.full_name, url: it.html_url, snippet: `${it.description || ''} ★${it.stargazers_count} ${it.language || ''} upd:${(it.updated_at || '').slice(0, 10)}`.slice(0, 240) });
     return { engine: 'github:' + kind, query, status: r.status, count: out.length, results: out };
   }
-  return { engine, query, error: 'unknown engine (ddg | mojeek | github)' };
+  if (engine === 'google') {
+    const g = await googleSearch(query, count);
+    if (g.blocked) {
+      // Fall back to ddg so the run still returns evidence instead of burning.
+      try {
+        const fb = await doSearch('ddg', query, count);
+        return { ...fb, engine: 'google-fallback-ddg', googleBlocked: true };
+      } catch { return g; }
+    }
+    return g;
+  }
+  return { engine, query, error: 'unknown engine (ddg | mojeek | github | google)' };
 }
 
 const rows = [];
