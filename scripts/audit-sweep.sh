@@ -49,7 +49,7 @@ if ! command -v aderyn >/dev/null; then
 fi
 echo "aderyn: $(aderyn --version 2>/dev/null || echo MISSING)"
 
-# --- slither (best-effort, needs pip; no apt) ---
+# --- slither (needs solc matching pragma; try solc-select auto) ---
 if ! command -v slither >/dev/null; then
   python3 -m pip install --quiet --user slither-analyzer solc-select 2>>"$EV/install.log" || echo "pip FAIL" >>"$EV/install.log"
   export PATH="$HOME/.local/bin:$PATH"
@@ -72,10 +72,21 @@ forge build --force >"../$EV/forge-build.log" 2>&1 && echo "forge-build: OK" || 
 # --- aderyn ---
 aderyn --output "../$EV/aderyn.json" . >"../$EV/aderyn.log" 2>&1 && echo "aderyn: OK" || echo "aderyn: FAIL (see log)"
 
-# --- slither (needs solc matching pragma; try solc-select auto) ---
+# --- slither (foundry projects auto-detect; else solc-direct file list fallback) ---
 if command -v slither >/dev/null; then
   export PATH="$HOME/.local/bin:$PATH"
-  slither . --json "../$EV/slither.json" >"../$EV/slither.log" 2>&1 && echo "slither: OK" || echo "slither: FAIL (see log)"
+  if slither . --json "../$EV/slither.json" >"../$EV/slither.log" 2>&1; then
+    echo "slither: OK"
+  else
+    echo "slither: project-mode FAIL, trying solc-direct fallback"
+    FILES=$(ls contracts/*.sol contracts/libraries/*.sol contracts/interfaces/*.sol 2>/dev/null | grep -v -i test || true)
+    if [ -n "$FILES" ]; then
+      # shellcheck disable=SC2086
+      slither $FILES --solc solc --json "../$EV/slither.json" >"../$EV/slither.log" 2>&1 && echo "slither: OK (solc-direct)" || echo "slither: FAIL (see log)"
+    else
+      echo "slither: FAIL (see log, no fallback files)"
+    fi
+  fi
 else
   echo "slither: SKIPPED"
 fi
