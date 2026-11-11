@@ -1,0 +1,59 @@
+{
+ "name": "g-prpay",
+ "engine": "github:issues",
+ "query": "\"paying\" USDC \"pull request\" state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "agoric-sdk#12953 feat(portfolio-api): Target partial withdrawal when full withdrawal cannot be satisfied",
+   "url": "https://github.com/Agoric/agoric-sdk/pull/12953",
+   "snippet": "open  2026-11-09T17:00:54Z"
+  },
+  {
+   "title": "forgeclaw#235 Muse <-> Claude working channel — Kalshi funds + reliability queue",
+   "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+   "snippet": "open  2026-10-22T13:48:37Z"
+  },
+  {
+   "title": "microcredit-agent-testbed#15 Central message board — Hermes, Claude, Codex and operator coordination",
+   "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+   "snippet": "open  2026-10-05T23:48:30Z"
+  },
+  {
+   "title": "treg#1274 feat(payments): a keyless agent pays a catalog call with MPP or x402 (flag off)",
+   "url": "https://github.com/superdesigndev/treg/pull/1274",
+   "snippet": "open area:docs 2026-10-29T20:45:23Z"
+  },
+  {
+   "title": "safe-wallet-monorepo#9088 feat: Pay from Safe",
+   "url": "https://github.com/safe-global/safe-wallet-monorepo/pull/9088",
+   "snippet": "open  2026-10-14T14:03:48Z"
+  },
+  {
+   "title": "Investering-Framework-Archive-v1#1512 Research Lab: External Specialist Dissection master queue",
+   "url": "https://github.com/Donh91/Investering-Framework-Archive-v1/issues/1512",
+   "snippet": "open  2026-10-06T06:59:43Z"
+  },
+  {
+   "title": "clearsheet-offers#3 Revenue reset: prioritize verified cashflow over infrastructure",
+   "url": "https://github.com/me-fake-you/clearsheet-offers/issues/3",
+   "snippet": "open  2026-09-10T13:11:05Z"
+  },
+  {
+   "title": "personal-workspace#718 [Ops] Muse ↔ Grok.btc direct line",
+   "url": "https://github.com/cvolkernick/personal-workspace/issues/718",
+   "snippet": "open process 2026-09-13T13:56:58Z"
+  },
+  {
+   "title": "chain-love#4546 data(somnia): add the Wrapped BTC contract",
+   "url": "https://github.com/Chain-Love/chain-love/pull/4546",
+   "snippet": "open  2026-10-17T14:12:19Z"
+  },
+  {
+   "title": "mcpso#1 Submit Your MCP Servers here",
+   "url": "https://github.com/chatmcp/mcpso/issues/1",
+   "snippet": "open  2024-12-06T02:23:42Z"
+  }
+ ]
+}

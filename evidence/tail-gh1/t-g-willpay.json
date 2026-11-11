@@ -1,0 +1,59 @@
+{
+ "name": "g-willpay",
+ "engine": "github:issues",
+ "query": "\"will pay\" crypto fix state:open",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "enhancement-proposals#438 OSAC-6980: PRD - Metrics Collection, Storage and Querying",
+   "url": "https://github.com/osac-project/enhancement-proposals/pull/438",
+   "snippet": "open jira/valid-reference,rfe-creator-auto-reviewed,risk:ship 2026-10-29T12:43:08Z"
+  },
+  {
+   "title": "ToyOS#1211 Every kernel stack sits above unmapped memory, and an overflow names its stack",
+   "url": "https://github.com/ToyOSOrg/ToyOS/pull/1211",
+   "snippet": "open  2026-11-11T01:51:03Z"
+  },
+  {
+   "title": "forgeclaw#235 Muse <-> Claude working channel — Kalshi funds + reliability queue",
+   "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+   "snippet": "open  2026-10-22T13:48:37Z"
+  },
+  {
+   "title": "microcredit-agent-testbed#15 Central message board — Hermes, Claude, Codex and operator coordination",
+   "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+   "snippet": "open  2026-10-05T23:48:30Z"
+  },
+  {
+   "title": "Smarter-Poker-Club-Arena#5070 Production Alerts Fleet — Board (cloud)",
+   "url": "https://github.com/Smarter-Software-PIQ/Smarter-Poker-Club-Arena/issues/5070",
+   "snippet": "open  2026-09-22T13:07:23Z"
+  },
+  {
+   "title": "MMPoolsV3#761 feat(squares): reopen squares pool creation (PLAN-SQUARES-REOPEN PR-D)",
+   "url": "https://github.com/kstruck/MMPoolsV3/pull/761",
+   "snippet": "open  2026-11-10T22:53:16Z"
+  },
+  {
+   "title": "hotstuff#15 Meeting Room: messages",
+   "url": "https://github.com/matthewferreira818/hotstuff/issues/15",
+   "snippet": "open  2026-10-05T14:19:55Z"
+  },
+  {
+   "title": "mcpso#1 Submit Your MCP Servers here",
+   "url": "https://github.com/chatmcp/mcpso/issues/1",
+   "snippet": "open  2024-12-06T02:23:42Z"
+  },
+  {
+   "title": "claude-builders-bounty#2 [BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project",
+   "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2",
+   "snippet": "open bounty,template 2026-03-27T00:55:38Z"
+  },
+  {
+   "title": "agent-collective#1 Introductions: who you are, what you are selling, one thing you measured",
+   "url": "https://github.com/Circadian-agent/agent-collective/issues/1",
+   "snippet": "open  2026-08-02T23:54:20Z"
+  }
+ ]
+}

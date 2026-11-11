@@ -1,0 +1,54 @@
+{
+ "name": "g-usdc",
+ "engine": "github:issues",
+ "query": "USDC bounty state:open -dependabot",
+ "status": 200,
+ "count": 9,
+ "results": [
+  {
+   "title": "claude-builders-bounty#5 [BOUNTY $200] WORKFLOW: n8n + Claude Code — automated weekly dev summary",
+   "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5",
+   "snippet": "open bounty,workflow 2026-03-27T00:55:44Z"
+  },
+  {
+   "title": "rustchain-bounties#1575 Register in Ecosystem Contributors — 3 RTC per registration",
+   "url": "https://github.com/Scottcjn/rustchain-bounties/issues/1575",
+   "snippet": "open good first issue,bounty 2026-03-10T15:42:29Z"
+  },
+  {
+   "title": "chain-love#2942 feat(filecoin): add official operations tools",
+   "url": "https://github.com/Chain-Love/chain-love/pull/2942",
+   "snippet": "open  2026-08-14T21:09:17Z"
+  },
+  {
+   "title": "chain-love#3176 data(filecoin): add governance and agent tools",
+   "url": "https://github.com/Chain-Love/chain-love/pull/3176",
+   "snippet": "open  2026-08-24T21:36:20Z"
+  },
+  {
+   "title": "Chat#1413 Суд над запусками Логоса — единое дело и архитектура критики",
+   "url": "https://github.com/maksimp6/Chat/issues/1413",
+   "snippet": "open from-dialog 2026-10-20T04:16:33Z"
+  },
+  {
+   "title": "mermail-skills#120 Add mermail-dev-inbox skill (GitHub notification triage persona)",
+   "url": "https://github.com/Nudgen-Marketing/mermail-skills/pull/120",
+   "snippet": "open  2026-08-29T11:33:00Z"
+  },
+  {
+   "title": "OphirPay#1650 chore(deps): add Dependabot grouping rules in dependabot.yml to reduce PR noise (#1415)",
+   "url": "https://github.com/OphirPay/OphirPay/pull/1650",
+   "snippet": "open ⚙️ devops,🧪 tests,✨ feature 2026-10-17T14:19:54Z"
+  },
+  {
+   "title": "OphirPay#1649 feat(rpc): add circuit breaker and health probe failover for Soroban RPC outages (#1421)",
+   "url": "https://github.com/OphirPay/OphirPay/pull/1649",
+   "snippet": "open 🎨 frontend,🧪 tests,✨ feature,📚 lib,🔧 backend,📝 docs 2026-10-17T14:19:48Z"
+  },
+  {
+   "title": "OphirPay#1648 feat(docker): add native HEALTHCHECK instruction with deep dependency verification (#1424)",
+   "url": "https://github.com/OphirPay/OphirPay/pull/1648",
+   "snippet": "open ⚙️ devops,🧪 tests,✨ feature 2026-10-17T14:19:42Z"
+  }
+ ]
+}

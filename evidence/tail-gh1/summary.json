@@ -1,0 +1,28 @@
+{
+ "stamp": "tail-gh1",
+ "takenAt": "2026-11-11T15:57:06.206Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "g-usdc",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "g-willpay",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "g-prpay",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}
