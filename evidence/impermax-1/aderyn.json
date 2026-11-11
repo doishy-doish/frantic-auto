@@ -1,0 +1,2000 @@
+{
+  "files_summary": {
+    "total_source_units": 39,
+    "total_sloc": 1837
+  },
+  "files_details": {
+    "files_details": [
+      {
+        "file_path": "contracts/ImpermaxERC20.sol",
+        "n_sloc": 84
+      },
+      {
+        "file_path": "contracts/LVAllocatorV2.sol",
+        "n_sloc": 121
+      },
+      {
+        "file_path": "contracts/LVDeployerV2.sol",
+        "n_sloc": 9
+      },
+      {
+        "file_path": "contracts/LVSetterV2.sol",
+        "n_sloc": 67
+      },
+      {
+        "file_path": "contracts/LVStorageV2.sol",
+        "n_sloc": 22
+      },
+      {
+        "file_path": "contracts/LendingVaultV2.sol",
+        "n_sloc": 69
+      },
+      {
+        "file_path": "contracts/LendingVaultV2Factory.sol",
+        "n_sloc": 71
+      },
+      {
+        "file_path": "contracts/LendingVaultWatcher01.sol",
+        "n_sloc": 36
+      },
+      {
+        "file_path": "contracts/PoolToken.sol",
+        "n_sloc": 66
+      },
+      {
+        "file_path": "contracts/interfaces/IBorrowable.sol",
+        "n_sloc": 71
+      },
+      {
+        "file_path": "contracts/interfaces/IERC20.sol",
+        "n_sloc": 14
+      },
+      {
+        "file_path": "contracts/interfaces/ILVDeployerV2.sol",
+        "n_sloc": 4
+      },
+      {
+        "file_path": "contracts/interfaces/ILendingVaultCallee.sol",
+        "n_sloc": 4
+      },
+      {
+        "file_path": "contracts/interfaces/ILendingVaultV2.sol",
+        "n_sloc": 61
+      },
+      {
+        "file_path": "contracts/interfaces/ILendingVaultV2Factory.sol",
+        "n_sloc": 22
+      },
+      {
+        "file_path": "contracts/interfaces/IPoolToken.sol",
+        "n_sloc": 31
+      },
+      {
+        "file_path": "contracts/libraries/BorrowableHelpers.sol",
+        "n_sloc": 34
+      },
+      {
+        "file_path": "contracts/libraries/BorrowableObject.sol",
+        "n_sloc": 117
+      },
+      {
+        "file_path": "contracts/libraries/Math.sol",
+        "n_sloc": 18
+      },
+      {
+        "file_path": "contracts/libraries/SafeMath.sol",
+        "n_sloc": 52
+      },
+      {
+        "file_path": "contracts/libraries/SafeToken.sol",
+        "n_sloc": 28
+      },
+      {
+        "file_path": "contracts/libraries/StringHelpers.sol",
+        "n_sloc": 12
+      },
+      {
+        "file_path": "contracts/test/BAllowance.sol",
+        "n_sloc": 26
+      },
+      {
+        "file_path": "contracts/test/BInterestRateModel.sol",
+        "n_sloc": 68
+      },
+      {
+        "file_path": "contracts/test/BSetter.sol",
+        "n_sloc": 55
+      },
+      {
+        "file_path": "contracts/test/BStorage.sol",
+        "n_sloc": 25
+      },
+      {
+        "file_path": "contracts/test/Borrowable.sol",
+        "n_sloc": 117
+      },
+      {
+        "file_path": "contracts/test/BorrowableHarness.sol",
+        "n_sloc": 90
+      },
+      {
+        "file_path": "contracts/test/BorrowableObjectHarness.sol",
+        "n_sloc": 25
+      },
+      {
+        "file_path": "contracts/test/FlashAllocatePoC.sol",
+        "n_sloc": 13
+      },
+      {
+        "file_path": "contracts/test/ImpermaxERC20Harness.sol",
+        "n_sloc": 16
+      },
+      {
+        "file_path": "contracts/test/LendingVaultV2Harness.sol",
+        "n_sloc": 132
+      },
+      {
+        "file_path": "contracts/test/MockERC20.sol",
+        "n_sloc": 73
+      },
+      {
+        "file_path": "contracts/test/PoolTokenOld.sol",
+        "n_sloc": 71
+      },
+      {
+        "file_path": "contracts/test/interfaces/IBDeployer.sol",
+        "n_sloc": 4
+      },
+      {
+        "file_path": "contracts/test/interfaces/IBorrowTracker.sol",
+        "n_sloc": 4
+      },
+      {
+        "file_path": "contracts/test/interfaces/ICollateral.sol",
+        "n_sloc": 64
+      },
+      {
+        "file_path": "contracts/test/interfaces/IFactory.sol",
+        "n_sloc": 36
+      },
+      {
+        "file_path": "contracts/test/interfaces/IImpermaxCallee.sol",
+        "n_sloc": 5
+      }
+    ]
+  },
+  "issue_count": {
+    "high": 4,
+    "low": 17
+  },
+  "high_issues": {
+    "issues": [
+      {
+        "title": "`abi.encodePacked()` Hash Collision",
+        "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+        "detector_name": "abi-encode-packed-hash-collision",
+        "instances": [
+          {
+            "contract_path": "contracts/libraries/StringHelpers.sol",
+            "line_no": 5,
+            "src": "166:16",
+            "src_char": "166:16"
+          }
+        ]
+      },
+      {
+        "title": "Experimental ABI Encoder",
+        "description": "Experimental encoders should not be used in production. There are multiple known compiler bugs that are caused by the experimental encoder. Upgrade your solidity version to remove the need for experimental features.",
+        "detector_name": "experimental-encoder",
+        "instances": [
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 2,
+            "src": "25:33",
+            "src_char": "25:33"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableObjectHarness.sol",
+            "line_no": 2,
+            "src": "25:33",
+            "src_char": "25:33"
+          }
+        ]
+      },
+      {
+        "title": "Reentrancy: State change after external call",
+        "description": "Changing state after an external call can lead to re-entrancy attacks.Use the checks-effects-interactions pattern to avoid this issue.",
+        "detector_name": "reentrancy-state-change",
+        "instances": [
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 31,
+            "src": "928:97",
+            "src_char": "928:97",
+            "hint": "State is changed at: `borrowableInfo[borrowable].exists = true`, `borrowableInfo[borrowable].enabled = true`, `borrowables.push(borrowable)`"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 34,
+            "src": "1030:124",
+            "src_char": "1030:124",
+            "hint": "State is changed at: `allVaults.push(vault)`"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 35,
+            "src": "1158:95",
+            "src_char": "1158:95",
+            "hint": "State is changed at: `allVaults.push(vault)`"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 36,
+            "src": "1257:34",
+            "src_char": "1257:34",
+            "hint": "State is changed at: `allVaults.push(vault)`"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 37,
+            "src": "1295:36",
+            "src_char": "1295:36",
+            "hint": "State is changed at: `allVaults.push(vault)`"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 38,
+            "src": "1335:60",
+            "src_char": "1335:60",
+            "hint": "State is changed at: `allVaults.push(vault)`"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 113,
+            "src": "3308:53",
+            "src_char": "3308:53",
+            "hint": "State is changed at: `totalBorrows = safe112(totalBorrows + borrowAmount)`"
+          }
+        ]
+      },
+      {
+        "title": "Weak Randomness",
+        "description": "The use of keccak256 hash functions on predictable values like block.timestamp, block.number, or similar data, including modulo operations on these values, should be avoided for generating randomness, as they are easily predictable and manipulable. The `PREVRANDAO` opcode also should not be used as a source of randomness. Instead, utilize Chainlink VRF for cryptographically secure and provably random values to ensure protocol integrity.",
+        "detector_name": "weak-randomness",
+        "instances": [
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 93,
+            "src": "3855:23",
+            "src_char": "3855:23"
+          },
+          {
+            "contract_path": "contracts/test/BStorage.sol",
+            "line_no": 18,
+            "src": "524:23",
+            "src_char": "524:23"
+          },
+          {
+            "contract_path": "contracts/test/BStorage.sol",
+            "line_no": 25,
+            "src": "741:23",
+            "src_char": "741:23"
+          }
+        ]
+      }
+    ]
+  },
+  "low_issues": {
+    "issues": [
+      {
+        "title": "Dead Code",
+        "description": "Functions that are not used. Consider removing them.",
+        "detector_name": "dead-code",
+        "instances": [
+          {
+            "contract_path": "contracts/LVAllocatorV2.sol",
+            "line_no": 44,
+            "src": "2006:224",
+            "src_char": "2006:224"
+          },
+          {
+            "contract_path": "contracts/test/Borrowable.sol",
+            "line_no": 27,
+            "src": "1060:77",
+            "src_char": "1060:77"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 95,
+            "src": "2623:130",
+            "src_char": "2623:130"
+          }
+        ]
+      },
+      {
+        "title": "Incorrect Order of Division and Multiplication",
+        "description": "Division operations followed directly by multiplication operations can lead to precision loss due to the way integer arithmetic is handled in Solidity./\n        Consider Multiplication before Division.",
+        "detector_name": "division-before-multiplication",
+        "instances": [
+          {
+            "contract_path": "contracts/LendingVaultWatcher01.sol",
+            "line_no": 38,
+            "src": "1712:43",
+            "src_char": "1712:43"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 33,
+            "src": "1324:56",
+            "src_char": "1324:56"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 37,
+            "src": "1544:56",
+            "src_char": "1544:56"
+          }
+        ]
+      },
+      {
+        "title": "`ecrecover` Signature Malleability",
+        "description": "The `ecrecover` function is susceptible to signature malleability. This means that the same message can be signed in multiple ways, allowing an attacker to change the message signature without invalidating it. This can lead to unexpected behavior in smart contracts, such as the loss of funds or the ability to bypass access control. Consider using OpenZeppelin's ECDSA library instead of the built-in function.",
+        "detector_name": "ecrecover",
+        "instances": [
+          {
+            "contract_path": "contracts/ImpermaxERC20.sol",
+            "line_no": 94,
+            "src": "2878:9",
+            "src_char": "2878:9"
+          }
+        ]
+      },
+      {
+        "title": "Empty Block",
+        "description": "Consider removing empty blocks.",
+        "detector_name": "empty-block",
+        "instances": [
+          {
+            "contract_path": "contracts/PoolToken.sol",
+            "line_no": 77,
+            "src": "2637:47",
+            "src_char": "2637:47"
+          },
+          {
+            "contract_path": "contracts/test/Borrowable.sol",
+            "line_no": 56,
+            "src": "2160:54",
+            "src_char": "2160:54"
+          },
+          {
+            "contract_path": "contracts/test/PoolTokenOld.sol",
+            "line_no": 76,
+            "src": "2740:47",
+            "src_char": "2740:47"
+          }
+        ]
+      },
+      {
+        "title": "Inconsistent uint256/uint (or) int256/int types",
+        "description": "Inconsistency in declaring uint256/uint (or) int256/int variables within a contract. Use explicit size declarations (uint256 or int256). Consider keeping the naming convention consistent in a given contract. Explicit size declarations are preferred (uint256, int256) over implicit ones (uint, int) to avoid confusion.",
+        "detector_name": "inconsistent-type-names",
+        "instances": [
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 7,
+            "src": "137:10",
+            "src_char": "137:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 8,
+            "src": "214:10",
+            "src_char": "214:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 13,
+            "src": "442:4",
+            "src_char": "442:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 14,
+            "src": "507:4",
+            "src_char": "507:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 15,
+            "src": "589:4",
+            "src_char": "589:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 16,
+            "src": "631:10",
+            "src_char": "631:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 17,
+            "src": "699:10",
+            "src_char": "699:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 18,
+            "src": "785:10",
+            "src_char": "785:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 22,
+            "src": "1002:4",
+            "src_char": "1002:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 23,
+            "src": "1058:10",
+            "src_char": "1058:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 23,
+            "src": "1070:13",
+            "src_char": "1070:13"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 27,
+            "src": "1212:15",
+            "src_char": "1212:15"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 27,
+            "src": "1229:15",
+            "src_char": "1229:15"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 28,
+            "src": "1311:17",
+            "src_char": "1311:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 28,
+            "src": "1330:17",
+            "src_char": "1330:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 29,
+            "src": "1362:17",
+            "src_char": "1362:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 33,
+            "src": "1541:4",
+            "src_char": "1541:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 34,
+            "src": "1601:4",
+            "src_char": "1601:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 36,
+            "src": "1652:4",
+            "src_char": "1652:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 37,
+            "src": "1708:15",
+            "src_char": "1708:15"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 38,
+            "src": "1779:17",
+            "src_char": "1779:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 46,
+            "src": "1994:10",
+            "src_char": "1994:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 49,
+            "src": "2114:4",
+            "src_char": "2114:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 50,
+            "src": "2173:4",
+            "src_char": "2173:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 51,
+            "src": "2227:4",
+            "src_char": "2227:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 52,
+            "src": "2282:4",
+            "src_char": "2282:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 53,
+            "src": "2370:4",
+            "src_char": "2370:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 57,
+            "src": "2583:10",
+            "src_char": "2583:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 57,
+            "src": "2595:13",
+            "src_char": "2595:13"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 61,
+            "src": "2717:24",
+            "src_char": "2717:24"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 61,
+            "src": "2743:16",
+            "src_char": "2743:16"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 61,
+            "src": "2761:17",
+            "src_char": "2761:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 62,
+            "src": "2802:13",
+            "src_char": "2802:13"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 63,
+            "src": "2845:15",
+            "src_char": "2845:15"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 65,
+            "src": "2921:4",
+            "src_char": "2921:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 66,
+            "src": "2984:4",
+            "src_char": "2984:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 67,
+            "src": "3042:4",
+            "src_char": "3042:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 68,
+            "src": "3095:4",
+            "src_char": "3095:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 69,
+            "src": "3152:4",
+            "src_char": "3152:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 70,
+            "src": "3214:4",
+            "src_char": "3214:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 71,
+            "src": "3268:4",
+            "src_char": "3268:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 79,
+            "src": "3495:21",
+            "src_char": "3495:21"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 80,
+            "src": "3549:27",
+            "src_char": "3549:27"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 81,
+            "src": "3601:19",
+            "src_char": "3601:19"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 83,
+            "src": "3678:4",
+            "src_char": "3678:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 84,
+            "src": "3732:4",
+            "src_char": "3732:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 85,
+            "src": "3786:4",
+            "src_char": "3786:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 86,
+            "src": "3845:4",
+            "src_char": "3845:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 87,
+            "src": "3904:4",
+            "src_char": "3904:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 95,
+            "src": "4077:21",
+            "src_char": "4077:21"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 96,
+            "src": "4144:27",
+            "src_char": "4144:27"
+          },
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 97,
+            "src": "4209:19",
+            "src_char": "4209:19"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 7,
+            "src": "141:10",
+            "src_char": "141:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 8,
+            "src": "218:10",
+            "src_char": "218:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 13,
+            "src": "446:4",
+            "src_char": "446:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 14,
+            "src": "511:4",
+            "src_char": "511:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 15,
+            "src": "593:4",
+            "src_char": "593:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 16,
+            "src": "635:10",
+            "src_char": "635:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 17,
+            "src": "703:10",
+            "src_char": "703:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 18,
+            "src": "789:10",
+            "src_char": "789:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 22,
+            "src": "1006:4",
+            "src_char": "1006:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 23,
+            "src": "1062:10",
+            "src_char": "1062:10"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 23,
+            "src": "1074:13",
+            "src_char": "1074:13"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 27,
+            "src": "1216:15",
+            "src_char": "1216:15"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 27,
+            "src": "1233:15",
+            "src_char": "1233:15"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 28,
+            "src": "1315:17",
+            "src_char": "1315:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 28,
+            "src": "1334:17",
+            "src_char": "1334:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 29,
+            "src": "1366:17",
+            "src_char": "1366:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 33,
+            "src": "1545:4",
+            "src_char": "1545:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 34,
+            "src": "1605:4",
+            "src_char": "1605:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 36,
+            "src": "1656:4",
+            "src_char": "1656:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 37,
+            "src": "1712:15",
+            "src_char": "1712:15"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 38,
+            "src": "1783:17",
+            "src_char": "1783:17"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 54,
+            "src": "2480:4",
+            "src_char": "2480:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 59,
+            "src": "2689:4",
+            "src_char": "2689:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 60,
+            "src": "2767:4",
+            "src_char": "2767:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 62,
+            "src": "2824:4",
+            "src_char": "2824:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 63,
+            "src": "2883:4",
+            "src_char": "2883:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 75,
+            "src": "3270:21",
+            "src_char": "3270:21"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 77,
+            "src": "3349:4",
+            "src_char": "3349:4"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 84,
+            "src": "3497:21",
+            "src_char": "3497:21"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 26,
+            "src": "833:17",
+            "src_char": "833:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 26,
+            "src": "852:17",
+            "src_char": "852:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 26,
+            "src": "907:17",
+            "src_char": "907:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 27,
+            "src": "930:20",
+            "src_char": "930:20"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 28,
+            "src": "997:21",
+            "src_char": "997:21"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 31,
+            "src": "1067:27",
+            "src_char": "1067:27"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 34,
+            "src": "1244:26",
+            "src_char": "1244:26"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 39,
+            "src": "1439:17",
+            "src_char": "1439:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 39,
+            "src": "1458:17",
+            "src_char": "1458:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 39,
+            "src": "1500:17",
+            "src_char": "1500:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 43,
+            "src": "1607:17",
+            "src_char": "1607:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 43,
+            "src": "1626:17",
+            "src_char": "1626:17"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 43,
+            "src": "1668:17",
+            "src_char": "1668:17"
+          },
+          {
+            "contract_path": "contracts/test/BAllowance.sol",
+            "line_no": 21,
+            "src": "642:21",
+            "src_char": "642:21"
+          },
+          {
+            "contract_path": "contracts/test/BAllowance.sol",
+            "line_no": 30,
+            "src": "1183:10",
+            "src_char": "1183:10"
+          },
+          {
+            "contract_path": "contracts/test/BAllowance.sol",
+            "line_no": 30,
+            "src": "1195:13",
+            "src_char": "1195:13"
+          },
+          {
+            "contract_path": "contracts/test/BStorage.sol",
+            "line_no": 20,
+            "src": "553:28",
+            "src_char": "553:28"
+          },
+          {
+            "contract_path": "contracts/test/BStorage.sol",
+            "line_no": 27,
+            "src": "769:35",
+            "src_char": "769:35"
+          },
+          {
+            "contract_path": "contracts/test/BStorage.sol",
+            "line_no": 28,
+            "src": "813:41",
+            "src_char": "813:41"
+          },
+          {
+            "contract_path": "contracts/test/BStorage.sol",
+            "line_no": 29,
+            "src": "863:37",
+            "src_char": "863:37"
+          },
+          {
+            "contract_path": "contracts/test/BStorage.sol",
+            "line_no": 32,
+            "src": "969:6",
+            "src_char": "969:6"
+          }
+        ]
+      },
+      {
+        "title": "Internal Function Used Only Once",
+        "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+        "detector_name": "internal-function-used-once",
+        "instances": [
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 54,
+            "src": "1908:232",
+            "src_char": "1908:232"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 86,
+            "src": "3307:461",
+            "src_char": "3307:461"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 101,
+            "src": "4163:747",
+            "src_char": "4163:747"
+          },
+          {
+            "contract_path": "contracts/libraries/SafeMath.sol",
+            "line_no": 70,
+            "src": "2236:187",
+            "src_char": "2236:187"
+          },
+          {
+            "contract_path": "contracts/libraries/SafeMath.sol",
+            "line_no": 147,
+            "src": "4872:338",
+            "src_char": "4872:338"
+          },
+          {
+            "contract_path": "contracts/libraries/SafeMath.sol",
+            "line_no": 182,
+            "src": "6246:163",
+            "src_char": "6246:163"
+          }
+        ]
+      },
+      {
+        "title": "Literal Instead of Constant",
+        "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+        "detector_name": "literal-instead-of-constant",
+        "instances": [
+          {
+            "contract_path": "contracts/LVAllocatorV2.sol",
+            "line_no": 14,
+            "src": "524:4",
+            "src_char": "524:4"
+          },
+          {
+            "contract_path": "contracts/LVAllocatorV2.sol",
+            "line_no": 26,
+            "src": "1126:4",
+            "src_char": "1126:4"
+          },
+          {
+            "contract_path": "contracts/LVAllocatorV2.sol",
+            "line_no": 30,
+            "src": "1289:4",
+            "src_char": "1289:4"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2.sol",
+            "line_no": 20,
+            "src": "755:4",
+            "src_char": "755:4"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2.sol",
+            "line_no": 36,
+            "src": "1377:4",
+            "src_char": "1377:4"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2.sol",
+            "line_no": 44,
+            "src": "1733:4",
+            "src_char": "1733:4"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2.sol",
+            "line_no": 60,
+            "src": "2385:4",
+            "src_char": "2385:4"
+          },
+          {
+            "contract_path": "contracts/LendingVaultWatcher01.sol",
+            "line_no": 38,
+            "src": "1764:4",
+            "src_char": "1764:4"
+          },
+          {
+            "contract_path": "contracts/LendingVaultWatcher01.sol",
+            "line_no": 38,
+            "src": "1792:4",
+            "src_char": "1792:4"
+          },
+          {
+            "contract_path": "contracts/PoolToken.sol",
+            "line_no": 40,
+            "src": "1197:4",
+            "src_char": "1197:4"
+          },
+          {
+            "contract_path": "contracts/PoolToken.sol",
+            "line_no": 47,
+            "src": "1500:4",
+            "src_char": "1500:4"
+          },
+          {
+            "contract_path": "contracts/PoolToken.sol",
+            "line_no": 62,
+            "src": "2117:4",
+            "src_char": "2117:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 13,
+            "src": "402:4",
+            "src_char": "402:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 27,
+            "src": "970:4",
+            "src_char": "970:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 31,
+            "src": "1136:4",
+            "src_char": "1136:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 34,
+            "src": "1311:4",
+            "src_char": "1311:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 37,
+            "src": "1269:4",
+            "src_char": "1269:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 38,
+            "src": "1341:4",
+            "src_char": "1341:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 39,
+            "src": "1406:4",
+            "src_char": "1406:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 57,
+            "src": "2113:4",
+            "src_char": "2113:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 62,
+            "src": "2301:4",
+            "src_char": "2301:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 63,
+            "src": "2320:4",
+            "src_char": "2320:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 63,
+            "src": "2361:4",
+            "src_char": "2361:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 68,
+            "src": "2550:4",
+            "src_char": "2550:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 74,
+            "src": "2830:4",
+            "src_char": "2830:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 74,
+            "src": "2845:4",
+            "src_char": "2845:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 75,
+            "src": "2961:4",
+            "src_char": "2961:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 77,
+            "src": "3024:4",
+            "src_char": "3024:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 77,
+            "src": "3045:4",
+            "src_char": "3045:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 104,
+            "src": "4383:4",
+            "src_char": "4383:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 104,
+            "src": "4419:4",
+            "src_char": "4419:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 105,
+            "src": "4470:4",
+            "src_char": "4470:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 108,
+            "src": "4612:4",
+            "src_char": "4612:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 109,
+            "src": "4676:4",
+            "src_char": "4676:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 110,
+            "src": "4696:4",
+            "src_char": "4696:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 112,
+            "src": "4808:4",
+            "src_char": "4808:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 112,
+            "src": "4839:4",
+            "src_char": "4839:4"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableObject.sol",
+            "line_no": 122,
+            "src": "5269:4",
+            "src_char": "5269:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 33,
+            "src": "1358:4",
+            "src_char": "1358:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 33,
+            "src": "1412:4",
+            "src_char": "1412:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 34,
+            "src": "1443:4",
+            "src_char": "1443:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 34,
+            "src": "1454:4",
+            "src_char": "1454:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 37,
+            "src": "1578:4",
+            "src_char": "1578:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 37,
+            "src": "1632:4",
+            "src_char": "1632:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 38,
+            "src": "1663:4",
+            "src_char": "1663:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 42,
+            "src": "1754:4",
+            "src_char": "1754:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 54,
+            "src": "2261:4",
+            "src_char": "2261:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 63,
+            "src": "2666:4",
+            "src_char": "2666:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 63,
+            "src": "2674:4",
+            "src_char": "2674:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 65,
+            "src": "2786:4",
+            "src_char": "2786:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 65,
+            "src": "2812:4",
+            "src_char": "2812:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 83,
+            "src": "3469:4",
+            "src_char": "3469:4"
+          },
+          {
+            "contract_path": "contracts/test/BInterestRateModel.sol",
+            "line_no": 85,
+            "src": "3608:4",
+            "src_char": "3608:4"
+          },
+          {
+            "contract_path": "contracts/test/Borrowable.sol",
+            "line_no": 35,
+            "src": "1423:4",
+            "src_char": "1423:4"
+          },
+          {
+            "contract_path": "contracts/test/Borrowable.sol",
+            "line_no": 51,
+            "src": "2031:4",
+            "src_char": "2031:4"
+          },
+          {
+            "contract_path": "contracts/test/Borrowable.sol",
+            "line_no": 115,
+            "src": "5131:4",
+            "src_char": "5131:4"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 76,
+            "src": "2142:2",
+            "src_char": "2142:2"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 88,
+            "src": "2476:2",
+            "src_char": "2476:2"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 92,
+            "src": "2612:2",
+            "src_char": "2612:2"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 101,
+            "src": "2860:4",
+            "src_char": "2860:4"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 107,
+            "src": "3088:4",
+            "src_char": "3088:4"
+          },
+          {
+            "contract_path": "contracts/test/PoolTokenOld.sol",
+            "line_no": 39,
+            "src": "1278:4",
+            "src_char": "1278:4"
+          },
+          {
+            "contract_path": "contracts/test/PoolTokenOld.sol",
+            "line_no": 46,
+            "src": "1602:4",
+            "src_char": "1602:4"
+          },
+          {
+            "contract_path": "contracts/test/PoolTokenOld.sol",
+            "line_no": 61,
+            "src": "2219:4",
+            "src_char": "2219:4"
+          }
+        ]
+      },
+      {
+        "title": "Local Variable Shadows State Variable",
+        "description": "Rename the local variable that shadows another state variable.",
+        "detector_name": "local-variable-shadowing",
+        "instances": [
+          {
+            "contract_path": "contracts/LVAllocatorV2.sol",
+            "line_no": 28,
+            "src": "1170:17",
+            "src_char": "1170:17"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 43,
+            "src": "1195:18",
+            "src_char": "1195:18"
+          },
+          {
+            "contract_path": "contracts/test/LendingVaultV2Harness.sol",
+            "line_no": 37,
+            "src": "1228:16",
+            "src_char": "1228:16"
+          },
+          {
+            "contract_path": "contracts/test/LendingVaultV2Harness.sol",
+            "line_no": 55,
+            "src": "1778:16",
+            "src_char": "1778:16"
+          },
+          {
+            "contract_path": "contracts/test/LendingVaultV2Harness.sol",
+            "line_no": 81,
+            "src": "2589:16",
+            "src_char": "2589:16"
+          },
+          {
+            "contract_path": "contracts/test/LendingVaultV2Harness.sol",
+            "line_no": 103,
+            "src": "3178:16",
+            "src_char": "3178:16"
+          },
+          {
+            "contract_path": "contracts/test/LendingVaultV2Harness.sol",
+            "line_no": 125,
+            "src": "3759:16",
+            "src_char": "3759:16"
+          }
+        ]
+      },
+      {
+        "title": "`nonReentrant` is Not the First Modifier",
+        "description": "To protect against reentrancy in other modifiers, the `nonReentrant` modifier should be the first modifier in the list of modifiers.",
+        "detector_name": "non-reentrant-not-first",
+        "instances": [
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 22,
+            "src": "628:12",
+            "src_char": "628:12"
+          },
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 30,
+            "src": "911:12",
+            "src_char": "911:12"
+          },
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 42,
+            "src": "1445:12",
+            "src_char": "1445:12"
+          },
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 57,
+            "src": "2029:12",
+            "src_char": "2029:12"
+          },
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 66,
+            "src": "2385:12",
+            "src_char": "2385:12"
+          },
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 75,
+            "src": "2739:12",
+            "src_char": "2739:12"
+          }
+        ]
+      },
+      {
+        "title": "Redundant Statement",
+        "description": "Remove the redundant statement.",
+        "detector_name": "redundant-statement",
+        "instances": [
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 96,
+            "src": "2713:12",
+            "src_char": "2713:12"
+          },
+          {
+            "contract_path": "contracts/test/FlashAllocatePoC.sol",
+            "line_no": 13,
+            "src": "498:4",
+            "src_char": "498:4"
+          }
+        ]
+      },
+      {
+        "title": "Address State Variable Set Without Checks",
+        "description": "Check for `address(0)` when assigning values to address state variables.",
+        "detector_name": "state-no-address-check",
+        "instances": [
+          {
+            "contract_path": "contracts/LVSetterV2.sol",
+            "line_no": 18,
+            "src": "485:24",
+            "src_char": "485:24"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 26,
+            "src": "726:14",
+            "src_char": "726:14"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 27,
+            "src": "744:30",
+            "src_char": "744:30"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 28,
+            "src": "778:28",
+            "src_char": "778:28"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 46,
+            "src": "1668:30",
+            "src_char": "1668:30"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 63,
+            "src": "2319:46",
+            "src_char": "2319:46"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 80,
+            "src": "3101:36",
+            "src_char": "3101:36"
+          },
+          {
+            "contract_path": "contracts/test/BSetter.sol",
+            "line_no": 29,
+            "src": "977:24",
+            "src_char": "977:24"
+          },
+          {
+            "contract_path": "contracts/test/BSetter.sol",
+            "line_no": 30,
+            "src": "1005:24",
+            "src_char": "1005:24"
+          },
+          {
+            "contract_path": "contracts/test/BSetter.sol",
+            "line_no": 54,
+            "src": "1867:32",
+            "src_char": "1867:32"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 10,
+            "src": "251:24",
+            "src_char": "251:24"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 14,
+            "src": "341:18",
+            "src_char": "341:18"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 18,
+            "src": "431:24",
+            "src_char": "431:24"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 84,
+            "src": "2325:30",
+            "src_char": "2325:30"
+          },
+          {
+            "contract_path": "contracts/test/LendingVaultV2Harness.sol",
+            "line_no": 10,
+            "src": "251:20",
+            "src_char": "251:20"
+          }
+        ]
+      },
+      {
+        "title": "Unchecked Return",
+        "description": "Function returns a value but it is ignored. Consider checking the return value.",
+        "detector_name": "unchecked-return",
+        "instances": [
+          {
+            "contract_path": "contracts/LVAllocatorV2.sol",
+            "line_no": 131,
+            "src": "5565:107",
+            "src_char": "5565:107"
+          },
+          {
+            "contract_path": "contracts/LVAllocatorV2.sol",
+            "line_no": 141,
+            "src": "6158:91",
+            "src_char": "6158:91"
+          },
+          {
+            "contract_path": "contracts/LendingVaultV2.sol",
+            "line_no": 79,
+            "src": "3149:64",
+            "src_char": "3149:64"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 113,
+            "src": "3308:53",
+            "src_char": "3308:53"
+          }
+        ]
+      },
+      {
+        "title": "Uninitialized Local Variable",
+        "description": "Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero to improve code readability.",
+        "detector_name": "uninitialized-local-variable",
+        "instances": [
+          {
+            "contract_path": "contracts/ImpermaxERC20.sol",
+            "line_no": 29,
+            "src": "853:12",
+            "src_char": "853:12"
+          }
+        ]
+      },
+      {
+        "title": "Unsafe ERC20 Operation",
+        "description": "ERC20 functions may not behave as expected. For example: return values are not always meaningful. It is recommended to use OpenZeppelin's SafeERC20 library.",
+        "detector_name": "unsafe-erc20-operation",
+        "instances": [
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 113,
+            "src": "3308:27",
+            "src_char": "3308:27"
+          }
+        ]
+      },
+      {
+        "title": "Unspecific Solidity Pragma",
+        "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+        "detector_name": "unspecific-solidity-pragma",
+        "instances": [
+          {
+            "contract_path": "contracts/interfaces/IBorrowable.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/interfaces/IERC20.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILVDeployerV2.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultCallee.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/interfaces/ILendingVaultV2Factory.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/interfaces/IPoolToken.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/test/interfaces/IBDeployer.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/test/interfaces/IBorrowTracker.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/test/interfaces/ICollateral.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/test/interfaces/IFactory.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          },
+          {
+            "contract_path": "contracts/test/interfaces/IImpermaxCallee.sol",
+            "line_no": 1,
+            "src": "0:24",
+            "src_char": "0:24"
+          }
+        ]
+      },
+      {
+        "title": "Unused Import",
+        "description": "Redundant import statement. Consider removing it.",
+        "detector_name": "unused-import",
+        "instances": [
+          {
+            "contract_path": "contracts/LendingVaultV2Factory.sol",
+            "line_no": 3,
+            "src": "26:28",
+            "src_char": "26:28"
+          },
+          {
+            "contract_path": "contracts/libraries/BorrowableHelpers.sol",
+            "line_no": 6,
+            "src": "92:34",
+            "src_char": "92:34"
+          }
+        ]
+      },
+      {
+        "title": "Public Function Not Used Internally",
+        "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+        "detector_name": "unused-public-function",
+        "instances": [
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 24,
+            "src": "542:173",
+            "src_char": "542:173"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 47,
+            "src": "1378:88",
+            "src_char": "1378:88"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 51,
+            "src": "1470:91",
+            "src_char": "1470:91"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 55,
+            "src": "1565:84",
+            "src_char": "1565:84"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 59,
+            "src": "1653:82",
+            "src_char": "1653:82"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 63,
+            "src": "1739:92",
+            "src_char": "1739:92"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 67,
+            "src": "1835:84",
+            "src_char": "1835:84"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 72,
+            "src": "1948:88",
+            "src_char": "1948:88"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 75,
+            "src": "2038:111",
+            "src_char": "2038:111"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 79,
+            "src": "2153:107",
+            "src_char": "2153:107"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 83,
+            "src": "2264:95",
+            "src_char": "2264:95"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 87,
+            "src": "2363:120",
+            "src_char": "2363:120"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 91,
+            "src": "2487:132",
+            "src_char": "2487:132"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 100,
+            "src": "2757:227",
+            "src_char": "2757:227"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 106,
+            "src": "2988:235",
+            "src_char": "2988:235"
+          },
+          {
+            "contract_path": "contracts/test/BorrowableHarness.sol",
+            "line_no": 112,
+            "src": "3227:193",
+            "src_char": "3227:193"
+          },
+          {
+            "contract_path": "contracts/test/ImpermaxERC20Harness.sol",
+            "line_no": 10,
+            "src": "236:75",
+            "src_char": "236:75"
+          },
+          {
+            "contract_path": "contracts/test/ImpermaxERC20Harness.sol",
+            "line_no": 14,
+            "src": "314:79",
+            "src_char": "314:79"
+          }
+        ]
+      }
+    ]
+  },
+  "detectors_used": [
+    "abi-encode-packed-hash-collision",
+    "arbitrary-transfer-from",
+    "assert-state-change",
+    "block-timestamp-deadline",
+    "boolean-equality",
+    "builtin-symbol-shadowing",
+    "centralization-risk",
+    "constant-function-changes-state",
+    "constant-function-contains-assembly",
+    "contract-locks-ether",
+    "costly-loop",
+    "dangerous-unary-operator",
+    "dead-code",
+    "delegate-call-unchecked-address",
+    "delegatecall-in-loop",
+    "delete-nested-mapping",
+    "deprecated-oz-function",
+    "division-before-multiplication",
+    "dynamic-array-length-assignment",
+    "ecrecover",
+    "empty-block",
+    "empty-require-revert",
+    "enumerable-loop-removal",
+    "eth-send-unchecked-address",
+    "experimental-encoder",
+    "function-initializing-state",
+    "function-pointer-in-constructor",
+    "function-selector-collision",
+    "inconsistent-type-names",
+    "incorrect-caret-operator",
+    "incorrect-erc20-interface",
+    "incorrect-erc721-interface",
+    "incorrect-shift-order",
+    "incorrect-use-of-modifier",
+    "internal-function-used-once",
+    "large-numeric-literal",
+    "literal-instead-of-constant",
+    "local-variable-shadowing",
+    "missing-inheritance",
+    "misused-boolean",
+    "modifier-used-only-once",
+    "msg-value-in-loop",
+    "multiple-constructors",
+    "multiple-placeholders",
+    "nested-struct-in-mapping",
+    "non-reentrant-not-first",
+    "out-of-order-retryable",
+    "pre-declared-local-variable-usage",
+    "push-zero-opcode",
+    "redundant-statement",
+    "reentrancy-state-change",
+    "require-revert-in-loop",
+    "return-bomb",
+    "reused-contract-name",
+    "rtlo",
+    "selfdestruct",
+    "signed-integer-storage-array",
+    "solmate-safe-transfer-lib",
+    "state-change-without-event",
+    "state-no-address-check",
+    "state-variable-could-be-constant",
+    "state-variable-could-be-immutable",
+    "state-variable-init-order",
+    "state-variable-read-external",
+    "state-variable-shadowing",
+    "storage-array-length-not-cached",
+    "storage-array-memory-edit",
+    "strict-equality-contract-balance",
+    "tautological-compare",
+    "tautology-or-contradiction",
+    "todo",
+    "tx-origin-used-for-auth",
+    "unchecked-low-level-call",
+    "unchecked-return",
+    "unchecked-send",
+    "uninitialized-local-variable",
+    "unprotected-initializer",
+    "unsafe-casting",
+    "unsafe-erc20-operation",
+    "unsafe-oz-erc721-mint",
+    "unspecific-solidity-pragma",
+    "unused-error",
+    "unused-import",
+    "unused-public-function",
+    "unused-state-variable",
+    "void-constructor",
+    "weak-randomness",
+    "yul-return"
+  ]
+}

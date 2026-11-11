@@ -1,0 +1,58 @@
+al/lib/python3.14/site-packages/crytic_compile/crytic_compile.py", line 279, in __init__
+    self._compile(**kwargs)
+    ~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.14/site-packages/crytic_compile/crytic_compile.py", line 725, in _compile
+    self._platform.compile(self, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.14/site-packages/crytic_compile/platform/hardhat.py", line 227, in compile
+    hardhat_like_parsing(crytic_compile, self._target, build_directory, hardhat_working_dir)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.14/site-packages/crytic_compile/platform/hardhat.py", line 53, in hardhat_like_parsing
+    raise InvalidCompilation(txt)
+crytic_compile.platform.exceptions.InvalidCompilation: Compilation failed. Can you run build command?
+/home/runner/work/frantic-auto/frantic-auto/sweep-target/artifacts/build-info is not a directory.
+Multiple frameworks detected: Hardhat, Truffle. Using Hardhat (highest priority). Use --compile-force-framework to override.
+'npx hardhat clean' running (wd: /home/runner/work/frantic-auto/frantic-auto/sweep-target)
+'npx' returned non-zero exit code 1
+npm warn exec The following package was not found and will be installed: hardhat@3.21.2
+stderr: Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr: 
+stderr: HardhatError: HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr:     at main (/home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/src/internal/cli/main.ts:168:13)
+stderr:     at async file:///home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/dist/src/cli.js:21:1
+'npx hardhat clean --global' running (wd: /home/runner/work/frantic-auto/frantic-auto/sweep-target)
+'npx' returned non-zero exit code 1
+Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr: 
+stderr: HardhatError: HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr:     at main (/home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/src/internal/cli/main.ts:168:13)
+stderr:     at async file:///home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/dist/src/cli.js:21:1
+Problem executing hardhat: Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+
+Please install Hardhat locally using pnpm, npm or yarn, and try again.
+
+HardhatError: HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+
+Please install Hardhat locally using pnpm, npm or yarn, and try again.
+    at main (/home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/src/internal/cli/main.ts:168:13)
+    at async file:///home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/dist/src/cli.js:21:1
+
+'npx hardhat compile --force' running (wd: /home/runner/work/frantic-auto/frantic-auto/sweep-target)
+'npx' returned non-zero exit code 1
+Error HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr: 
+stderr: HardhatError: HHE22: Trying to use a non-local installation of Hardhat, which is not supported.
+stderr: 
+stderr: Please install Hardhat locally using pnpm, npm or yarn, and try again.
+stderr:     at main (/home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/src/internal/cli/main.ts:168:13)
+stderr:     at async file:///home/runner/.npm/_npx/ef9ef3f50c7d7dc1/node_modules/hardhat/dist/src/cli.js:21:1
