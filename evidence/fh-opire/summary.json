@@ -1,0 +1,18 @@
+{
+ "stamp": "fh-opire",
+ "takenAt": "2026-11-11T15:57:08.209Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 3,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "opire-app",
+   "status": 200,
+   "bytes": 128309
+  }
+ ]
+}
