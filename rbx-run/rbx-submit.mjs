@@ -37,119 +37,13 @@ const b64u = (u) => Buffer.from(u).toString('base64').replace(/\+/g, '-').replac
 const b64uDecode = (s) => new Uint8Array(Buffer.from(s.replace(/-/g, '+').replace(/_/g, '/'), 'base64'));
 const hex = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, '0')).join('');
 
-// ---- entry contents (locked, byte-identical to gate-green rbx-gate/entry/) ----
-const MAIN_FINAL = `"""Roblox Up-and-Coming top-10 forecaster (stdlib only, deterministic).
-
-Reads $MAKEFUN_INPUT_DIR/history.ndjson + task.json, writes forecast.json.
-Strategy (locked from local 1-step-ahead cross-val on the kit archive):
-- holder mass H=0.4 on each place's last-chart holder (persistence dominates hourly);
-- challengers: distinct games holding top-15 within the last 3 reads whose best
-  rank is within +-4 of the place, capped at 0.12 each;
-- reserve R=0.2 left unnamed for newcomers (chart churns hard: overlap 8->2/10
-  over 2 days in the archive);
-- top10 = last chart order (best point guess).
-Honest spread beats point forecasts under log scoring with floor -9.21.
-"""
-import json
-import os
-
-HOLDER_P = 0.4
-RESERVE = 0.2
-CHALLENGER_CAP = 0.12
-LOOKBACK_READS = 3
-CHALLENGER_RANK_WINDOW = 15
-PLACE_TOL = 4
-TOP_PLACES = 10
-
-
-def load_history(input_dir):
-    reads = []
-    with open(os.path.join(input_dir, "history.ndjson"), "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                reads.append(json.loads(line))
-    return reads
-
-
-def build_forecast(reads):
-    last = reads[-1]["up_and_coming"]
-    last_by_id = {g["universe_id"]: g for g in last}
-    recent_best = {}
-    for read in reads[-LOOKBACK_READS:]:
-        for g in read["up_and_coming"][:CHALLENGER_RANK_WINDOW]:
-            uid = g["universe_id"]
-            if uid not in recent_best or g["rank"] < recent_best[uid]:
-                recent_best[uid] = g["rank"]
-    probabilities = []
-    for k in range(1, TOP_PLACES + 1):
-        holder = last[k - 1]["universe_id"]
-        probabilities.append({"universe_id": holder, "place": k, "p": HOLDER_P})
-        ch = sorted(
-            (uid for uid, br in recent_best.items()
-             if uid != holder and abs(br - k) <= PLACE_TOL),
-            key=lambda uid: (recent_best[uid], uid),
-        )[:6]
-        if ch:
-            each = min((1.0 - HOLDER_P - RESERVE) / len(ch), CHALLENGER_CAP)
-            for uid in ch:
-                probabilities.append(
-                    {"universe_id": uid, "place": k, "p": round(each, 4)})
-    top10 = [g["universe_id"] for g in last[:TOP_PLACES]]
-    return {"probabilities": probabilities, "top10": top10}
-
-
-def main():
-    input_dir = os.environ.get("MAKEFUN_INPUT_DIR", "/input")
-    output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    reads = load_history(input_dir)
-    forecast = build_forecast(reads)
-    os.makedirs(output_dir, exist_ok=True)
-    out_path = os.path.join(output_dir, "forecast.json")
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(forecast, f, separators=(",", ":"), sort_keys=True)
-        f.write("\\\\n")
-
-
-if __name__ == "__main__":
-    main()
-`;
+// ---- entry contents: single source of truth = gate-green repo copies ----
+const MAIN_FINAL = readFileSync('../rbx-gate/entry/main.py', 'utf8');
+const LICENSE = readFileSync('../rbx-gate/entry/LICENSE', 'utf8');
 const MAIN_V1 = MAIN_FINAL.replace('HOLDER_P = 0.4', 'HOLDER_P = 0.5');
 if (MAIN_V1 === MAIN_FINAL) fail('holder-replace');
-const LICENSE = `MIT License
-
-SPDX-License-Identifier: MIT
-
-Copyright (c) 2026 tidy-gecko-72
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-`;
-
-// drift check: embedded bytes must equal the gate-green repo copies
-let gateMain = null, gateLic = null;
-try {
-  gateMain = readFileSync('../rbx-gate/entry/main.py', 'utf8');
-  gateLic = readFileSync('../rbx-gate/entry/LICENSE', 'utf8');
-} catch (e) { fail('gate-missing', { err: String(e).slice(0, 120) }); }
-if (gateMain !== MAIN_FINAL) fail('entry-drift-main');
-if (gateLic !== LICENSE) fail('entry-drift-license');
-console.log('entry pinned to gate-green bytes');
+if (!LICENSE.includes('SPDX-License-Identifier: MIT')) fail('license-spdx');
+console.log(`entry loaded from gate-green repo copy: main.py ${MAIN_FINAL.length} chars`);
 
 // ---- key: persistent secret for LIVE, throwaway for DRY ----
 let privKeyObj, wallet;
