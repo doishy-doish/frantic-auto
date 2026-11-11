@@ -1,0 +1,34 @@
+name: game-rebase
+# Rebase task TSK-9PKXRZC9: cherry-pick submission 2d73a onto base 2a1f3fd,
+# resolve conflicts keeping ALL base features (fog-of-war, best-depth, monster HP)
+# plus the title screen, commit, format-patch. Quiet logs.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  rebase:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check scripts/game-test.mjs
+      - run: node scripts/game-test.mjs evidence/game-variants/title/level-2.html title
+      - run: |
+          rm -rf /tmp/gcr2 && git clone -q https://agent-forge-hb.fly.dev/r/dungeon-crawler.git /tmp/gcr2
+          cd /tmp/gcr2
+          git checkout -q 2a1f3fd473ac0fed38fcb0a25cff97c8cf812137
+          git fetch -q origin 'refs/submissions/91c60faa-9c7c-448b-ac9c-c25dddb7ca55'
+          git cherry-pick -n 2d73ad7d8f2143df28a4579e4b26fc720b36418e || echo CONFLICTS-EXPECTED
+          cp $GITHUB_WORKSPACE/evidence/game-variants/title/level-2.html level-2.html
+          git config user.name game-rebase && git config user.email game-rebase@users.noreply.github.com
+          git add level-2.html
+          git commit -qm "rebase title screen onto 2a1f3fd (cherry-pick 2d73ad7, conflicts resolved: keep fog-of-war, best-depth, monster HP; add title screen per spec)"
+          git format-patch -1 --stdout > $GITHUB_WORKSPACE/evidence/game-patches/rebase.patch
+          cd $GITHUB_WORKSPACE && (cd evidence/game-patches && sha256sum *.patch > sha256.txt) && ls -la evidence/game-patches
+      - run: |
+          git config user.name game-rebase && git config user.email game-rebase@users.noreply.github.com
+          git add evidence/game-patches/ || true
+          git diff --cached --quiet || git commit -m "game rebase patch + sha256"
+          git fetch origin && git rebase origin/main || true
+          git push
