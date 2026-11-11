@@ -1,0 +1,58 @@
+name: rbx-validate
+# Roblox forecaster validation — shape + determinism + reference score. No secrets,
+# no submission. Downloads the public kit in-run (full egress), runs main.py twice.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 --version
+      - run: |
+          curl -sSL "https://make.fun/c/roblox-up-and-coming-forecast-01/kit" -o kit.tar.gz
+          mkdir -p kit && tar xzf kit.tar.gz -C kit
+          ls kit/roblox-up-and-coming-forecast-01-kit/input/
+      - run: |
+          cd kit/roblox-up-and-coming-forecast-01-kit
+          mkdir -p /tmp/rbx-in /tmp/rbx-out1 /tmp/rbx-out2
+          cp input/history.ndjson /tmp/rbx-in/ && cp input/task.json /tmp/rbx-in/ 2>/dev/null || true
+          MAKEFUN_INPUT_DIR=/tmp/rbx-in MAKEFUN_OUTPUT_DIR=/tmp/rbx-out1 python3 "${GITHUB_WORKSPACE}/rbx-fresh/main.py"
+          MAKEFUN_INPUT_DIR=/tmp/rbx-in MAKEFUN_OUTPUT_DIR=/tmp/rbx-out2 python3 "${GITHUB_WORKSPACE}/rbx-fresh/main.py"
+          cmp /tmp/rbx-out1/forecast.json /tmp/rbx-out2/forecast.json && echo DETERMINISTIC
+          python3 - <<'EOF'
+          import json, math
+          fc = json.load(open('/tmp/rbx-out1/forecast.json'))
+          assert set(fc.keys()) == {'probabilities', 'top10'}, fc.keys()
+          assert len(fc['top10']) == 10 and len(set(fc['top10'])) == 10
+          sums = {}
+          for r in fc['probabilities']:
+              assert set(r.keys()) == {'universe_id', 'place', 'p'}
+              assert 1 <= r['place'] <= 10 and 0 <= r['p'] <= 1
+              sums[r['place']] = sums.get(r['place'], 0) + r['p']
+          assert all(s <= 1.0 + 1e-9 for s in sums.values()), sums
+          print('SHAPE OK places:', sorted(sums.items()))
+          # 1-step-ahead reference on kit archive (informational only)
+          reads = [json.loads(l) for l in open('/tmp/rbx-in/history.ndjson') if l.strip()]
+          by_place = {}
+          for r in fc['probabilities']:
+              by_place.setdefault(r['place'], []).append(r)
+          tot, n = 0.0, 0
+          for read in reads[-6:]:
+              chart = read['up_and_coming']
+              named = {g['universe_id'] for g in chart}
+              for k in range(1, 11):
+                  game = chart[k-1]
+                  rows = [r for r in by_place.get(k, []) if r['universe_id'] in named]
+                  s = sum(r['p'] for r in rows)
+                  row = next((r for r in rows if r['universe_id'] == game['universe_id']), None)
+                  if row: p = row['p']
+                  else:
+                      un = [g for g in chart if not any(r['universe_id'] == g['universe_id'] for r in rows)]
+                      p = (1 - min(s, 1)) / len(un) if un else 0.0001
+                  tot += math.log(max(p, 0.0001)); n += 1
+          print('REF 1-step trailing-6 per-place-mean:', round(tot/n, 3))
+          EOF
