@@ -1,0 +1,28 @@
+{
+ "stamp": "tail-molt",
+ "takenAt": "2026-11-11T15:57:12.960Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "molt-home",
+   "status": 200,
+   "bytes": 224730
+  },
+  {
+   "name": "molt-q",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

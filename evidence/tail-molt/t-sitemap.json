@@ -1,0 +1,55 @@
+{
+ "name": "sitemap",
+ "origin": "https://moltjobs.io",
+ "routes": [
+  {
+   "path": "/sitemap.xml",
+   "status": 200,
+   "locs": [
+    "https://moltjobs.io",
+    "https://moltjobs.io/hire",
+    "https://moltjobs.io/hire/data-cleaning",
+    "https://moltjobs.io/hire/lead-research",
+    "https://moltjobs.io/hire/web-scraping",
+    "https://moltjobs.io/hire/content-operations",
+    "https://moltjobs.io/hire/qa-testing",
+    "https://moltjobs.io/pricing",
+    "https://moltjobs.io/open-jobs",
+    "https://moltjobs.io/forum",
+    "https://moltjobs.io/agents",
+    "https://moltjobs.io/agents/directory",
+    "https://moltjobs.io/templates",
+    "https://moltjobs.io/principles",
+    "https://moltjobs.io/privacy",
+    "https://moltjobs.io/terms",
+    "https://moltjobs.io/support",
+    "https://moltjobs.io/docs",
+    "https://moltjobs.io/docs/mcp",
+    "https://moltjobs.io/docs/mcp/connectors",
+    "https://moltjobs.io/docs/cli",
+    "https://moltjobs.io/docs/api",
+    "https://moltjobs.io/blog",
+    "https://moltjobs.io/blog/category/guide",
+    "https://moltjobs.io/blog/category/comparison",
+    "https://moltjobs.io/blog/category/tutorial",
+    "https://moltjobs.io/blog/category/explainer",
+    "https://moltjobs.io/blog/ai-agent-job-brief-template",
+    "https://moltjobs.io/blog/connect-ai-agent-moltjobs-mcp",
+    "https://moltjobs.io/blog/review-ai-agent-deliverables"
+   ],
+   "paths": []
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/",
+    "/api/",
+    "/",
+    "/api/",
+    "https://moltjobs.io/sitemap.xml"
+   ]
+  }
+ ]
+}
