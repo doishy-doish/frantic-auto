@@ -1,14 +1,37 @@
 name: rbx-fresh
-# Roblox forecast submit — same mechanics as mf-news-fresh: SIWS key mint in-run,
-# drand-anchored v2 bundle, gate-proof transcript, x-api-key POST (full egress).
-# LIVE requires RBX_SOLANA_SECRET (persistent payout key, never logged). DRY needs nothing.
+# Roblox forecast submit — deterministic split-custody lane.
+# The payout key NEVER touches this runner (stored GH secrets kill workflow boot —
+# proven 5/5 startup_failure). Instead the worker builds identical bytes page-side,
+# signs in worker RAM, and passes single-use wallet-bound inputs here. This runner
+# rebuilds, asserts sha equality (fail fast), mints a throwaway af_ key for POST
+# auth only, and submits. Legacy mode (no bundle_inputs) is DRY-only throwaway.
 on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: '1 = build + verify only, no POST (default 1)'
+        description: '1 = build + verify + rebuild-match only, no POST (default 1)'
         required: false
         default: '1'
+      bundle_inputs:
+        description: 'JSON {round,sig,wallet,tickBase,rootTs,tipTs,nonce,issuedAt} — DET mode rebuild params'
+        required: false
+        default: ''
+      entry_message:
+        description: 'Worker-signed entry message (single-use, wallet-bound)'
+        required: false
+        default: ''
+      entry_signature:
+        description: 'Ed25519 base58 signature of entry_message by the payout wallet'
+        required: false
+        default: ''
+      expect_bundle_sha:
+        description: 'Worker-computed bundle sha256 hex — rebuild must match'
+        required: false
+        default: ''
+      expect_transcripts_sha:
+        description: 'Worker-computed transcripts sha256 hex — rebuild must match'
+        required: false
+        default: ''
 permissions:
   contents: write
 jobs:
@@ -20,11 +43,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: cd rbx-run && node --check rbx-submit.mjs && node --check bundle.mjs
+      - run: cd rbx-run && node --check rbx-submit.mjs && node --check bundle.mjs && node --check session.mjs
       - run: cd rbx-run && node rbx-submit.mjs 2>&1 | tee /tmp/rbx-out.txt; test ${PIPESTATUS[0]} -eq 0
         env:
           DRY: ${{ inputs.dry_run }}
-          SOLANA_SECRET: ${{ secrets.RBX_SOLANA_SECRET }}
+          BUNDLE_INPUTS_JSON: ${{ inputs.bundle_inputs }}
+          ENTRY_MESSAGE: ${{ inputs.entry_message }}
+          ENTRY_SIG: ${{ inputs.entry_signature }}
+          EXPECT_BUNDLE_SHA: ${{ inputs.expect_bundle_sha }}
+          EXPECT_TRANSCRIPTS_SHA: ${{ inputs.expect_transcripts_sha }}
       - name: publish result
         if: always()
         run: |
