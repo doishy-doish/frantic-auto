@@ -1,0 +1,37 @@
+
+---------------------------------------------------------------------------
+# Configuration
+---------------------------------------------------------------------------
+Root - /home/runner/work/frantic-auto/frantic-auto/sweep-target
+Source - /home/runner/work/frantic-auto/frantic-auto/sweep-target/contracts
+Remappings - [
+    "forge-std/=lib/forge-std/src/",
+    "erc4626-tests/=lib/erc4626-tests/",
+    "@tokenized-strategy/=lib/tokenized-strategy/src/",
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "ds-test/=lib/forge-std/lib/ds-test/src/",
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+    "openzeppelin/=lib/openzeppelin-contracts/contracts/",
+    "tokenized-strategy/=lib/tokenized-strategy/",
+]
+EVM version - paris
+---------------------------------------------------------------------------
+# Source Scope
+---------------------------------------------------------------------------
+Include Filepaths Containing - No specific criteria.
+Exclude Filepaths Containing - No specific criteria.
+Auto Excluding - No Files.
+---------------------------------------------------------------------------
+# Compiling Abstract Syntax Trees
+---------------------------------------------------------------------------
+Ingesting 14 compiled files [solc : v0.8.18]
+---------------------------------------------------------------------------
+# Scanning Contracts
+---------------------------------------------------------------------------
+Running 88 detectors
+Detectors run, printing report.
+Report printed to ../evidence/yearn-1/aderyn.json
+
+🌱 Aderyn is growing with community support.
+Help others discover it — drop a star on GitHub:
+https://github.com/Cyfrin/aderyn

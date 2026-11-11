@@ -1,0 +1,75 @@
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests) registered for path 'lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/forge-std'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/openzeppelin-contracts'
+Submodule 'lib/tokenized-strategy' (https://github.com/yearn/tokenized-strategy) registered for path 'lib/tokenized-strategy'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            2b58ecbcf3dfde7a75959dc7b4eb3d0670278de6 -> FETCH_HEAD
+Submodule path 'lib/forge-std': checked out '2b58ecbcf3dfde7a75959dc7b4eb3d0670278de6'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f -> FETCH_HEAD
+Submodule path 'lib/forge-std/lib/ds-test': checked out '6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            bd325d56b4c62c9c5c1aff048c37c6bb18ac0290 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts': checked out 'bd325d56b4c62c9c5c1aff048c37c6bb18ac0290'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/openzeppelin-contracts/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts/lib/forge-std'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            c2236853aadb8e2d9909bbecdc490099519b70a4 -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts/lib/forge-std': checked out 'c2236853aadb8e2d9909bbecdc490099519b70a4'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f -> FETCH_HEAD
+Submodule path 'lib/openzeppelin-contracts/lib/forge-std/lib/ds-test': checked out '6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f'
+From https://github.com/yearn/tokenized-strategy
+ * branch            6e12ce08584b49c7560227e94810d2f0e3dec8b2 -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy': checked out '6e12ce08584b49c7560227e94810d2f0e3dec8b2'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests) registered for path 'lib/tokenized-strategy/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/tokenized-strategy/lib/forge-std'
+Submodule 'lib/openzeppelin-contracts' (https://github.com/OpenZeppelin/openzeppelin-contracts) registered for path 'lib/tokenized-strategy/lib/openzeppelin-contracts'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy/lib/forge-std'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy/lib/openzeppelin-contracts'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            2b58ecbcf3dfde7a75959dc7b4eb3d0670278de6 -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy/lib/forge-std': checked out '2b58ecbcf3dfde7a75959dc7b4eb3d0670278de6'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/tokenized-strategy/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy/lib/forge-std/lib/ds-test': checked out '6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f'
+From https://github.com/OpenZeppelin/openzeppelin-contracts
+ * branch            bd325d56b4c62c9c5c1aff048c37c6bb18ac0290 -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy/lib/openzeppelin-contracts': checked out 'bd325d56b4c62c9c5c1aff048c37c6bb18ac0290'
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/tokenized-strategy/lib/openzeppelin-contracts/lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/tokenized-strategy/lib/openzeppelin-contracts/lib/forge-std'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy/lib/openzeppelin-contracts/lib/forge-std'...
+From https://github.com/a16z/erc4626-tests
+ * branch            8b1d7c2ac248c33c3506b1bff8321758943c5e11 -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy/lib/openzeppelin-contracts/lib/erc4626-tests': checked out '8b1d7c2ac248c33c3506b1bff8321758943c5e11'
+From https://github.com/foundry-rs/forge-std
+ * branch            c2236853aadb8e2d9909bbecdc490099519b70a4 -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy/lib/openzeppelin-contracts/lib/forge-std': checked out 'c2236853aadb8e2d9909bbecdc490099519b70a4'
+Submodule 'lib/ds-test' (https://github.com/dapphub/ds-test) registered for path 'lib/tokenized-strategy/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'
+Cloning into '/home/runner/work/frantic-auto/frantic-auto/sweep-target/lib/tokenized-strategy/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test'...
+From https://github.com/dapphub/ds-test
+ * branch            6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f -> FETCH_HEAD
+Submodule path 'lib/tokenized-strategy/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test': checked out '6da7dd8f7395f83e1fb6fa88a64ba9a030f85d4f'
