@@ -1,0 +1,59 @@
+{
+ "name": "d-micro",
+ "engine": "ddg",
+ "query": "micro grant AI agents 2026 apply",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Grants for AI Projects (2026): Federal, State and Foundation",
+   "url": "https://www.layer3labs.io/guides/grants-for-ai-projects",
+   "snippet": "Grants for AI Projects: Where to Find AI Funding in 2026 A plain-English map of real, currently open funding for artificial intelligence work — federal, state, and private — plus who actually qualifies and how to apply ."
+  },
+  {
+   "title": "AWS Agentic AI call for proposals - Fall 2026 - Amazon Science",
+   "url": "https://www.amazon.science/research-awards/call-for-proposals/aws-agentic-ai-call-for-proposals-fall-2026",
+   "snippet": "AWS Agentic AI aims to advance agentic AI research by funding development of open-source tools and research that benefit the AI community at large, or impactful research related to agents ."
+  },
+  {
+   "title": "AI Research Grants 2026 | Atom Grants",
+   "url": "https://atomgrants.com/collections/ai-research-grants",
+   "snippet": "Open AI research grants and funding opportunities for 2026 , from NSF, DOE, and NIH to Schmidt Sciences and Sloan. A live list, updated daily."
+  },
+  {
+   "title": "AI Grants for Nonprofits in 2026: A Guide to Available Funding",
+   "url": "https://onehundrednights.com/article/ai-grants-nonprofits-2026/",
+   "snippet": "This article provides a comprehensive guide to the most significant AI grant programs available to nonprofits in 2026 . For each program, it covers what is on offer, who is eligible, when to apply , and what funders are looking for in propo"
+  },
+  {
+   "title": "AI Grants 2026: NSF, DARPA &amp; DOE Funding | GrantMetric",
+   "url": "https://grantmetric.com/insights/ai-grants-2026",
+   "snippet": "Federal AI funding is surging in 2026 . NSF, DOE, DARPA, and NIH are all running major AI grant programs. Here&#x27;s what&#x27;s available and how to apply ."
+  },
+  {
+   "title": "Artificial Intelligence Researchers Grants 2026/2027",
+   "url": "https://www.usgrants.org/business/artificial-intelligence-researchers",
+   "snippet": "Browse and view government and federal funding opportunities for Artificial Intelligence Researchers in 2026 /2027"
+  },
+  {
+   "title": "Artificial Intelligence Grant - Apply Today | NSF SBIR",
+   "url": "https://seedfund.nsf.gov/topics/artificial-intelligence/",
+   "snippet": "NSF funds startups. Use a research and development grant to create an artificial intelligence technology."
+  },
+  {
+   "title": "Opportunity Listing - MICRO-2026-1",
+   "url": "https://simpler.grants.gov/opportunity/9307e413-d55b-488b-a924-ee2460128269",
+   "snippet": "Link to additional information MICRO - 2026 -1 Archived: July 5, 2026 Application process This site is a work in progress. Go to www. grants .gov to apply , track application status, and subscribe to updates. View on Grants .gov"
+  },
+  {
+   "title": "AI Grants 2026: Federal &amp; Foundation Funding for AI Research | Granted AI",
+   "url": "https://grantedai.com/grants/ai",
+   "snippet": "Browse grants for artificial intelligence, machine learning, and responsible AI . NSF, DARPA, NIH, DOE, and foundations."
+  },
+  {
+   "title": "AI Grant",
+   "url": "https://aigrant.com/",
+   "snippet": "AI Grant companies — batch 4 Goodfire — Interpretability tools Silurian — Weather forecasting foundation models Granola — AI notepad for meetings Pulse AI — Intelligent document extraction InspectMind AI — AI plan checker for construction H"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "stamp": "tail-micro",
+ "takenAt": "2026-11-11T15:57:10.047Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "d-micro",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "d-smallgrant",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "d-retro",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

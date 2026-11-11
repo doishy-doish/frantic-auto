@@ -1,0 +1,59 @@
+{
+ "name": "d-smallgrant",
+ "engine": "ddg",
+ "query": "small grant open source developers crypto",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "Bitcoin and Crypto Developer Grant Program | Kraken",
+   "url": "https://www.kraken.com/features/grants",
+   "snippet": "Kraken funds open-source Bitcoin and crypto developers with quarterly grants . Apply if you&#x27;re building public-good tools for the ecosystem."
+  },
+  {
+   "title": "Crypto grants for individuals: who funds solo builders",
+   "url": "https://www.web3grant.com/guides/crypto-grants-for-individuals",
+   "snippet": "Crypto grants for individuals are common. As of November 2026, more than 40 of the 100 programs in web3grant&#x27;s directory name individuals, solo builders or &quot;anyone&quot; in their eligibility rules, so you do not need a company. Bi"
+  },
+  {
+   "title": "Bitcoin Development Grants: Who Funds Open-Source Bitcoin Work?",
+   "url": "https://www.spark.money/tools/bitcoin-development-grant-directory",
+   "snippet": "Directory of Bitcoin development grants , fellowships, and funding programs for open-source contributors. Compare Brink, OpenSats, Spiral, HRF, and more."
+  },
+  {
+   "title": "Crypto and Web3 Grants for Builders | OpenGrants",
+   "url": "https://opengrants.io/guides/crypto-grants/",
+   "snippet": "189 recurring crypto and web3 grants , retro rounds, hackathons and bounties for builders, with award, catch and next deadline. Data refreshed Nov 9, 2026."
+  },
+  {
+   "title": "Ethereum Foundation &amp; community grant programs | ethereum.org",
+   "url": "https://ethereum.org/community/grants",
+   "snippet": "- Public goods funding ecosystem that balances the common good and individual financial empowerment Giveth ( opens in a new tab) - Crypto donation platform enabling direct donations from for-good projects with zero added fees Artizen ( open"
+  },
+  {
+   "title": "Jack Dorsey&#x27;s Start Small expands funding for open source AI and ...",
+   "url": "https://cryptobriefing.com/dorsey-start-small-bitcoin-ai-open-source/",
+   "snippet": "Jack Dorsey&#x27;s nonprofit initiative, Start Small , has been steadily expanding its financial support for open-source AI projects and Bitcoin development, with cumulative donations now stretching well into the tens of millions of dollars"
+  },
+  {
+   "title": "Blockchain and Cryptocurrency Grants | Funding Opportunities",
+   "url": "https://www.giboo.com/grants/tech-and-research/blockchain-and-cryptocurrency",
+   "snippet": "This grant program is dedicated to supporting critical projects and foundational development within the Bitcoin ecosystem, with a strong emphasis on free and open-source software. Key focus areas include advancing the overall health and sta"
+  },
+  {
+   "title": "Crypto Grants 2026: 320+ Open Blockchain Grants - Blockchain Academics",
+   "url": "https://blockchainacademics.com/grants",
+   "snippet": "320+ open crypto and blockchain grants from Solana, Ethereum, Stellar, NEAR, Arbitrum and more. Amounts, deadlines and how to apply, checked daily."
+  },
+  {
+   "title": "Top 15 Blockchain Grants to Fund Your Web3 Project - 4ire",
+   "url": "https://4irelabs.com/articles/top-15-blockchain-grants-to-get-funding/",
+   "snippet": "If you&#x27;re applying for a grant , the strongest applications pair a working prototype with sound tokenomics and, where funds touch user money, a completed audit. 4IRE&#x27;s team can hire on as blockchain developers to get a prototype g"
+  },
+  {
+   "title": "Crypto Grants 2026: 10+ Blockchain Funding Programs",
+   "url": "https://rocknblock.io/blog/crypto-grants-2026",
+   "snippet": "Explore crypto grants in 2026 for Web3 startups, blockchain developers , DeFi projects, and open-source teams. Find funding programs and application links."
+  }
+ ]
+}
