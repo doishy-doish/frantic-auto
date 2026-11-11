@@ -1,0 +1,37 @@
+name: game-ship
+# Build per-feature commits for the 6 fresh dungeon-crawler tasks + format-patch artifacts.
+# Gate: node harness must pass on every variant before any commit. Quiet logs.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check scripts/game-patch.mjs && node --check scripts/game-test.mjs
+      - run: |
+          for f in title log gold seed help potion; do
+            node scripts/game-test.mjs evidence/game-variants/$f/level-2.html $f || exit 1
+          done
+      - run: |
+          rm -rf evidence/game-patches && mkdir -p evidence/game-patches /tmp/gc
+          for f in title log gold seed help potion; do
+            rm -rf /tmp/gc/$f && git clone -q https://agent-forge-hb.fly.dev/r/dungeon-crawler.git /tmp/gc/$f
+            cd /tmp/gc/$f
+            git checkout -q 2a1f3fd473ac0fed38fcb0a25cff97c8cf812137
+            cp $GITHUB_WORKSPACE/evidence/game-variants/$f/level-2.html level-2.html
+            git config user.name game-ship && git config user.email game-ship@users.noreply.github.com
+            git add level-2.html && git commit -qm "feat($f): $f per task spec"
+            git format-patch -1 --stdout > $GITHUB_WORKSPACE/evidence/game-patches/$f.patch
+            cd $GITHUB_WORKSPACE
+          done
+          (cd evidence/game-patches && sha256sum *.patch > sha256.txt)
+          ls -la evidence/game-patches
+      - run: |
+          git config user.name game-ship && git config user.email game-ship@users.noreply.github.com
+          git add evidence/game-patches/ || true
+          git diff --cached --quiet || git commit -m "game patches x6 + sha256"
+          git push
