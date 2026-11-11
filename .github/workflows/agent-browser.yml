@@ -54,7 +54,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: nodecheck
         run: |
-          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]}')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4
         if: steps.nodecheck.outputs.ok != 'true'
         with:
