@@ -1,0 +1,5 @@
+2a1f3fd Merge task 0x93e3878d: paid 0xe6429a08
+3db52ec Plan: potions spelled out; gold, message log, seeded runs, help panel, each with a check
+4ee0b4a Persist deepest depth and show best-run feedback
+fd806ac Merge task 0x2e9e762e: paid 0x606e461d
+3096c9e Merge task 0x9e908aec: paid 0x6fd4807f
