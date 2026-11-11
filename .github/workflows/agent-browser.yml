@@ -72,7 +72,7 @@ jobs:
       - run: |
           NEED_PW=0
           if [ "${{ inputs.render }}" = "1" ]; then NEED_PW=1; fi
-          case "${{ inputs.targets }}" in *google*) NEED_PW=1;; esac
+          case "${{ inputs.case }}" in *demand*) NEED_PW=1;; esac
           if [ "$NEED_PW" = "1" ]; then npm init -y >/dev/null 2>&1; npm pkg set type=module >/dev/null 2>&1; npm i playwright@latest && npx playwright install chromium --with-deps; fi
       - run: node scripts/browse.mjs
         env:
