@@ -24,7 +24,7 @@ TOP_PLACES = 10
 
 def load_history(input_dir):
     reads = []
-    with open(os.path.join(input_dir, "history.ndjson"), "utf-8") as f:
+    with open(os.path.join(input_dir, "history.ndjson"), "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line:
@@ -66,7 +66,7 @@ def main():
     forecast = build_forecast(reads)
     os.makedirs(output_dir, exist_ok=True)
     out_path = os.path.join(output_dir, "forecast.json")
-    with open(out_path, "w", "utf-8") as f:
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(forecast, f, separators=(",", ":"), sort_keys=True)
         f.write("\n")
 
