@@ -1,0 +1,18 @@
+{
+ "stamp": "immunefi2",
+ "takenAt": "2026-11-11T08:55:08.836Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 3,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "immunefi-list",
+   "status": 200,
+   "bytes": 440177
+  }
+ ]
+}
