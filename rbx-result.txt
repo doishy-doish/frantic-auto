@@ -1,0 +1,17 @@
+RUN_ID=43041672213 DRY=0
+---
+entry loaded from gate-green repo copy: main.py 2733 chars
+auth 3fUVp2… payout 4N8u1v… (DET presigned)
+signed in as @coral-panda-77
+reg domain=make.fun account=01a1cb12-ef86-766d-9792-4c7fec18656b
+handshake published for run 43041672213, awaiting reg file...
+reg inputs received, proceeding
+drand round 33868333
+{"check":"self","turns":"10A/9T","usage":"10/10 non-round>=100","anchor":"before-first-write","window":"increasing-after-round"}
+bundle 3010 bytes root=55a52669ebb7b54b80081ff57c3181efdea6c567 tip=024faed72203fc54b8244d20a9f763d8b754f5b2
+transcript 10604 bytes
+rebuild-match: runner bytes == worker bytes
+reg-post http=201
+{"regOk":true,"regHttp":201,"regResp":"{\"wallet\":{\"wallet\":\"4N8u1vXeEymNyHjWaTkKtQHSUTsko6N2KdvyfL3dKsYS\",\"kind\":\"registered\",\"signs_in\":false,\"sign_in_id\":null,\"paid\":\"any\",\"name\":null,\"primary\":false,\"added_at\":\"2026-11-11T14:47:00.930Z\"},\"already\":false}"}
+submit http=202
+{"ok":true,"http":202,"det":true,"handle":"coral-panda-77","payoutWallet":"4N8u1vXeEymNyHjWaTkKtQHSUTsko6N2KdvyfL3dKsYS","round":33868333,"root":"55a52669ebb7b54b80081ff57c3181efdea6c567","tip":"024faed72203fc54b8244d20a9f763d8b754f5b2","bundleSha":"dd393aaa68a1fab280da433f984b8f941cc3c2f7c1e571e12c425b61d2c76b78","resp":"{\"submission_id\":\"01a1cb13-96e0-71dd-b5f2-b58baed63987\",\"title\":\"Roblox Up-and-Coming forecaster H=0.4\",\"title_generated\":false,\"status\":\"submitting\",\"round\":1,\"payout_wallet\":\"4N8u1vXeEymNyHjWaTkKtQHSUTsko6N2KdvyfL3dKsYS\",\"receipt\":{\"id\":\"01a1cb13-96e0-71dd-b5f2-b58baed63987\",\"server_time\":\"2026-11-11T14:47:01.077Z\",\"repo\":\"bundle:55a52669ebb7b54b80081ff57c3181efdea6c567\",\"commit\":\"024faed72203fc54b8244d20a9f763d8b754f5b2\",\"snapshot_sha256\":null,\"bundle_sha256\":null,\"pricing_rev\":\"1ea1b8ea1c4a66de7ef740880c266a2c0e119de11f1651873f3b1a55f3caeec9\"},\"claim_code\":\"AF-NMXVC-NEZ8P-5K01D-NTA7H\",\"claim_code_note\":\"Your entry's claim code: only you see it again, on your entry's status page while signed in.\",\"transcript_bundle_sha256\":null,\"transcript_files\":1,\"links\":{\"submission\":\"/api/submissions/01a1cb13-96e0-71dd-b5f2-b58baed63987\",\"submissions\":\"/api/competitions/roblox-up-and-coming-forecast-01/submissions\"}}"}
