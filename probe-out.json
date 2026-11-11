@@ -13,15 +13,15 @@
   "work": "open",
   "slots": {
    "capacity": 100,
-   "occupied": 98,
-   "available": 2,
-   "active": 4,
-   "delivered": 32,
+   "occupied": 99,
+   "available": 1,
+   "active": 3,
+   "delivered": 34,
    "accepted": 1,
    "paid": 61,
    "revising": 1,
-   "rejected": 71,
-   "expired": 171
+   "rejected": 73,
+   "expired": 175
   },
   "claimWindow": 720,
   "artifacts": [
