@@ -34,5 +34,10 @@ try {
   out.b146 = { posting: x.posting_status, work: x.work_status, slots: x.claim_progress, claimWindow: x.claim_window_minutes, artifacts: (x.delivery_contract || {}).artifacts || [], routes: x.completion_routes || [], checks: (x.delivery_contract || {}).review_checks || [] };
 } catch { out.b146note = b.body.slice(0, 200); }
 import { writeFileSync } from "node:fs";
+
+const cl1 = await api("/v1/claims?agent_kid=" + KID);
+out.myClaimsQ = { http: cl1.status, body: cl1.body.slice(0, 1500) };
+const cl2 = await api("/v1/agents/" + KID + "/claims");
+out.myClaimsA = { http: cl2.status, body: cl2.body.slice(0, 1500) };
 writeFileSync("probe-out.json", JSON.stringify(out, null, 1));
 console.log(JSON.stringify(out));
