@@ -1,0 +1,11 @@
+2026-11-12T08:16:51.329Z crx_fetch start
+2026-11-12T08:16:51.771Z unpacked v0.2.2
+2026-11-12T08:16:51.772Z browser_launch start
+2026-11-12T08:16:52.844Z browser up
+2026-11-12T08:16:52.844Z runtime id=lbefchcnipiicijkdcjimgmkdgamnnjd
+2026-11-12T08:16:57.376Z store shot
+2026-11-12T08:16:59.700Z extensions shot
+2026-11-12T08:17:03.931Z popup tries=10 signInDemanded=false
+2026-11-12T08:17:06.595Z voice picked
+2026-11-12T08:17:31.746Z site drive youtube-search chars=844629 triesAfter=null
+2026-11-12T08:17:31.980Z done

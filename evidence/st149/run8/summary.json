@@ -1,0 +1,62 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:17:31.980Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:16:51.329Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:16:51.771Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:16:51.772Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:16:52.844Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:16:52.844Z",
+   "s": "runtime id=lbefchcnipiicijkdcjimgmkdgamnnjd"
+  },
+  {
+   "t": "2026-11-12T08:16:57.376Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:16:59.700Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:17:03.931Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:17:06.595Z",
+   "s": "voice picked"
+  },
+  {
+   "t": "2026-11-12T08:17:31.746Z",
+   "s": "site drive youtube-search chars=844629 triesAfter=null"
+  },
+  {
+   "t": "2026-11-12T08:17:31.980Z",
+   "s": "done"
+  }
+ ],
+ "errors": [],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": null,
+ "outputChars": 844629,
+ "outputText": "\"Waiting for permission\"}]},\"permissionsSubtext\":{\"runs\":[{\"text\":\"Allow microphone access to search with voice\"}]},\"disabledHeader\":{\"runs\":[{\"text\":\"Search with your voice\"}]},\"disabledSubtext\":{\"runs\":[{\"text\":\"To search by voice, go to your browser settings and allow access to microphone\"}]},\"microphoneButtonAriaLabel\":{\"runs\":[{\"text\":\"Cancel\"}]},\"exitButton\":{\"buttonRenderer\":{\"style\":\"STYLE_DEFAULT\",\"size\":\"SIZE_DEFAULT\",\"isDisabled\":false,\"icon\":{\"iconType\":\"CLOSE\"},\"trackingParams\":\"CAQQ0LEFIhMIhr7N__6BmAMVucGUCR2g6iCc\",\"accessibilityData\":{\"accessibilityData\":{\"label\":\"Cancel\"}}}},\"trackingParams\":\"CAMQ7q8FIhMIhr7N__6BmAMVucGUCR2g6iCc\",\"microphoneOffPromptHeader\":{\"runs\":[{\"text\":\"Microphone off. Try again.\"}]}}},\"popupType\":\"TOP_ALIGNED_DIALOG\"}}]}},\"icon\":{\"iconType\":\"MICROPHONE_ON\"},\"tooltip\":\"Search with your voice\",\"trackingParams\":\"CAIQ7a8FIhMIhr7N__6BmAMVucGUCR2g6iCc\",\"accessibilityData\":{\"accessibilityData\":{\"label\":\"Search with your voice\"}}}}}},\"frameworkUpdates\":{\"entityBatchUpdate\":{\"mutations\":[{\"entityKey\":\"EgZ0b3BiYXIg9QEoAQ%3D%3D\",\"type\":\"ENTITY_MUTATION_TYPE_DELETE\",\"options\":{\"persistenceOption\":\"ENTITY_PERSISTENCE_OPTION_INMEMORY_AND_PERSIST\"}}],\"timestamp\":{\"seconds\":\"1794471426\",\"nanos\":834758596}}}}; if (window.ytcsi) {window.ytcsi.tick('pdr', null, '');} (function serverContract() {window['ytPageType'] = \"browse\";window['ytCommand'] = {\"clickTrackingParams\":\"IhMIsc3L__6BmAMVVuByCR37wQFWMghleHRlcm5hbMoBBMHKmrg=\",\"commandMetadata\":{\"webCommandMetadata\":{\"url\":\"/\",\"webPageType\":\"WEB_PAGE_TYPE_BROWSE\",\"rootVe\":3854,\"apiUrl\":\"/youtubei/v1/browse\"}},\"browseEndpoint\":{\"browseId\":\"FEwhat_to_watch\"}};window['ytUrl'] = '\\/';var a=window;(function(e){var c=window;c.getInitialCommand=function(){return e};c.loadInitialCommand&&c.loadInitialCommand(c.getInitialCommand())})(a.ytCommand); (function(e,c,l,f,g,h,k){var d=window;d.getInitialData=function(){var b=window;b.ytcsi&&b.ytcsi.tick(\"pr\",null,\"\");b={page:e,endpoint:c,response:l};f&&(b.playerResponse=f);g&&(b.reelWatchSequenceResponse=g);k&&(b.url=k);h&&(b.previousCsn=h);return b};d.loadInitialData&&d.loadInitialData(d.getInitialData())})(a.ytPageType,a.ytCommand,a.ytInitialData,a.ytInitialPlayerResponse,a.ytInitialReelWatchSequenceResponse,a.ytPreviousCsn,a.ytUrl); })(); if (window.ytcsi) {window.ytcsi.tick('gcc', null, '');} ytcfg.set({\"CSI_SERVICE_NAME\": 'youtube', \"TIMING_INFO\": {\"GetHome_rid\": '0x91fa00a8e40558b0',}}) if (window.ytcsi) {ytcsi.infoGel({serverTimeMs: 138.0 }, '');} ",
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run8/ext-unpacked",
+ "extRuntimeId": "lbefchcnipiicijkdcjimgmkdgamnnjd"
+}
