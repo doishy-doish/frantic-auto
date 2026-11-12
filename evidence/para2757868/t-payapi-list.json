@@ -1,0 +1,147 @@
+{
+ "name": "payapi-list",
+ "url": "https://payapi.market/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 33189,
+ "textLen": 14405,
+ "head": "x402 marketplace for AI agents | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Marketplace Providers Agents Agent marketplace Enterprises Calculator Pricing Blog News · About x402 marketplace for AI agents List an API once. Keep 100% of what each call earns. Agents pay per request in USDC on Base, Solana or Algorand, where a listing offers it. Listing is free. 1,546 settlement-verified APIs, 2,742 listed. The badge means we put a coin in from our own wallet and the can came out. 1,546 settlement-verified APIs, 2,742 listed · providers keep 100% · pay per request in USDC. Powered by the x402 payment standard: agents pay per call, providers get paid automatical…[trunc 14405]",
+ "links": [
+  {
+   "h": "/marketplace",
+   "t": "Browse verified APIs"
+  },
+  {
+   "h": "/list",
+   "t": "List your API (free)"
+  },
+  {
+   "h": "/blog/payapi-market-vs-rapidapi",
+   "t": "RapidAPI alternative for AI agents"
+  },
+  {
+   "h": "/guides/x402-api-directory",
+   "t": "x402 API directory"
+  },
+  {
+   "h": "/guides/x402-bazaar-alternatives",
+   "t": "x402 Bazaar alternatives"
+  },
+  {
+   "h": "/guides/pay-per-call-mcp-tools",
+   "t": "Pay-per-call MCP tools"
+  },
+  {
+   "h": "/guides/promote-x402-endpoint",
+   "t": "Promote an x402 endpoint"
+  },
+  {
+   "h": "/guides/list-your-agent",
+   "t": "List your AI agent"
+  },
+  {
+   "h": "https://payapi.market/list",
+   "t": "https://payapi.market/list"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "https://payapi.market/agent",
+   "t": "https://payapi.market/agent"
+  },
+  {
+   "h": "/marketplace",
+   "t": "Browse all APIs &mdash; view the full marketplace &rarr;"
+  },
+  {
+   "h": "/list",
+   "t": "List your API - free"
+  },
+  {
+   "h": "/list",
+   "t": "Submit your API"
+  },
+  {
+   "h": "/best-x402-apis-2027",
+   "t": "Best x402 APIs 2027"
+  },
+  {
+   "h": "/terms",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": "nd, where a listing offers it. Listing is free. 1,546 settlement-verified APIs, 2,742 listed. The badge means we put a coin in from our own wallet and the can came out. 1,546 settlement-verified APIs, 2,742 listed · providers keep 100% · pay per request in USDC. Powered by the x402 payment standard: agents pay per call"
+  },
+  {
+   "k": "wallet",
+   "w": "ace 1,546 settlement-verified APIs, 2,742 listed · 30343 Endpoints · 100% Kept by providers x402 verified We paid for it from our own buyer wallet and received product back. The badge is enforced at database level: it cannot be set without a matching settlement record. 1546 listings carry it, of which 10 are our own fi"
+  },
+  {
+   "k": "wallet",
+   "w": "on HTTP 402 Payment Required. When an agent calls a paid endpoint without paying, the server replies 402 with the price, token, network and wallet. The agent signs a USDC payment, retries the request and gets the response. No account, API key or OAuth flow is needed. How much does PayAPI Market cost? Listing is free an"
+  },
+  {
+   "k": "usdc",
+   "w": "tor Pricing Blog News · About x402 marketplace for AI agents List an API once. Keep 100% of what each call earns. Agents pay per request in USDC on Base, Solana or Algorand, where a listing offers it. Listing is free. 1,546 settlement-verified APIs, 2,742 listed. The badge means we put a coin in from our own wallet and"
+  },
+  {
+   "k": "usdc",
+   "w": "a coin in from our own wallet and the can came out. 1,546 settlement-verified APIs, 2,742 listed · providers keep 100% · pay per request in USDC. Powered by the x402 payment standard: agents pay per call, providers get paid automatically. Browse verified APIs · List your API (free) Discovery is free. Agents search the "
+  },
+  {
+   "k": "usdc",
+   "w": ". Directories still sell the whole machine: sign up, get a key, wait. PayAPI is the plugged-in slot. Someone lists a button. We drop a real USDC coin on Base. If the can comes out, the row goes on the floor. If the machine is a tunnel, the coil is empty, or the coin bounces, it stays in the back. Providers keep 100% of"
+  },
+  {
+   "k": "crypto",
+   "w": "quest. Postcode & Address Lookup : 5 endpoints. UK postcode to address, validation, autocomplete, geocoding. $0.001 per request. Currency & Crypto API : 5 endpoints. FX rates, crypto spot prices, historical series, conversion. $0.001 per request. Screenshot & PDF Capture : 4 endpoints. Headless browser page rendering, "
+  },
+  {
+   "k": "crypto",
+   "w": " endpoints. UK postcode to address, validation, autocomplete, geocoding. $0.001 per request. Currency & Crypto API : 5 endpoints. FX rates, crypto spot prices, historical series, conversion. $0.001 per request. Screenshot & PDF Capture : 4 endpoints. Headless browser page rendering, full-page screenshots, PDF export. $"
+  },
+  {
+   "k": "crypto",
+   "w": "eview across 17 active states. $0.010 per request. x402 Agent-Payment Infrastructure : 12 endpoints. x402/MCP layer for paid AI/data calls, crypto conversion quotes, progress streams, receipts, and agent spend governance. $0.001–5.000 per request. Merchant Risk WHOIS Domain Evidence API : 1 endpoint. WHOIS and domain-a"
+  },
+  {
+   "k": "fee",
+   "w": "PayAPI vs enterprise data providers On PayAPI Market an agent pays only the provider's own per-call price, with no commitment and no PayAPI fee. Paid in USDC on Base, Solana or Algorand, where a listing offers it. No invoices and no support tickets. How it works Agent finds an API on payapi.market. Pays the listed pric"
+  },
+  {
+   "k": "fee",
+   "w": "xt analytics, data intelligence, and more. Browse all APIs &mdash; view the full marketplace &rarr; Pricing Listing is free. No per-request fee, providers keep 100% of what the call earns. No subscriptions for buyers. Agents pay per request. List your API - free Explore the marketplace Estimate your revenue See pricing"
+  },
+  {
+   "k": "fee",
+   "w": "uest. List your API - free Explore the marketplace Estimate your revenue See pricing List your API. Keep 100%. Free to list. No per-request fee from us. We verify with a real payment before the badge goes on. Your API is discoverable by every Claude Desktop, Cursor and custom agent connected to the marketplace. Submit "
+  },
+  {
+   "k": "claim",
+   "w": "he listing is live. Either its provider submitted it, or we imported it from a public x402 directory, in which case the provider shows as Unclaimed. We have not paid for it yet. A directory import that passed an unpaid 402 check is labelled 402 checked. Neither label is the settlement-verified badge. The story An agent"
+  },
+  {
+   "k": "get paid",
+   "w": "ed APIs, 2,742 listed · providers keep 100% · pay per request in USDC. Powered by the x402 payment standard: agents pay per call, providers get paid automatically. Browse verified APIs · List your API (free) Discovery is free. Agents search the catalogue here. Payment happens on the listing 402, not on PayAPI. url http"
+  },
+  {
+   "k": "how it works",
+   "w": "h no commitment and no PayAPI fee. Paid in USDC on Base, Solana or Algorand, where a listing offers it. No invoices and no support tickets. How it works Agent finds an API on payapi.market. Pays the listed price in USDC , no key, no signup. Gets the data , and the provider is paid automatically. Who is this for You do "
+  },
+  {
+   "k": "terms",
+   "w": "in April 2026 and launched it in August 2026. · Agent marketplace · News · Best x402 APIs 2027 · Developers · Changelog · About · Privacy · Terms · llms.txt payapi.market is operated by Concor Technologies Limited, a company registered in England and Wales, company number 16633188. Registered office: 67 Josephine Avenu"
+  }
+ ],
+ "depth": 0
+}

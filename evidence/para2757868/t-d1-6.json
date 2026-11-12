@@ -1,0 +1,64 @@
+{
+ "name": "d1-6",
+ "url": "https://payapi.market/terms",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 10911,
+ "textLen": 2702,
+ "head": "Terms of service | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Home › Terms Terms of service Effective 30 October 2026 PayAPI Market is the trading name of CONCOR TECHNOLOGIES LIMITED (company number 16633188), 67 Josephine Avenue, London SW2 2JZ, United Kingdom. Contact: chet@payapi.market or hello@payapi.market . PayAPI Market is a discovery catalogue. Listing is free. We do not charge a take-rate on provider settlements in this window. Providers You warrant you control the API and the payTo wallet you submit. The badge means we paid one route from our wallet and got a response we judged to be product. It is not a warranty, SLA, or endorsement of your bus…[trunc 2702]",
+ "links": [
+  {
+   "h": "mailto:chet@payapi.market",
+   "t": "chet@payapi.market"
+  },
+  {
+   "h": "mailto:hello@payapi.market",
+   "t": "hello@payapi.market"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "/terms",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": "sting is free. We do not charge a take-rate on provider settlements in this window. Providers You warrant you control the API and the payTo wallet you submit. The badge means we paid one route from our wallet and got a response we judged to be product. It is not a warranty, SLA, or endorsement of your business. We can "
+  },
+  {
+   "k": "wallet",
+   "w": "ments in this window. Providers You warrant you control the API and the payTo wallet you submit. The badge means we paid one route from our wallet and got a response we judged to be product. It is not a warranty, SLA, or endorsement of your business. We can reject, unbadge, or remove a listing if the route fails, the w"
+  },
+  {
+   "k": "wallet",
+   "w": "be product. It is not a warranty, SLA, or endorsement of your business. We can reject, unbadge, or remove a listing if the route fails, the wallet does not match, the host is ephemeral, or the listing is misleading. Listed paid routes should only settle payment after a successful response (a 2xx status with real, non-e"
+  },
+  {
+   "k": "usdc",
+   "w": "e search is free. If you pay a listed API you are paying that provider, not CONCOR. We are not a party to that call. Settlement is on-chain USDC on Base via x402. No refunds from us for a provider's output. MCP https://payapi.market/mcp is free, read-only, and does not return HTTP 402. Acceptable use No abuse of the ca"
+  },
+  {
+   "k": "fee",
+   "w": "or a wallet that is not yours. Liability The site is provided as is. Our liability is limited to £100 or the amount you paid us for listing fees in the last 12 months (currently £0), whichever is greater, except where the law does not allow a cap. Changes We can change these terms. The date at the top is the current ve"
+  },
+  {
+   "k": "terms",
+   "w": "Terms of service | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previous"
+  },
+  {
+   "k": "terms",
+   "w": "eturns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Home › Terms Terms of service Effective 30 October 2026 PayAPI Market is the trading name of CONCOR TECHNOLOGIES LIMITED (company number 16633188), 67 Josephine Avenue, London SW2 2JZ, Un"
+  },
+  {
+   "k": "terms",
+   "w": " nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Home › Terms Terms of service Effective 30 October 2026 PayAPI Market is the trading name of CONCOR TECHNOLOGIES LIMITED (company number 16633188), 67 Josephine Avenue, London SW2 2JZ, United K"
+  }
+ ],
+ "followOf": "payapi-list",
+ "depth": 1
+}

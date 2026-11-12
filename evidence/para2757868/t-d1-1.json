@@ -1,0 +1,140 @@
+{
+ "name": "d1-1",
+ "url": "https://payapi.market/guides/x402-api-directory",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 21072,
+ "textLen": 8249,
+ "head": "x402 API directory for AI agents | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Home › x402 API directory x402 API directory: how to find and check x402 APIs An x402 API directory is a catalogue an agent searches before it calls a paid endpoint. PayAPI Market is an x402 marketplace and an AI agent API marketplace. Discovery is free, and a settlement-verified listing is one we paid ourselves. The unpaid 402 states the price, network and payTo address before any payment. Last updated: 30 October 2026 What is an x402 API directory? An x402 API directory is a catalogue an agent searches before it calls a paid endpoint. It should name the API, the price range, th…[trunc 8249]",
+ "links": [
+  {
+   "h": "/guides/x402-api-directory",
+   "t": "x402 API directory"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "https://toolvet.app/blog/how-many-x402-apis-november-2026",
+   "t": "ToolVet"
+  },
+  {
+   "h": "/blog/how-ai-agents-pay-for-apis-without-keys",
+   "t": "Paying without an API key"
+  },
+  {
+   "h": "/blog/how-ai-agents-pay-for-apis-without-keys",
+   "t": "the guide to paying without an API key"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "How we verify"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "How we verify"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "/best-x402-apis-2027",
+   "t": "the 2027 shortlist"
+  },
+  {
+   "h": "https://payapi.market/llms.txt",
+   "t": "llms.txt"
+  },
+  {
+   "h": "https://docs.cdp.coinbase.com/x402/buyer/discover-services",
+   "t": "CDP buyer discovery docs"
+  },
+  {
+   "h": "/list",
+   "t": "list an API"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "how we verify"
+  },
+  {
+   "h": "https://payapi.market/llms.txt",
+   "t": "PayAPI Market llms.txt"
+  },
+  {
+   "h": "https://payapi.market/how-we-verify",
+   "t": "How we verify"
+  },
+  {
+   "h": "https://docs.cdp.coinbase.com/x402/buyer/discover-services",
+   "t": "CDP buyer discovery docs"
+  },
+  {
+   "h": "https://toolvet.app/blog/how-many-x402-apis-november-2026",
+   "t": "ToolVet, 1 Nov 2026"
+  },
+  {
+   "h": "/faq",
+   "t": "FAQ"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "how we verify"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": "ase. Some also accept USDC on Solana or Algorand on the same route, and the 402 names the network. An agent should match the network to the wallet it holds before it signs. What is the difference between a 402 check and settlement-verified? A 402 check means an unpaid request received a valid HTTP 402 for Circle USDC. "
+  },
+  {
+   "k": "wallet",
+   "w": "ipt. The badge is that route, not demand. How we verify defines both checks. Settlement-verified means we paid one named route from our own wallet, received real product back, and link the on-chain USDC receipt. The badge covers that route, not every route on the listing. How we verify defines the term, compares it wit"
+  },
+  {
+   "k": "wallet",
+   "w": "a list of 402 endpoints? A 402 check shows that an endpoint asks to be paid. Settlement-verified means we paid one named route from our own wallet, got real product back, and link the on-chain receipt. The badge is that paid check, not a claim about demand. Which networks does the directory include? Listings accept USD"
+  },
+  {
+   "k": "usdc",
+   "w": "ere dead or invalid. PayAPI Market counts a different thing: 1,546 settlement-verified APIs, each paid for with a real call and an on-chain USDC receipt you can check, out of 2,742 listed. Can an agent see the price before paying? Yes. Call the endpoint without a payment. The HTTP 402 response states the price, the net"
+  },
+  {
+   "k": "usdc",
+   "w": "ates the price, the network and the payTo address before any payment is made. Nothing has been signed. The agent can stop, or it can sign a USDC payment for that exact challenge and retry. Paying without an API key walks through the same loop. On this AI agent API marketplace, get_api returns price_min and price_max fo"
+  },
+  {
+   "k": "usdc",
+   "w": " A listing page and the guide to paying without an API key walk through the same loop. Networks are part of that challenge. Listings accept USDC on Base. Some also accept USDC on Solana or Algorand on the same route, and the 402 names the network. An agent should match the network to the wallet it holds before it signs"
+  },
+  {
+   "k": "fee",
+   "w": "ted 90,112 paid x402 APIs on 1 Nov 2026, and 50.2% of all listings passed their latest check in that morning's snapshot. On 2 Nov 2026 PulseFeed found that 66% of endpoints that 402index lists as healthy returned a valid x402 challenge to PulseFeed's independent probe, and 26% of services were dead or invalid. PayAPI M"
+  },
+  {
+   "k": "fee",
+   "w": "ning's snapshot. On 2 Nov 2026 PulseFeed found that 66% of endpoints that 402index lists as healthy returned a valid x402 challenge to PulseFeed's independent probe, and 26% of services were dead or invalid. PayAPI Market counts a different thing: 1,546 settlement-verified APIs, each paid for with a real call and an on"
+  },
+  {
+   "k": "fee",
+   "w": "de. Sources PayAPI Market llms.txt How we verify x402.org x402 List the402 x402 Directory CDP buyer discovery docs ToolVet, 1 Nov 2026 PulseFeed, 2 Nov 2026 Related: marketplace · for agents · FAQ · how we verify How to find an x402 API, read the price before paying, and tell a settlement-verified listing from a 402 ch"
+  },
+  {
+   "k": "claim",
+   "w": " term, compares it with a 402 check and with payment-provider settlement, and says what the badge does not prove. It is a paid check, not a claim about demand. How does an agent search this directory? Add https://payapi.market/mcp to any MCP client that speaks streamable HTTP. search_apis, list_apis and get_api are fre"
+  },
+  {
+   "k": "claim",
+   "w": "a 402. get_api returns the base URL, the price range, the network and, when the provider supplied one, an MCP endpoint. Treat that URL as a claim. We do not probe it. Plain HTTP is the same catalogue. /agent/list defaults to settlement-verified listings. Pass verified_only=false to include live listings that have not b"
+  },
+  {
+   "k": "claim",
+   "w": "eans we paid one named route from our own wallet, got real product back, and link the on-chain receipt. The badge is that paid check, not a claim about demand. Which networks does the directory include? Listings accept USDC on Base. Some also accept USDC on Solana or Algorand, and the unpaid 402 names the network. We c"
+  }
+ ],
+ "followOf": "payapi-list",
+ "depth": 1
+}

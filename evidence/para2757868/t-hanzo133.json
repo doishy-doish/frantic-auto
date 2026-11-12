@@ -1,0 +1,119 @@
+{
+ "name": "hanzo133",
+ "url": "https://github.com/hanzoai/ai/issues/133",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 307071,
+ "textLen": 9546,
+ "head": "[QA Bounty] [P1] Audio Generation & Transcription · Issue #133 · hanzoai/ai · GitHub Skip to content Navigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support…[trunc 9546]",
+ "links": [
+  {
+   "h": "https://github.com/enterprise/startups",
+   "t": "Startups"
+  },
+  {
+   "h": "https://hanzo.ai/bounty",
+   "t": "https://hanzo.ai/bounty"
+  },
+  {
+   "h": "/apps/linear",
+   "t": "linear"
+  },
+  {
+   "h": "https://linear.app",
+   "t": "Linear"
+  },
+  {
+   "h": "https://linear.app/hanzoai/issue/HAI-482",
+   "t": "HAI-482"
+  },
+  {
+   "h": "https://github.com/hanzoai/ai/issues/133",
+   "t": "#133"
+  },
+  {
+   "h": "https://github.com/hanzoai/ai/issues/133",
+   "t": "#133"
+  },
+  {
+   "h": "https://github.com/hanzoai/ai/issues/133",
+   "t": "#133"
+  },
+  {
+   "h": "/login?return_to=https://github.com/hanzoai/ai/issues/133",
+   "t": "Sign in to comment"
+  },
+  {
+   "h": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+   "t": "Terms"
+  },
+  {
+   "h": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+   "t": "Privacy"
+  },
+  {
+   "h": "https://docs.github.com/",
+   "t": "Docs"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": " translation. Reproducible Audio TTS/STT Harness ( qa/audio/audio_generation_transcription_qa.test.mjs & qa/audio/README.md ) : 2/2 passed. Payout Wallet Solana (USDC / SOL) : EdbgyAcVC5MNaFGph2UgvnBUP7WxxNyXZUzsHHifQyAE Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment M"
+  },
+  {
+   "k": "wallet",
+   "w": "ation. Reproducible Audio TTS/STT Harness ( qa/audio/audio_generation_transcription_qa.test.mjs & qa/audio/README.md ) : 2/2 passed. Payout Wallet Solana (USDC / SOL) : EdbgyAcVC5MNaFGph2UgvnBUP7WxxNyXZUzsHHifQyAE Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata"
+  },
+  {
+   "k": "usdc",
+   "w": "ible Audio TTS/STT Harness ( qa/audio/audio_generation_transcription_qa.test.mjs & qa/audio/README.md ) : 2/2 passed. Payout Wallet Solana (USDC / SOL) : EdbgyAcVC5MNaFGph2UgvnBUP7WxxNyXZUzsHHifQyAE Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assig"
+  },
+  {
+   "k": "claim",
+   "w": "r timestamp drift. Difficulty: P1 Points: 150 (Hanzo Rewards points — see https://hanzo.ai/bounty and https://hanzo.ai/leaderboard ) How to Claim Comment on this issue stating the test cases / models you are covering. Submit a reproducible test suite, detailed QA report with request/response traces, or a pull request r"
+  },
+  {
+   "k": "claim",
+   "w": "9, 2026 linear Bot on Nov 9, 2026 – with Linear More actions HAI-482 DSP-AID commented on Nov 10, 2026 DSP-AID on Nov 10, 2026 More actions Claiming this QA bounty — submitted the reproducible suite in #149 (Closes #133 ). Models covered: zen-voice-mini (Kokoro TTS) and zen-scribe (Parakeet/Whisper STT), pinned against"
+  },
+  {
+   "k": "claim",
+   "w": "t, and the keyed lanes skip with their reason without HANZO_API_KEY . mulak1 commented on Nov 10, 2026 mulak1 on Nov 10, 2026 More actions /claim #133 Submitted PR #158 ( #158 ) with native package controllers QA tests in controllers/audio_generation_transcription_qa_test.go covering TTS formats/voices/speeds, containe"
+  },
+  {
+   "k": "reward",
+   "w": "QA Bounty] [P1] Audio Generation & Transcription #133 #181 ( + 4 ) Copy link Labels bounty Open QA or engineering bounty eligible for Hanzo Rewards Open QA or engineering bounty eligible for Hanzo Rewards bounty:P1 Priority 1 high-impact QA bounty Priority 1 high-impact QA bounty priority: P1 Priority 1 (High) Priority"
+  },
+  {
+   "k": "reward",
+   "w": "1 ( + 4 ) Copy link Labels bounty Open QA or engineering bounty eligible for Hanzo Rewards Open QA or engineering bounty eligible for Hanzo Rewards bounty:P1 Priority 1 high-impact QA bounty Priority 1 high-impact QA bounty priority: P1 Priority 1 (High) Priority 1 (High) qa Quality assurance and model/API verification"
+  },
+  {
+   "k": "reward",
+   "w": "ted reproduction steps and assertions for any format errors, truncated audio outputs, or timestamp drift. Difficulty: P1 Points: 150 (Hanzo Rewards points — see https://hanzo.ai/bounty and https://hanzo.ai/leaderboard ) How to Claim Comment on this issue stating the test cases / models you are covering. Submit a reprod"
+  },
+  {
+   "k": "bounty",
+   "w": "[QA Bounty] [P1] Audio Generation & Transcription · Issue #133 · hanzoai/ai · GitHub Skip to content Navigation Menu Sign in Products Platform GitHub Repository hosting, code review, a"
+  },
+  {
+   "k": "bounty",
+   "w": "age }} hanzoai ai Repository navigation Code Issues 12 ( 12 ) Pull requests 44 ( 44 ) Projects Security and quality Insights More items [QA Bounty] [P1] Audio Generation & Transcription #133 New issue Copy link New issue Copy link Open #181 ( + 4 ) Open [QA Bounty] [P1] Audio Generation & Transcription #133 #181 ( + 4 "
+  },
+  {
+   "k": "bounty",
+   "w": "sights More items [QA Bounty] [P1] Audio Generation & Transcription #133 New issue Copy link New issue Copy link Open #181 ( + 4 ) Open [QA Bounty] [P1] Audio Generation & Transcription #133 #181 ( + 4 ) Copy link Labels bounty Open QA or engineering bounty eligible for Hanzo Rewards Open QA or engineering bounty eligi"
+  },
+  {
+   "k": "terms",
+   "w": "verable where appropriate. Could you confirm your proposed budget and the output you need? We can confirm scope, AI-use policy, and payment terms before work begins. Work will not begin until we agree. I propose to draft a comprehensive test plan for the audio generation and transcription functionality, including test "
+  },
+  {
+   "k": "terms",
+   "w": "one yet Development No branches or pull requests Issue actions Open in GitHub Copilot app Footer &copy; 2026 GitHub, Inc. Footer navigation Terms Privacy Security Status Community Docs Contact Manage cookies Do not share my personal information You can’t perform that action at this time."
+  }
+ ],
+ "depth": 0
+}

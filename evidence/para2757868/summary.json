@@ -1,0 +1,58 @@
+{
+ "stamp": "para2757868",
+ "takenAt": "2026-11-12T12:49:33.350Z",
+ "case": "proof",
+ "depth": 2,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 6
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "payapi-list",
+   "status": 200,
+   "bytes": 33189
+  },
+  {
+   "name": "hanzo133",
+   "status": 200,
+   "bytes": 307071
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  },
+  {
+   "name": "d1-1",
+   "status": 200,
+   "bytes": 21072
+  },
+  {
+   "name": "d1-2",
+   "status": 200,
+   "bytes": 21573
+  },
+  {
+   "name": "d1-3",
+   "status": 200,
+   "bytes": 68558
+  },
+  {
+   "name": "d1-4",
+   "status": 200,
+   "bytes": 17928
+  },
+  {
+   "name": "d1-5",
+   "status": 200,
+   "bytes": 15240
+  },
+  {
+   "name": "d1-6",
+   "status": 200,
+   "bytes": 10911
+  }
+ ]
+}

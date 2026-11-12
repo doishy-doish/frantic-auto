@@ -1,0 +1,100 @@
+{
+ "name": "d1-4",
+ "url": "https://payapi.market/guides/promote-x402-endpoint",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 17928,
+ "textLen": 6366,
+ "head": "Where to promote an x402 endpoint so agents find it there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Home › Promote an x402 endpoint Where do I promote an x402 endpoint so agents find it? Short answer: agents don't scroll social feeds. They find paid endpoints by querying catalogues, over MCP or plain HTTP, and then read your 402 before they pay. So promotion for an x402 endpoint mostly means getting listed in the catalogues agents query, with a price and a receipt they can check. On PayAPI Market that listing is free, there's no per-request fee, and agents pay your wallet directly. Last updated: 11 November 2026 How agents actually discover an x402 endpoint An agent searchin…[trunc 6366]",
+ "links": [
+  {
+   "h": "/guides/promote-x402-endpoint",
+   "t": "Promote an x402 endpoint"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "/list",
+   "t": "payapi.market/list"
+  },
+  {
+   "h": "/guides/list-your-agent",
+   "t": "How to list your AI agent"
+  },
+  {
+   "h": "/guides/x402-api-directory",
+   "t": "x402 API directory guide"
+  },
+  {
+   "h": "https://payapi.market/llms.txt",
+   "t": "PayAPI Market llms.txt"
+  },
+  {
+   "h": "https://payapi.market/providers",
+   "t": "For API providers"
+  },
+  {
+   "h": "https://payapi.market/how-an-agent-finds-payapi",
+   "t": "How an agent finds PayAPI"
+  },
+  {
+   "h": "https://payapi.market/how-we-verify",
+   "t": "How we verify"
+  },
+  {
+   "h": "https://payapi.market/guides/x402-api-directory",
+   "t": "x402 API directory"
+  },
+  {
+   "h": "/faq",
+   "t": "FAQ"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "how we verify"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": "ts query, with a price and a receipt they can check. On PayAPI Market that listing is free, there's no per-request fee, and agents pay your wallet directly. Last updated: 11 November 2026 How agents actually discover an x402 endpoint An agent searching PayAPI Market uses one of three free, read-only routes: MCP: https:"
+  },
+  {
+   "k": "wallet",
+   "w": "nels and sandbox hosts are refused), the paid route that already returns HTTP 402, a working example request if the route takes inputs, the wallet in your 402's payTo, and a price that matches the live 402. The form calls your paid route unpaid before it creates a row. Automated checks run first (host durability, a rea"
+  },
+  {
+   "k": "wallet",
+   "w": ". The form calls your paid route unpaid before it creates a row. Automated checks run first (host durability, a real 402, payTo matches the wallet you entered), then a person reviews it and you get one email with the result. Listing is free and providers keep 100% of what each call earns. If you already work in Cursor "
+  },
+  {
+   "k": "usdc",
+   "w": "n proof. After review, PayAPI Market pays one cheap call on one route, up to $0.10, from its own wallet. If real product comes back and the USDC lands in your listed wallet, the listing gets a settlement-verified badge that links the on-chain receipt. Routes priced above $0.10 need a top-up first; the providers page ex"
+  },
+  {
+   "k": "usdc",
+   "w": "rified mean for my listing? PayAPI Market paid one real call on one route from its own wallet, got real product back and links the on-chain USDC receipt. It covers that route, not every route on the listing. Can I list from inside Cursor or Claude Desktop? Yes. The PayAPI MCP server includes submit_listing, which is fr"
+  },
+  {
+   "k": "fee",
+   "w": "yAPI Market Home › Promote an x402 endpoint Where do I promote an x402 endpoint so agents find it? Short answer: agents don't scroll social feeds. They find paid endpoints by querying catalogues, over MCP or plain HTTP, and then read your 402 before they pay. So promotion for an x402 endpoint mostly means getting liste"
+  },
+  {
+   "k": "fee",
+   "w": "ed in the catalogues agents query, with a price and a receipt they can check. On PayAPI Market that listing is free, there's no per-request fee, and agents pay your wallet directly. Last updated: 11 November 2026 How agents actually discover an x402 endpoint An agent searching PayAPI Market uses one of three free, read"
+  },
+  {
+   "k": "fee",
+   "w": "er than one call (an agent that does a task end to end), list it on the Agent marketplace instead. It's also free and PayAPI doesn't take a fee. How to list your AI agent walks through that form. Step 2: get the route settlement-verified Agents filter on proof. After review, PayAPI Market pays one cheap call on one rou"
+  },
+  {
+   "k": "claim",
+   "w": "I directory guide says what each one publishes. Post the listing link with a real number from your receipt (price per call, network), not a claim about traffic you can't show. What listing does not do It doesn't guarantee calls. A badge proves one paid route worked; it isn't a measure of demand. PayAPI Market never hol"
+  }
+ ],
+ "followOf": "payapi-list",
+ "depth": 1
+}

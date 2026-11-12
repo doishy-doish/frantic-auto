@@ -1,0 +1,244 @@
+{
+ "name": "d1-3",
+ "url": "https://payapi.market/guides/pay-per-call-mcp-tools",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 68558,
+ "textLen": 24728,
+ "head": "Pay-per-call MCP tools for AI agents | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Home › Pay-per-call MCP tools Pay-per-call MCP tools for AI agents A pay-per-call MCP tool lets an agent call a tool and pay for that call, with no API key. The unpaid response states the price before any payment is made. On this AI agent API marketplace the catalogue MCP is free. Paying happens on the provider endpoint, in USDC on Base, Solana or Algorand where the listing offers it. Last updated: 30 October 2026 What is a pay-per-call MCP tool? A pay-per-call MCP tool lets an agent call a tool and pay for that call, with no API key. On this AI agent API marketplace the cata…[trunc 24728]",
+ "links": [
+  {
+   "h": "/guides/pay-per-call-mcp-tools",
+   "t": "Pay-per-call MCP tools"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "/blog/how-ai-agents-pay-for-apis-without-keys",
+   "t": "Paying without an API key"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "PayAPI MCP"
+  },
+  {
+   "h": "https://docs.cdp.coinbase.com/x402/buyer/discover-services",
+   "t": "CDP buyer discovery docs"
+  },
+  {
+   "h": "https://agent402.tools/docs",
+   "t": "Agent402 docs"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20AI%20model%20list%20prices%20(~3%2C000%20models)",
+   "t": "Agent Extraction API: AI model list prices (~3,000 models)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Base%20mainnet%20gas%20price%20%2B%20USDC%20transfer%20cost",
+   "t": "Agent Extraction API: Base mainnet gas price + USDC transfer cost"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Bulk%20link%20checker%20(up%20to%2020%20URLs)",
+   "t": "Agent Extraction API: Bulk link checker (up to 20 URLs)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Company%20contacts",
+   "t": "Agent Extraction API: Company contacts"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Company%20enrichment",
+   "t": "Agent Extraction API: Company enrichment"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Company%20enrichment%20batch",
+   "t": "Agent Extraction API: Company enrichment batch"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Contract%20ABI%20%2B%20proxy%20resolver%20(Base%2FEthereum)",
+   "t": "Agent Extraction API: Contract ABI + proxy resolver (Base/Ethereum)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Country%20reference%20lookup%20(ISO2%2FISO3%2Fname)",
+   "t": "Agent Extraction API: Country reference lookup (ISO2/ISO3/name)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Currency%20conversion%20(ECB%20reference%20rates)",
+   "t": "Agent Extraction API: Currency conversion (ECB reference rates)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Developer%20%2B%20LLM%20free-tier%20limits",
+   "t": "Agent Extraction API: Developer + LLM free-tier limits"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20DNS%20%2B%20SPF%2FDMARC%20mail-auth%20check",
+   "t": "Agent Extraction API: DNS + SPF/DMARC mail-auth check"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Domain%20WHOIS%20via%20RDAP%20(registrar%2C%20expiry)",
+   "t": "Agent Extraction API: Domain WHOIS via RDAP (registrar, expiry)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Email%20check%20without%20SMTP%20(syntax%2C%20MX%2C%20disposable)",
+   "t": "Agent Extraction API: Email check without SMTP (syntax, MX, disposable)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Email%20quick%20check",
+   "t": "Agent Extraction API: Email quick check"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Email%20verification%20batch",
+   "t": "Agent Extraction API: Email verification batch"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20ENS%20%2B%20Basenames%20resolver%20(forward%2Freverse)",
+   "t": "Agent Extraction API: ENS + Basenames resolver (forward/reverse)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Gas%20prices%20across%205%20EVM%20chains",
+   "t": "Agent Extraction API: Gas prices across 5 EVM chains"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Geocode%20%2B%20reverse%20geocode%20(OpenStreetMap)",
+   "t": "Agent Extraction API: Geocode + reverse geocode (OpenStreetMap)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Geocode%20batch",
+   "t": "Agent Extraction API: Geocode batch"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20LLM%20token%20%2B%20cost%20calculator%20across%20models",
+   "t": "Agent Extraction API: LLM token + cost calculator across models"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Messy%20text%20%2B%20JSON%20Schema%20to%20clean%20JSON",
+   "t": "Agent Extraction API: Messy text + JSON Schema to clean JSON"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Named%20entity%20extraction",
+   "t": "Agent Extraction API: Named entity extraction"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20One-call%20page%20audit%20(status%2C%20redirects%2C%20SEO%20tags)",
+   "t": "Agent Extraction API: One-call page audit (status, redirects, SEO tags)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Page%20metadata%20(title%2C%20Open%20Graph%2C%20canonical%2C%20JSON-LD)",
+   "t": "Agent Extraction API: Page metadata (title, Open Graph, canonical, JSON-LD)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Page%20to%20RAG%20(web%20page%20to%20Markdown%20%2B%20chunks)",
+   "t": "Agent Extraction API: Page to RAG (web page to Markdown + chunks)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20QR%20code%20generator%20(SVG%2FGIF%2C%20Wi-Fi%2C%20payment%20URIs)",
+   "t": "Agent Extraction API: QR code generator (SVG/GIF, Wi-Fi, payment URIs)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20robots.txt%20crawl%20permission%20check",
+   "t": "Agent Extraction API: robots.txt crawl permission check"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20RSS%20%2F%20Atom%20%2F%20JSON%20Feed%20to%20JSON",
+   "t": "Agent Extraction API: RSS / Atom / JSON Feed to JSON"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Rug%20pull%20check",
+   "t": "Agent Extraction API: Rug pull check"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Search%20~13%2C000%20agent%20tools%20(MCP%20%2B%20x402)",
+   "t": "Agent Extraction API: Search ~13,000 agent tools (MCP + x402)"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Search%20~8%2C900%20live%20x402%20APIs",
+   "t": "Agent Extraction API: Search ~8,900 live x402 APIs"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Search%202%2C230%20link-checked%20free%2Fpublic%20APIs",
+   "t": "Agent Extraction API: Search 2,230 link-checked free/public APIs"
+  },
+  {
+   "h": "/marketplace?q=Agent%20Extraction%20API%3A%20Search%204%2C259%20MCP%20servers",
+   "t": "Agent Extraction API: Search 4,259 MCP servers"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": " EVM chains) settlement-verified Agent Extraction API: Tx explain + payment check (Base/Ethereum) settlement-verified Agent Extraction API: Wallet profile (Base/Ethereum address) settlement-verified Agent Extraction API: Web page to clean Markdown settlement-verified Agent Extraction API: Website tech stack detection s"
+  },
+  {
+   "k": "wallet",
+   "w": " & Jailbreak Firewall settlement-verified Bankruptcy Filing Search & Chapter 11 Dockets API settlement-verified Base & EVM Smart Contract / Wallet Rug & Risk Scanner settlement-verified Base USDC Transfer Receipt Evidence settlement-verified BeliefState settlement-verified BlindOracle settlement-verified BlindOracle se"
+  },
+  {
+   "k": "wallet",
+   "w": "ed EVM Gas Price Lookup settlement-verified EVM Latest Block Lookup settlement-verified EVM Transaction Hash Lookup settlement-verified EVM Wallet Balance Lookup settlement-verified Factline: Netherlands Address & EU Compliance Data settlement-verified FactStamp settlement-verified FairSeal Cryptographic Receipts API s"
+  },
+  {
+   "k": "usdc",
+   "w": "e price before any payment is made. On this AI agent API marketplace the catalogue MCP is free. Paying happens on the provider endpoint, in USDC on Base, Solana or Algorand where the listing offers it. Last updated: 30 October 2026 What is a pay-per-call MCP tool? A pay-per-call MCP tool lets an agent call a tool and p"
+  },
+  {
+   "k": "usdc",
+   "w": "e Desktop, Cursor or any streamable HTTP client at https://payapi.market/mcp . Discovery spends nothing. To pay a provider, the agent needs USDC on the network the 402 names and a client that can sign. Fund a small balance and set a per-call cap. The agent page has the config. When get_api includes an MCP endpoint, rea"
+  },
+  {
+   "k": "usdc",
+   "w": "MCP server and an npm server for pay-per-call tools. The docs say an unpaid call receives HTTP 402 with the price, then a client can sign a USDC payment and retry. Some tools also offer a proof-of-work path. Agent402 docs 30 October 2026 Toolbooth One MCP server of pay-per-call tools. The homepage says an unpaid call i"
+  },
+  {
+   "k": "crypto",
+   "w": "Pay settlement-verified AgentYield settlement-verified AGORA Omega — Counterparty Check (EU) settlement-verified AlphaStream — Quantitative Crypto & DeFi Narrative Signal Engine settlement-verified API Acre settlement-verified api.cortexcloud.org — On-Chain Data & Intelligence API settlement-verified Arabic Pipeline AP"
+  },
+  {
+   "k": "crypto",
+   "w": "fied CourtListener Legal Opinions & Case Law API settlement-verified crosscheck: independent review of an agent's draft settlement-verified Crypto Derivatives Data API settlement-verified Crypto Snapshot Pro - AI Trading Signals settlement-verified cryptofeed402 settlement-verified Currency & Crypto API settlement-veri"
+  },
+  {
+   "k": "crypto",
+   "w": " settlement-verified crosscheck: independent review of an agent's draft settlement-verified Crypto Derivatives Data API settlement-verified Crypto Snapshot Pro - AI Trading Signals settlement-verified cryptofeed402 settlement-verified Currency & Crypto API settlement-verified CVEIntel — NVD CVE, CISA KEV & Exploit Matu"
+  },
+  {
+   "k": "fee",
+   "w": "Is) settlement-verified Agent Extraction API: robots.txt crawl permission check settlement-verified Agent Extraction API: RSS / Atom / JSON Feed to JSON settlement-verified Agent Extraction API: Rug pull check settlement-verified Agent Extraction API: Search ~13,000 agent tools (MCP + x402) settlement-verified Agent Ex"
+  },
+  {
+   "k": "fee",
+   "w": "ess Stock Trades & Financial Disclosures API settlement-verified Council of AI (CSOAI) settlement-verified Council of AI GSPC — EU Evidence Feed settlement-verified CourtListener Legal Opinions & Case Law API settlement-verified crosscheck: independent review of an agent's draft settlement-verified Crypto Derivatives D"
+  },
+  {
+   "k": "fee",
+   "w": "raft settlement-verified Crypto Derivatives Data API settlement-verified Crypto Snapshot Pro - AI Trading Signals settlement-verified cryptofeed402 settlement-verified Currency & Crypto API settlement-verified CVEIntel — NVD CVE, CISA KEV & Exploit Maturity Vulnerability Oracle settlement-verified Dallas County Propert"
+  },
+  {
+   "k": "claim",
+   "w": "hallenge. Some listings also publish an mcp_endpoint. That value is supplied by the provider. We do not probe it, so a non-empty value is a claim, not a guarantee. The settlement-verified badge covers the route we paid, which is often the HTTP route rather than the MCP URL. There is a separate first-party server for ou"
+  },
+  {
+   "k": "claim",
+   "w": "ich PayAPI Market listings publish an MCP endpoint? mcp_endpoint is supplied by the provider. We do not probe it, so a non-empty value is a claim, not a guarantee. The settlement-verified badge covers the route we paid, which is often the HTTP route rather than the MCP URL. Names below come from the same catalogue as l"
+  },
+  {
+   "k": "claim",
+   "w": "logue as llms.txt . 302 live listings publish an MCP endpoint. 299 of those are settlement-verified. The endpoint URL is the provider's own claim: we do not probe it, and the badge covers the route we paid. 402registry settlement-verified 402Shield settlement-verified 402xAgent settlement-verified 50M Swarm Gateway set"
+  },
+  {
+   "k": "bounty",
+   "w": "d BeliefState settlement-verified BlindOracle settlement-verified BlindOracle settlement-verified Blinka Machine Mouths settlement-verified Bounty Engineer Agent Commerce API settlement-verified Broken Link Checker, 404 Audit & Link Rot API settlement-verified Bulk Email Validation & Verification API settlement-verifie"
+  },
+  {
+   "k": "bounty",
+   "w": "2A Card Generator settlement-verified Money Maker MCP: EVM wallet reads + AI tasks (x402) settlement-verified Money Reactor - Funded Crypto Bounty Feed settlement-verified Money Reactor - Honeypot Trust Scan settlement-verified Money Reactor - Live Crypto Price settlement-verified Money Reactor - Token Verdict settleme"
+  }
+ ],
+ "followOf": "payapi-list",
+ "depth": 1
+}

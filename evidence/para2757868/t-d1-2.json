@@ -1,0 +1,100 @@
+{
+ "name": "d1-2",
+ "url": "https://payapi.market/guides/x402-bazaar-alternatives",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 21573,
+ "textLen": 8248,
+ "head": "x402 Bazaar and Agentic.Market alternatives | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market Home › x402 Bazaar alternatives x402 Bazaar and Agentic.Market alternatives An x402 Bazaar alternative is another public place an agent can look up a paid API. The Coinbase CDP Bazaar catalogues services its facilitator has settled. PayAPI Market is an x402 marketplace and an AI agent API marketplace with a different check: we pay one route and link the receipt. Listing is free and providers keep 100%. Last updated: 30 October 2026 What is the Coinbase CDP Bazaar? Coinbase documents the x402 Bazaar as discovery for services catalogued through the CDP Facilitator. Index…[trunc 8248]",
+ "links": [
+  {
+   "h": "/guides/x402-bazaar-alternatives",
+   "t": "x402 Bazaar alternatives"
+  },
+  {
+   "h": "https://docs.cdp.coinbase.com/x402/buyer/discover-services",
+   "t": "CDP discovery docs"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "How we verify"
+  },
+  {
+   "h": "/blog/how-ai-agents-pay-for-apis-without-keys",
+   "t": "Paying for APIs without an API key"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "how we verify"
+  },
+  {
+   "h": "https://docs.cdp.coinbase.com/x402/buyer/discover-services",
+   "t": "CDP buyer discovery docs"
+  },
+  {
+   "h": "https://access402.com/blog/x402-bazaar-discovery-paid-apis",
+   "t": "Access402 on Bazaar discovery"
+  },
+  {
+   "h": "https://payapi.market/how-we-verify",
+   "t": "How we verify"
+  },
+  {
+   "h": "/agents",
+   "t": "the agent guide"
+  },
+  {
+   "h": "/guides/x402-api-directory",
+   "t": "x402 API directory"
+  },
+  {
+   "h": "/guides/pay-per-call-mcp-tools",
+   "t": "pay-per-call MCP tools"
+  },
+  {
+   "h": "https://docs.cdp.coinbase.com/x402/buyer/discover-services",
+   "t": "CDP buyer discovery docs"
+  },
+  {
+   "h": "https://access402.com/blog/x402-bazaar-discovery-paid-apis",
+   "t": "Access402 on Bazaar discovery"
+  },
+  {
+   "h": "https://payapi.market/how-we-verify",
+   "t": "How we verify"
+  },
+  {
+   "h": "https://payapi.market/llms.txt",
+   "t": "PayAPI Market llms.txt"
+  },
+  {
+   "h": "/faq",
+   "t": "FAQ"
+  },
+  {
+   "h": "/how-we-verify",
+   "t": "how we verify"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": "litator. PayAPI Market answers a different question: does this route return real output when someone pays it? We pay one route from our own wallet, check the response, and link the on-chain receipt, on Base, Solana or Algorand, whichever facilitator the provider uses. An API can and often should appear in both. Use Age"
+  },
+  {
+   "k": "wallet",
+   "w": "a human-readable AI agent API marketplace as well as a machine catalogue. We review a listing, pay one cheap call on one route from our own wallet, and publish the receipt. A live listing that we have not paid is still findable. It is not described as settlement-verified. At the last count, the same catalogue query tha"
+  },
+  {
+   "k": "wallet",
+   "w": "es indexed through the CDP Facilitator after a payment settles. PayAPI Market is an x402 marketplace that pays one named route from its own wallet and links the receipt. An API can appear in more than one catalogue. Do I have to list in only one place? No. Providers often publish in more than one directory. PayAPI Mark"
+  },
+  {
+   "k": "claim",
+   "w": "ants to be found has to learn each one. This page does not ask anyone to list in only one marketplace. It says what each public alternative claims, so an agent can pick a source on purpose. PayAPI Market is one of those places. It is an x402 marketplace for people who want a human-readable AI agent API marketplace as w"
+  }
+ ],
+ "followOf": "payapi-list",
+ "depth": 1
+}
