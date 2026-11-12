@@ -84,34 +84,41 @@ try {
 
   const SAMPLE = 'Thanks for having me on the show, I had a great time and hope to come back soon.';
   try {
-    const box = pop.locator('textarea, [contenteditable="true"], input[type="text"]').first();
-    await box.waitFor({ timeout: 15000 });
+    const snoop = pop.getByText(/snoop dogg/i).first();
+    await snoop.waitFor({ timeout: 15000 });
+    await pop.screenshot({ path: `${dir}/04-picker.png` });
+    await snoop.click({ timeout: 8000 });
+    await pop.waitForTimeout(2500);
+    await pop.screenshot({ path: `${dir}/05-voice-picked.png` });
+    note('voice picked');
+    const site = await ctx.newPage();
+    await site.goto('https://www.reddit.com/', { waitUntil: 'domcontentloaded', timeout: 45000 });
+    await site.waitForTimeout(5000);
+    await site.screenshot({ path: `${dir}/06-site.png` });
+    const box = site.locator('input[type="search"], textarea, [contenteditable="true"]').first();
+    await box.waitFor({ timeout: 20000 });
+    await box.click({ timeout: 8000 });
     await box.fill(SAMPLE);
-    await pop.waitForTimeout(1000);
-    await pop.screenshot({ path: `${dir}/04-input.png` });
-    const voiceHit = pop.getByText(/snoop/i).first();
-    if (await voiceHit.count()) { await voiceHit.click({ timeout: 8000 }).catch(() => {}); await pop.waitForTimeout(1500); }
-    const go = pop.getByRole('button', { name: /rewrite|reply|write|generate/i }).first();
-    if (await go.count()) {
-      await go.click({ timeout: 8000 });
-      let last = -1, still = 0;
-      for (let i = 0; i < 30 && still < 3; i++) {
-        await pop.waitForTimeout(3000);
-        const n = ((await pop.content()) || '').length;
-        if (n === last) still++;
-        else { still = 0; last = n; }
-      }
-      await pop.screenshot({ path: `${dir}/05-generation.png` });
-      const finalText = ((await pop.content()) || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
-      summary.outputChars = finalText.length;
-      const si = finalText.indexOf('Thanks for having me');
-      summary.outputText = (si >= 0 ? finalText.slice(Math.max(0, si - 1500), si + 2500) : finalText.slice(-2500)).slice(0, 3000);
-      const mA = finalText.match(/(\d+)\s+free\s+tr/i) || finalText.match(/(\d+)\s+left/i);
-      summary.triesAfter = mA ? Number(mA[1]) : null;
-      note(`generated chars=${summary.outputChars} triesAfter=${summary.triesAfter}`);
-    } else { summary.errors.push('no generate button'); await pop.screenshot({ path: `${dir}/05-generation.png` }); }
-  } catch (e) { summary.errors.push(`generation: ${e.message}`); await pop.screenshot({ path: `${dir}/05-generation.png` }).catch(() => {}); }
-
+    await site.waitForTimeout(1000);
+    await site.keyboard.press('Control+Shift+S');
+    await site.waitForTimeout(4000);
+    await site.screenshot({ path: `${dir}/07-card.png` });
+    let last = -1, still = 0;
+    for (let i = 0; i < 30 && still < 3; i++) {
+      await site.waitForTimeout(3000);
+      const n = ((await site.content()) || '').length;
+      if (n === last) still++;
+      else { still = 0; last = n; }
+    }
+    await site.screenshot({ path: `${dir}/08-generation.png` });
+    const finalText = ((await site.content()) || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    summary.outputChars = finalText.length;
+    const si = finalText.indexOf('Thanks for having me');
+    summary.outputText = (si >= 0 ? finalText.slice(Math.max(0, si - 1500), si + 2500) : finalText.slice(-2500)).slice(0, 3000);
+    const mA = finalText.match(/(\d+)\s+free\s+tr/i) || finalText.match(/(\d+)\s+left/i);
+    summary.triesAfter = mA ? Number(mA[1]) : null;
+    note(`site drive done chars=${summary.outputChars} triesAfter=${summary.triesAfter}`);
+  } catch (e) { summary.errors.push(`generation: ${e.message}`); }
   await ctx.close().catch(() => {});
   note('done');
 } catch (e) {
