@@ -1,0 +1,60 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:11:28.513Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:10:45.303Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:10:45.744Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:10:45.744Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:10:48.665Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:10:49.666Z",
+   "s": "runtime id=ffgpaigagfdhpjcleidfjdngoiijjmpo"
+  },
+  {
+   "t": "2026-11-12T08:10:54.009Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:10:56.215Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:11:00.373Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:11:02.996Z",
+   "s": "voice picked"
+  },
+  {
+   "t": "2026-11-12T08:11:28.513Z",
+   "s": "done"
+  }
+ ],
+ "errors": [
+  "generation: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('input[type=\"search\"], textarea, [contenteditable=\"true\"]').first() to be visible\n"
+ ],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": null,
+ "outputChars": 0,
+ "outputText": null,
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run6/ext-unpacked",
+ "extRuntimeId": "ffgpaigagfdhpjcleidfjdngoiijjmpo"
+}
