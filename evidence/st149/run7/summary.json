@@ -1,0 +1,61 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:14:48.114Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:13:39.115Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:13:39.527Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:13:39.527Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:13:41.612Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:13:41.612Z",
+   "s": "runtime id=cgknmblimpjkcpednkembcgcdnjciheh"
+  },
+  {
+   "t": "2026-11-12T08:13:46.309Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:13:48.546Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:13:52.664Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:13:55.324Z",
+   "s": "voice picked"
+  },
+  {
+   "t": "2026-11-12T08:14:48.114Z",
+   "s": "done"
+  }
+ ],
+ "errors": [
+  "youtube-search: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('input#search').first() to be visible\n",
+  "old-reddit-comment: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('textarea').first() to be visible\n"
+ ],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": null,
+ "outputChars": 0,
+ "outputText": null,
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run7/ext-unpacked",
+ "extRuntimeId": "cgknmblimpjkcpednkembcgcdnjciheh"
+}
