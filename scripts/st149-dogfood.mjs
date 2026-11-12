@@ -41,10 +41,13 @@ try {
   note(`unpacked v${manifest.version}`);
 
   note('browser_launch start');
-  const ctx = await chromium.launchPersistentContext(`${dir}/profile`, {
+  const absExt = path.resolve(`${dir}/ext-unpacked`);
+  const absProfile = path.resolve(`${dir}/profile`);
+  const ctx = await chromium.launchPersistentContext(absProfile, {
     headless: false, timeout: 90000,
-    args: [`--load-extension=${dir}/ext-unpacked`, '--no-sandbox', '--disable-dev-shm-usage'],
+    args: [`--load-extension=${absExt}`, `--disable-extensions-except=${absExt}`, '--no-sandbox', '--disable-dev-shm-usage'],
   });
+  summary.loadPath = absExt;
   note('browser up');
 
   let extId = null;
