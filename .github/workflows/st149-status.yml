@@ -1,0 +1,28 @@
+name: st149-status
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/st149-status.mjs && node --check scripts/token.mjs
+      - run: node scripts/st149-status.mjs
+        env:
+          FRANTIC_BASE: https://gofrantic.com
+          FRANTIC_AGENT_KID: ${{ secrets.FRANTIC_AGENT_KID }}
+          FRANTIC_AGENT_TOKEN: ${{ secrets.FRANTIC_AGENT_TOKEN }}
+          SCRAMBLE_KEY: ${{ secrets.SCRAMBLE }}
+      - run: |
+          git config user.name "st149-status"
+          git config user.email "st149-status@users.noreply.github.com"
+          git add evidence/st149/claim-status.json || true
+          git diff --cached --quiet || git commit -m "st149 claim-status $(date -u +%FT%TZ)"
+          for i in 1 2 3; do git fetch origin main >/dev/null 2>&1; git rebase origin/main >/dev/null 2>&1 || git rebase --abort; git push && break || sleep 10; done
+        if: always()
