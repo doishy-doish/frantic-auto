@@ -1,0 +1,16 @@
+{
+ "name": "wkours",
+ "url": "https://agent-apis-agent1-48fb.vercel.app/.well-known/x402",
+ "status": 404,
+ "ct": "application/json",
+ "bytes": 68,
+ "json": {
+  "keys": [
+   "error"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"error\": {\"code\": \"404\", \"message\": \"The page could not be found\"}}"
+ },
+ "depth": 0
+}

@@ -1,0 +1,29 @@
+{
+ "name": "sitemap",
+ "origin": "https://10x402.com",
+ "routes": [
+  {
+   "path": "/sitemap.xml",
+   "status": 200,
+   "locs": [
+    "https://10x402.com/",
+    "https://10x402.com/audit",
+    "https://10x402.com/retest",
+    "https://10x402.com/guides/",
+    "https://10x402.com/guides/bazaar-not-indexed/",
+    "https://10x402.com/guides/wrong-bag/",
+    "https://10x402.com/guides/registry-coverage/"
+   ],
+   "paths": []
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/",
+    "https://10x402.com/sitemap.xml"
+   ]
+  }
+ ]
+}

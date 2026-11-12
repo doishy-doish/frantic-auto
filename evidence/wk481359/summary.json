@@ -1,0 +1,28 @@
+{
+ "stamp": "wk481359",
+ "takenAt": "2026-11-12T13:18:14.759Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "wkref",
+   "status": 200,
+   "bytes": 33308
+  },
+  {
+   "name": "wkours",
+   "status": 404,
+   "bytes": 68
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

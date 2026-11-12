@@ -1,0 +1,20 @@
+{
+ "name": "wkref",
+ "url": "https://10x402.com/.well-known/x402",
+ "status": 200,
+ "ct": "application/json; charset=utf-8",
+ "bytes": 33308,
+ "json": {
+  "keys": [
+   "x402Version",
+   "service",
+   "resources",
+   "free",
+   "human_delivered",
+   "note"
+  ],
+  "count": null,
+  "first": null
+ },
+ "depth": 0
+}
