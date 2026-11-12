@@ -21,25 +21,37 @@ const r = await fetch(`https://api.github.com/repos/doishy-doish/frantic-auto/ac
 });
 if (r.status !== 200) { console.log('logs-http=' + r.status); process.exit(1); }
 const zip = Buffer.from(await r.arrayBuffer());
+console.log('zip-bytes=' + zip.length);
 
-// minimal zip walk (stored + deflated entries) — avoids heavy deps.
+// central-directory walk (handles data-descriptor entries GitHub emits).
 const out = {};
 try {
   const dv = new DataView(zip.buffer, zip.byteOffset, zip.length);
-  let off = 0;
-  while (off + 30 < zip.length && dv.getUint32(off, true) === 0x04034b50) {
-    const method = dv.getUint16(off + 8, true);
-    const csize = dv.getUint32(off + 18, true);
-    const nlen = dv.getUint16(off + 26, true);
-    const elen = dv.getUint16(off + 28, true);
-    const name = zip.toString('utf8', off + 30, off + 30 + nlen);
-    const start = off + 30 + nlen + elen;
+  let eocd = -1;
+  for (let i = zip.length - 22; i >= Math.max(0, zip.length - 66000); i--) {
+    if (dv.getUint32(i, true) === 0x06054b50) { eocd = i; break; }
+  }
+  if (eocd < 0) throw new Error('no-eocd');
+  const cdCount = dv.getUint16(eocd + 10, true);
+  let cdOff = dv.getUint32(eocd + 16, true);
+  for (let k = 0; k < cdCount; k++) {
+    if (dv.getUint32(cdOff, true) !== 0x02014b50) throw new Error('bad-cd');
+    const method = dv.getUint16(cdOff + 10, true);
+    const csize = dv.getUint32(cdOff + 20, true);
+    const nlen = dv.getUint16(cdOff + 28, true);
+    const elen = dv.getUint16(cdOff + 30, true);
+    const clen = dv.getUint16(cdOff + 32, true);
+    const lho = dv.getUint32(cdOff + 42, true);
+    const name = zip.toString('utf8', cdOff + 46, cdOff + 46 + nlen);
+    const lhoNlen = dv.getUint16(lho + 26, true);
+    const lhoElen = dv.getUint16(lho + 28, true);
+    const start = lho + 30 + lhoNlen + lhoElen;
     const data = zip.subarray(start, start + csize);
-    out[name] = method === 0 ? data : inflateSync(data);
-    off = start + csize;
+    if (!name.endsWith('/')) out[name] = method === 0 ? data : inflateSync(data);
+    cdOff += 46 + nlen + elen + clen;
   }
 } catch (e) {
-  console.log('unzip-fail bytes=' + zip.length);
+  console.log('unzip-fail bytes=' + zip.length + ' err=' + String(e).slice(0, 80));
   process.exit(1);
 }
 
