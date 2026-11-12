@@ -1,0 +1,47 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T07:43:05.630Z",
+ "steps": [
+  {
+   "t": "2026-11-12T07:42:35.762Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T07:42:36.222Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T07:42:36.222Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T07:42:38.331Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T07:42:58.352Z",
+   "s": "runtime id=null"
+  },
+  {
+   "t": "2026-11-12T07:43:03.425Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T07:43:05.630Z",
+   "s": "extensions shot"
+  }
+ ],
+ "errors": [
+  "fatal: extension failed to load (no service worker)"
+ ],
+ "signInDemanded": null,
+ "triesBefore": null,
+ "triesAfter": null,
+ "outputChars": 0,
+ "outputText": null,
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "extRuntimeId": null
+}
