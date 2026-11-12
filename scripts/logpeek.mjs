@@ -52,7 +52,7 @@ try {
   const keep = [];
   for (const n of names) {
     const txt = out[n].toString('utf8');
-    const hits = txt.split('\n').filter((l) => /ARTIFACTKEY=|upload-req status=|fromkeys(\[\d+\])? status=|submissionId/i.test(l)).slice(0, 40);
+    const hits = txt.split('\n').filter((l) => /ARTIFACTKEY=|upload-req status=|fromkeys(\[\d+\])? status=|submissionId|payTo|accepts|x402Version|TransferWithAuthorization|maxAmountRequired|error/i.test(l)).slice(0, 60);
     if (hits.length) keep.push('### ' + n + '\n' + hits.join('\n'));
   }
   matched = keep.length;
