@@ -90,6 +90,13 @@ else
   echo "slither: SKIPPED"
 fi
 
+# --- elite detectors (yAudit-class D1-D5, best-effort) ---
+if command -v node >/dev/null; then
+  node ../scripts/run-elite-detectors.mjs . "../$EV/elite-detectors.json" >"../$EV/elite.log" 2>&1 && echo "elite-detectors: OK" || echo "elite-detectors: FAIL (see log)"
+else
+  echo "elite-detectors: SKIPPED (no node)"
+fi
+
 # --- trim evidence (keep JSONs + tails only) ---
 cd ..
 for f in forge-build aderyn slither; do
