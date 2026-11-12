@@ -1,0 +1,23 @@
+{
+ "stamp": "li026354",
+ "takenAt": "2026-11-12T12:20:40.604Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "li-profile",
+   "status": 999,
+   "bytes": 1530
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

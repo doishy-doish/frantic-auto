@@ -1,0 +1,43 @@
+{
+ "name": "sitemap",
+ "origin": "https://www.linkedin.com",
+ "routes": [
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/",
+    "/",
+    "/addContacts*",
+    "/addressBookExport*",
+    "/ambry",
+    "/analytics/",
+    "/answers*",
+    "/authwall",
+    "/badges/profile/create",
+    "/cap/",
+    "/chat/",
+    "/checkpoint/",
+    "/companyDir*",
+    "/connections*",
+    "/csp/",
+    "/e/",
+    "/edurec*",
+    "/embed/feed/update/",
+    "/endorsements",
+    "/feed/update/",
+    "/find/",
+    "/fizzy/admin",
+    "/groups/",
+    "/groupAnswers*",
+    "/groupSharingMsg*",
+    "/inviteFromProfile*",
+    "/inviteMany*",
+    "/jobs?runSearch*",
+    "/jobs/view/externalApply/",
+    "/jobs-guest/"
+   ]
+  }
+ ]
+}
