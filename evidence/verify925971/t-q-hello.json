@@ -1,0 +1,19 @@
+{
+ "name": "q-hello",
+ "engine": "ddg",
+ "query": "hello world",
+ "status": 200,
+ "count": 2,
+ "results": [
+  {
+   "title": "Hello, world - Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Hello,_world",
+   "snippet": "A &quot; Hello , world &quot; program is usually a simple computer program that outputs a message similar to &quot; Hello , world &quot;. The text may be printed out or displayed on a screen (often a console). A small piece of code in most "
+  },
+  {
+   "title": "Hello, World (photograph) - Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Hello,_World_(photograph)",
+   "snippet": "Hello , World , taken by Reid Wiseman of the Artemis II crew on April 3, 2026 Hello , World is a photograph of Earth taken by NASA astronaut Reid Wiseman aboard the Orion spacecraft on April 2, 2026, during the Artemis II mission, published"
+  }
+ ]
+}

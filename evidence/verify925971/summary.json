@@ -1,0 +1,18 @@
+{
+ "stamp": "verify925971",
+ "takenAt": "2026-11-12T12:19:02.311Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "q-hello",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}
