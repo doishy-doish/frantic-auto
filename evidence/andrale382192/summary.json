@@ -1,0 +1,33 @@
+{
+ "stamp": "andrale382192",
+ "takenAt": "2026-11-12T12:26:41.981Z",
+ "case": "search-sweep",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 10,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "q-name",
+   "status": 202,
+   "bytes": 0
+  },
+  {
+   "name": "q-linkedin",
+   "status": 202,
+   "bytes": 0
+  },
+  {
+   "name": "q-github",
+   "status": 200,
+   "bytes": 0
+  },
+  {
+   "name": "q-user",
+   "status": 200,
+   "bytes": 0
+  }
+ ]
+}

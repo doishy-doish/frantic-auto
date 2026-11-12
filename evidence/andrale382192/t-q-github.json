@@ -1,0 +1,34 @@
+{
+ "name": "q-github",
+ "engine": "github:repositories",
+ "query": "andrale",
+ "status": 200,
+ "count": 5,
+ "results": [
+  {
+   "title": "doishy-doish/andrale-voxel",
+   "url": "https://github.com/doishy-doish/andrale-voxel",
+   "snippet": "Andrale Voxel — browser voxel survival sandbox. Web build source + itch.io butler deploy. ★0 HTML upd:2026-11-05"
+  },
+  {
+   "title": "andralex/andralex.github.io",
+   "url": "https://github.com/andralex/andralex.github.io",
+   "snippet": "Website ★0 HTML upd:2026-10-02"
+  },
+  {
+   "title": "smbh-devs/andralex-trading-site",
+   "url": "https://github.com/smbh-devs/andralex-trading-site",
+   "snippet": " ★0 HTML upd:2026-09-15"
+  },
+  {
+   "title": "ExpertosTI/andrale",
+   "url": "https://github.com/ExpertosTI/andrale",
+   "snippet": " ★0 JavaScript upd:2026-04-15"
+  },
+  {
+   "title": "tonymonaghan0/Andralert",
+   "url": "https://github.com/tonymonaghan0/Andralert",
+   "snippet": "Android intruder alarm that will ring or text another phone if an alert triggered. ★0 Java upd:2020-11-18"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "name": "q-user",
+ "engine": "github:issues",
+ "query": "author:doishy-doish",
+ "status": 200,
+ "count": 5,
+ "results": [
+  {
+   "title": "dex223-bug-bounty#70 [Info] NonfungiblePositionManager.tokenURI() unconditionally returns empty string — position descriptor was removed during testing and neve",
+   "url": "https://github.com/rroland10/dex223-bug-bounty/issues/70",
+   "snippet": "closed  2026-11-06T21:16:39Z"
+  },
+  {
+   "title": "Go-Hybrid#4073 [soundness] hy-check: method calls with receiver bypass const-write check (HYB-E3006)",
+   "url": "https://github.com/limitlessprojects/Go-Hybrid/issues/4073",
+   "snippet": "open  2026-11-07T17:42:05Z"
+  },
+  {
+   "title": "Go-Hybrid#4044 [buildable] hy-check(foreign): `foreign_method_surface` omits curated `http.serve_mux`, `http.header`, and `http.transport` method surfaces (HYB-",
+   "url": "https://github.com/limitlessprojects/Go-Hybrid/issues/4044",
+   "snippet": "open  2026-11-07T13:27:14Z"
+  },
+  {
+   "title": "Go-Hybrid#4043 [buildable] hy-check(foreign): `foreign_method_surface` omits curated `url.values` method surface (HYB-E1002, Row 13)",
+   "url": "https://github.com/limitlessprojects/Go-Hybrid/issues/4043",
+   "snippet": "open  2026-11-07T13:27:13Z"
+  },
+  {
+   "title": "Go-Hybrid#4042 [buildable] hy-check(foreign): `foreign_method_surface` omits curated `time.duration` method surface (HYB-E1002, Row 13)",
+   "url": "https://github.com/limitlessprojects/Go-Hybrid/issues/4042",
+   "snippet": "open  2026-11-07T13:27:12Z"
+  }
+ ]
+}
