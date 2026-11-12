@@ -132,7 +132,7 @@ try {
     const voiceSlug = pick.slug || pick.id;
     summary.api.voice = voiceSlug;
     note(`api voice=${voiceSlug}`);
-    const payload = { requestId: randomUUID(), voice: voiceSlug, box: 'post', length: 'short', site: 'generic', context: '', draft: '', brief: SAMPLE, language: 'en', edge: 'clean', emoji: 'off', intensity: 'full' };
+    const payload = { requestId: randomUUID(), voice: voiceSlug, box: 'post', length: 'short', site: 'x', context: '', draft: '', brief: SAMPLE, language: 'en', edge: 'clean', emoji: 'off', intensity: 'full' };
     await fs.writeFile(`${dir}/compose-request.json`, JSON.stringify({ ...payload }, null, 1));
     const comp = await fetch(`${API}/v1/compose`, { method: 'POST', headers: { ...auth, accept: 'text/event-stream' }, body: JSON.stringify(payload) });
     if (!comp.ok && !(comp.headers.get('content-type') || '').startsWith('text/event-stream')) {
