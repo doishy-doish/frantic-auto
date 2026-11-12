@@ -1,0 +1,23 @@
+{
+ "stamp": "v402b758306",
+ "takenAt": "2026-11-12T13:06:11.521Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "radar402",
+   "status": 200,
+   "bytes": 59
+  },
+  {
+   "name": "poison402",
+   "status": 200,
+   "bytes": 240
+  }
+ ]
+}
