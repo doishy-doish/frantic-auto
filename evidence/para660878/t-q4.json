@@ -1,0 +1,59 @@
+{
+ "name": "q4",
+ "engine": "github:issues",
+ "query": "label:bounty state:open no:assignee",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "claude-builders-bounty#1 [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history",
+   "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1",
+   "snippet": "open bounty,skill,good first issue 2026-03-27T00:55:36Z"
+  },
+  {
+   "title": "claude-builders-bounty#3 [BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands",
+   "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3",
+   "snippet": "open bounty,hook,security 2026-03-27T00:55:40Z"
+  },
+  {
+   "title": "claude-builders-bounty#4 [BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment",
+   "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
+   "snippet": "open bounty,agent 2026-03-27T00:55:42Z"
+  },
+  {
+   "title": "ai#133 [QA Bounty] [P1] Audio Generation & Transcription",
+   "url": "https://github.com/hanzoai/ai/issues/133",
+   "snippet": "open track: oss,priority: P1,bounty,bounty:P1,tests,qa 2026-11-09T19:23:22Z"
+  },
+  {
+   "title": "ai#132 [QA Bounty] [P1] Text Generation Edge Cases",
+   "url": "https://github.com/hanzoai/ai/issues/132",
+   "snippet": "open track: oss,priority: P1,bounty,bounty:P1,tests,qa 2026-11-09T19:23:19Z"
+  },
+  {
+   "title": "ai#130 [QA Bounty] [P1] Cross-Modal Workflows",
+   "url": "https://github.com/hanzoai/ai/issues/130",
+   "snippet": "open track: oss,priority: P1,bounty,bounty:P1,tests,qa 2026-11-09T19:23:13Z"
+  },
+  {
+   "title": "frantic-board#589 Frantic bounty #148: Write one draft in a famous voice with Silvertongue's MCP server",
+   "url": "https://github.com/auscaster/frantic-board/issues/589",
+   "snippet": "open bounty,funded,claimed,delivered 2026-11-10T21:22:21Z"
+  },
+  {
+   "title": "AncientBeast#2004 ability unit targeting tweaks [bounty: 15 XTR]",
+   "url": "https://github.com/FreezingMoon/AncientBeast/issues/2004",
+   "snippet": "open coding,visuals,abilities,input,bounty 2022-01-03T06:20:14Z"
+  },
+  {
+   "title": "ai#137 [QA Bounty] [P0] Model Routing & Failover",
+   "url": "https://github.com/hanzoai/ai/issues/137",
+   "snippet": "open track: oss,bounty,bounty:P0,priority: P0,tests,qa 2026-11-09T19:23:33Z"
+  },
+  {
+   "title": "ai#138 [QA Bounty] [P0] Cross-Model API Compatibility",
+   "url": "https://github.com/hanzoai/ai/issues/138",
+   "snippet": "open track: oss,bounty,bounty:P0,priority: P0,tests,qa 2026-11-09T19:23:36Z"
+  }
+ ]
+}

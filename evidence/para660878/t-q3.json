@@ -1,0 +1,59 @@
+{
+ "name": "q3",
+ "engine": "ddg",
+ "query": "x402 paid API marketplace monetize agent",
+ "status": 200,
+ "count": 10,
+ "results": [
+  {
+   "title": "x402 Bazaar — The API Marketplace for AI Agents",
+   "url": "https://www.x402bazaar.org/",
+   "snippet": "Any agent . Any API . Instant pay. The payment layer for autonomous agents . Discover, pay, and consume APIs in a single request — no keys, no subscriptions."
+  },
+  {
+   "title": "x402 marketplace for AI agents | PayAPI Market",
+   "url": "https://payapi.market/",
+   "snippet": "1,492 settlement-verified APIs , 2,688 listed. x402 marketplace for AI agents . Find APIs free over MCP and pay per call in USDC on Base, Solana or Algorand. No API key. Free to list, keep 100%."
+  },
+  {
+   "title": "Monetize Your API with x402 - x402 Bazaar",
+   "url": "https://www.x402bazaar.org/for-providers",
+   "snippet": "Publish your API on x402 Bazaar and earn USDC from AI agents worldwide. Keep 95% of every payment. No subscription model, no infrastructure overhead. Instant on-chain payouts on Base or SKALE."
+  },
+  {
+   "title": "Agent Bazaar — AI Skills Marketplace | x402 Pay-Per-Use",
+   "url": "https://agent-bazaar.com/try",
+   "snippet": "Discover APIs , CLI tools, and agent skills. Pay per use with x402 . No subscriptions. Agents shop autonomously."
+  },
+  {
+   "title": "Monetize Your API for AI Agents with x402 and USDC | Circle",
+   "url": "https://www.circle.com/blog/turn-your-api-into-a-storefront-for-agents",
+   "snippet": "Agent Wallets let agents hold and transact assets autonomously within predefined policies. Agent Marketplace gives services a place to be discovered, evaluated, and paid for by agents . Gateway provides the x402 payment flow for USDC nanopa"
+  },
+  {
+   "title": "x402 APIs for AI Agents | PayAPI Market",
+   "url": "https://payapi.market/agents",
+   "snippet": "MCP API directory for AI agents : one endpoint at payapi.market/mcp. Discover pay-per-call APIs and pay per request in USDC on Base, no keys, no accounts."
+  },
+  {
+   "title": "How to Monetize APIs for AI Agents with Agent Stack and x402 | Circle",
+   "url": "https://www.circle.com/blog/turn-your-api-into-an-agent-ready-revenue-stream",
+   "snippet": "Learn how x402 and Circle Agent Stack help API providers accept USDC payments from autonomous agents and unlock pay-per-use revenue."
+  },
+  {
+   "title": "x402-monetize — Charge USDC Per API Call on Base - GitHub",
+   "url": "https://github.com/igor-holt/x402-monetize-plugin",
+   "snippet": "x402 - monetize is a Claude Code plugin for the x402 payment protocol. It does two things: it helps you build paid endpoints that charge USDC per request on Base, and it lets you discover and pay for other agents&#x27; services from inside "
+  },
+  {
+   "title": "x402 · Cloudflare Agents docs",
+   "url": "https://developers.cloudflare.com/agents/tools/payments/x402/",
+   "snippet": "Accept and make machine-to-machine payments using the x402 HTTP payment protocol on Cloudflare Workers and the Agents SDK."
+  },
+  {
+   "title": "X402 BAZAAR APP - Discover, Connect, Monetize | Payable API Marketplace",
+   "url": "https://x402bazaar.app/",
+   "snippet": "The X402 Protocol Marketplace for Payable APIs . Discover 800+ live endpoints, like trending services, and monetize with crypto."
+  }
+ ]
+}
