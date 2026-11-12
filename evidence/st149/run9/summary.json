@@ -1,0 +1,65 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:21:16.634Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:20:10.095Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:20:10.533Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:20:10.533Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:20:13.228Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:20:13.228Z",
+   "s": "runtime id=abdegipabnbghechaljpiocaeoopgkfe"
+  },
+  {
+   "t": "2026-11-12T08:20:17.624Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:20:19.864Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:20:24.019Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:20:26.655Z",
+   "s": "voice picked"
+  },
+  {
+   "t": "2026-11-12T08:21:16.460Z",
+   "s": "site drive welcome chars=482 triesAfter=null"
+  },
+  {
+   "t": "2026-11-12T08:21:16.633Z",
+   "s": "done"
+  }
+ ],
+ "errors": [
+  "yt-watch: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('#contenteditable-root').first() to be visible\n"
+ ],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": null,
+ "outputChars": 482,
+ "outputText": " Silvertongue is installed Silvertongue is installed What you want to say, written the way anyone famous would say it, in every box you type in. Try it here: nothing on this page is posted. J Jess · group chat Who ate my leftovers? They had my name on them. that was me. they were delicious. no regrets Click the Silvertongue button in the corner of the box, or press Ctrl Shift S . Using Silvertongue means you agree to its terms . The privacy policy says what it reads and keeps. ",
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run9/ext-unpacked",
+ "extRuntimeId": "abdegipabnbghechaljpiocaeoopgkfe",
+ "drove_welcome": true
+}
