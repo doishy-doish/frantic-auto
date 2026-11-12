@@ -92,24 +92,35 @@ try {
     await pop.screenshot({ path: `${dir}/05-voice-picked.png` });
     note('voice picked');
     const targets = [
-      { name: 'youtube-search', url: 'https://www.youtube.com/', box: 'input[placeholder="Search"]', fill: true },
+      { name: 'yt-watch', url: 'https://www.youtube.com/watch?v=jNQXAC9IVRw', box: '#contenteditable-root', fill: true },
+      { name: 'welcome', url: null, box: 'textarea, [contenteditable="true"]', fill: true },
     ];
     let drove = false;
     for (const tg of targets) {
       if (drove) break;
       const site = await ctx.newPage();
       try {
-        await site.goto(tg.url, { waitUntil: 'domcontentloaded', timeout: 45000 });
-        await site.waitForTimeout(6000);
+        if (tg.url) {
+          await site.goto(tg.url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+          await site.waitForTimeout(7000);
+        } else {
+          await site.goto(`chrome-extension://${summary.extRuntimeId}/welcome.html`, { timeout: 30000 });
+          await site.waitForTimeout(4000);
+        }
         await site.screenshot({ path: `${dir}/06-site-${tg.name}.png` });
+        // dismiss consent dialogs if present
+        const consent = site.getByRole('button', { name: /accept|agree|reject all/i }).first();
+        if (await consent.count()) { await consent.click({ timeout: 5000 }).catch(() => {}); await site.waitForTimeout(3000); }
         const box = site.locator(tg.box).first();
         await box.waitFor({ timeout: 20000 });
+        try { await box.scrollIntoViewIfNeeded({ timeout: 8000 }); } catch (e) {}
         await box.click({ timeout: 8000 });
         await box.fill(SAMPLE);
         await site.waitForTimeout(1000);
+        await site.screenshot({ path: `${dir}/07-filled-${tg.name}.png` });
         await site.keyboard.press('Control+Shift+S');
         await site.waitForTimeout(4000);
-        await site.screenshot({ path: `${dir}/07-card-${tg.name}.png` });
+        await site.screenshot({ path: `${dir}/08-card-${tg.name}.png` });
         let last = -1, still = 0;
         for (let i = 0; i < 30 && still < 3; i++) {
           await site.waitForTimeout(3000);
@@ -117,15 +128,16 @@ try {
           if (n === last) still++;
           else { still = 0; last = n; }
         }
-        await site.screenshot({ path: `${dir}/08-generation-${tg.name}.png` });
+        await site.screenshot({ path: `${dir}/09-generation-${tg.name}.png` });
         const finalText = ((await site.content()) || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
         summary.outputChars = finalText.length;
         const si = finalText.indexOf('Thanks for having me');
         summary.outputText = (si >= 0 ? finalText.slice(Math.max(0, si - 1500), si + 2500) : finalText.slice(-2500)).slice(0, 3000);
         const mA = finalText.match(/(\d+)\s+free\s+tr/i) || finalText.match(/(\d+)\s+left/i);
         summary.triesAfter = mA ? Number(mA[1]) : null;
+        summary['drove_' + tg.name] = true;
         note(`site drive ${tg.name} chars=${summary.outputChars} triesAfter=${summary.triesAfter}`);
-        if (summary.outputChars > 5000) drove = true;
+        if (tg.name === 'yt-watch' && summary.outputChars > 5000) drove = true;
       } catch (e) { summary.errors.push(tg.name + ': ' + e.message); }
       await site.close().catch(() => {});
     }
