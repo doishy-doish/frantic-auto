@@ -1,0 +1,16 @@
+2026-11-12T08:32:03.930Z crx_fetch start
+2026-11-12T08:32:04.206Z unpacked v0.2.2
+2026-11-12T08:32:04.206Z browser_launch start
+2026-11-12T08:32:07.823Z browser up
+2026-11-12T08:32:08.823Z runtime id=lpbfpdhjpplmonbffclaimjekkmnijba
+2026-11-12T08:32:13.160Z store shot
+2026-11-12T08:32:15.395Z extensions shot
+2026-11-12T08:32:19.554Z popup tries=10 signInDemanded=false
+2026-11-12T08:32:22.186Z voice picked
+2026-11-12T08:32:42.806Z yt-wall confirmed: no comment box logged-out
+2026-11-12T08:32:42.806Z api install start
+2026-11-12T08:32:43.648Z api me fills before=10
+2026-11-12T08:32:43.760Z api voice=snoop-dogg
+2026-11-12T08:32:43.867Z api-compose FAILED: compose http 400: {"error":"invalid","message":"✖ Invalid option: expected one of \"x\"|\"threads\"|\"bluesky\"|\"linkedin\"|\"instagram\"|\"facebook\"|\"reddit\"|\"youtube\"|\"gmail\"|\"outlook\"|\"s
+2026-11-12T08:32:45.509Z render shot
+2026-11-12T08:32:45.660Z done
