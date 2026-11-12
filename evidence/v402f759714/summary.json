@@ -1,0 +1,18 @@
+{
+ "stamp": "v402f759714",
+ "takenAt": "2026-11-12T13:22:52.657Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "a402",
+   "status": 402,
+   "bytes": 586
+  }
+ ]
+}

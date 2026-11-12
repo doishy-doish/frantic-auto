@@ -1,0 +1,18 @@
+{
+ "name": "a402",
+ "url": "https://agent-apis-agent1-48fb.vercel.app/api/radar?q=escrow",
+ "status": 402,
+ "ct": "application/json; charset=utf-8",
+ "bytes": 586,
+ "json": {
+  "keys": [
+   "x402Version",
+   "error",
+   "accepts"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"x402Version\":1,\"error\":\"Payment required: pay $0.01 USDC on Base, then retry with X-PAYMENT header.\",\"accepts\":[{\"scheme\":\"exact\",\"network\":\"base\",\"maxAmountRequired\":\"10000\",\"resource\":\"https://agent-apis-agent1-48fb.vercel.app/api/radar?q=escrow\",\"description\":\"Bounty radar score: paid per request\",\"mimeType\":\"application/json\",\"payTo\":\"0x9592d926920D99758fD3394c88f35959af6aD888\",\"maxTimeoutSeconds\":60,\"asset\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA4\",\"extra\":{\"name\":\"USD Coin\",\"version\":\"2\"},\"outputSchema\":{\"input\":{\"type\":\"http\",\"method\":\"GET\"},\"output\":{\"type\":\"string\"}}}]}"
+ },
+ "depth": 0
+}
