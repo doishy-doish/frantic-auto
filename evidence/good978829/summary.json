@@ -1,0 +1,28 @@
+{
+ "stamp": "good978829",
+ "takenAt": "2026-11-12T13:10:58.952Z",
+ "case": "api-hunt",
+ "depth": 1,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 8
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "ref402",
+   "status": 402,
+   "bytes": 2173
+  },
+  {
+   "name": "ours",
+   "status": 402,
+   "bytes": 498
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

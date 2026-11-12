@@ -1,0 +1,21 @@
+{
+ "name": "ref402",
+ "url": "https://10x402.com/lint/one",
+ "renderError": "playwright-missing",
+ "status": 402,
+ "ct": "application/json; charset=utf-8",
+ "bytes": 2173,
+ "json": {
+  "keys": [
+   "x402Version",
+   "error",
+   "execute",
+   "see",
+   "accepts"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"x402Version\":1,\"error\":\"X-PAYMENT header is required — and /lint/one executes on POST, not GET\",\"execute\":\"POST /lint/one with a JSON body and the X-PAYMENT header. This 402 is the liveness/terms surface for GET probes; paying on GET settles nothing and is answered 405.\",\"see\":{\"catalog\":\"https://10x402.com/check\",\"openapi\":\"https://10x402.com/openapi.json\",\"discovery\":\"https://10x402.com/.well-known/x402\",\"agent_instructions\":\"https://10x402.com/skill.md\"},\"accepts\":[{\"scheme\":\"exact\",\"network\":\"base\",\"maxAmountRequired\":\"15000\",\"resource\":\"https://10x402.com/lint/one\",\"description\":\"Run ONE named check against a live endpoint\",\"mimeType\":\"application/json\",\"payTo\":\"0x885E7BEF433eb78F5976b28A7c10739c98DB11E5\",\"maxTimeoutSeconds\":60,\"asset\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"extra\":{\"name\":\"USD Coin\",\"version\":\"2\"},\"outputSchema\":{\"input\":{\"type\":\"http\",\"method\":\"POST\",\"discoverable\":true,\"bodyType\":\"json\",\"description\":\"a JSON object: { \\\"url\\\": \\\"https://…\\\", \\\"check\\\": \\\"V2_B64_URLSAFE\\\" } — exactly one check id from GET /check, plus optionally { \\\"method\\\": \\\"POST\\\" | \\\"GET\\\" }, up to 256 KB\"},\"output\":{\"type\":\"string\",\"description\":\"a JSON single-check report: check, applied, passed, the finding with its fix (or null), regime, sources and the envelope summary\"}}},{\"scheme\":\"exact\",\"network\":\"solana\",\"maxAmountRequired\":\"15000\",\"resource\":\"https://10x402.com/lint/one\",\"description\":\"Run ONE named check against a live endpoint\",\"mimeType\":\"application/json\",\"payTo\":\"6Cg4g7rXQApimMc9wVJGLLZfHsvbwGpGrUpGDgyJ2RaP\",\"maxTimeoutSeconds\":60,\"asset\":\"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\",\"extra\":{\"feePayer\":\"BENrLoUbndxoNMUS5JXApGMtNykLjFXXixMtpDwDR9SP\"},\"outputSchema\":{\"input\":{\"type\":\"http\",\"method\":\"POST\",\"discoverable\":true,\"bodyType\":\"json\",\"description\":\"a JSON object: { \\\"url\\\": \\\"https://…\\\", \\\"check\\\": \\\"V2_B64_URLSAFE\\\" } — exactly one check id from GET /check, plus optionally { \\\"method\\\": \\\"POST\\\" | \\\"GET\\\" }, up to 256 KB\"},\"output\":{\"type\":\"string\",\"description\":\"a JSON single-check report: check, applied, passed, the finding with its fix (or null), regime, sources and the envelope summary\"}}}]}\n"
+ },
+ "depth": 0
+}
