@@ -92,8 +92,7 @@ try {
     await pop.screenshot({ path: `${dir}/05-voice-picked.png` });
     note('voice picked');
     const targets = [
-      { name: 'youtube-search', url: 'https://www.youtube.com/', box: 'input#search', fill: true },
-      { name: 'old-reddit-comment', url: 'https://old.reddit.com/r/test/comments/7k9n87/test_post_please_ignore/', box: 'textarea', fill: true },
+      { name: 'youtube-search', url: 'https://www.youtube.com/', box: 'input[placeholder="Search"]', fill: true },
     ];
     let drove = false;
     for (const tg of targets) {
