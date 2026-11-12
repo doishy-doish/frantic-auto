@@ -1,0 +1,41 @@
+name: st149-dogfood
+# Silvertongue extension dogfood for Frantic #149. Public lane, no secrets.
+# One dispatch: scripts/st149-dogfood.mjs under xvfb (extensions need headed).
+on:
+  workflow_dispatch:
+    inputs:
+      stamp:
+        description: 'Evidence dir name under evidence/st149/'
+        required: false
+        default: 'run1'
+permissions:
+  contents: write
+jobs:
+  dogfood:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - id: nodecheck
+        run: |
+          if command -v node >/dev/null && [ "$(node -p 'process.versions.node.split(".")[0]}')" -ge 20 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-node@v4
+        if: steps.nodecheck.outputs.ok != 'true'
+        with:
+          node-version: 20
+      - run: node --check scripts/st149-dogfood.mjs
+      - run: |
+          npm init -y >/dev/null 2>&1; npm pkg set type=module >/dev/null 2>&1
+          npm i playwright@latest && (npx playwright install chromium || true)
+          sudo apt-get install -y xvfb >/dev/null 2>&1 || true
+      - run: xvfb-run -a node scripts/st149-dogfood.mjs
+        env:
+          STAMP: ${{ inputs.stamp }}
+      - run: |
+          git config user.name "st149-dogfood"
+          git config user.email "st149-dogfood@users.noreply.github.com"
+          git add evidence/st149/ || true
+          git diff --cached --quiet || git commit -m "st149 $STAMP $(date -u +%FT%TZ)"
+          for i in 1 2 3; do git fetch origin main >/dev/null 2>&1; git rebase origin/main >/dev/null 2>&1 || git rebase --abort; git push && break || sleep 10; done
+        env:
+          STAMP: ${{ inputs.stamp }}
