@@ -1,0 +1,33 @@
+{
+ "stamp": "andrale2472261",
+ "takenAt": "2026-11-12T12:28:07.611Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "mo-name",
+   "status": 403,
+   "bytes": 0
+  },
+  {
+   "name": "gh-user",
+   "status": 200,
+   "bytes": 1227
+  },
+  {
+   "name": "gh-repos",
+   "status": 200,
+   "bytes": 188177
+  },
+  {
+   "name": "voxel",
+   "status": 200,
+   "bytes": 192474
+  }
+ ]
+}

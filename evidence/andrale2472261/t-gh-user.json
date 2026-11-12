@@ -1,0 +1,35 @@
+{
+ "name": "gh-user",
+ "url": "https://api.github.com/users/doishy-doish",
+ "status": 200,
+ "ct": "application/json; charset=utf-8",
+ "bytes": 1227,
+ "json": {
+  "keys": [
+   "login",
+   "id",
+   "node_id",
+   "avatar_url",
+   "gravatar_id",
+   "url",
+   "html_url",
+   "followers_url",
+   "following_url",
+   "gists_url",
+   "starred_url",
+   "subscriptions_url",
+   "organizations_url",
+   "repos_url",
+   "events_url",
+   "received_events_url",
+   "type",
+   "user_view_type",
+   "site_admin",
+   "name"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"login\":\"doishy-doish\",\"id\":203965714,\"node_id\":\"U_kgDODChFEg\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/203965714?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/doishy-doish\",\"html_url\":\"https://github.com/doishy-doish\",\"followers_url\":\"https://api.github.com/users/doishy-doish/followers\",\"following_url\":\"https://api.github.com/users/doishy-doish/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/doishy-doish/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/doishy-doish/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/doishy-doish/subscriptions\",\"organizations_url\":\"https://api.github.com/users/doishy-doish/orgs\",\"repos_url\":\"https://api.github.com/users/doishy-doish/repos\",\"events_url\":\"https://api.github.com/users/doishy-doish/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/doishy-doish/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false,\"name\":null,\"company\":null,\"blog\":\"\",\"location\":null,\"email\":null,\"hireable\":true,\"bio\":null,\"twitter_username\":null,\"public_repos\":35,\"public_gists\":8,\"followers\":0,\"following\":0,\"created_at\":\"2025-03-19T07:47:14Z\",\"updated_at\":\"2026-10-23T06:59:49Z\"}"
+ },
+ "depth": 0
+}
