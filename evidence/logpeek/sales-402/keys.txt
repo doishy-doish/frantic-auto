@@ -1,0 +1,7 @@
+### 0_run.txt
+2026-11-12T11:25:37.8670574Z fromkeys[0] status=402
+2026-11-12T11:25:37.8672599Z {"x402Version":2,"error":"Payment required","resource":{"url":"https://api.taskmarket.dev/api/tasks/0x2d6c97c911c6dd928ced4a6cc1754ffff99dbd6de1cdba3132ba3e64b375f6ce/submissions/from-keys","description":"Submit work (from keys) (the free submissions for this task are used up)","mimeType":"application/json"},"accepts":[{"scheme":"exact","network":"eip155:8453","amount":"1000","asset":"0x833589fCD6
+
+### run/4_Run node scripts_tm-submit.mjs.txt
+2026-11-12T11:25:37.8670521Z fromkeys[0] status=402
+2026-11-12T11:25:37.8672589Z {"x402Version":2,"error":"Payment required","resource":{"url":"https://api.taskmarket.dev/api/tasks/0x2d6c97c911c6dd928ced4a6cc1754ffff99dbd6de1cdba3132ba3e64b375f6ce/submissions/from-keys","description":"Submit work (from keys) (the free submissions for this task are used up)","mimeType":"application/json"},"accepts":[{"scheme":"exact","network":"eip155:8453","amount":"1000","asset":"0x833589fCD6
