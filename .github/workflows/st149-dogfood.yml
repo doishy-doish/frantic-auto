@@ -29,6 +29,7 @@ jobs:
           npm i playwright@latest && (npx playwright install chromium || true)
           sudo apt-get install -y xvfb >/dev/null 2>&1 || true
       - run: xvfb-run -a node scripts/st149-dogfood.mjs
+        timeout-minutes: 18
         env:
           STAMP: ${{ inputs.stamp }}
       - run: |
@@ -38,5 +39,6 @@ jobs:
           git add evidence/st149/ || true
           git diff --cached --quiet || git commit -m "st149 $STAMP $(date -u +%FT%TZ)"
           for i in 1 2 3; do git fetch origin main >/dev/null 2>&1; git rebase origin/main >/dev/null 2>&1 || git rebase --abort; git push && break || sleep 10; done
+        if: always()
         env:
           STAMP: ${{ inputs.stamp }}
