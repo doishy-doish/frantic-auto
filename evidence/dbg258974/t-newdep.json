@@ -1,0 +1,16 @@
+{
+ "name": "newdep",
+ "url": "https://agent-apis-ct5hnmt65-agent1-48fb.vercel.app/api/radar?q=escrow",
+ "status": 500,
+ "ct": "application/json",
+ "bytes": 68,
+ "json": {
+  "keys": [
+   "error"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"error\": {\"code\": \"500\", \"message\": \"A server error has occurred\"}}"
+ },
+ "depth": 0
+}
