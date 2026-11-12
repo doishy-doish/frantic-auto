@@ -1,0 +1,28 @@
+{
+ "stamp": "papi324252",
+ "takenAt": "2026-11-12T12:59:05.719Z",
+ "case": "api-hunt",
+ "depth": 1,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 8
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "openapi",
+   "status": 200,
+   "bytes": 4046077
+  },
+  {
+   "name": "list2",
+   "status": 200,
+   "bytes": 18659
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

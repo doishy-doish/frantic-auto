@@ -1,0 +1,23 @@
+{
+ "name": "openapi",
+ "url": "https://payapi.market/openapi.json",
+ "renderError": "playwright-missing",
+ "status": 200,
+ "ct": "application/json; charset=utf-8",
+ "bytes": 4046077,
+ "json": {
+  "keys": [
+   "openapi",
+   "info",
+   "servers",
+   "externalDocs",
+   "x-catalogue",
+   "tags",
+   "paths",
+   "components"
+  ],
+  "count": null,
+  "first": null
+ },
+ "depth": 0
+}
