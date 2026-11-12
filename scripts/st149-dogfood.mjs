@@ -105,7 +105,7 @@ try {
     await site.waitForTimeout(7000);
     await site.screenshot({ path: `${dir}/06-site-yt-watch.png` });
     const box = site.locator("#contenteditable-root").first();
-    await box.waitFor({ timeout: 8000 });
+    await box.waitFor({ timeout: 12000 });
     await site.screenshot({ path: `${dir}/07-yt-box.png` });
     note('yt comment box present (unexpected)');
     await site.close().catch(() => {});
@@ -132,11 +132,11 @@ try {
     const voiceSlug = pick.slug || pick.id;
     summary.api.voice = voiceSlug;
     note(`api voice=${voiceSlug}`);
-    const payload = { requestId: randomUUID(), voice: voiceSlug, box: 'post', length: 'short', site: 'x', context: '', draft: '', brief: SAMPLE, language: 'en', edge: 'clean', emoji: 'off', intensity: 'medium' };
+    const payload = { requestId: randomUUID(), voice: voiceSlug, box: 'post', length: 'short', site: 'generic', context: '', draft: '', brief: SAMPLE, language: 'en', edge: 'clean', emoji: 'off', intensity: 'full' };
     await fs.writeFile(`${dir}/compose-request.json`, JSON.stringify({ ...payload }, null, 1));
     const comp = await fetch(`${API}/v1/compose`, { method: 'POST', headers: { ...auth, accept: 'text/event-stream' }, body: JSON.stringify(payload) });
     if (!comp.ok && !(comp.headers.get('content-type') || '').startsWith('text/event-stream')) {
-      throw new Error(`compose http ${comp.status}: ` + (await comp.text()).slice(0, 2000));
+      throw new Error(`compose http ${comp.status}: ` + (await comp.text()).slice(0, 400));
     }
     const reader = comp.body.pipeThrough(new TextDecoderStream()).getReader();
     let acc = '', final = null, bufAcc = '';
@@ -196,4 +196,4 @@ summary.at = new Date().toISOString();
 await save();
 await fs.writeFile(`${dir}/run.log`, summary.steps.map((s) => `${s.t} ${s.s}`).join('\n') + '\n').catch(() => {});
 await fs.rm(`${dir}/profile`, { recursive: true, force: true });
-console.log('st149 v10 done');
+console.log('st149 v9 done');
