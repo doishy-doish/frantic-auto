@@ -1,0 +1,56 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:07:43.503Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:07:14.960Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:07:15.254Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:07:15.254Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:07:16.270Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:07:17.271Z",
+   "s": "runtime id=idigbchfladkimolghbmijegalcfebbl"
+  },
+  {
+   "t": "2026-11-12T08:07:21.858Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:07:24.135Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:07:28.311Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:07:43.503Z",
+   "s": "done"
+  }
+ ],
+ "errors": [
+  "generation: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('textarea, [contenteditable=\"true\"], input[type=\"text\"]').first() to be visible\n"
+ ],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": null,
+ "outputChars": 0,
+ "outputText": null,
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run5/ext-unpacked",
+ "extRuntimeId": "idigbchfladkimolghbmijegalcfebbl"
+}
