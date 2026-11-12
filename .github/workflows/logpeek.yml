@@ -1,0 +1,37 @@
+name: logpeek
+# Read a workflow run's logs with zero operator clicks. Token is dispatch-only
+# (never committed, never logged); evidence holds ONLY grepped status lines.
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: 'Actions run id whose logs to read'
+        required: true
+      token:
+        description: 'Classic token (dispatch-only, redacted from evidence)'
+        required: true
+      stamp:
+        description: 'Evidence dir name under evidence/logpeek/'
+        required: false
+        default: 'run'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check scripts/logpeek.mjs
+      - run: node scripts/logpeek.mjs
+        env:
+          RUN_ID: ${{ inputs.run_id }}
+          LOGT: ${{ inputs.token }}
+          STAMP: ${{ inputs.stamp }}
+      - run: |
+          grep -rEi 'ghp_|github_pat_|bearer ' evidence/logpeek/ && { echo SECRET_LEAK; exit 1; } || true
+          git config user.name doishy-doish
+          git config user.email doishy-doish@users.noreply.github.com
+          git add evidence/logpeek/
+          git commit -m "logpeek ${{ inputs.stamp }}" || echo no-change
+          git push
