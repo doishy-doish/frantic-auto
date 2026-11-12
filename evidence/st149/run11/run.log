@@ -1,0 +1,16 @@
+2026-11-12T08:30:39.892Z crx_fetch start
+2026-11-12T08:30:40.208Z unpacked v0.2.2
+2026-11-12T08:30:40.208Z browser_launch start
+2026-11-12T08:30:41.620Z browser up
+2026-11-12T08:30:41.620Z runtime id=oglljmjnohnndglegnhppaojkhhlknbp
+2026-11-12T08:30:45.980Z store shot
+2026-11-12T08:30:48.188Z extensions shot
+2026-11-12T08:30:52.337Z popup tries=10 signInDemanded=false
+2026-11-12T08:30:54.985Z voice picked
+2026-11-12T08:31:11.607Z yt-wall confirmed: no comment box logged-out
+2026-11-12T08:31:11.607Z api install start
+2026-11-12T08:31:12.400Z api me fills before=10
+2026-11-12T08:31:12.517Z api voice=snoop-dogg
+2026-11-12T08:31:12.639Z api-compose FAILED: compose http 400: {"error":"invalid","message":"✖ Invalid option: expected one of \"light\"|\"full\"\n  → at intensity"}
+2026-11-12T08:31:14.262Z render shot
+2026-11-12T08:31:14.415Z done

@@ -1,0 +1,106 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:31:14.415Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:30:39.892Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:30:40.208Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:30:40.208Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:30:41.620Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:30:41.620Z",
+   "s": "runtime id=oglljmjnohnndglegnhppaojkhhlknbp"
+  },
+  {
+   "t": "2026-11-12T08:30:45.980Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:30:48.188Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:30:52.337Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:30:54.985Z",
+   "s": "voice picked"
+  },
+  {
+   "t": "2026-11-12T08:31:11.607Z",
+   "s": "yt-wall confirmed: no comment box logged-out"
+  },
+  {
+   "t": "2026-11-12T08:31:11.607Z",
+   "s": "api install start"
+  },
+  {
+   "t": "2026-11-12T08:31:12.400Z",
+   "s": "api me fills before=10"
+  },
+  {
+   "t": "2026-11-12T08:31:12.517Z",
+   "s": "api voice=snoop-dogg"
+  },
+  {
+   "t": "2026-11-12T08:31:12.639Z",
+   "s": "api-compose FAILED: compose http 400: {\"error\":\"invalid\",\"message\":\"✖ Invalid option: expected one of \\\"light\\\"|\\\"full\\\"\\n  → at intensity\"}"
+  },
+  {
+   "t": "2026-11-12T08:31:14.262Z",
+   "s": "render shot"
+  },
+  {
+   "t": "2026-11-12T08:31:14.415Z",
+   "s": "done"
+  }
+ ],
+ "errors": [
+  "yt-watch (expected wall): locator.waitFor: Timeout 8000ms exceeded.\nCall log:\n  - waiting for locator('#contenteditable-root').first() to be visible\n",
+  "api-compose: compose http 400: {\"error\":\"invalid\",\"message\":\"✖ Invalid option: expected one of \\\"light\\\"|\\\"full\\\"\\n  → at intensity\"}"
+ ],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": null,
+ "outputChars": 0,
+ "outputText": null,
+ "api": {
+  "installId": "a954382a-7307-4ec8-acdb-f5c2424dbf51",
+  "fillsAtInstall": {
+   "left": 10
+  },
+  "meBefore": {
+   "install": "a954382a-7307-4ec8-acdb-f5c2424dbf51",
+   "plan": "anonymous",
+   "own": "none",
+   "fills": {
+    "left": 10
+   },
+   "allowances": {
+    "install": 10,
+    "free": 30,
+    "paid": 300,
+    "price": "$9"
+   }
+  },
+  "voice": "snoop-dogg"
+ },
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run11/ext-unpacked",
+ "extRuntimeId": "oglljmjnohnndglegnhppaojkhhlknbp"
+}
