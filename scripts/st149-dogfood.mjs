@@ -5,6 +5,7 @@ import { promises as fs } from 'node:fs';
 import { createWriteStream } from 'node:fs';
 import { pipeline } from 'node:stream/promises';
 import { execFileSync } from 'node:child_process';
+import path from 'node:path';
 
 const EXT_ID = 'lanedehejpgpanageefmjbfgaeppeidl';
 const STORE_URL = `https://chromewebstore.google.com/detail/silvertongue-write-like-a/${EXT_ID}`;
