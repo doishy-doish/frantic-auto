@@ -1,0 +1,30 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:04:20.746Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:04:20.495Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:04:20.746Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:04:20.746Z",
+   "s": "browser_launch start"
+  }
+ ],
+ "errors": [
+  "fatal: path is not defined"
+ ],
+ "signInDemanded": null,
+ "triesBefore": null,
+ "triesAfter": null,
+ "outputChars": 0,
+ "outputText": null,
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ }
+}
