@@ -1,7 +1,7 @@
 // logpeek v3: always exits 0; real status lives in evidence/logpeek/<stamp>/.
 // Reads back via contents API. Debug breadcrumbs on every path.
 import { writeFile, mkdir } from 'node:fs/promises';
-import { inflateSync } from 'node:zlib';
+import { inflateRawSync } from 'node:zlib';
 
 const RUN = (process.env.RUN_ID || '').trim();
 const TOKEN = (process.env.LOGT || '').trim();
@@ -44,7 +44,7 @@ try {
     const lhoElen = dv.getUint16(lho + 28, true);
     const start = lho + 30 + lhoNlen + lhoElen;
     const data = zip.subarray(start, start + csize);
-    if (!name.endsWith('/')) out[name] = method === 0 ? data : inflateSync(data);
+    if (!name.endsWith('/')) out[name] = method === 0 ? data : inflateRawSync(data);
     cdOff += 46 + nlen + elen + clen;
   }
   const names = Object.keys(out);
