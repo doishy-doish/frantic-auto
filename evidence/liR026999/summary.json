@@ -1,0 +1,18 @@
+{
+ "stamp": "liR026999",
+ "takenAt": "2026-11-12T12:22:39.699Z",
+ "case": "inventory",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 3,
+  "maxFollows": 0
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "li-profile",
+   "status": 200,
+   "bytes": 80042
+  }
+ ]
+}
