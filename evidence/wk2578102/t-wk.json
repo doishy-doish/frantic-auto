@@ -1,0 +1,18 @@
+{
+ "name": "wk",
+ "url": "https://agent-apis-agent1-48fb.vercel.app/.well-known/x402",
+ "status": 200,
+ "ct": "application/json",
+ "bytes": 1287,
+ "json": {
+  "keys": [
+   "x402Version",
+   "service",
+   "resources"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\n  \"x402Version\": 2,\n  \"service\": {\n    \"name\": \"agent-apis\",\n    \"description\": \"Bounty-radar scoring and exfil-clause poison detection for AI agents, paid per call in USDC on Base.\",\n    \"url\": \"https://agent-apis-agent1-48fb.vercel.app\",\n    \"contact\": \"10a11andralemisquitta@gmail.com\"\n  },\n  \"resources\": [\n    {\n      \"url\": \"https://agent-apis-agent1-48fb.vercel.app/api/radar\",\n      \"method\": \"GET\",\n      \"description\": \"Bounty radar score: paid per request. Example: ?q=escrow\",\n      \"mimeType\": \"application/json\",\n      \"accepts\": [\n        {\n          \"scheme\": \"exact\",\n          \"network\": \"eip155:8453\",\n          \"amount\": \"10000\",\n          \"asset\": \"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA4\",\n          \"payTo\": \"0x9592d926920D99758fD3394c88f35959af6aD888\"\n        }\n      ]\n    },\n    {\n      \"url\": \"https://agent-apis-agent1-48fb.vercel.app/api/poison\",\n      \"method\": \"GET\",\n      \"description\": \"Exfil-clause poison detector: paid per request.\",\n      \"mimeType\": \"application/json\",\n      \"accepts\": [\n        {\n          \"scheme\": \"exact\",\n          \"network\": \"eip155:8453\",\n          \"amount\": \"10000\",\n          \"asset\": \"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA4\",\n          \"payTo\": \"0x9592d926920D99758fD3394c88f35959af6aD888\"\n        }\n      ]\n    }\n  ]\n}"
+ },
+ "depth": 0
+}

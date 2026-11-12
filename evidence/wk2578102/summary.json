@@ -1,0 +1,18 @@
+{
+ "stamp": "wk2578102",
+ "takenAt": "2026-11-12T13:19:53.168Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "wk",
+   "status": 200,
+   "bytes": 1287
+  }
+ ]
+}
