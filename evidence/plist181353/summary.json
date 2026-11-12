@@ -1,0 +1,28 @@
+{
+ "stamp": "plist181353",
+ "takenAt": "2026-11-12T12:56:57.125Z",
+ "case": "api-hunt",
+ "depth": 1,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 8
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "listform",
+   "status": 200,
+   "bytes": 52407
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  },
+  {
+   "name": "d1-1",
+   "status": 200,
+   "bytes": 23226
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "name": "listform",
+ "url": "https://payapi.market/list",
+ "rendered": true,
+ "status": 200,
+ "ct": "rendered-dom",
+ "bytes": 52407,
+ "textLen": 7764,
+ "head": "List your API: free listing form | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 payapi market Marketplace Providers Agents Agent marketplace New Enterprises Calculator Pricing Blog About Log in List your API Listing is free. Providers keep 100% of what the call earns. Want the provider playbook by email? Use the box on the homepage . One screen. Add your email and the paid route. We read the 402 and fill the wallet, and the example when the route publishes one. Email Paste the paid route that already returns HTTP 402, not the homepage. Paid route URL One URL on each line, up to 20. Paste the exact URL we will call unpaid. It must return HTTP 402 with a Base USDC challenge…[trunc 7764]",
+ "links": [
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "/best-x402-apis-2027",
+   "t": "Best x402 APIs 2027"
+  },
+  {
+   "h": "/terms",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "t from this box. Settlement transaction hash (optional) Optional: a Base tx hash of a payment you already settled. Speeds up review. Solana payout address (USDC on Solana, optional) Only if your 402 also accepts USDC on Solana. We check it against your live 402. Algorand payout address (USDC, ASA 31566704, optional) On"
+  },
+  {
+   "k": "payout",
+   "w": " Solana payout address (USDC on Solana, optional) Only if your 402 also accepts USDC on Solana. We check it against your live 402. Algorand payout address (USDC, ASA 31566704, optional) Only if your 402 also accepts Circle USDC on Algorand. The address must have opted in to ASA 31566704. We check it against your live 4"
+  },
+  {
+   "k": "wallet",
+   "w": "t the provider playbook by email? Use the box on the homepage . One screen. Add your email and the paid route. We read the 402 and fill the wallet, and the example when the route publishes one. Email Paste the paid route that already returns HTTP 402, not the homepage. Paid route URL One URL on each line, up to 20. Pas"
+  },
+  {
+   "k": "wallet",
+   "w": "oute URL One URL on each line, up to 20. Paste the exact URL we will call unpaid. It must return HTTP 402 with a Base USDC challenge to the wallet on your 402. Not the homepage. Not an AppDeploy, Floot or Bonto shell. If this URL does not return HTTP 402 to the wallet you typed, the form will not create a listing. Meth"
+  },
+  {
+   "k": "wallet",
+   "w": " challenge to the wallet on your 402. Not the homepage. Not an AppDeploy, Floot or Bonto shell. If this URL does not return HTTP 402 to the wallet you typed, the form will not create a listing. Method GET POST How we call it. Example request The query string we send when we test this route. Leave it blank only when the"
+  },
+  {
+   "k": "usdc",
+   "w": "t the homepage. Paid route URL One URL on each line, up to 20. Paste the exact URL we will call unpaid. It must return HTTP 402 with a Base USDC challenge to the wallet on your 402. Not the homepage. Not an AppDeploy, Floot or Bonto shell. If this URL does not return HTTP 402 to the wallet you typed, the form will not "
+  },
+  {
+   "k": "usdc",
+   "w": "one in minutes. Number of endpoints How many routes your API exposes. Number of tools Callable MCP tools, often the same number. Price min (USDC/request) What agents pay per request, in USDC. We fill both prices from the live 402. Price max (USDC/request) Set the same as min for one flat price. Protected routes should "
+  },
+  {
+   "k": "usdc",
+   "w": "outes your API exposes. Number of tools Callable MCP tools, often the same number. Price min (USDC/request) What agents pay per request, in USDC. We fill both prices from the live 402. Price max (USDC/request) Set the same as min for one flat price. Protected routes should return HTTP 402 with x402 payment headers so a"
+  },
+  {
+   "k": "terms",
+   "w": " Log in Audiences Providers Agents Agent marketplace Developers Enterprises Resources Blog Changelog Best x402 APIs 2027 News About Privacy Terms © 2026 PayAPI Market Built on x402 · All trademarks are property of their respective owners. payapi.market is operated by Concor Technologies Limited, a company registered in"
+  }
+ ],
+ "apiCalls": [
+  "https://gateway.umami.is/api/send",
+  "https://payapi.market/api/import-openapi"
+ ],
+ "depth": 0
+}
