@@ -1,0 +1,73 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "steps": [
+  {
+   "step": "crx_download",
+   "bytes": 220475
+  },
+  {
+   "step": "crx_parse",
+   "version": 3,
+   "zipOff": 1320
+  },
+  {
+   "step": "store_page",
+   "title": "Silvertongue: Write Like Anyone Famous - Chrome Web Store",
+   "installable": false
+  },
+  {
+   "step": "store_install_click",
+   "done": true
+  },
+  {
+   "step": "extensions_page",
+   "done": true
+  },
+  {
+   "step": "popup",
+   "declared": "popup.html"
+  },
+  {
+   "step": "translator_probe",
+   "signInWall": "sign-in mentioned on page"
+  }
+ ],
+ "signInWall": "sign-in mentioned on page",
+ "generatedText": null,
+ "errors": [],
+ "manifest": {
+  "version": "0.2.2",
+  "name": "Silvertongue: Write Like Anyone Famous",
+  "mv": 3,
+  "permissions": [
+   "activeTab",
+   "scripting",
+   "contextMenus",
+   "storage",
+   "alarms",
+   "identity"
+  ],
+  "host_permissions": [
+   "https://*.x.com/*",
+   "https://*.twitter.com/*",
+   "https://*.threads.com/*",
+   "https://*.threads.net/*",
+   "https://*.bsky.app/*",
+   "https://*.linkedin.com/*",
+   "https://*.instagram.com/*",
+   "https://*.facebook.com/*",
+   "https://*.reddit.com/*",
+   "https://*.youtube.com/*",
+   "https://mail.google.com/*",
+   "https://outlook.live.com/*",
+   "https://outlook.office.com/*",
+   "https://outlook.office365.com/*",
+   "https://outlook.cloud.microsoft/*",
+   "https://app.slack.com/*",
+   "https://*.discord.com/*",
+   "https://web.whatsapp.com/*",
+   "https://*.github.com/*"
+  ]
+ },
+ "at": "2026-11-12T06:43:06.680Z"
+}
