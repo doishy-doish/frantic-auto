@@ -1,0 +1,18 @@
+{
+ "name": "radar402",
+ "url": "https://agent-apis-bb4agbmzp-agent1-48fb.vercel.app/api/radar?q=test",
+ "status": 200,
+ "ct": "application/json; charset=utf-8",
+ "bytes": 59,
+ "json": {
+  "keys": [
+   "takenAt",
+   "count",
+   "items"
+  ],
+  "count": 0,
+  "first": null,
+  "body": "{\"takenAt\":\"2026-11-12T13:02:12.612Z\",\"count\":0,\"items\":[]}"
+ },
+ "depth": 0
+}

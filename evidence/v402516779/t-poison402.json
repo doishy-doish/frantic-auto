@@ -1,0 +1,22 @@
+{
+ "name": "poison402",
+ "url": "https://agent-apis-bb4agbmzp-agent1-48fb.vercel.app/api/poison?text=hello",
+ "status": 200,
+ "ct": "application/json; charset=utf-8",
+ "bytes": 240,
+ "json": {
+  "keys": [
+   "takenAt",
+   "verdict",
+   "hits",
+   "blacklistedRepo",
+   "note",
+   "family",
+   "actors"
+  ],
+  "count": null,
+  "first": null,
+  "body": "{\"takenAt\":\"2026-11-12T13:02:12.744Z\",\"verdict\":\"CLEAN\",\"hits\":[],\"blacklistedRepo\":false,\"note\":\"No known exfil clause.\",\"family\":[\"clankernation/openagents\",\"unsafelabs/bounty-hunters\"],\"actors\":[\"clankerjournalist\",\"clanker-journalist\"]}"
+ },
+ "depth": 0
+}
