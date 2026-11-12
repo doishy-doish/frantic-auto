@@ -1,0 +1,76 @@
+{
+ "name": "cloudflare",
+ "url": "https://www.cloudflare.com/products/registrar/",
+ "status": 200,
+ "final": "https://www.cloudflare.com/domains/",
+ "ct": "text/html; charset=utf-8",
+ "bytes": 258992,
+ "textLen": 5640,
+ "head": "Cloudflare Registrar - Search and Buy Domains at Cost Products Solutions Resources Pricing Login Dashboard Contact sales Start building Dashboard Login Start your next idea with a domain name Enter a name, domain, or website URL. Results update as you type. SEC 0.1 At cost At cost Never pay more than we do Cloudflare Registrar eliminates surprise fees and unnecessary add-ons. Registration, transfer, and renewal prices are always at or below what registries and ICANN charge us. Browse supported domain extensions Transparent pricing See registration, transfer, and renewal prices upfront, with no hidden fees or required add-ons. Security included Every domain integrates with free DNS, CDN, SSL, and one-click DNSSEC for built-in security and performance. Privacy by default Free WHOIS redaction keeps your personal contact details out of public records, reducing spam and unwanted exposure. SEC 0.2 How it works div]:mx-auto [&>div]:max-w-[1080px]\" data-cms-path=\"pages.domains.marketing\"> How it works Search, register, and transfer domains in one place Register new domains, transfer existing ones, and manage your portfolio from the Cloudflare dashboard. SEC 0.3 Security div]:mx-auto [&>div…[trunc 5640]",
+ "links": [
+  {
+   "h": "https://dash.cloudflare.com/sign-up",
+   "t": "Start building"
+  },
+  {
+   "h": "/startups/",
+   "t": "Startups"
+  },
+  {
+   "h": "/trust-hub/abuse-approach/",
+   "t": "Report abuse"
+  },
+  {
+   "h": "/resource/app-innovation-report/",
+   "t": "App innovation report"
+  },
+  {
+   "h": "https://developers.cloudflare.com/",
+   "t": "Documentation"
+  },
+  {
+   "h": "/learning/",
+   "t": "Learning center"
+  },
+  {
+   "h": "https://www.cloudflare.com/disclosure/",
+   "t": "Report security issues"
+  },
+  {
+   "h": "/policies/terms/",
+   "t": "Terms of use"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "crypto",
+   "w": "and manage your existing domains through the Cloudflare Dashboard. What is DNSSEC and how does Cloudflare Registrar support it? DNSSEC uses cryptographic signatures to prevent domain hijacking and on-path attacks. Cloudflare Registrar makes it easy and free, offering universal, one-click DNSSEC activation for all your "
+  },
+  {
+   "k": "fee",
+   "w": "ain, or website URL. Results update as you type. SEC 0.1 At cost At cost Never pay more than we do Cloudflare Registrar eliminates surprise fees and unnecessary add-ons. Registration, transfer, and renewal prices are always at or below what registries and ICANN charge us. Browse supported domain extensions Transparent "
+  },
+  {
+   "k": "fee",
+   "w": "NN charge us. Browse supported domain extensions Transparent pricing See registration, transfer, and renewal prices upfront, with no hidden fees or required add-ons. Security included Every domain integrates with free DNS, CDN, SSL, and one-click DNSSEC for built-in security and performance. Privacy by default Free WHO"
+  },
+  {
+   "k": "fee",
+   "w": " asked questions What is Cloudflare Registrar? Cloudflare Registrar allows users to register, renew, and manage domain names without hidden fees or inflated renewal costs. Cloudflare Registrar also offers defenses against domain hijacking and natively integrates DNSSEC for additional domain security. How does Cloudflar"
+  },
+  {
+   "k": "how it works",
+   "w": "acy by default Free WHOIS redaction keeps your personal contact details out of public records, reducing spam and unwanted exposure. SEC 0.2 How it works div]:mx-auto [&>div]:max-w-[1080px]\" data-cms-path=\"pages.domains.marketing\"> How it works Search, register, and transfer domains in one place Register new domains, tr"
+  },
+  {
+   "k": "how it works",
+   "w": "ds, reducing spam and unwanted exposure. SEC 0.2 How it works div]:mx-auto [&>div]:max-w-[1080px]\" data-cms-path=\"pages.domains.marketing\"> How it works Search, register, and transfer domains in one place Register new domains, transfer existing ones, and manage your portfolio from the Cloudflare dashboard. SEC 0.3 Secu"
+  },
+  {
+   "k": "terms",
+   "w": "i-Tenant Platform Development Web Security Platform Start Building Log In © 2026 Cloudflare, Inc. Privacy policy | Report security issues | Terms of use | Trademark | Your privacy choices"
+  }
+ ],
+ "depth": 0
+}

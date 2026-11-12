@@ -1,0 +1,33 @@
+{
+ "stamp": "dom344421",
+ "takenAt": "2026-11-12T12:42:40.208Z",
+ "case": "discover",
+ "depth": 0,
+ "breadth": {
+  "maxTargets": 12,
+  "maxFollows": 0
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "porkbun",
+   "status": 200,
+   "bytes": 785566
+  },
+  {
+   "name": "cloudflare",
+   "status": 200,
+   "bytes": 258992
+  },
+  {
+   "name": "tldlist",
+   "status": 202,
+   "bytes": 0
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}
