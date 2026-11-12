@@ -1,0 +1,60 @@
+foundryup-init: installing latest foundryup
+foundryup-init: downloading attestation...
+foundryup-init: verifying attestation...
+foundryup-init: downloading foundryup...
+foundryup-init: verifying binary integrity...
+foundryup-init: binary verified ✓
+foundryup-init: installing foundryup to /home/runner/.config/.foundry/bin...
+foundryup-init: 
+foundryup-init: foundryup was installed successfully!
+foundryup-init: 
+foundryup-init: Run 'foundryup' to install Foundry.
+
+.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx
+
+ ╔═╗ ╔═╗ ╦ ╦ ╔╗╔ ╔╦╗ ╦═╗ ╦ ╦         Portable and modular toolkit
+ ╠╣  ║ ║ ║ ║ ║║║  ║║ ╠╦╝ ╚╦╝    for Ethereum Application Development
+ ╚   ╚═╝ ╚═╝ ╝╚╝ ═╩╝ ╩╚═  ╩                 written in Rust.
+
+.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx
+
+Repo       : https://github.com/foundry-rs/foundry
+Book       : https://book.getfoundry.sh/
+Chat       : https://t.me/foundry_rs/
+Support    : https://t.me/foundry_support/
+Contribute : https://github.com/foundry-rs/foundry/blob/HEAD/CONTRIBUTING.md
+
+.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx.xOx
+
+foundryup: fetching latest release tag from foundry-rs/foundry...
+foundryup: resolved release tag: v1.9.0
+foundryup: installing foundry (version v1.9.0, tag v1.9.0)
+foundryup: checking if forge, cast, anvil, chisel, solar for v1.9.0 version are already installed
+foundryup: found attestation for v1.9.0 version, downloading attestation artifact, checking...
+foundryup: Sigstore bundle verified ✓
+foundryup: version v1.9.0 is not installed, downloading binaries
+foundryup: downloading foundry_v1.9.0_linux_amd64.tar.gz
+foundryup: foundry_v1.9.0_linux_amd64.tar.gz verified ✓
+foundryup: verifying downloaded binaries against the attestation file
+foundryup: forge verified ✓
+foundryup: cast verified ✓
+foundryup: anvil verified ✓
+foundryup: chisel verified ✓
+foundryup: solar verified ✓
+foundryup: downloading manpages
+foundryup: use - forge 1.9.0 (6056c5845d 2026-11-02T20:28:32.434285913Z)
+foundryup: use - cast 1.9.0 (6056c5845d 2026-11-02T20:28:32.434285913Z)
+foundryup: use - anvil 1.9.0 (6056c5845d 2026-11-02T20:28:32.434285913Z)
+foundryup: use - chisel 1.9.0 (6056c5845d 2026-11-02T20:28:32.434285913Z)
+foundryup: use - solar 0.3.0-dev+commit.a2b44354
+foundryup: done!
+foundryup: foundryup is up to date.
+aderyn-tarball http=200 bytes=6269536
+total 16
+drwxr-xr-x 3 runner runner 4096 Nov 12 09:35 .
+drwxr-xr-x 3 runner runner 4096 Nov 12 09:35 ..
+lrwxrwxrwx 1 runner runner   63 Nov 12 09:35 aderyn -> /home/runner/.cyfrin/bin/aderyn-x86_64-unknown-linux-gnu/aderyn
+drwxr-xr-x 2 runner runner 4096 Jan 22  2026 aderyn-x86_64-unknown-linux-gnu
+Installing solc '0.8.19'...
+Version '0.8.19' installed.
+Switched global version to 0.8.19

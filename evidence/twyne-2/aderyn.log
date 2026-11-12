@@ -1,0 +1,67 @@
+
+---------------------------------------------------------------------
+# Configuration
+---------------------------------------------------------------------
+Root - /home/runner/work/frantic-auto/frantic-auto/sweep-target
+Source - /home/runner/work/frantic-auto/frantic-auto/sweep-target/src
+Remappings - [
+    "ethereum-vault-connector/=lib/euler-vault-kit/lib/ethereum-vault-connector/src/",
+    "euler-vault-kit/=lib/euler-vault-kit/src/",
+    "euler-price-oracle/=lib/euler-price-oracle/",
+    "permit2/=lib/euler-vault-kit/lib/permit2/",
+    "forge-std/=lib/forge-std/src/",
+    "openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/",
+    "openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "aave-v3/=lib/aave-v3-origin/src/contracts/",
+    "solidity-utils/=lib/aave-v3-origin/lib/solidity-utils/src/",
+    "lib/aave-v3-origin/:openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/",
+    "lib/aave-v3-origin/:openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+    "morpho/=lib/morpho-blue/src/",
+    "@openzeppelin/contracts/=lib/euler-vault-kit/lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "@pendle/core-v2/=lib/euler-price-oracle/lib/pendle-core-v2-public/contracts/",
+    "@pyth/=lib/euler-price-oracle/lib/pyth-sdk-solidity/",
+    "@redstone/evm-connector/=lib/euler-price-oracle/lib/redstone-oracles-monorepo/packages/evm-connector/contracts/",
+    "@solady/=lib/euler-price-oracle/lib/solady/src/",
+    "@uniswap/v3-core/=lib/euler-price-oracle/lib/v3-core/",
+    "@uniswap/v3-periphery/=lib/euler-price-oracle/lib/v3-periphery/",
+    "aave-v3-origin/=lib/aave-v3-origin/",
+    "ds-test/=lib/forge-safe/lib/ds-test/src/",
+    "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+    "forge-gas-snapshot/=lib/euler-vault-kit/lib/permit2/lib/forge-gas-snapshot/src/",
+    "forge-safe/=lib/forge-safe/",
+    "halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/",
+    "morpho-blue/=lib/morpho-blue/",
+    "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+    "openzeppelin/=lib/euler-price-oracle/lib/openzeppelin-contracts/contracts/",
+    "pendle-core-v2-public/=lib/euler-price-oracle/lib/pendle-core-v2-public/contracts/",
+    "pyth-sdk-solidity/=lib/euler-price-oracle/lib/pyth-sdk-solidity/",
+    "redstone-oracles-monorepo/=lib/euler-price-oracle/lib/",
+    "solady/=lib/euler-price-oracle/lib/solady/src/",
+    "solidity-stringutils/=lib/forge-safe/lib/surl/lib/solidity-stringutils/",
+    "solmate/=lib/forge-safe/lib/solmate/src/",
+    "surl/=lib/forge-safe/lib/surl/",
+    "v3-core/=lib/euler-price-oracle/lib/v3-core/contracts/",
+    "v3-periphery/=lib/euler-price-oracle/lib/v3-periphery/contracts/",
+]
+EVM version - cancun
+---------------------------------------------------------------------
+# Source Scope
+---------------------------------------------------------------------
+Include Filepaths Containing - No specific criteria.
+Exclude Filepaths Containing - No specific criteria.
+Auto Excluding - No Files.
+---------------------------------------------------------------------
+# Compiling Abstract Syntax Trees
+---------------------------------------------------------------------
+Ingesting 23 compiled files [solc : v0.8.28]
+---------------------------------------------------------------------
+# Scanning Contracts
+---------------------------------------------------------------------
+Running 88 detectors
+Detectors run, printing report.
+Report printed to ../evidence/twyne-2/aderyn.json
+
+🛡️ Together we make Solidity safer.
+✨ Support open-source security — star Aderyn:
+https://github.com/Cyfrin/aderyn

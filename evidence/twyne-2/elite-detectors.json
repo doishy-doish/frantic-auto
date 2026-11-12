@@ -1,0 +1,28 @@
+{
+ "files": 23,
+ "scanned": 23,
+ "detectors": [
+  "d1_slippageContamination",
+  "d2_grossBorrow",
+  "d3_frozenReserve",
+  "d4_cursorRegression",
+  "d5_zeroWeight"
+ ],
+ "hits": [
+  {
+   "detector": "d3_frozenReserve",
+   "file": "src/twyne/AaveV3CollateralVault.sol",
+   "hit": "[object Object]"
+  },
+  {
+   "detector": "d3_frozenReserve",
+   "file": "src/twyne/EulerCollateralVault.sol",
+   "hit": "[object Object]"
+  },
+  {
+   "detector": "d3_frozenReserve",
+   "file": "src/twyne/MorphoCollateralVault.sol",
+   "hit": "[object Object]"
+  }
+ ]
+}

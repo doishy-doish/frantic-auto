@@ -1,0 +1,1834 @@
+{
+  "files_summary": {
+    "total_source_units": 23,
+    "total_sloc": 2667
+  },
+  "files_details": {
+    "files_details": [
+      {
+        "file_path": "src/Periphery/AssetZap.sol",
+        "n_sloc": 64
+      },
+      {
+        "file_path": "src/TwyneFactory/BridgeHookTarget.sol",
+        "n_sloc": 27
+      },
+      {
+        "file_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+        "n_sloc": 144
+      },
+      {
+        "file_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+        "n_sloc": 145
+      },
+      {
+        "file_path": "src/interfaces/IErrors.sol",
+        "n_sloc": 52
+      },
+      {
+        "file_path": "src/interfaces/IEvents.sol",
+        "n_sloc": 43
+      },
+      {
+        "file_path": "src/operators/AaveV3DeleverageOperator.sol",
+        "n_sloc": 114
+      },
+      {
+        "file_path": "src/operators/AaveV3LeverageOperator.sol",
+        "n_sloc": 126
+      },
+      {
+        "file_path": "src/operators/AaveV3TeleportOperator.sol",
+        "n_sloc": 98
+      },
+      {
+        "file_path": "src/operators/DeleverageOperator.sol",
+        "n_sloc": 89
+      },
+      {
+        "file_path": "src/operators/LeverageOperator.sol",
+        "n_sloc": 117
+      },
+      {
+        "file_path": "src/operators/MorphoDeleverageOperator.sol",
+        "n_sloc": 103
+      },
+      {
+        "file_path": "src/operators/MorphoLeverageOperator.sol",
+        "n_sloc": 107
+      },
+      {
+        "file_path": "src/operators/MorphoTeleportOperator.sol",
+        "n_sloc": 133
+      },
+      {
+        "file_path": "src/operators/handlers/WstethHandler.sol",
+        "n_sloc": 30
+      },
+      {
+        "file_path": "src/twyne/AaveV3ATokenWrapperOracle.sol",
+        "n_sloc": 33
+      },
+      {
+        "file_path": "src/twyne/AaveV3CollateralVault.sol",
+        "n_sloc": 212
+      },
+      {
+        "file_path": "src/twyne/CollateralVaultBase.sol",
+        "n_sloc": 350
+      },
+      {
+        "file_path": "src/twyne/EulerCollateralVault.sol",
+        "n_sloc": 190
+      },
+      {
+        "file_path": "src/twyne/IRMTwyneCurve.sol",
+        "n_sloc": 55
+      },
+      {
+        "file_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+        "n_sloc": 14
+      },
+      {
+        "file_path": "src/twyne/MorphoCollateralVault.sol",
+        "n_sloc": 255
+      },
+      {
+        "file_path": "src/twyne/VaultManager.sol",
+        "n_sloc": 166
+      }
+    ]
+  },
+  "issue_count": {
+    "high": 5,
+    "low": 15
+  },
+  "high_issues": {
+    "issues": [
+      {
+        "title": "Contract locks Ether without a withdraw function",
+        "description": "It appears that the contract includes a payable function to accept Ether but lacks a corresponding function to withdraw it, which leads to the Ether being locked in the contract. To resolve this issue, please implement a public or external function that allows for the withdrawal of Ether from the contract.",
+        "detector_name": "contract-locks-ether",
+        "instances": [
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 33,
+            "src": "1452:22",
+            "src_char": "1452:22"
+          }
+        ]
+      },
+      {
+        "title": "ETH transferred without address checks",
+        "description": "Consider introducing checks for `msg.sender` to ensure the recipient of the money is as intended.",
+        "detector_name": "eth-send-unchecked-address",
+        "instances": [
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 42,
+            "src": "2028:8",
+            "src_char": "2028:8"
+          }
+        ]
+      },
+      {
+        "title": "Reentrancy: State change after external call",
+        "description": "Changing state after an external call can lead to re-entrancy attacks.Use the checks-effects-interactions pattern to avoid this issue.",
+        "detector_name": "reentrancy-state-change",
+        "instances": [
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 48,
+            "src": "2558:89",
+            "src_char": "2558:89",
+            "hint": "State is changed at: `aaveDataProvider = IAaveV3DataProvider(aaveAddressProvider.getPoolDataProvider())`, `INCENTIVES_CONTROLLER = IRewardsController(_incentiveController)`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 49,
+            "src": "2657:81",
+            "src_char": "2657:81",
+            "hint": "State is changed at: `INCENTIVES_CONTROLLER = IRewardsController(_incentiveController)`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 70,
+            "src": "3539:54",
+            "src_char": "3539:54",
+            "hint": "State is changed at: `underlyingAsset = _underlyingAsset`, `targetAsset = __targetAsset`, `aaveDebtToken = debtToken`, `aToken = _aToken`, `tenPowAssetDecimals = 10 ** uint(IAaveV3ATokenWrapper(__asset).decimals())`, `tenPowVAssetDecimals = 10 ** uint(IERC20_Euler(aaveDebtToken).decimals())`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 71,
+            "src": "3603:64",
+            "src_char": "3603:64",
+            "hint": "State is changed at: `underlyingAsset = _underlyingAsset`, `targetAsset = __targetAsset`, `aaveDebtToken = debtToken`, `aToken = _aToken`, `tenPowAssetDecimals = 10 ** uint(IAaveV3ATokenWrapper(__asset).decimals())`, `tenPowVAssetDecimals = 10 ** uint(IERC20_Euler(aaveDebtToken).decimals())`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 77,
+            "src": "3855:81",
+            "src_char": "3855:81",
+            "hint": "State is changed at: `aaveDebtToken = debtToken`, `aToken = _aToken`, `tenPowAssetDecimals = 10 ** uint(IAaveV3ATokenWrapper(__asset).decimals())`, `tenPowVAssetDecimals = 10 ** uint(IERC20_Euler(aaveDebtToken).decimals())`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 78,
+            "src": "3946:51",
+            "src_char": "3946:51",
+            "hint": "State is changed at: `aaveDebtToken = debtToken`, `aToken = _aToken`, `tenPowAssetDecimals = 10 ** uint(IAaveV3ATokenWrapper(__asset).decimals())`, `tenPowVAssetDecimals = 10 ** uint(IERC20_Euler(aaveDebtToken).decimals())`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 82,
+            "src": "4161:56",
+            "src_char": "4161:56",
+            "hint": "State is changed at: `aToken = _aToken`, `tenPowAssetDecimals = 10 ** uint(IAaveV3ATokenWrapper(__asset).decimals())`, `tenPowVAssetDecimals = 10 ** uint(IERC20_Euler(aaveDebtToken).decimals())`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 88,
+            "src": "4494:74",
+            "src_char": "4494:74",
+            "hint": "State is changed at: `tenPowVAssetDecimals = 10 ** uint(IERC20_Euler(aaveDebtToken).decimals())`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 308,
+            "src": "17147:67",
+            "src_char": "17130:67",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 312,
+            "src": "17372:73",
+            "src_char": "17355:73",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 316,
+            "src": "17621:70",
+            "src_char": "17604:70",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 327,
+            "src": "17983:46",
+            "src_char": "17966:46",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 334,
+            "src": "18423:54",
+            "src_char": "18406:54",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 340,
+            "src": "18714:30",
+            "src_char": "18697:30",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 346,
+            "src": "18999:66",
+            "src_char": "18982:66",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 353,
+            "src": "19320:61",
+            "src_char": "19303:61",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 359,
+            "src": "19615:53",
+            "src_char": "19598:53",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 370,
+            "src": "17862:53",
+            "src_char": "17829:53",
+            "hint": "State is changed at: `totalAssetsDepositedOrReserved = balance`"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 29,
+            "src": "1626:42",
+            "src_char": "1626:42",
+            "hint": "State is changed at: `eulerEVC = IEVC(IEVault(targetVault).EVC())`"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 273,
+            "src": "14773:54",
+            "src_char": "14759:54",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 276,
+            "src": "14923:135",
+            "src_char": "14909:135",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 294,
+            "src": "15902:52",
+            "src_char": "15888:52",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 308,
+            "src": "16534:53",
+            "src_char": "16520:53",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 171,
+            "src": "7842:53",
+            "src_char": "7842:53",
+            "hint": "State is changed at: `totalAssetsDepositedOrReserved += skimmed`"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 316,
+            "src": "15535:40",
+            "src_char": "15513:40",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 358,
+            "src": "17411:53",
+            "src_char": "17389:53",
+            "hint": "State is changed at: `delete totalAssetsDepositedOrReserved`, `delete borrower`"
+          }
+        ]
+      },
+      {
+        "title": "Contract Name Reused in Different Files",
+        "description": "When compiling contracts with certain development frameworks (for example: Truffle), having contracts with the same name across different files can lead to one being overwritten.",
+        "detector_name": "reused-contract-name",
+        "instances": [
+          {
+            "contract_path": "src/Periphery/AssetZap.sol",
+            "line_no": 13,
+            "src": "671:8",
+            "src_char": "671:8"
+          },
+          {
+            "contract_path": "src/operators/AaveV3DeleverageOperator.sol",
+            "line_no": 19,
+            "src": "1124:7",
+            "src_char": "1124:7"
+          },
+          {
+            "contract_path": "src/operators/AaveV3DeleverageOperator.sol",
+            "line_no": 23,
+            "src": "1229:8",
+            "src_char": "1229:8"
+          },
+          {
+            "contract_path": "src/operators/AaveV3LeverageOperator.sol",
+            "line_no": 19,
+            "src": "1124:7",
+            "src_char": "1124:7"
+          },
+          {
+            "contract_path": "src/operators/AaveV3LeverageOperator.sol",
+            "line_no": 23,
+            "src": "1229:8",
+            "src_char": "1229:8"
+          },
+          {
+            "contract_path": "src/operators/AaveV3TeleportOperator.sol",
+            "line_no": 19,
+            "src": "1124:7",
+            "src_char": "1124:7"
+          },
+          {
+            "contract_path": "src/operators/DeleverageOperator.sol",
+            "line_no": 16,
+            "src": "881:7",
+            "src_char": "881:7"
+          },
+          {
+            "contract_path": "src/operators/DeleverageOperator.sol",
+            "line_no": 20,
+            "src": "986:8",
+            "src_char": "986:8"
+          },
+          {
+            "contract_path": "src/operators/LeverageOperator.sol",
+            "line_no": 16,
+            "src": "881:7",
+            "src_char": "881:7"
+          },
+          {
+            "contract_path": "src/operators/LeverageOperator.sol",
+            "line_no": 20,
+            "src": "986:8",
+            "src_char": "986:8"
+          },
+          {
+            "contract_path": "src/operators/MorphoDeleverageOperator.sol",
+            "line_no": 20,
+            "src": "1165:8",
+            "src_char": "1165:8"
+          },
+          {
+            "contract_path": "src/operators/MorphoLeverageOperator.sol",
+            "line_no": 18,
+            "src": "1048:8",
+            "src_char": "1048:8"
+          }
+        ]
+      },
+      {
+        "title": "Unsafe Casting of integers",
+        "description": "Downcasting int/uints in Solidity can be unsafe due to the potential for data loss and unintended behavior.When downcasting a larger integer type to a smaller one (e.g., uint256 to uint128), the value may exceed the range of the target type,leading to truncation and loss of significant digits. Use OpenZeppelin's SafeCast library to safely downcast integers.",
+        "detector_name": "unsafe-casting",
+        "instances": [
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 308,
+            "src": "18468:20",
+            "src_char": "18468:20"
+          }
+        ]
+      }
+    ]
+  },
+  "low_issues": {
+    "issues": [
+      {
+        "title": "Centralization Risk",
+        "description": "Contracts have owners with privileged rights to perform admin tasks and need to be trusted to not perform malicious updates or drain funds.",
+        "detector_name": "centralization-risk",
+        "instances": [
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 63,
+            "src": "2743:9",
+            "src_char": "2743:9"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 81,
+            "src": "3313:9",
+            "src_char": "3313:9"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 105,
+            "src": "4518:9",
+            "src_char": "4518:9"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 85,
+            "src": "3752:9",
+            "src_char": "3752:9"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 243,
+            "src": "14233:9",
+            "src_char": "14233:9"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 249,
+            "src": "14480:9",
+            "src_char": "14480:9"
+          }
+        ]
+      },
+      {
+        "title": "Empty Block",
+        "description": "Consider removing empty blocks.",
+        "detector_name": "empty-block",
+        "instances": [
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 63,
+            "src": "2680:17",
+            "src_char": "2680:17"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 347,
+            "src": "16941:12",
+            "src_char": "16908:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 383,
+            "src": "18468:12",
+            "src_char": "18435:12"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 80,
+            "src": "3820:9",
+            "src_char": "3820:9"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 83,
+            "src": "3975:31",
+            "src_char": "3975:31"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 85,
+            "src": "4068:18",
+            "src_char": "4068:18"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 86,
+            "src": "4123:15",
+            "src_char": "4123:15"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 85,
+            "src": "3689:17",
+            "src_char": "3689:17"
+          }
+        ]
+      },
+      {
+        "title": "Internal Function Used Only Once",
+        "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+        "detector_name": "internal-function-used-once",
+        "instances": [
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 259,
+            "src": "14159:26",
+            "src_char": "14144:26"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 219,
+            "src": "12089:26",
+            "src_char": "12077:26"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 274,
+            "src": "13227:26",
+            "src_char": "13207:26"
+          }
+        ]
+      },
+      {
+        "title": "Literal Instead of Constant",
+        "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+        "detector_name": "literal-instead-of-constant",
+        "instances": [
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 215,
+            "src": "10656:3",
+            "src_char": "10656:3"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 215,
+            "src": "10661:3",
+            "src_char": "10661:3"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3ATokenWrapperOracle.sol",
+            "line_no": 23,
+            "src": "1136:2",
+            "src_char": "1136:2"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3ATokenWrapperOracle.sol",
+            "line_no": 58,
+            "src": "3107:2",
+            "src_char": "3107:2"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 88,
+            "src": "4516:2",
+            "src_char": "4516:2"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 89,
+            "src": "4605:2",
+            "src_char": "4605:2"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 202,
+            "src": "10713:4",
+            "src_char": "10710:4"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 313,
+            "src": "17479:4",
+            "src_char": "17462:4"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 218,
+            "src": "10777:3",
+            "src_char": "10744:3"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 596,
+            "src": "29644:3",
+            "src_char": "29469:3"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 606,
+            "src": "30324:3",
+            "src_char": "30132:3"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 31,
+            "src": "1385:4",
+            "src_char": "1385:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 34,
+            "src": "1514:4",
+            "src_char": "1514:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 68,
+            "src": "2588:4",
+            "src_char": "2588:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 82,
+            "src": "3127:4",
+            "src_char": "3127:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 84,
+            "src": "3204:4",
+            "src_char": "3204:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 86,
+            "src": "3279:4",
+            "src_char": "3279:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 88,
+            "src": "3353:4",
+            "src_char": "3353:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+            "line_no": 25,
+            "src": "1128:4",
+            "src_char": "1128:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+            "line_no": 27,
+            "src": "1199:4",
+            "src_char": "1199:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+            "line_no": 29,
+            "src": "1270:4",
+            "src_char": "1270:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+            "line_no": 31,
+            "src": "1342:4",
+            "src_char": "1342:4"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+            "line_no": 33,
+            "src": "1414:4",
+            "src_char": "1414:4"
+          }
+        ]
+      },
+      {
+        "title": "`nonReentrant` is Not the First Modifier",
+        "description": "To protect against reentrancy in other modifiers, the `nonReentrant` modifier should be the first modifier in the list of modifiers.",
+        "detector_name": "non-reentrant-not-first",
+        "instances": [
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 304,
+            "src": "16946:12",
+            "src_char": "16929:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 243,
+            "src": "12022:12",
+            "src_char": "11989:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 258,
+            "src": "12894:12",
+            "src_char": "12861:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 355,
+            "src": "17226:12",
+            "src_char": "17193:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 369,
+            "src": "17839:12",
+            "src_char": "17806:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 391,
+            "src": "18852:12",
+            "src_char": "18819:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 421,
+            "src": "20182:12",
+            "src_char": "20149:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 455,
+            "src": "21879:12",
+            "src_char": "21846:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 621,
+            "src": "31262:12",
+            "src_char": "31070:12"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 704,
+            "src": "36409:12",
+            "src_char": "36204:12"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 270,
+            "src": "14686:12",
+            "src_char": "14672:12"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 320,
+            "src": "17044:12",
+            "src_char": "17030:12"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 170,
+            "src": "7819:12",
+            "src_char": "7819:12"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 307,
+            "src": "15226:12",
+            "src_char": "15204:12"
+          }
+        ]
+      },
+      {
+        "title": "PUSH0 Opcode",
+        "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+        "detector_name": "push-zero-opcode",
+        "instances": [
+          {
+            "contract_path": "src/Periphery/AssetZap.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/TwyneFactory/BridgeHookTarget.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 2,
+            "src": "39:24",
+            "src_char": "39:24"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 3,
+            "src": "33:24",
+            "src_char": "33:24"
+          },
+          {
+            "contract_path": "src/interfaces/IEvents.sol",
+            "line_no": 3,
+            "src": "33:24",
+            "src_char": "33:24"
+          },
+          {
+            "contract_path": "src/operators/AaveV3DeleverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/AaveV3LeverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/AaveV3TeleportOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/DeleverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/LeverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/MorphoDeleverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/MorphoLeverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/MorphoTeleportOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3ATokenWrapperOracle.sol",
+            "line_no": 2,
+            "src": "45:23",
+            "src_char": "45:23"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          }
+        ]
+      },
+      {
+        "title": "State Change Without Event",
+        "description": "There are state variable changes in this function but no event is emitted. Consider emitting an event to enable offchain indexers to track the changes.",
+        "detector_name": "state-change-without-event",
+        "instances": [
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 621,
+            "src": "31193:9",
+            "src_char": "31001:9"
+          }
+        ]
+      },
+      {
+        "title": "Address State Variable Set Without Checks",
+        "description": "Check for `address(0)` when assigning values to address state variables.",
+        "detector_name": "state-no-address-check",
+        "instances": [
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 59,
+            "src": "2594:14",
+            "src_char": "2594:14"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 82,
+            "src": "3333:46",
+            "src_char": "3333:46"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 113,
+            "src": "4818:30",
+            "src_char": "4818:30"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 73,
+            "src": "3721:27",
+            "src_char": "3721:27"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 104,
+            "src": "4729:34",
+            "src_char": "4727:34"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 106,
+            "src": "4842:48",
+            "src_char": "4840:48"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 80,
+            "src": "3560:33",
+            "src_char": "3560:33"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 81,
+            "src": "3603:14",
+            "src_char": "3603:14"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 244,
+            "src": "14253:33",
+            "src_char": "14253:33"
+          }
+        ]
+      },
+      {
+        "title": "Unchecked Return",
+        "description": "Function returns a value but it is ignored. Consider checking the return value.",
+        "detector_name": "unchecked-return",
+        "instances": [
+          {
+            "contract_path": "src/Periphery/AssetZap.sol",
+            "line_no": 125,
+            "src": "7182:52",
+            "src_char": "7162:52"
+          },
+          {
+            "contract_path": "src/operators/AaveV3DeleverageOperator.sol",
+            "line_no": 151,
+            "src": "7001:61",
+            "src_char": "7001:61"
+          },
+          {
+            "contract_path": "src/operators/AaveV3DeleverageOperator.sol",
+            "line_no": 160,
+            "src": "7357:262",
+            "src_char": "7357:262"
+          },
+          {
+            "contract_path": "src/operators/AaveV3LeverageOperator.sol",
+            "line_no": 168,
+            "src": "7941:82",
+            "src_char": "7941:82"
+          },
+          {
+            "contract_path": "src/operators/AaveV3TeleportOperator.sol",
+            "line_no": 111,
+            "src": "4833:45",
+            "src_char": "4833:45"
+          },
+          {
+            "contract_path": "src/operators/AaveV3TeleportOperator.sol",
+            "line_no": 117,
+            "src": "5166:52",
+            "src_char": "5166:52"
+          },
+          {
+            "contract_path": "src/operators/AaveV3TeleportOperator.sol",
+            "line_no": 118,
+            "src": "5228:82",
+            "src_char": "5228:82"
+          },
+          {
+            "contract_path": "src/operators/DeleverageOperator.sol",
+            "line_no": 126,
+            "src": "5876:56",
+            "src_char": "5876:56"
+          },
+          {
+            "contract_path": "src/operators/DeleverageOperator.sol",
+            "line_no": 131,
+            "src": "6078:245",
+            "src_char": "6078:245"
+          },
+          {
+            "contract_path": "src/operators/LeverageOperator.sol",
+            "line_no": 96,
+            "src": "4768:69",
+            "src_char": "4768:69"
+          },
+          {
+            "contract_path": "src/operators/LeverageOperator.sol",
+            "line_no": 99,
+            "src": "4909:78",
+            "src_char": "4909:78"
+          },
+          {
+            "contract_path": "src/operators/MorphoDeleverageOperator.sol",
+            "line_no": 130,
+            "src": "5949:102",
+            "src_char": "5939:102"
+          },
+          {
+            "contract_path": "src/operators/MorphoDeleverageOperator.sol",
+            "line_no": 133,
+            "src": "6133:106",
+            "src_char": "6123:106"
+          },
+          {
+            "contract_path": "src/operators/MorphoDeleverageOperator.sol",
+            "line_no": 143,
+            "src": "6570:257",
+            "src_char": "6560:257"
+          },
+          {
+            "contract_path": "src/operators/MorphoTeleportOperator.sol",
+            "line_no": 83,
+            "src": "4189:239",
+            "src_char": "4189:239"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 36,
+            "src": "1765:36",
+            "src_char": "1765:36"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 43,
+            "src": "2105:62",
+            "src_char": "2105:62"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 48,
+            "src": "2378:35",
+            "src_char": "2378:35"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 178,
+            "src": "9287:77",
+            "src_char": "9287:77"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 334,
+            "src": "18423:54",
+            "src_char": "18406:54"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 346,
+            "src": "18999:66",
+            "src_char": "18982:66"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 353,
+            "src": "19320:61",
+            "src_char": "19303:61"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 359,
+            "src": "19615:53",
+            "src_char": "19598:53"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 105,
+            "src": "5056:53",
+            "src_char": "5056:53"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 111,
+            "src": "5343:50",
+            "src_char": "5343:50"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 294,
+            "src": "15902:52",
+            "src_char": "15888:52"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 308,
+            "src": "16534:53",
+            "src_char": "16520:53"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 126,
+            "src": "5813:209",
+            "src_char": "5813:209"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 358,
+            "src": "17411:53",
+            "src_char": "17389:53"
+          }
+        ]
+      },
+      {
+        "title": "Unsafe ERC20 Operation",
+        "description": "ERC20 functions may not behave as expected. For example: return values are not always meaningful. It is recommended to use OpenZeppelin's SafeERC20 library.",
+        "detector_name": "unsafe-erc20-operation",
+        "instances": [
+          {
+            "contract_path": "src/operators/AaveV3TeleportOperator.sol",
+            "line_no": 117,
+            "src": "5166:22",
+            "src_char": "5166:22"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 36,
+            "src": "1765:24",
+            "src_char": "1765:24"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 43,
+            "src": "2105:25",
+            "src_char": "2105:25"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 48,
+            "src": "2378:23",
+            "src_char": "2378:23"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 337,
+            "src": "17640:19",
+            "src_char": "17626:19"
+          }
+        ]
+      },
+      {
+        "title": "Unspecific Solidity Pragma",
+        "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+        "detector_name": "unspecific-solidity-pragma",
+        "instances": [
+          {
+            "contract_path": "src/Periphery/AssetZap.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/TwyneFactory/BridgeHookTarget.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 3,
+            "src": "33:24",
+            "src_char": "33:24"
+          },
+          {
+            "contract_path": "src/interfaces/IEvents.sol",
+            "line_no": 3,
+            "src": "33:24",
+            "src_char": "33:24"
+          },
+          {
+            "contract_path": "src/operators/AaveV3DeleverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/AaveV3LeverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/AaveV3TeleportOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/DeleverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/LeverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/MorphoDeleverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/MorphoLeverageOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/MorphoTeleportOperator.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/operators/handlers/WstethHandler.sol",
+            "line_no": 2,
+            "src": "32:24",
+            "src_char": "32:24"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3ATokenWrapperOracle.sol",
+            "line_no": 2,
+            "src": "45:23",
+            "src_char": "45:23"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/CollateralVaultBase.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurve.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/IRMTwyneCurveGamma32.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 3,
+            "src": "38:24",
+            "src_char": "38:24"
+          }
+        ]
+      },
+      {
+        "title": "Unused Error",
+        "description": "Consider using or removing the unused error.",
+        "detector_name": "unused-error",
+        "instances": [
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 13,
+            "src": "224:39",
+            "src_char": "224:39"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 14,
+            "src": "268:23",
+            "src_char": "268:23"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 15,
+            "src": "296:38",
+            "src_char": "296:38"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 16,
+            "src": "339:27",
+            "src_char": "339:27"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 17,
+            "src": "371:30",
+            "src_char": "371:30"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 18,
+            "src": "406:50",
+            "src_char": "406:50"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 19,
+            "src": "461:40",
+            "src_char": "461:40"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 20,
+            "src": "506:59",
+            "src_char": "506:59"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 21,
+            "src": "570:26",
+            "src_char": "570:26"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 22,
+            "src": "601:85",
+            "src_char": "601:85"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 23,
+            "src": "691:80",
+            "src_char": "691:80"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 24,
+            "src": "776:45",
+            "src_char": "776:45"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 25,
+            "src": "826:45",
+            "src_char": "826:45"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 26,
+            "src": "876:41",
+            "src_char": "876:41"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 27,
+            "src": "922:43",
+            "src_char": "922:43"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 28,
+            "src": "970:48",
+            "src_char": "970:48"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 29,
+            "src": "1023:58",
+            "src_char": "1023:58"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 30,
+            "src": "1086:79",
+            "src_char": "1086:79"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 31,
+            "src": "1170:76",
+            "src_char": "1170:76"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 32,
+            "src": "1251:75",
+            "src_char": "1251:75"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 33,
+            "src": "1331:77",
+            "src_char": "1331:77"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 34,
+            "src": "1413:27",
+            "src_char": "1413:27"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 35,
+            "src": "1445:22",
+            "src_char": "1445:22"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 36,
+            "src": "1472:22",
+            "src_char": "1472:22"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 37,
+            "src": "1499:19",
+            "src_char": "1499:19"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 38,
+            "src": "1523:21",
+            "src_char": "1523:21"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 39,
+            "src": "1549:65",
+            "src_char": "1549:65"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 40,
+            "src": "1619:30",
+            "src_char": "1619:30"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 41,
+            "src": "1654:22",
+            "src_char": "1654:22"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 42,
+            "src": "1681:27",
+            "src_char": "1681:27"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 43,
+            "src": "1713:24",
+            "src_char": "1713:24"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 44,
+            "src": "1742:40",
+            "src_char": "1742:40"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 45,
+            "src": "1787:41",
+            "src_char": "1787:41"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 46,
+            "src": "1833:50",
+            "src_char": "1833:50"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 47,
+            "src": "1888:40",
+            "src_char": "1888:40"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 48,
+            "src": "1933:46",
+            "src_char": "1933:46"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 49,
+            "src": "1984:38",
+            "src_char": "1984:38"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 50,
+            "src": "2027:36",
+            "src_char": "2027:36"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 51,
+            "src": "2068:49",
+            "src_char": "2068:49"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 52,
+            "src": "2122:20",
+            "src_char": "2122:20"
+          },
+          {
+            "contract_path": "src/interfaces/IAaveV3ATokenWrapper.sol",
+            "line_no": 53,
+            "src": "2147:44",
+            "src_char": "2147:44"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 13,
+            "src": "429:23",
+            "src_char": "429:23"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 14,
+            "src": "471:36",
+            "src_char": "471:36"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 20,
+            "src": "777:17",
+            "src_char": "777:17"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 22,
+            "src": "860:19",
+            "src_char": "860:19"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 27,
+            "src": "1081:31",
+            "src_char": "1081:31"
+          },
+          {
+            "contract_path": "src/interfaces/IErrors.sol",
+            "line_no": 45,
+            "src": "1848:24",
+            "src_char": "1848:24"
+          }
+        ]
+      },
+      {
+        "title": "Unused Import",
+        "description": "Redundant import statement. Consider removing it.",
+        "detector_name": "unused-import",
+        "instances": [
+          {
+            "contract_path": "src/operators/AaveV3DeleverageOperator.sol",
+            "line_no": 7,
+            "src": "296:104",
+            "src_char": "296:104"
+          },
+          {
+            "contract_path": "src/operators/MorphoDeleverageOperator.sol",
+            "line_no": 7,
+            "src": "296:64",
+            "src_char": "296:64"
+          },
+          {
+            "contract_path": "src/operators/MorphoTeleportOperator.sol",
+            "line_no": 7,
+            "src": "296:64",
+            "src_char": "296:64"
+          }
+        ]
+      },
+      {
+        "title": "Public Function Not Used Internally",
+        "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+        "detector_name": "unused-public-function",
+        "instances": [
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 149,
+            "src": "6505:26",
+            "src_char": "6505:26"
+          },
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 168,
+            "src": "7561:27",
+            "src_char": "7561:27"
+          }
+        ]
+      },
+      {
+        "title": "Unused State Variable",
+        "description": "State variable appears to be unused. No analysis has been performed to see if any inline assembly references it. Consider removing this unused variable.",
+        "detector_name": "unused-state-variable",
+        "instances": [
+          {
+            "contract_path": "src/TwyneFactory/CollateralVaultFactory.sol",
+            "line_no": 48,
+            "src": "2259:5",
+            "src_char": "2259:5"
+          },
+          {
+            "contract_path": "src/twyne/AaveV3CollateralVault.sol",
+            "line_no": 43,
+            "src": "2322:5",
+            "src_char": "2322:5"
+          },
+          {
+            "contract_path": "src/twyne/EulerCollateralVault.sol",
+            "line_no": 24,
+            "src": "1383:5",
+            "src_char": "1383:5"
+          },
+          {
+            "contract_path": "src/twyne/MorphoCollateralVault.sol",
+            "line_no": 34,
+            "src": "1772:5",
+            "src_char": "1772:5"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 38,
+            "src": "1703:25",
+            "src_char": "1703:25"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 39,
+            "src": "1807:31",
+            "src_char": "1807:31"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 43,
+            "src": "2032:35",
+            "src_char": "2032:35"
+          },
+          {
+            "contract_path": "src/twyne/VaultManager.sol",
+            "line_no": 58,
+            "src": "2874:5",
+            "src_char": "2874:5"
+          }
+        ]
+      }
+    ]
+  },
+  "detectors_used": [
+    "abi-encode-packed-hash-collision",
+    "arbitrary-transfer-from",
+    "assert-state-change",
+    "block-timestamp-deadline",
+    "boolean-equality",
+    "builtin-symbol-shadowing",
+    "centralization-risk",
+    "constant-function-changes-state",
+    "constant-function-contains-assembly",
+    "contract-locks-ether",
+    "costly-loop",
+    "dangerous-unary-operator",
+    "dead-code",
+    "delegate-call-unchecked-address",
+    "delegatecall-in-loop",
+    "delete-nested-mapping",
+    "deprecated-oz-function",
+    "division-before-multiplication",
+    "dynamic-array-length-assignment",
+    "ecrecover",
+    "empty-block",
+    "empty-require-revert",
+    "enumerable-loop-removal",
+    "eth-send-unchecked-address",
+    "experimental-encoder",
+    "function-initializing-state",
+    "function-pointer-in-constructor",
+    "function-selector-collision",
+    "inconsistent-type-names",
+    "incorrect-caret-operator",
+    "incorrect-erc20-interface",
+    "incorrect-erc721-interface",
+    "incorrect-shift-order",
+    "incorrect-use-of-modifier",
+    "internal-function-used-once",
+    "large-numeric-literal",
+    "literal-instead-of-constant",
+    "local-variable-shadowing",
+    "missing-inheritance",
+    "misused-boolean",
+    "modifier-used-only-once",
+    "msg-value-in-loop",
+    "multiple-constructors",
+    "multiple-placeholders",
+    "nested-struct-in-mapping",
+    "non-reentrant-not-first",
+    "out-of-order-retryable",
+    "pre-declared-local-variable-usage",
+    "push-zero-opcode",
+    "redundant-statement",
+    "reentrancy-state-change",
+    "require-revert-in-loop",
+    "return-bomb",
+    "reused-contract-name",
+    "rtlo",
+    "selfdestruct",
+    "signed-integer-storage-array",
+    "solmate-safe-transfer-lib",
+    "state-change-without-event",
+    "state-no-address-check",
+    "state-variable-could-be-constant",
+    "state-variable-could-be-immutable",
+    "state-variable-init-order",
+    "state-variable-read-external",
+    "state-variable-shadowing",
+    "storage-array-length-not-cached",
+    "storage-array-memory-edit",
+    "strict-equality-contract-balance",
+    "tautological-compare",
+    "tautology-or-contradiction",
+    "todo",
+    "tx-origin-used-for-auth",
+    "unchecked-low-level-call",
+    "unchecked-return",
+    "unchecked-send",
+    "uninitialized-local-variable",
+    "unprotected-initializer",
+    "unsafe-casting",
+    "unsafe-erc20-operation",
+    "unsafe-oz-erc721-mint",
+    "unspecific-solidity-pragma",
+    "unused-error",
+    "unused-import",
+    "unused-public-function",
+    "unused-state-variable",
+    "void-constructor",
+    "weak-randomness",
+    "yul-return"
+  ]
+}
