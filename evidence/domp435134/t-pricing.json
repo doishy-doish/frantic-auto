@@ -1,0 +1,11 @@
+{
+ "name": "pricing",
+ "url": "https://porkbun.com/api/json/v3/pricing/getAll",
+ "status": 403,
+ "ct": "text/html",
+ "bytes": 118,
+ "json": {
+  "parse": "fail"
+ },
+ "depth": 0
+}

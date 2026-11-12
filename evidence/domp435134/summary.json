@@ -1,0 +1,23 @@
+{
+ "stamp": "domp435134",
+ "takenAt": "2026-11-12T12:44:08.599Z",
+ "case": "api-hunt",
+ "depth": 1,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 8
+ },
+ "render": true,
+ "targets": [
+  {
+   "name": "pricing",
+   "status": 403,
+   "bytes": 118
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  }
+ ]
+}

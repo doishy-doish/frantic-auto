@@ -1,0 +1,70 @@
+{
+ "name": "sitemap",
+ "origin": "https://porkbun.com",
+ "routes": [
+  {
+   "path": "/sitemap.xml",
+   "status": 200,
+   "locs": [
+    "https://porkbun.com/",
+    "https://porkbun.com/api/json/v3/documentation",
+    "https://porkbun.com/products/domains",
+    "https://porkbun.com/products/deals",
+    "https://porkbun.com/marketplace",
+    "https://porkbun.com/auctions",
+    "https://porkbun.com/closeouts",
+    "https://porkbun.com/aftermarket",
+    "https://porkbun.com/products/web_hosting",
+    "https://porkbun.com/products/webhosting/managedLinks",
+    "https://porkbun.com/products/webhosting/articulation",
+    "https://porkbun.com/products/webhosting/cloudWordPress",
+    "https://porkbun.com/products/webhosting/cPanelHosting",
+    "https://porkbun.com/products/webhosting/secureStaticHosting",
+    "https://porkbun.com/products/webhosting/managedPHP",
+    "https://porkbun.com/products/email",
+    "https://porkbun.com/products/whois_privacy",
+    "https://porkbun.com/products/dns_management",
+    "https://porkbun.com/products/ssl",
+    "https://porkbun.com/products/email_forwarding",
+    "https://porkbun.com/products/url_forwarding",
+    "https://porkbun.com/transfer",
+    "https://porkbun.com/mcp",
+    "https://porkbun.com/ai-agents",
+    "https://porkbun.com/terraform",
+    "https://porkbun.com/contact",
+    "https://porkbun.com/support/payment_options",
+    "https://porkbun.com/security",
+    "https://porkbun.com/abuse",
+    "https://porkbun.com/whois"
+   ],
+   "paths": []
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "locs": [],
+   "paths": [
+    "/api/json/v3/documentation",
+    "/api/json/v3/spec",
+    "/checkout/allocation/*",
+    "/widgets/*",
+    "/checkout/*",
+    "/account/*",
+    "/api/*",
+    "/api/domains/*",
+    "/api/loader/*",
+    "/api/orders/*",
+    "/api/transfer/*",
+    "/api/user/*",
+    "/event/freeappdev",
+    "/event/freeappdevdomain",
+    "/porkbun-domain-resource-downloads",
+    "/your-first-website-in-ten-minutes",
+    "/stop-overpaying-for-domains",
+    "/launch-a-professional-website-under-30-dollars",
+    "/is-your-personal-info-public-now",
+    "https://porkbun.com/sitemap.xml"
+   ]
+  }
+ ]
+}
