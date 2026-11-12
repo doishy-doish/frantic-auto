@@ -1,0 +1,131 @@
+{
+ "name": "bounty",
+ "url": "https://hanzo.ai/bounty",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 167233,
+ "textLen": 5936,
+ "head": "Bounties — Hanzo AI Skip to content Hanzo AI Research Products Solutions Developers Learn Pricing EN Log in Try Hanzo Language: English (United States) Take an issue. Ship the fix. Open issues and bug reports across Hanzo’s repositories. Ship a fix or report a verified bug to earn AI credits and climb the global leaderboard. Every open bounty Leaderboard How to contribute Bounties & Rewards Open bounties 9 10 Point the README install steps and badges at hanzo.ai/lz4/v4 hanzo-go/lz4#1 starter Honor the lines argument in MCPManager.Logs hanzoai/agents#9 starter Make the agent counts in README.md match the files hanzoai/agents#8 starter Fix 103 broken relative links in the README hanzoai/agents#6 starter Rewrite CONTRIBUTING.md for the Rust CLI; it describes a Python app hanzoai/cli#12 starter Add bin/ignoretracked_test.sh and register it in hanzo.yml hanzoai/ci#13 starter Asking GitHub for the open bounties. Every open bounty ↗ How a bounty is taken Verified bug reports and merged bounties earn Hanzo AI credits and leaderboard points, with email notifications sent as you climb ranks. Say on the issue that you are taking it. Point the README install steps and badges at hanzo.ai/lz4/v4…[trunc 5936]",
+ "links": [
+  {
+   "h": "https://github.com/search?type=issues&amp;s=created&amp;o=desc&amp;q=is%3Aissue%20is%3Aopen%20label%3Abounty%20archived%3Afalse%20org%3Ahanzoai%20org%3Ahanzo-apps%20org%3Ahanzo-go%20org%3Ahanzo-js",
+   "t": "Every open bounty"
+  },
+  {
+   "h": "https://github.com/hanzoai/.github/blob/main/CONTRIBUTING.md",
+   "t": "How to contribute"
+  },
+  {
+   "h": "https://github.com/search?type=issues&amp;s=created&amp;o=desc&amp;q=is%3Aissue%20is%3Aopen%20label%3Abounty%20archived%3Afalse%20org%3Ahanzoai%20org%3Ahanzo-apps%20org%3Ahanzo-go%20org%3Ahanzo-js",
+   "t": "Every open bounty ↗"
+  },
+  {
+   "h": "/leaderboard",
+   "t": "View global token &amp; bounty leaderboard"
+  },
+  {
+   "h": "https://github.com/search?type=issues&amp;s=created&amp;o=desc&amp;q=is%3Aissue%20is%3Aopen%20label%3Abounty%20archived%3Afalse%20org%3Ahanzoai%20org%3Ahanzo-apps%20org%3Ahanzo-go%20org%3Ahanzo-js",
+   "t": "Every open bounty"
+  },
+  {
+   "h": "/open-source",
+   "t": "Open source"
+  },
+  {
+   "h": "https://hanzo.ai/products",
+   "t": "Apps"
+  },
+  {
+   "h": "https://hanzo.app",
+   "t": "Hanzo App ↗"
+  },
+  {
+   "h": "/desktop",
+   "t": "Desktop app"
+  },
+  {
+   "h": "/platform",
+   "t": "API Platform"
+  },
+  {
+   "h": "https://platform.hanzo.ai/api-keys",
+   "t": "API keys ↗"
+  },
+  {
+   "h": "https://docs.hanzo.ai",
+   "t": "Developers ↗"
+  },
+  {
+   "h": "https://docs.hanzo.ai",
+   "t": "Documentation ↗"
+  },
+  {
+   "h": "https://docs.hanzo.ai/docs/openapi/",
+   "t": "API reference ↗"
+  },
+  {
+   "h": "https://docs.hanzo.ai/docs/quickstart/",
+   "t": "Quickstart ↗"
+  },
+  {
+   "h": "/startups",
+   "t": "Programs"
+  },
+  {
+   "h": "/startups",
+   "t": "Startups"
+  },
+  {
+   "h": "/open-source",
+   "t": "OSS grants"
+  },
+  {
+   "h": "/learn",
+   "t": "Learn"
+  },
+  {
+   "h": "https://docs.hanzo.ai/docs/guides/",
+   "t": "Guides ↗"
+  },
+  {
+   "h": "https://docs.hanzo.ai/docs/guides/cookbook/",
+   "t": "Cookbook ↗"
+  },
+  {
+   "h": "https://bsky.app/profile/hanzoai.bsky.social",
+   "t": "Bluesky ↗"
+  },
+  {
+   "h": "https://hanzo.ai/terms",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "reward",
+   "w": "ix or report a verified bug to earn AI credits and climb the global leaderboard. Every open bounty Leaderboard How to contribute Bounties & Rewards Open bounties 9 10 Point the README install steps and badges at hanzo.ai/lz4/v4 hanzo-go/lz4#1 starter Honor the lines argument in MCPManager.Logs hanzoai/agents#9 starter "
+  },
+  {
+   "k": "reward",
+   "w": "unty label. A maintainer decides. Hanzo’s repositories A security issue goes to [email&#160;protected] , never to a public issue. ← → — — — Rewards & points Every verified bug report, merged pull request, and token processed on Hanzo Cloud builds your standing and awards AI credits. + 50 pts +50 pts Verified bug report"
+  },
+  {
+   "k": "bounty",
+   "w": "ug reports across Hanzo’s repositories. Ship a fix or report a verified bug to earn AI credits and climb the global leaderboard. Every open bounty Leaderboard How to contribute Bounties & Rewards Open bounties 9 10 Point the README install steps and badges at hanzo.ai/lz4/v4 hanzo-go/lz4#1 starter Honor the lines argum"
+  },
+  {
+   "k": "bounty",
+   "w": "12 starter Add bin/ignoretracked_test.sh and register it in hanzo.yml hanzoai/ci#13 starter Asking GitHub for the open bounties. Every open bounty ↗ How a bounty is taken Verified bug reports and merged bounties earn Hanzo AI credits and leaderboard points, with email notifications sent as you climb ranks. Say on the i"
+  },
+  {
+   "k": "bounty",
+   "w": "bin/ignoretracked_test.sh and register it in hanzo.yml hanzoai/ci#13 starter Asking GitHub for the open bounties. Every open bounty ↗ How a bounty is taken Verified bug reports and merged bounties earn Hanzo AI credits and leaderboard points, with email notifications sent as you climb ranks. Say on the issue that you a"
+  },
+  {
+   "k": "terms",
+   "w": " transparency Contact Discord ↗ Telegram ↗ X ↗ GitHub ↗ LinkedIn ↗ Facebook ↗ Bluesky ↗ Reddit ↗ TikTok ↗ Instagram ↗ © 2026 Hanzo AI, Inc. Terms Privacy Usage policy Privacy choices"
+  }
+ ],
+ "depth": 0
+}

@@ -1,0 +1,139 @@
+{
+ "name": "d1-3",
+ "url": "https://docs.hanzo.ai/docs/quickstart/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 1065298,
+ "textLen": 8936,
+ "head": "Quickstart | Hanzo Docs Hanzo Docs Search or ask AI ⌘K Documentation Agents: start here Quickstart Self-Hosting & Air-Gapped Models Decisions Build with Guides Concepts Apps Open source Account Company Sign in Get an API key Hanzo Docs Agents Docs Guides Models APIs SDKs CLI MCP Sign in API key On this page Quickstart Use agent Install the CLI, log in, and make your first call — then see that same call as an SDK method, raw HTTP and an MCP tool. After this page you have a working credential and one call that answered. (Deploying on your own hardware or offline? Jump straight to Self-Hosting & Air-Gapped .) Hanzo is one cloud behind one key. Every capability — inference, identity, storage, money, agents — answers at https://api.hanzo.ai , and the CLI, the SDKs and the MCP tools are all generated from the same description of it. So there is nothing to wire up per service: get a key once and everything is reachable. 1 Install npm Script Homebrew From source npm i -g hanzo Any OS, Windows included. This installs the hanzo launcher only; each native binary is downloaded and SHA-256 verified the first time you use it: hanzo dev (the coding agent), hanzo mcp (the MCP server over stdio), h…[trunc 8936]",
+ "links": [
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/docs/agents/",
+   "t": "Agents"
+  },
+  {
+   "h": "/docs/",
+   "t": "Docs"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Guides"
+  },
+  {
+   "h": "/docs/models/",
+   "t": "Models"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "APIs"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "SDKs"
+  },
+  {
+   "h": "/docs/cli/",
+   "t": "CLI"
+  },
+  {
+   "h": "/docs/mcp/",
+   "t": "MCP"
+  },
+  {
+   "h": "/docs/self-hosting/",
+   "t": "Self-Hosting &amp; Air-Gapped"
+  },
+  {
+   "h": "/docs/api-keys/",
+   "t": "Authentication"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "reference"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "Java, Kotlin, Swift and C++"
+  },
+  {
+   "h": "/docs/cli/",
+   "t": "CLI"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "SDKs"
+  },
+  {
+   "h": "/docs/mcp/",
+   "t": "MCP"
+  },
+  {
+   "h": "/docs/mcp-tools/",
+   "t": "the tools"
+  },
+  {
+   "h": "/docs/credits/",
+   "t": "Credits &amp; billing"
+  },
+  {
+   "h": "/docs/credits/",
+   "t": "Credits &amp; billing"
+  },
+  {
+   "h": "/docs/pricing/",
+   "t": "Pricing"
+  },
+  {
+   "h": "/docs/openapi/graph/",
+   "t": "Graph"
+  },
+  {
+   "h": "/docs/self-hosting/",
+   "t": "Self-Hosting &amp; Air-Gapped"
+  },
+  {
+   "h": "/docs/network/",
+   "t": "The Network"
+  },
+  {
+   "h": "/docs/guides/coding/",
+   "t": "Coding agents"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Six flows, four surfaces"
+  },
+  {
+   "h": "/docs/concepts/",
+   "t": "Concepts"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "Capabilities"
+  },
+  {
+   "h": "/docs/errors/",
+   "t": "Errors"
+  },
+  {
+   "h": "https://discord.gg/XthHQQj",
+   "t": "#docs on Discord"
+  },
+  {
+   "h": "https://github.com/hanzo-docs/docs",
+   "t": "open a PR"
+  }
+ ],
+ "nextData": null,
+ "hits": [],
+ "followOf": "bounty",
+ "depth": 1
+}

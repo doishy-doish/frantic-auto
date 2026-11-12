@@ -1,0 +1,58 @@
+{
+ "stamp": "para3898324",
+ "takenAt": "2026-11-12T12:51:53.927Z",
+ "case": "proof",
+ "depth": 2,
+ "breadth": {
+  "maxTargets": 2,
+  "maxFollows": 6
+ },
+ "render": false,
+ "targets": [
+  {
+   "name": "list",
+   "status": 200,
+   "bytes": 18659
+  },
+  {
+   "name": "bounty",
+   "status": 200,
+   "bytes": 167233
+  },
+  {
+   "name": "sitemap",
+   "status": "?",
+   "bytes": 0
+  },
+  {
+   "name": "d1-1",
+   "status": 200,
+   "bytes": 974847
+  },
+  {
+   "name": "d1-2",
+   "status": 200,
+   "bytes": 900833
+  },
+  {
+   "name": "d1-3",
+   "status": 200,
+   "bytes": 1065298
+  },
+  {
+   "name": "d1-4",
+   "status": 200,
+   "bytes": 758345
+  },
+  {
+   "name": "d1-5",
+   "status": 200,
+   "bytes": 728825
+  },
+  {
+   "name": "d1-6",
+   "status": 200,
+   "bytes": 244523
+  }
+ ]
+}

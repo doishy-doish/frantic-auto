@@ -1,0 +1,47 @@
+{
+ "name": "list",
+ "url": "https://payapi.market/list",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 18659,
+ "textLen": 4323,
+ "head": "List your API: free listing form | PayAPI Market there and it reads ?q= and filters the grid. Verified live on 17 Sep 2026: ?q=anchor returned 3 results, ?q=price 15, ?q=zzzznomatch 0. It previously pointed at the bare site root with a q parameter, i.e. the HomePage route, which reads no query string at all, so the sitelinks searchbox advertised a search that did not exist. The literal old URL is deliberately not repeated here, so that grepping this repo for that fake target returns nothing. The agent search at /agent/search is JSON for machines and is deliberately NOT advertised here. --> x4 PayAPI Market · Marketplace Home &rsaquo; List your API List your API Turn your data or tool into a pay-per-call API for AI agents. One screen: your email, the paid route, an example request, and the wallet we read from your 402. No payment integration to build: agents pay you per request in USDC on Base, Solana or Algorand via the x402 protocol. Listing is free. Providers keep 100% of what the call earns. Want the provider playbook by email? Use the box on the homepage . 1,546 settlement-verified APIs, 2,742 listed. 30343 endpoints are already listed on PayAPI Market. How listing works Email …[trunc 4323]",
+ "links": [
+  {
+   "h": "https://payapi.market/mcp",
+   "t": "https://payapi.market/mcp"
+  },
+  {
+   "h": "/list",
+   "t": "Start listing - free"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "wallet",
+   "w": " your API Turn your data or tool into a pay-per-call API for AI agents. One screen: your email, the paid route, an example request, and the wallet we read from your 402. No payment integration to build: agents pay you per request in USDC on Base, Solana or Algorand via the x402 protocol. Listing is free. Providers keep"
+  },
+  {
+   "k": "wallet",
+   "w": "oints are already listed on PayAPI Market. How listing works Email and paid route - one paid URL on each line. We read the 402 and fill the wallet. The wallet is the payTo from that 402. Example request - a real query or JSON body. A GET route that publishes no inputs can leave this blank. More details, then submit - n"
+  },
+  {
+   "k": "wallet",
+   "w": "ready listed on PayAPI Market. How listing works Email and paid route - one paid URL on each line. We read the 402 and fill the wallet. The wallet is the payTo from that 402. Example request - a real query or JSON body. A GET route that publishes no inputs can leave this blank. More details, then submit - name, descrip"
+  },
+  {
+   "k": "usdc",
+   "w": "l, the paid route, an example request, and the wallet we read from your 402. No payment integration to build: agents pay you per request in USDC on Base, Solana or Algorand via the x402 protocol. Listing is free. Providers keep 100% of what the call earns. Want the provider playbook by email? Use the box on the homepag"
+  },
+  {
+   "k": "usdc",
+   "w": "ed above $0.10 are not paid from PayAPI's canary wallet, and a payment from another wallet is not accepted. Send the test price plus 20% in USDC on Base to 0x171d8021b98c53DCbB3c9C30CBbBeb1b01850fCA. We will email you once the top-up arrives, then run one paid test of this route. A listing depends on that test passing "
+  },
+  {
+   "k": "usdc",
+   "w": " the wallet on the form. A second listing that is the same product or a sub-path of one already live. extra.name must be \"USD Coin\" on Base USDC or settlement fails. What do I need on the form? A durable URL, the paid route, a working example request when the route publishes inputs, and a price that matches the live 40"
+  }
+ ],
+ "depth": 0
+}

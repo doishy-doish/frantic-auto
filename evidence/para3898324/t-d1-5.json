@@ -1,0 +1,272 @@
+{
+ "name": "d1-5",
+ "url": "https://docs.hanzo.ai/docs/guides/cookbook/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 728825,
+ "textLen": 178170,
+ "head": "Cookbook | Hanzo Docs Hanzo Docs Search or ask AI ⌘K Docs Cookbook Cookbook Enterprise Blueprints & Production Archetypes Modular Decision Recipes Route with Enso Triage with Kai, reply with Zen Gate an agent's command Drive an agent loop Sign in Get an API key Hanzo Docs Agents Docs Guides Models APIs SDKs CLI MCP Sign in API key Cookbook Cookbook Use agent Four recipes that put Enso, Kai and Zen in one loop: route a request, triage with typed answers, gate an agent's command, and drive an agent from programs instead of prompts. Each recipe is one job, end to end, in requests you can paste. Together they show the pattern the platform is built around: Enso routes each request, Kai decides the bounded questions, Zen reasons through the open ones, and your policy keeps the last word. Recipe What it shows Runs on Modular Decision Recipes typed Rust blueprints for retail, industrial, confidence gating and agent loops recipes/ + api.hanzo.ai Route with Enso one request for every model, a price cap per call, the model that answered, feedback that trains the router api.hanzo.ai Triage with Kai, reply with Zen three decisions with no generated tokens, then one generation api.hanzo.ai Gate …[trunc 178170]",
+ "links": [
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/docs/agents/",
+   "t": "Agents"
+  },
+  {
+   "h": "/docs/",
+   "t": "Docs"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Guides"
+  },
+  {
+   "h": "/docs/models/",
+   "t": "Models"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "APIs"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "SDKs"
+  },
+  {
+   "h": "/docs/cli/",
+   "t": "CLI"
+  },
+  {
+   "h": "/docs/mcp/",
+   "t": "MCP"
+  },
+  {
+   "h": "/docs/guides/cookbook/recipes/",
+   "t": "Modular Decision Recipes"
+  },
+  {
+   "h": "/docs/guides/cookbook/route/",
+   "t": "Route with Enso"
+  },
+  {
+   "h": "/docs/guides/cookbook/triage/",
+   "t": "Triage with Kai, reply with Zen"
+  },
+  {
+   "h": "/docs/guides/cookbook/gate/",
+   "t": "Gate an agent&#x27;s command"
+  },
+  {
+   "h": "/docs/guides/cookbook/loop/",
+   "t": "Drive an agent loop"
+  },
+  {
+   "h": "https://discord.gg/XthHQQj",
+   "t": "#docs on Discord"
+  },
+  {
+   "h": "https://github.com/hanzo-docs/docs",
+   "t": "open a PR"
+  },
+  {
+   "h": "https://hanzo.app",
+   "t": "Hanzo App"
+  },
+  {
+   "h": "https://hanzo.ai/download",
+   "t": "Download app"
+  },
+  {
+   "h": "/docs/models/enso/",
+   "t": "Enso Router"
+  },
+  {
+   "h": "/docs/models/kai/",
+   "t": "Kai Decisions"
+  },
+  {
+   "h": "/docs/models/zen/",
+   "t": "Zen Open Weights"
+  },
+  {
+   "h": "/docs/models/",
+   "t": "Model Catalogue"
+  },
+  {
+   "h": "/docs/agents/",
+   "t": "Managed Agents"
+  },
+  {
+   "h": "/docs/mcp/",
+   "t": "MCP Tools"
+  },
+  {
+   "h": "/docs/",
+   "t": "Documentation"
+  },
+  {
+   "h": "/docs/quickstart/",
+   "t": "Quickstart"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "API Reference"
+  },
+  {
+   "h": "/docs/cli/",
+   "t": "CLI Reference"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "SDKs"
+  },
+  {
+   "h": "/docs/contributing/",
+   "t": "Contributing"
+  },
+  {
+   "h": "/docs/openapi/iam/",
+   "t": "Identity &amp; IAM"
+  },
+  {
+   "h": "/docs/openapi/kms/",
+   "t": "Key Management (KMS)"
+  },
+  {
+   "h": "/docs/openapi/provisioning/",
+   "t": "Vector &amp; SQL Data"
+  },
+  {
+   "h": "/docs/openapi/pubsub/",
+   "t": "Streams &amp; PubSub"
+  },
+  {
+   "h": "/docs/openapi/o11y/",
+   "t": "Observability"
+  },
+  {
+   "h": "/docs/openapi/commerce/",
+   "t": "Commerce &amp; Billing"
+  },
+  {
+   "h": "/docs/architecture/",
+   "t": "Architecture"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Guides &amp; Tutorials"
+  },
+  {
+   "h": "https://discord.gg/XthHQQj",
+   "t": "Discord (#docs)"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "e\\\":\\\"folder\\\",\\\"name\\\":\\\"Treasury\\\",\\\"root\\\":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"The reserve fund behind every payout: real capital, held and accounted for.\\\",\\\"collapsible\\\":false,\\\"children\\\":[],\\\"$id\\\":\\\"openapi/treasury\\\",\\\"$ref\\\":{\\\"folder\\\":\\\"openapi/treasury\\\",\\\"meta\\\":\\\"openapi/trea"
+  },
+  {
+   "k": "payout",
+   "w": "},\\\"index\\\":{\\\"$id\\\":\\\"openapi/treasury/index.mdx\\\",\\\"type\\\":\\\"page\\\",\\\"name\\\":\\\"Treasury\\\",\\\"description\\\":\\\"The reserve fund behind every payout: real capital, held and accounted for.\\\",\\\"icon\\\":\\\"$undefined\\\",\\\"url\\\":\\\"/docs/openapi/treasury\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$ref\\\":\\\"openap"
+  },
+  {
+   "k": "wallet",
+   "w": "e\\\":\\\"folder\\\",\\\"name\\\":\\\"Agents: start here\\\",\\\"root\\\":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"Sign up free with a wallet, get a key, read your limits, top up in USDC or USDT, then the first call, MCP, Kai, spend control, a campaign, and the prompt to hand an agent.\\\",\\\"collapsible\\\":\\\"$undefin"
+  },
+  {
+   "k": "wallet",
+   "w": ",\\\"children\\\":[{\\\"$id\\\":\\\"agents/headless.mdx\\\",\\\"type\\\":\\\"page\\\",\\\"name\\\":\\\"Headless, step by step\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Wallet\\\","
+  },
+  {
+   "k": "wallet",
+   "w": "small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Wallet\\\",\\\"url\\\":\\\"/docs/agents/headless\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$ref\\\":\\\"agents/headless.mdx\\\"},{\\\"$id\\\":\\\"agents/prompt.mdx\\\",\\\"type\\\":\\\"page\\"
+  },
+  {
+   "k": "usdc",
+   "w": "\\\"root\\\":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"Sign up free with a wallet, get a key, read your limits, top up in USDC or USDT, then the first call, MCP, Kai, spend control, a campaign, and the prompt to hand an agent.\\\",\\\"collapsible\\\":\\\"$undefined\\\",\\\"children\\\":[{\\\"$id\\\":\\\"agents/headless.m"
+  },
+  {
+   "k": "usdc",
+   "w": "\":\\\"Headless, step by step\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Wallet\\\",\\\"url\\\":\\\"/docs/agents/headless\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\"
+  },
+  {
+   "k": "usdc",
+   "w": "ame\\\":\\\"Agents: start here\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Bot\\\",\\\"url\\\":\\\"/docs/agents\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefin"
+  },
+  {
+   "k": "usdt",
+   "w": ":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"Sign up free with a wallet, get a key, read your limits, top up in USDC or USDT, then the first call, MCP, Kai, spend control, a campaign, and the prompt to hand an agent.\\\",\\\"collapsible\\\":\\\"$undefined\\\",\\\"children\\\":[{\\\"$id\\\":\\\"agents/headless.mdx\\\",\\\"t"
+  },
+  {
+   "k": "usdt",
+   "w": "less, step by step\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Wallet\\\",\\\"url\\\":\\\"/docs/agents/headless\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$und"
+  },
+  {
+   "k": "usdt",
+   "w": "Agents: start here\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Bot\\\",\\\"url\\\":\\\"/docs/agents\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$"
+  },
+  {
+   "k": "kyc",
+   "w": ":\\\"$undefined\\\"},{\\\"type\\\":\\\"folder\\\",\\\"name\\\":\\\"Compliance\\\",\\\"root\\\":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"Your KYC/KYB onboarding, accreditation records, and the evidence trail behind them.\\\",\\\"collapsible\\\":false,\\\"children\\\":[],\\\"$id\\\":\\\"openapi/compliance\\\",\\\"$ref\\\":{\\\"folder\\\":\\\"openapi"
+  },
+  {
+   "k": "kyc",
+   "w": "ompliance/meta.json\\\"},\\\"index\\\":{\\\"$id\\\":\\\"openapi/compliance/index.mdx\\\",\\\"type\\\":\\\"page\\\",\\\"name\\\":\\\"Compliance\\\",\\\"description\\\":\\\"Your KYC/KYB onboarding, accreditation records, and the evidence trail behind them.\\\",\\\"icon\\\":\\\"$undefined\\\",\\\"url\\\":\\\"/docs/openapi/compliance\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs"
+  },
+  {
+   "k": "fee",
+   "w": " gating and agent loops recipes/ + api.hanzo.ai Route with Enso one request for every model, a price cap per call, the model that answered, feedback that trains the router api.hanzo.ai Triage with Kai, reply with Zen three decisions with no generated tokens, then one generation api.hanzo.ai Gate an agent's command a De"
+  },
+  {
+   "k": "fee",
+   "w": ",\\\"description\\\":\\\"Mounts the rewards rules engine (github.com/hanzoai/reward) at /v1/reward, with the admin queue at /v1/admin/reward, and feeds it what really happened.\\\",\\\"collapsible\\\":false,\\\"children\\\":[],\\\"$id\\\":\\\"openapi/reward\\\",\\\"$ref\\\":{\\\"folder\\\":\\\"openapi/reward\\\",\\\"meta\\\":\\\"openapi/reward/meta.json\\\"},\\\"i"
+  },
+  {
+   "k": "fee",
+   "w": ",\\\"description\\\":\\\"Mounts the rewards rules engine (github.com/hanzoai/reward) at /v1/reward, with the admin queue at /v1/admin/reward, and feeds it what really happened.\\\",\\\"icon\\\":\\\"$undefined\\\",\\\"url\\\":\\\"/docs/openapi/reward\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$ref\\\":\\\"openapi/reward/index.md"
+  },
+  {
+   "k": "claim",
+   "w": "type\\\":\\\"folder\\\",\\\"name\\\":\\\"Zen\\\",\\\"root\\\":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"co-resident on ai's router — it claims zen-SKU requests and passes the rest on\\\",\\\"collapsible\\\":false,\\\"children\\\":[],\\\"$id\\\":\\\"openapi/zen\\\",\\\"$ref\\\":{\\\"folder\\\":\\\"openapi/zen\\\",\\\"meta\\\":\\\"openapi/zen/meta.json"
+  },
+  {
+   "k": "reward",
+   "w": "erral\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$ref\\\":\\\"mcp-tools/unmapped/referral.mdx\\\"},{\\\"$id\\\":\\\"mcp-tools/unmapped/reward.mdx\\\",\\\"type\\\":\\\"page\\\",\\\"name\\\":\\\"reward\\\",\\\"description\\\":\\\"reward: 7 operations.\\\",\\\"icon\\\":\\\"$undefined\\\",\\\"url\\\":\\\"/docs/mcp-tools/unmapped/reward\\\",\\\"access\\\":\\\"$undef"
+  },
+  {
+   "k": "reward",
+   "w": "Orgs\\\":\\\"$undefined\\\",\\\"$ref\\\":\\\"mcp-tools/unmapped/referral.mdx\\\"},{\\\"$id\\\":\\\"mcp-tools/unmapped/reward.mdx\\\",\\\"type\\\":\\\"page\\\",\\\"name\\\":\\\"reward\\\",\\\"description\\\":\\\"reward: 7 operations.\\\",\\\"icon\\\":\\\"$undefined\\\",\\\"url\\\":\\\"/docs/mcp-tools/unmapped/reward\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$re"
+  },
+  {
+   "k": "reward",
+   "w": "f\\\":\\\"mcp-tools/unmapped/referral.mdx\\\"},{\\\"$id\\\":\\\"mcp-tools/unmapped/reward.mdx\\\",\\\"type\\\":\\\"page\\\",\\\"name\\\":\\\"reward\\\",\\\"description\\\":\\\"reward: 7 operations.\\\",\\\"icon\\\":\\\"$undefined\\\",\\\"url\\\":\\\"/docs/mcp-tools/unmapped/reward\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$ref\\\":\\\"mcp-tools/unmapped/re"
+  },
+  {
+   "k": "get paid",
+   "w": "e\\\":\\\"Author\\\",\\\"root\\\":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"A royalty for open-source work: your repo runs, you get paid.\\\",\\\"collapsible\\\":false,\\\"children\\\":[],\\\"$id\\\":\\\"openapi/author\\\",\\\"$ref\\\":{\\\"folder\\\":\\\"openapi/author\\\",\\\"meta\\\":\\\"openapi/author/meta.json\\\"},\\\"index\\\":{\\\"$id\\\":\\\"ope"
+  },
+  {
+   "k": "get paid",
+   "w": "\\\":\\\"openapi/author/index.mdx\\\",\\\"type\\\":\\\"page\\\",\\\"name\\\":\\\"Author\\\",\\\"description\\\":\\\"A royalty for open-source work: your repo runs, you get paid.\\\",\\\"icon\\\":\\\"$undefined\\\",\\\"url\\\":\\\"/docs/openapi/author\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$ref\\\":\\\"openapi/author/index.mdx\\\"},\\\"icon\\\":\\\"$unde"
+  },
+  {
+   "k": "terms",
+   "w": " Blog Discord (#docs) GitHub Research & Papers System Status Support Company About Hanzo Enterprise Security & Trust Careers Privacy Policy Terms of Service Contact © 2014–2026 Hanzo AI Inc. · Techstars '17 · 1 Ferry Building, San Francisco, CA 94105 All systems operational Privacy Terms Security hanzo self.__next_f.pu"
+  },
+  {
+   "k": "terms",
+   "w": "ms of Service Contact © 2014–2026 Hanzo AI Inc. · Techstars '17 · 1 Ferry Building, San Francisco, CA 94105 All systems operational Privacy Terms Security hanzo self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[349228,[\\\"/_next/static/chunks/2ds-63u4rubtu.js\\\",\\\"/_next/static/chunks/1db5ide_r0-ev.js\\\",\\\"/_next/static/"
+  }
+ ],
+ "followOf": "bounty",
+ "depth": 1
+}

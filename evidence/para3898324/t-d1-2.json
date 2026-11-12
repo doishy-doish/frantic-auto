@@ -1,0 +1,256 @@
+{
+ "name": "d1-2",
+ "url": "https://docs.hanzo.ai/docs/openapi/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 900833,
+ "textLen": 59152,
+ "head": "Capabilities | Hanzo Docs Hanzo Docs Search or ask AI ⌘K Docs By domain Identity & trust Intelligence Data Streams Observability Economy Fabric Applications Chain Sign in Get an API key Hanzo Docs Agents Docs Guides Models APIs SDKs CLI MCP Sign in API key On this page Capabilities Use agent Every Hanzo capability — 137 of them, 2709 operations, generated from the OpenAPI document. One cloud, one credential. 137 capabilities , and each is one word that names the same thing everywhere — its address, its command group, its client class, its MCP tool, this page and its HIP. 131 of them speak REST over HTTPS and carry 2709 operations , generated straight from the OpenAPI document that also generates the SDKs, the CLI and the MCP tools. The other 6 carry no operation in it. Most answer somewhere a document cannot describe — a port, a /.well-known/ convention, another app's router, a control plane the address relays onto — and two are the operator surface, which serves ordinary HTTP and is withheld because its audience is not a customer. All 6 are GA and run in every deployment; each page names its own address and prints no endpoint table it does not have. The names below are the canonic…[trunc 59152]",
+ "links": [
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/docs/agents/",
+   "t": "Agents"
+  },
+  {
+   "h": "/docs/",
+   "t": "Docs"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Guides"
+  },
+  {
+   "h": "/docs/models/",
+   "t": "Models"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "APIs"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "SDKs"
+  },
+  {
+   "h": "/docs/cli/",
+   "t": "CLI"
+  },
+  {
+   "h": "/docs/mcp/",
+   "t": "MCP"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Get started"
+  },
+  {
+   "h": "/docs/openapi/reference/",
+   "t": "interactive reference"
+  },
+  {
+   "h": "https://discord.gg/XthHQQj",
+   "t": "#docs on Discord"
+  },
+  {
+   "h": "https://github.com/hanzo-docs/docs",
+   "t": "open a PR"
+  },
+  {
+   "h": "https://hanzo.app",
+   "t": "Hanzo App"
+  },
+  {
+   "h": "https://hanzo.ai/download",
+   "t": "Download app"
+  },
+  {
+   "h": "/docs/models/enso/",
+   "t": "Enso Router"
+  },
+  {
+   "h": "/docs/models/kai/",
+   "t": "Kai Decisions"
+  },
+  {
+   "h": "/docs/models/zen/",
+   "t": "Zen Open Weights"
+  },
+  {
+   "h": "/docs/models/",
+   "t": "Model Catalogue"
+  },
+  {
+   "h": "/docs/agents/",
+   "t": "Managed Agents"
+  },
+  {
+   "h": "/docs/mcp/",
+   "t": "MCP Tools"
+  },
+  {
+   "h": "/docs/",
+   "t": "Documentation"
+  },
+  {
+   "h": "/docs/quickstart/",
+   "t": "Quickstart"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "API Reference"
+  },
+  {
+   "h": "/docs/cli/",
+   "t": "CLI Reference"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "SDKs"
+  },
+  {
+   "h": "/docs/contributing/",
+   "t": "Contributing"
+  },
+  {
+   "h": "/docs/openapi/iam/",
+   "t": "Identity &amp; IAM"
+  },
+  {
+   "h": "/docs/openapi/kms/",
+   "t": "Key Management (KMS)"
+  },
+  {
+   "h": "/docs/openapi/provisioning/",
+   "t": "Vector &amp; SQL Data"
+  },
+  {
+   "h": "/docs/openapi/pubsub/",
+   "t": "Streams &amp; PubSub"
+  },
+  {
+   "h": "/docs/openapi/o11y/",
+   "t": "Observability"
+  },
+  {
+   "h": "/docs/openapi/commerce/",
+   "t": "Commerce &amp; Billing"
+  },
+  {
+   "h": "/docs/architecture/",
+   "t": "Architecture"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Guides &amp; Tutorials"
+  },
+  {
+   "h": "https://discord.gg/XthHQQj",
+   "t": "Discord (#docs)"
+  },
+  {
+   "h": "https://hanzo.ai/terms",
+   "t": "Terms of Service"
+  },
+  {
+   "h": "https://hanzo.ai/terms",
+   "t": "Terms"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "payout",
+   "w": "perations Billing Your org's balance, what it has spent, and the cards it pays with. · 58 operations Treasury The reserve fund behind every payout: real capital, held and accounted for. · 2 operations Plan The plan catalog: every tier you can buy, what it costs, and what it grants. · 14 operations Pricing The price lis"
+  },
+  {
+   "k": "wallet",
+   "w": "operations Validator One-click validator onboarding: prove your Genesis NFT, get a node provisioned, queue its registration. · 4 operations Wallet Blockchain key custody: create wallets, rotate their keys, and sign with them. · 8 operations Team Your org's shared space: documents edited together, files, seats, and agen"
+  },
+  {
+   "k": "wallet",
+   "w": "or onboarding: prove your Genesis NFT, get a node provisioned, queue its registration. · 4 operations Wallet Blockchain key custody: create wallets, rotate their keys, and sign with them. · 8 operations Team Your org's shared space: documents edited together, files, seats, and agents as teammates. · 45 operations Intel"
+  },
+  {
+   "k": "wallet",
+   "w": "hostname routing to any backend, changed live. · 18 operations Domain Hanzo Domains: search a name, see the price, buy it from your prepaid wallet. · 7 operations DNS Your DNS records: the zones and records behind every name you point at Hanzo. · 12 operations Cloudflare Your Cloudflare account, managed from Hanzo: zon"
+  },
+  {
+   "k": "usdc",
+   "w": "\\\"root\\\":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"Sign up free with a wallet, get a key, read your limits, top up in USDC or USDT, then the first call, MCP, Kai, spend control, a campaign, and the prompt to hand an agent.\\\",\\\"collapsible\\\":\\\"$undefined\\\",\\\"children\\\":[{\\\"$id\\\":\\\"agents/headless.m"
+  },
+  {
+   "k": "usdc",
+   "w": "\":\\\"Headless, step by step\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Wallet\\\",\\\"url\\\":\\\"/docs/agents/headless\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\"
+  },
+  {
+   "k": "usdc",
+   "w": "ame\\\":\\\"Agents: start here\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Bot\\\",\\\"url\\\":\\\"/docs/agents\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefin"
+  },
+  {
+   "k": "usdt",
+   "w": ":\\\"$undefined\\\",\\\"defaultOpen\\\":\\\"$undefined\\\",\\\"description\\\":\\\"Sign up free with a wallet, get a key, read your limits, top up in USDC or USDT, then the first call, MCP, Kai, spend control, a campaign, and the prompt to hand an agent.\\\",\\\"collapsible\\\":\\\"$undefined\\\",\\\"children\\\":[{\\\"$id\\\":\\\"agents/headless.mdx\\\",\\\"t"
+  },
+  {
+   "k": "usdt",
+   "w": "less, step by step\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Wallet\\\",\\\"url\\\":\\\"/docs/agents/headless\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$und"
+  },
+  {
+   "k": "usdt",
+   "w": "Agents: start here\\\",\\\"description\\\":\\\"Sign up free with a wallet. Get an API key free. A small free allowance to try it. Top up in USDC or USDT over the API to raise your limits and pay as you go. No human required.\\\",\\\"icon\\\":\\\"Bot\\\",\\\"url\\\":\\\"/docs/agents\\\",\\\"access\\\":\\\"$undefined\\\",\\\"accessOrgs\\\":\\\"$undefined\\\",\\\"$"
+  },
+  {
+   "k": "kyc",
+   "w": "tions Audit Your org's tamper-evident audit trail: every security-relevant event, hash-chained and readable. · 1 operations Compliance Your KYC/KYB onboarding, accreditation records, and the evidence trail behind them. · 17 operations Trust Your trust centre: the controls you publish, the coverage they compute to, the "
+  },
+  {
+   "k": "fee",
+   "w": " operations Reward Mounts the rewards rules engine (github.com/hanzoai/reward) at /v1/reward, with the admin queue at /v1/admin/reward, and feeds it what really happened. · 17 operations Marketplace The one market between orgs: agents and personas to hire, apps, skills, MCP servers and tools to buy, each sold by the or"
+  },
+  {
+   "k": "fee",
+   "w": " out before you deploy. · 3 operations Bot A bot doing your work on a real desktop, live, while you watch. · 4 operations World A live news feed filtered to what your project cares about. · 6 operations Task Hanzo Task: boards, the work items on them, and the filters that make a board. · 14 operations Patrol Stands wat"
+  },
+  {
+   "k": "fee",
+   "w": "eads every wallet UI needs. · 4 operations Explorer Chain data: your block indexers and how far each has caught up, plus the on-chain price feeds. · 2 operations Market What trades on each chain, and how far the read of it got. · 5 operations Prefer to click? The interactive reference renders the same document. Was thi"
+  },
+  {
+   "k": "claim",
+   "w": "binary with the money, ingest and telemetry callbacks cloud BUILDS but cannot INSTALL. · 319 operations Zen co-resident on ai's router — it claims zen-SKU requests and passes the rest on Studio Hanzo Studio's workflow backend: every creation — an image, a poster, a document, a deck, a type system, a 3D model, an ad, a "
+  },
+  {
+   "k": "reward",
+   "w": " over MCP, and the index a client follows from the API root to reach any of it. · 5 operations Economy the economy — meter · price · bill · reward — 21 capabilities. Commerce Selling: checkout, subscriptions, invoices, spend alerts, payment webhooks and the storefront catalog. · 157 operations Billing Your org's balanc"
+  },
+  {
+   "k": "reward",
+   "w": "rations Allowance How much a plan lets you do without paying, and how much of it you have left in the window that holds you. · 1 operations Reward Mounts the rewards rules engine (github.com/hanzoai/reward) at /v1/reward, with the admin queue at /v1/admin/reward, and feeds it what really happened. · 17 operations Marke"
+  },
+  {
+   "k": "reward",
+   "w": "How much a plan lets you do without paying, and how much of it you have left in the window that holds you. · 1 operations Reward Mounts the rewards rules engine (github.com/hanzoai/reward) at /v1/reward, with the admin queue at /v1/admin/reward, and feeds it what really happened. · 17 operations Marketplace The one mar"
+  },
+  {
+   "k": "get paid",
+   "w": "rtner program that pays commission on what your referrals spend. · 10 operations Author A royalty for open-source work: your repo runs, you get paid. · 5 operations Licensing What an org has bought and may run: signed licenses to issue, verify and revoke, and the releases they unlock. · 9 operations x402 Pay-per-reques"
+  },
+  {
+   "k": "terms",
+   "w": " Blog Discord (#docs) GitHub Research & Papers System Status Support Company About Hanzo Enterprise Security & Trust Careers Privacy Policy Terms of Service Contact © 2014–2026 Hanzo AI Inc. · Techstars '17 · 1 Ferry Building, San Francisco, CA 94105 All systems operational Privacy Terms Security hanzo self.__next_f.pu"
+  },
+  {
+   "k": "terms",
+   "w": "ms of Service Contact © 2014–2026 Hanzo AI Inc. · Techstars '17 · 1 Ferry Building, San Francisco, CA 94105 All systems operational Privacy Terms Security hanzo self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[349228,[\\\"/_next/static/chunks/2ds-63u4rubtu.js\\\",\\\"/_next/static/chunks/1db5ide_r0-ev.js\\\",\\\"/_next/static/"
+  }
+ ],
+ "followOf": "bounty",
+ "depth": 1
+}

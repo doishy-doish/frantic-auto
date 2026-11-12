@@ -1,0 +1,68 @@
+{
+ "name": "d1-1",
+ "url": "https://docs.hanzo.ai/",
+ "status": 200,
+ "ct": "text/html; charset=utf-8",
+ "bytes": 974847,
+ "textLen": 6416,
+ "head": "Hanzo Docs — the AI operating system for business Hanzo Docs Search or ask AI ⌘K Documentation Agents: start here Quickstart Self-Hosting & Air-Gapped Models Decisions Build with Guides Concepts Apps Open source Account Company Sign in Get an API key Hanzo Docs Agents Docs Guides Models APIs SDKs CLI MCP Sign in API key The AI operating system for business. Building business software since 2014. Techstars '17. Every model, every tool and Kai on one key, free to start: in the browser, from your terminal, or on your own hardware, with the same software we run in production. Enso routes . The router. It picks the model for every request: send model: \"auto\" or an enso-* id. Docs hanzo.ai/enso ↗ Kai decides . The decision model. Typed answers with calibrated probabilities at POST /v1/decisions , $0.021 per million input tokens, output free. Docs hanzo.ai/kai ↗ Zen reasons . The open-weight family: text, vision and audio, with the weights on Hugging Face. Docs hanzo.ai/zen ↗ 500+ All models Every model the gateway serves, from 74 makers, on one key and one bill. The catalogue lists each id with its live rate. Browse the catalogue $ curl hanzo.sh | sh Installs the hanzo CLI. Then hanzo au…[trunc 6416]",
+ "links": [
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/",
+   "t": "Hanzo Docs"
+  },
+  {
+   "h": "/docs/agents/",
+   "t": "Agents"
+  },
+  {
+   "h": "/docs/",
+   "t": "Docs"
+  },
+  {
+   "h": "/docs/guides/",
+   "t": "Guides"
+  },
+  {
+   "h": "/docs/models/",
+   "t": "Models"
+  },
+  {
+   "h": "/docs/openapi/",
+   "t": "APIs"
+  },
+  {
+   "h": "/docs/sdks/",
+   "t": "SDKs"
+  },
+  {
+   "h": "/docs/cli/",
+   "t": "CLI"
+  },
+  {
+   "h": "/docs/mcp/",
+   "t": "MCP"
+  },
+  {
+   "h": "/docs/agents/",
+   "t": "Agents: start here"
+  }
+ ],
+ "nextData": null,
+ "hits": [
+  {
+   "k": "stripe",
+   "w": "on TypeScript Go Rust C++ Dart SDK reference Every tool, one MCP surface Native connectors + the open MCP registry — Slack, GitHub, Notion, Stripe, and more — exposed as MCP tools any agent can call. Slack GitHub GitLab Google Discord X +700 more MCP tools The hanzo CLI A ~15 MB Rust client for any live cloud — prod, l"
+  },
+  {
+   "k": "reward",
+   "w": ", live. Metrics, Logs, Traces, Sessions, Evals, Analytics. View docs Commerce Commerce Turn usage into money — meter it, price it, bill it, reward it. Commerce, Billing, Marketplace, Referrals. View docs Platform Platform Ship your code and run it anywhere. Gateway, Machines, Edge, Registry. View docs Apps Applications"
+  }
+ ],
+ "followOf": "bounty",
+ "depth": 1
+}
