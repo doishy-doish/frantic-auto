@@ -1,0 +1,106 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:26:35.381Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:25:56.206Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:25:56.836Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:25:56.836Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:25:58.172Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:25:59.172Z",
+   "s": "runtime id=nlkdbaijccfnbfkihimdjaapabbfcmgf"
+  },
+  {
+   "t": "2026-11-12T08:26:03.533Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:26:05.773Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:26:09.928Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:26:12.550Z",
+   "s": "voice picked"
+  },
+  {
+   "t": "2026-11-12T08:26:33.010Z",
+   "s": "yt-wall confirmed: no comment box logged-out"
+  },
+  {
+   "t": "2026-11-12T08:26:33.011Z",
+   "s": "api install start"
+  },
+  {
+   "t": "2026-11-12T08:26:33.382Z",
+   "s": "api me fills before=10"
+  },
+  {
+   "t": "2026-11-12T08:26:33.436Z",
+   "s": "api voice=snoop-dogg"
+  },
+  {
+   "t": "2026-11-12T08:26:33.513Z",
+   "s": "api-compose FAILED: compose http 400: {\"error\":\"invalid\",\"message\":\"✖ Invalid option: expected one of \\\"x\\\"|\\\"threads\\\"|\\\"bluesky\\\"|\\\"linkedin\\\"|\\\"instagram\\\"|\\\"facebook\\\"|\\\"reddit\\\"|\\\"youtube\\\"|\\\"gmail\\\"|\\\"outlook\\\"|\\\"s"
+  },
+  {
+   "t": "2026-11-12T08:26:35.231Z",
+   "s": "render shot"
+  },
+  {
+   "t": "2026-11-12T08:26:35.381Z",
+   "s": "done"
+  }
+ ],
+ "errors": [
+  "yt-watch (expected wall): locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n  - waiting for locator('#contenteditable-root').first() to be visible\n",
+  "api-compose: compose http 400: {\"error\":\"invalid\",\"message\":\"✖ Invalid option: expected one of \\\"x\\\"|\\\"threads\\\"|\\\"bluesky\\\"|\\\"linkedin\\\"|\\\"instagram\\\"|\\\"facebook\\\"|\\\"reddit\\\"|\\\"youtube\\\"|\\\"gmail\\\"|\\\"outlook\\\"|\\\"slack\\\"|\\\"discord\\\"|\\\"whatsapp\\\"|\\\"github\\\"|\\\"discourse\\\"|\\\"wordpress\\\"|\\\"phpbb\\\"|\\\"xenforo\\\"|\\\"textarea\\\"|\\\"contenteditable\\\"|\\\"welcome\\\"|\\\"popup\\\"|\\\"voice-page\\\"|\\\"telegram\\\"\\n  → at site\\n✖ Invalid option: expected o"
+ ],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": null,
+ "outputChars": 0,
+ "outputText": null,
+ "api": {
+  "installId": "ead2828d-820d-4cbe-8d70-ffc826161f2a",
+  "fillsAtInstall": {
+   "left": 10
+  },
+  "meBefore": {
+   "install": "ead2828d-820d-4cbe-8d70-ffc826161f2a",
+   "plan": "anonymous",
+   "own": "none",
+   "fills": {
+    "left": 10
+   },
+   "allowances": {
+    "install": 10,
+    "free": 30,
+    "paid": 300,
+    "price": "$9"
+   }
+  },
+  "voice": "snoop-dogg"
+ },
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run10/ext-unpacked",
+ "extRuntimeId": "nlkdbaijccfnbfkihimdjaapabbfcmgf"
+}
