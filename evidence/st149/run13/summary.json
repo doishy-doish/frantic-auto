@@ -1,0 +1,133 @@
+{
+ "extId": "lanedehejpgpanageefmjbfgaeppeidl",
+ "at": "2026-11-12T08:35:49.700Z",
+ "steps": [
+  {
+   "t": "2026-11-12T08:35:06.487Z",
+   "s": "crx_fetch start"
+  },
+  {
+   "t": "2026-11-12T08:35:06.883Z",
+   "s": "unpacked v0.2.2"
+  },
+  {
+   "t": "2026-11-12T08:35:06.883Z",
+   "s": "browser_launch start"
+  },
+  {
+   "t": "2026-11-12T08:35:07.269Z",
+   "s": "browser up"
+  },
+  {
+   "t": "2026-11-12T08:35:07.269Z",
+   "s": "runtime id=jpihhmfhkcnhngablpmdnafjdcgccgol"
+  },
+  {
+   "t": "2026-11-12T08:35:11.666Z",
+   "s": "store shot"
+  },
+  {
+   "t": "2026-11-12T08:35:13.860Z",
+   "s": "extensions shot"
+  },
+  {
+   "t": "2026-11-12T08:35:17.993Z",
+   "s": "popup tries=10 signInDemanded=false"
+  },
+  {
+   "t": "2026-11-12T08:35:20.607Z",
+   "s": "voice picked"
+  },
+  {
+   "t": "2026-11-12T08:35:41.118Z",
+   "s": "yt-wall confirmed: no comment box logged-out"
+  },
+  {
+   "t": "2026-11-12T08:35:41.119Z",
+   "s": "api install start"
+  },
+  {
+   "t": "2026-11-12T08:35:41.474Z",
+   "s": "api me fills before=10"
+  },
+  {
+   "t": "2026-11-12T08:35:41.548Z",
+   "s": "api voice=snoop-dogg"
+  },
+  {
+   "t": "2026-11-12T08:35:47.873Z",
+   "s": "api compose chars=130"
+  },
+  {
+   "t": "2026-11-12T08:35:47.963Z",
+   "s": "api me fills after=9"
+  },
+  {
+   "t": "2026-11-12T08:35:49.562Z",
+   "s": "render shot"
+  },
+  {
+   "t": "2026-11-12T08:35:49.700Z",
+   "s": "done"
+  }
+ ],
+ "errors": [
+  "yt-watch (expected wall): locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n  - waiting for locator('#contenteditable-root').first() to be visible\n"
+ ],
+ "signInDemanded": false,
+ "triesBefore": 10,
+ "triesAfter": 9,
+ "outputChars": 130,
+ "outputText": "Preciate yall havin me on tha show!! Your host game is off the chain, cuz. Just go ahead n put my name on a chair, I'm comin bacc.",
+ "api": {
+  "installId": "bdedee92-ff50-48ab-ae65-c2ae8d2311d5",
+  "fillsAtInstall": {
+   "left": 10
+  },
+  "meBefore": {
+   "install": "bdedee92-ff50-48ab-ae65-c2ae8d2311d5",
+   "plan": "anonymous",
+   "own": "none",
+   "fills": {
+    "left": 10
+   },
+   "allowances": {
+    "install": 10,
+    "free": 30,
+    "paid": 300,
+    "price": "$9"
+   }
+  },
+  "voice": "snoop-dogg",
+  "draft": "Preciate yall havin me on tha show!! Your host game is off the chain, cuz. Just go ahead n put my name on a chair, I'm comin bacc.",
+  "final": {
+   "text": "Preciate yall havin me on tha show!! Your host game is off the chain, cuz. Just go ahead n put my name on a chair, I'm comin bacc.",
+   "attempts": 1,
+   "problems": [],
+   "unsupportedNumbers": [],
+   "fills": {
+    "left": 9
+   }
+  },
+  "meAfter": {
+   "install": "bdedee92-ff50-48ab-ae65-c2ae8d2311d5",
+   "plan": "anonymous",
+   "own": "none",
+   "fills": {
+    "left": 9
+   },
+   "allowances": {
+    "install": 10,
+    "free": 30,
+    "paid": 300,
+    "price": "$9"
+   }
+  }
+ },
+ "manifest": {
+  "version": "0.2.2",
+  "popup": "popup.html"
+ },
+ "loadPath": "/home/runner/work/frantic-auto/frantic-auto/evidence/st149/run13/ext-unpacked",
+ "extRuntimeId": "jpihhmfhkcnhngablpmdnafjdcgccgol"
+}

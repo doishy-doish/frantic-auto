@@ -1,0 +1,17 @@
+2026-11-12T08:35:06.487Z crx_fetch start
+2026-11-12T08:35:06.883Z unpacked v0.2.2
+2026-11-12T08:35:06.883Z browser_launch start
+2026-11-12T08:35:07.269Z browser up
+2026-11-12T08:35:07.269Z runtime id=jpihhmfhkcnhngablpmdnafjdcgccgol
+2026-11-12T08:35:11.666Z store shot
+2026-11-12T08:35:13.860Z extensions shot
+2026-11-12T08:35:17.993Z popup tries=10 signInDemanded=false
+2026-11-12T08:35:20.607Z voice picked
+2026-11-12T08:35:41.118Z yt-wall confirmed: no comment box logged-out
+2026-11-12T08:35:41.119Z api install start
+2026-11-12T08:35:41.474Z api me fills before=10
+2026-11-12T08:35:41.548Z api voice=snoop-dogg
+2026-11-12T08:35:47.873Z api compose chars=130
+2026-11-12T08:35:47.963Z api me fills after=9
+2026-11-12T08:35:49.562Z render shot
+2026-11-12T08:35:49.700Z done
